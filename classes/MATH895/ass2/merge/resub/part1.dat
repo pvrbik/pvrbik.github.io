@@ -1,0 +1,52 @@
+-   -   -   -   -   - PART 1 -   -   -   -   -   -
+#interface(quiet=true):
+> read "merge_division.mpl":
+> read "../DatPart1.mpl":
+> 
+> print("MERGE"):
+                                    "MERGE"
+
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C);
+                         4966, 4966, 5, 5, 19195, 19195
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(C,A,var):
+> t:=time()-st;
+                                   t := 5.340           (old time: 13.126)
+
+> evalb(Q=B); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           95864, 24830, 3.860813532
+
+> 
+> print("DIVIDE(C,B)"):
+                                 "DIVIDE(C,B)"
+
+> N:=0:
+> st:=time():
+> N:=0:
+> (Q,R):=SMPdiv(C,B,var):
+> t:=time()-st;
+                                  t := 970.571          (old time: 2798.315)
+
+> evalb(Q=A); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                          10144280, 24830, 408.5493355
+
+> 
+> quit:

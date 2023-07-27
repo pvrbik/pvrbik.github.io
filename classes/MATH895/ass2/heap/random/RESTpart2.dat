@@ -1,0 +1,61 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+> read "../DatPart2.mpl":
+bytes used=57902864, alloc=27389032, time=0.90
+bytes used=66432176, alloc=32762000, time=1.13
+bytes used=99359136, alloc=50060336, time=2.21
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> 
+#print("DIVIDE(D,A)"):
+#st:=time():
+#N:=0;
+#(Q,R):=HeapDiv(D,A,var): R;
+#t:=time()-st;
+#print(N,M,evalf(N/M)):
+> 
+#restart():
+#read "heapDivision.mpl":
+#print("DIVIDE(D,B)"):
+#st:=time():
+#N:=0;
+#(Q,R):=HeapDiv(D,B,var): R;
+#t:=time()-st;
+#print(N,M,evalf(N/M)):
+> 
+> restart():
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                 t := 3820.389
+
+> print(N,M,evalf(N/M)):
+                          2429383, 127320, 19.08092209
+
+> 
+> quit:\
+bytes used=53877655608, alloc=55826448, time=3822.64

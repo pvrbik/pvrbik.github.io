@@ -1,0 +1,292 @@
+\documentclass[12pt]{report}
+
+\include{header}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subfigure}
+\usepackage{tikz}
+
+\usepackage{listings}
+\lstset{language=Java}
+
+\newcommand{\Ans}[1]{\hfill {\Huge\begin{tabular}{|c|} \hline \hfill #1\\ \hline \end{tabular}} }
+
+\newcommand{\AnsBox}[1]{
+\hspace{-1cm}\fbox{
+\begin{minipage}[b][#1][c]{17.6cm}
+\hfill
+\end{minipage}}
+}
+
+\begin{document}
+
+%%%TITLE PAGE%%%
+{\large
+\begin{center}
+{\it UNIVERSITY OF WESTERN ONTARIO}
+\end{center}
+\begin{center}
+\bf{Computer Science 1026b, Spring 2010}\\
+\large{\bf{Computer Science Fundamentals I}}\\
+{\large{\it MIDTERM TEST }}\\
+\end{center}
+}
+
+\vspace{8cm}
+\begin{center}{\Huge{Solutions}}\end{center}
+\clearpage
+%%%END TITLE PAGE%%%
+
+\section*{Very Short Answers}
+Each answer in this section is worth \emph{1 point} for a total of \emph{10 points}.
+\subsection*{Question 1}
+\emph{The following questions contain valid Java code and will provide output (without error) if entered into 
+the DrJava interactions pane.} 
+
+
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\begin{enumerate}
+\item Suppose we have defined
+\begin{verbatim}
+int n = 4;
+double x = 2.5;
+\end{verbatim}
+then the value of the expression \texttt{5 * x - n / 5} is: \Ans{12.5}
+
+\item Suppose we have defined
+\begin{verbatim}
+int num1 = 50, num2 = 50;
+\end{verbatim}
+then the value of the expression \texttt{(num1 == num2)} is: \Ans{true}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 3; 
+x = x + x; 
+x = x + x;
+\end{verbatim}
+the value of \texttt{x} is: \Ans{12}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 3, y = 5;
+x = y;
+y = x;
+\end{verbatim}
+the value of \texttt{y} is: \Ans{5}
+
+\item If we declare the array
+\begin{verbatim}
+int [] intArr = {2,4,6,8,10};
+\end{verbatim}
+then the value stored in \texttt{intArr[1]} is: \Ans{4}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int sum = 0;
+int count = 1;
+while (count < 5) {
+    sum = sum + count;
+    count = count + 2;
+}
+\end{verbatim}
+the value of \texttt{count} is: \Ans{5}
+
+\item After the following code segment is executed
+\begin{verbatim}
+bool x = (true && false) || (true && true) || false;
+\end{verbatim}
+the value of \texttt{x} is: \Ans{true}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = (3+3*2) % 6;
+\end{verbatim}
+the value of \texttt{x} is: \Ans{3}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int [] xs = { 1, 2, 3, 4, 5, 6, 7 };
+System.out.println(xs[xs.length]);
+\end{verbatim}
+what is printed? (Your solution doesn't need to be precise). \Ans{\large{OutOfBounds}}
+
+\item After the following code segment is executed
+\begin{verbatim}
+int n = 40; 
+while ((n % 2) == 0) {
+   n = n / 2;
+}
+\end{verbatim}
+the value of \texttt{n} is: \Ans{5}
+
+\end{enumerate}
+
+%%%SHORT ANSWER%%%
+\clearpage
+\section*{Short Answers}
+Each solution in this section is worth \emph{4 points} for a total of \emph{20 points}.
+\subsection*{Question 2}
+\begin{enumerate}
+\item What will be the output of the following code segment?
+\begin{verbatim}
+for (int row = 1; row <=3; row ++) {
+    for (int count = 1; count <= (4 - row); count++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+\end{verbatim}
+\item[\textsc{Solution.}]
+\begin{verbatim}
+  ***
+  **
+  *
+\end{verbatim}
+\vspace{2.5cm}
+\item What happens when the following code segment is executed? Why?
+\begin{verbatim}
+int sum = 0;
+int count = 5;
+while (count > 1) {
+    sum = sum + count;
+    count = count + 2;
+}
+System.out.println(sum);
+\end{verbatim}
+\vspace{.5cm}
+\item[\textsc{Solution.}] This will cause an infinite loop. The value of \texttt{count}, starting at five, is \emph{increased} at every iteration. Thus count will \emph{always} be greater than one and the loop will neve terminate as a result of this.
+
+\clearpage
+
+\item In the space provided, write a \texttt{for} loop that is equivalent to the following \texttt{while} loop. More precisely, 
+after executing this for loop the value
+in {\tt sum} will be the same as it is after executing the {\tt while} loop
+below.
+
+
+\begin{verbatim}
+int sum = 0;
+int i = 3;
+while (i < 100) {
+    sum = sum + i;
+    i = i + 3;
+}
+\end{verbatim}
+
+\item[\textsc{Solution.}] 
+\begin{verbatim}
+    int sum = 0, i;
+
+    for (i=3; i<100; i=i+3) {
+        sum = sum + i;
+    }
+\end{verbatim}
+
+
+%\item Write a method with the header \texttt{public void aboutFace()} for inclusion in the \texttt{Turtle} class 
+%that causes a turtle to ``turn around''; that is, to face in the opposite direction it is currently pointing.
+\vspace{1.5cm}
+\item Suppose \texttt{Yertle} and \texttt{Franklin} are two Turtle objects in the same World. Provide a code segment that makes the two turtles face each other.
+\vspace{.5cm}
+\item[\textsc{Solution.}]
+\begin{verbatim}
+    Yertle.turnToFace(Franklin);
+    Franklin.turnToFace(Yertle);
+\end{verbatim}
+
+\vspace{1.5cm}
+\item Write a code segment that creates a 400px by 300px (width by height) Picture object with all pixels set to red. Assume that this code will be part of a
+{\tt main} program and \emph{not} in the Picture class.
+For the red color, use {\tt Color.RED} from the class {\tt java.awt.Color}.
+\vspace{.5cm}
+\item[\textsc{Solution.}]
+\begin{verbatim}
+    Picture MyPic = new Picture(400, 300);
+    Pixel[] PixelArray = MyPic.getPixels();
+        
+    for (int i=0; i<PixelArray.length; i++) {
+       PixelArray[i].setColor( java.awt.Color.RED ); 
+    }
+\end{verbatim}
+
+
+\end{enumerate}
+
+\clearpage
+\section*{Long Answers}
+Each solution in this section is worth \emph{10 points} for a total of \emph{20 points}.
+\subsection*{Question 3}
+\begin{enumerate}
+\item Write an algorithm in pseudo-code (i.e. code mixed with English) which prints the following pattern when given \texttt{n}. Your method should work for any value of $n$ and not only on the examples given below. 
+Note that for a given \texttt{n}, the printed pattern has \texttt{n+1} rows
+and \texttt{n} columns.
+
+\begin{center}
+\begin{tabular}{l  c l c l }
+$n=2$ 		&\hspace{50px}\hfill	& $n=3$ 		&\hspace{50px}\hfill& $n=4$ \\
+\hline
+\texttt{xx}		&&\texttt{xxx}	&& \texttt{xxxx} \\
+\texttt{xo}		&&\texttt{xxo}	&& \texttt{xxxo} \\
+\texttt{oo}		&&\texttt{xoo}	&& \texttt{xxoo} \\
+			&&\texttt{ooo}	&& \texttt{xooo} \\
+			&&			&& \texttt{oooo} \\
+\hline
+\end{tabular}
+\end{center}
+
+\item[\textsc{Solution}] \blank
+
+for $i$ from $0$ to $n$ do\\
+....print $n-i$ many \texttt{x}'s\\
+....print $i$ many \texttt{o}'s\\
+....print a new line\\
+end do
+\vspace{1cm}
+
+\item Write a java class method \texttt{static void PrintPattern (int n) } that prints the same pattern as in Part a.
+
+\item[\textsc{Solution}]
+\begin{verbatim}
+    public static void PrintPattern (int n) {
+        for (int i=0; i<=n; i++) {
+            for (int j=0; j<n-i; j++) {
+                System.out.print("x"); 
+            }
+            for (int j=0; j<i; j++) {
+                System.out.print("o"); 
+            }
+            System.out.println();
+        }
+    }
+\end{verbatim}
+
+\end{enumerate}
+
+\clearpage
+\subsection*{Question 4}
+Write a java object method \texttt{void nSidedPolygon (int n, int s)} for inclusion in the Turtle class that takes as input $n$ and $s$ and draws an $n$-sided polygon with side length $s$. 
+You may assume that drawing these polygons will never cause  your turtle
+to go out of its world boundaries. 
+The ``exterior angle'' will be ${360^{\circ}}/{n}$ as illustrated for $n=3$ and $n=6$ in the figure below. \\
+\begin{center}
+\input{Polygon}\\
+\end{center}
+
+\begin{enumerate}
+\item[\textsc{Solution.}] \blank
+\begin{verbatim}
+    public void nSidedPolygon (int n, int s) {
+        for (int i=0; i<n; i++) {
+            this.forward(s);
+            this.turn(360 / n);
+        }
+    } 
+\end{verbatim}
+
+\end{enumerate}
+
+
+
+\end{document}

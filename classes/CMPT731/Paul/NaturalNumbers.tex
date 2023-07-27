@@ -1,0 +1,878 @@
+\documentclass{seminar}
+\nonstopmode
+
+\input{lectures}
+
+\newcommand{\NAT}{\textcolor{MathColor}{\ensuremath{\mathbb{N}}}}
+\newcommand{\ZZ}{\textcolor{MathColor}{\ensuremath{\mathbb{Z}}}}
+\newcommand{\ZP}{\textcolor{MathColor}{\ensuremath{\mathbb{Z}^{+}}}}
+\newcommand{\QQ}{\textcolor{MathColor}{\ensuremath{\mathbb{Q}}}}
+\newcommand{\QP}{\textcolor{MathColor}{\ensuremath{\mathbb{Q}^{+}}}}
+\newcommand{\suc}{\tmi{succ}}
+\newcommand{\Ha}{\tmi{Hask}}
+\newcommand{\vs}{\vspace{0.3in}}
+\newcommand{\CC}{\tm{\cal C}}
+\newcommand{\CCC}{\tm{{\cal C}\,}}
+\newcommand{\COP}{\tm{\cal C^\mathrm{op}}}
+\newcommand{\DD}{\tm{\cal D}}
+\newcommand{\DDD}{\tm{{\cal D}\,}}
+
+\newcommand{\pb}{\textcolor{MathColor}{\ensuremath{+\!\!_{_{_{\bot}}}}}}
+
+\newpagestyle{lectures}{\makebox[1in][l]{CMPT 481/731} \hfill Functional Programming
+\hfill \makebox[1in][r]{\semester}}{\makebox[2in][l]{Natural Numbers}
+\hfill F. Warren
+Burton \hfill \makebox[2in][r]{\thepage}}
+
+\pagestyle{lectures}
+
+\begin{document}
+\begin{slide}
+
+\begin{center}
+\begin{LARGE}
+\textbf{Natural Numbers}
+\end{LARGE}\\[3ex]
+\end{center}
+
+We will use natural numbers to illustrate several ideas that
+will apply to \Has data types in general.
+
+For the moment we will ignore that fact that each type in
+\Has includes \bottom ~ as a possible value.
+
+We note that it is only possible to define the natural numbers up to
+isomorphism.
+
+\newslide
+
+\section{Peano's Axioms}
+
+Let's consider a definition of \textit{Natural Numbers},
+\NAT, based on Peano's axioms. 
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \tmi{succ}(m) \in \NAT}.
+\end{enumerate}
+
+\newslide
+
+Oops, we forgot to exclude negative numbers!
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+\end{enumerate}
+
+\newslide
+
+We also need one more axiom.
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+\end{enumerate}
+
+\newslide
+
+Oh my gosh!  I just noticed that the nonnegative real numbers, the rational excluding
+negative integers,
+and lots of other sets, all satisfy these axioms.  I forgot the induction
+axiom!
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+\item For any predicate \tm{P} in the first order predicate calculus,
+\tm{(P(0) \wedge (P(m) \Rightarrow P(\suc(m)))) \Rightarrow
+(\forall n \in \NAT.P(n))}
+\end{enumerate}
+
+The induction axiom insures that \NAT \, is the smallest set that satisfies
+the above axioms.
+
+\newslide
+
+While you were looking at the previous page, I remembered that there are
+some completeness issues with the axioms for number theory.  The axioms
+on the previous page are satisfied by an infinite number of sets, most of
+which are a bit weird.
+
+We have to allow \tm{P} to be any predicate.
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+\item For any predicate \tm{P},
+\tm{(P(0) \wedge (P(m) \Rightarrow P(\suc(m)))) \Rightarrow
+(\forall n \in \NAT.P(n))}
+\end{enumerate}
+
+\newslide
+
+Since we have no way of expressing more than a countable subset of the
+predicates on \NAT, perhaps it is better to restate the final axiom in terms
+of sets.
+
+\begin{enumerate}
+\item \tm{0 \in \NAT}
+\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+\item \tm{(X \subseteq \NAT \wedge 0 \in X
+\wedge (m \in X \Rightarrow \suc(m) \in X))
+\Rightarrow X = \NAT}
+\end{enumerate}
+
+\newslide
+
+Are you really sure we finally have a correct definition
+for the natural numbers?
+
+Are you even sure I finally managed to get my parentheses
+balanced correctly?
+
+\newslide
+
+\section{Natural Numbers defined using Category Theory}
+
+Let's try another approach.
+
+Consider a category, \tmi{US} (for unary system), where
+
+\begin{description}
+\item[An Object] is any triple \tm{(S,a,f)} such that
+\begin{itemize}
+\item \tm{S} is a set,
+\item \tm{a \in s}, and
+\item \tm{f: S \rightarrow S} is a function.
+\end{itemize}
+\item[An Arrow] is any homomorphism between objects. 
+\end{description}
+
+The desired unary system,
+\tm{(\NAT, 0, \suc)},
+is an initial object in this category.
+
+(An initial object is an object such that for any object, \tm{A}, there
+is exactly one arrow from the initial object to \tm{A}.  In particular,
+there is exactly one arrow from the initial object to itself, which in this case is the identity function.)
+
+\newslide
+
+We will define category, object, arrow and initial object later.
+Initial objects are unique up to isomorphism, when they exist,
+and in cases like this initial objects always exist.
+
+For now, all we need to understand about this definition is that
+the natural numbers is a unary system such that for another
+unary system there is exactly one
+homomorphism from the natural numbers to the other unary system.
+
+If \tm{(S,a,f)} and \tm{(T,b,g)} are any two unary systems, then a homomorphism,
+\tm{h}, is a structure preserving function from \tm{S} to \tm{T}.  That is
+\begin{codenott}
+\tm{h: S \rarrow T}\\
+\tm{h(a) = b}\\
+\tm{\forall s \in S . ~ h(f(s)) = g(h(s))}
+\end{codenott}
+
+Later we will give a more general definition of homomorphism that will
+apply to a variety of different structures.
+
+\newslide
+
+\label{p-not-induction}
+
+To see that \tm{(\NAT, 0, \suc)} is an initial object, it is sufficient
+to show that for any other object, \tm{(S,a,f)}, in \tmi{US}
+there is a unique homomorphism from \tm{(\NAT, 0, \suc)} to
+\tm{(S,a,f)}.
+
+Clearly, \tm{h} defined by
+
+\begin{codenott}
+
+\tm{h(0) = a}\\
+\tm{\forall n \in \NAT.h(\suc(n)) = f(h(n))}
+\end{codenott}
+
+is the unique homomorphism.
+
+This is clearly the case because of our intuitive understanding of the
+natural numbers.  We are actually using the requirement that the
+above holds to define the natural numbers.
+
+\newslide
+
+Quiz:  \color{QuoteColor}
+For each of the following unary systems,
+(i) find the unique homomorphism from \tm{(\NAT, 0, \suc)} to
+the system, (ii) determine whether there are zero, one or more than one homomorphisms
+from the unary system to \tm{(\NAT, 0, \suc)},
+(iii) find either two or all homomorphisms from the unary system to
+\tm{(\NAT, 0, \suc)}, and in the case of a unique homomorphism to
+\tm{(\NAT, 0, \suc)~}determine if the homomorphism is an isomorphism.
+
+\begin{enumerate}
+\item \tm{(\ZZ, 0, succ)}
+\item \tm{(\ZP, 1, succ)}
+\item \tm{(}Strings over \tm{\{}\tmtt{'}\tm{a}\tmtt{'}\tm{\},}
+\tmtt{'}\tm{a}\tmtt{'}\tm{, (+}\tmtt{'}\tm{a}\tmtt{'}\tm{))} where \tm{+} means concatenate.
+% \item \tm{(\QQ, 0, succ)}
+\item \tm{(\QP, 0, succ)}, where \tm{\mathit{succ} ~ x = x + 1}
+\item \tm{(\{True, False\}, False, \neg)}
+\item \tm{(\{0,1,2,3,4\}, 0, succ_{\!\pmod{5}})}
+\item \tm{(\{0,1,2,3,4\}, 3, succ_{\!\pmod{5}})}
+\end{enumerate}
+\color{black}\rule{1ex}{0ex}
+
+\newslide
+
+Quiz:  \textcolor{QuoteColor}{
+\begin{enumerate}
+\item Prove that if \tm{h_{1}: S_{1} \rarrow S_{2}} is a homomorphism from
+\tm{(S_{1},a_{1},f_{1})} to \tm{(S_{2},a_{2},f_{2})} and
+\tm{h_{2}: S_{2} \rarrow S_{3}} is a homomorphism from
+\tm{(S_{2},a_{2},f_{2})} to \tm{(S_{3},a_{3},f_{3})} then
+\tm{h_{2} \circ h_{1}} is also a homomorphism.
+\item Prove that if for each unary system
+there is a unique homomorphism from
+\tm{(S,a,f)} to that unary system, then \tm{(S,a,f)} is isomorphic to
+\tm{(\NAT,0,succ)}.
+\end{enumerate}}
+
+Note: \tm{(S,a,f)} and \tm{(\NAT,0,succ)} are isomorphic unary systems if
+there exist homomorphisms \tm{g: S \rarrow \NAT} and
+\tm{h: \NAT \rarrow S} such that \tm{g \circ h = id_{\NAT}}
+and \tm{h \circ g = id_{S}}.
+
+\newslide
+
+\section{Haskell \tc{Nat}s}
+
+With \textit{Bird's} definition of \tc{Nat}s in Haskell (ignoring the
+\tc{deriving} stuff),
+
+\begin{code}
+data Nat = Zero | Succ Nat
+\end{code}
+
+we have an additional constructor, \bottom.
+
+Everything we have done so far carries over with minimal change.  Instead of
+a unary system we have \tc{(Nat, Zero, \bottom, Succ)}.
+
+A homomorphism
+from \tm{(\tc{Nat}, \tc{Zero}, \bottom_{\tc{Nat}}, \tc{Succ})}
+to \tm{(S, a, \bottom_{S}, f)} is a function \tm{h: \tc{Nat} \rarrow S}
+such that
+
+\begin{codenott}
+\tm{h ~ \tc{Zero} = a}\\
+\tm{h ~ \bottom_{\tc{Nat}} = \bottom_{S}}\\
+\tm{\forall n \in \tc{Nat} . h ~ (\tc{Succ} ~ n) = f (h ~ n)}
+\end{codenott}
+
+\newpage
+
+We will usually refer to \bottom~ without using a subscript, even though each
+domain (set of values corresponding to a type --- more or less) has a
+different \bottom.  Sometimes we will skip explicitly mentioning \bottom,
+since the impact of adding \bottom ~ is straight forward.
+
+The second condition on the previous page,
+\tm{h ~ \bottom = \bottom}, will usually be stated as
+``\tm{h} is strict''.
+
+\newpage
+
+\section{Catamorphisms}
+
+The homomorphisms from \tc{Nat}, or more generally homomorphisms from
+types defined by \Has \tc{data} statements, are called
+\definition{catamorphisms}.
+
+The catamorphisms for a type are exactly the functions that can be defined
+using the \tm{\mathit{fold}} function for the type.
+
+\newslide
+
+The \tm{\mathit{fold}} functions for \tc{Nat}'s (given in \textit{Bird}) is
+
+\begin{code}
+foldn :: (a -> a) -> a -> Nat\\
+foldn h c Zero = c\\
+foldn h c (Succ n) = h (foldn h c n)
+\end{code}
+
+Recall that \tm{g} is a homomorphism
+from \tm{(\tc{Nat}, \tc{Zero}, \bottom, \tc{Succ})}
+to \tm{(S, a, \bottom, f)} iff
+
+\begin{codenott}
+\tm{g} ~ \color{black}{is strict}\\
+\tm{g ~ \tc{Zero} = a}\\
+\tm{\forall n \in \tc{Nat} . g ~ (\tc{Succ} ~ n) = f (g ~ n)}
+\end{codenott}
+
+in which case 
+
+\begin{codenott}
+\tm{g = \tc{foldn} ~ f ~ a}
+\end{codenott}
+
+The third condition above,
+\tm{\forall n \in \tc{Nat} . g ~ (\tc{Succ} ~ n) = f (g ~ n)},
+can be written more compactly as \tm{g \circ \tc{Succ} = f \circ g}.
+
+\newslide
+
+Another way to look at 
+
+\begin{code}
+foldn :: (a -> a) -> a -> Nat\\
+foldn h c Zero = c\\
+foldn h c (Succ n) = h (foldn h c n)
+\end{code}
+
+is that ~ \tc{foldn h c n} ~ constructs a new value by replacing the
+\tc{Zero} constructor in \tc{n} with \tc{c} and each \tc{Succ}
+constructor with \tc{h}.
+
+For example
+
+\begin{code}
+foldn h c (Succ (Succ (Succ Zero))) = h (h (h c))
+\end{code}
+
+\newpage
+
+\subsection{Fusion}
+
+Suppose
+
+\begin{itemize}
+\item \tc{foldn g a} ~ is a homomorphism from \tc{(Nat,Zero,\bottom,Succ)}
+to \tc{(\tm{S},a,\bottom,g)},
+\item \tc{foldn h b} ~ is a homomorphism from \tc{(Nat,Zero,\bottom,Succ)}
+to \tc{(\tm{T},b,\bottom,h)}, and
+\item \tc{f} ~ is a homomorphism from \tc{(\tm{S},a,\bottom,g)}
+to \tc{(\tm{T},b,\bottom,h)}.
+\end{itemize}
+
+Since the composition of two homomorphisms is a homomorphism,
+and there is exactly one homomorphism from
+\newline
+\tc{(Nat,Zero,\bottom,Succ)}
+to \tc{(\tm{T},b,\bottom,h)}, it must be the case that:
+
+\begin{code}
+f . foldn g a = foldn h b
+\end{code}
+
+\newpage
+
+The result on the previous page is the \definition{fusion Law for \tc{Nat}}.
+
+In the book, the condition that \tc{f} is a homomorphism is stated as
+
+\begin{codenott}
+\tc{f} \color{black}{is strict}\\
+\tc{f a = b}\\
+\tc{f.g = h.f}
+\end{codenott}
+
+It may help to note that
+
+\begin{code}
+Zero: Nat\\
+Succ: Nat -> Nat\\[1.5ex]
+a: \tm{S}\\
+g: \tm{S} -> \tm{S}\\[1.5ex]
+b: \tm{T}\\
+h: \tm{T} -> \tm{T}\\[1.5ex]
+f: \tm{S} -> \tm{T}\\
+\end{code}
+
+\newpage
+
+\subsection{Induction}
+
+In \textit{Bird}, the fusion law for \tc{Nat}s was proved using induction.
+
+We will reverse this process and show, using the fusion law for \tc{Nat}s,
+that proof by induction is valid on \NAT.
+
+Before going into detail, let us consider why we can prove the validity
+of proof by induction, while mathematicians regard induction as an axiom.
+
+Recall that on
+page \pageref{p-not-induction} we
+\textbf{\textit{defined}} the natural numbers to
+be the initial object of the category of unary systems.  It turns out that this
+is equivalent to the induction axiom.
+
+\newpage
+
+We will break our proof into a number of small lemmas so that each lemma
+and its proof can be written on a single page.
+
+We will use the following definitions throughout the lemmas and
+the theorem that follows.
+
+\begin{code}
+f1 n     = (n, True)\\
+f2 n     = (n, p n)\\
+g        = Succ\\
+h (n, q) = (Succ n, q || p (Succ n))\\
+a        = Zero\\
+b1       = f1 a = (Zero, True)\\
+b2       = f2 a = (Zero, p Zero)
+\end{code}
+
+While our work is done using the notation of \textit{Haskell}, we note that the
+results will still hold even if \tc{p} is not a computable predicate.
+
+\newpage
+
+\paragraph{\red{Important:}}
+In our consideration of natural numbers, we will restrict our attention
+to \NAT.  In particular, we
+will not allow numbers to be \bottom ~ or partial numbers, or
+infinite.  This seems
+reasonable, since induction is usually expressed in terms of \NAT ~ rather
+than \tc{Nat}.
+
+Furthermore, we will assume that \tc{p} is a total predicate (i.e.
+\tc{(p n)} can never be \bottom).  This seems reasonable, since we are
+not restricting \tc{p} to be a computable predicate.
+
+%We could easily extends these results to \tc{Nat}s, by making \tc{f1} and
+%\tc{f2} strict (which is not necessary for these to be homomorphisms on
+%\NAT) and requiring that \tc{(p \bottom)} be true.
+
+\newpage
+
+%:lemma1
+
+\begin{lemma} \label{lemma-a}
+\tc{foldn Succ Zero = id}
+\end{lemma}
+\begin{proof}
+The function ~ \tc{foldn Succ Zero} ~ is a homomorphism from \tc{\NAT} to
+\tc{\NAT}.  The identity function is also a homomorphism from \tc{\NAT} to
+\tc{\NAT}.  Since there can be only one such homomorphism, the result holds.
+\end{proof}
+
+Notice that we avoided using induction, since that would result in a
+circular argument.
+
+\newpage
+
+%:lemma2
+
+\begin{lemma} \label{lemma-b}
+If ~ \tc{p  n \tmcc{\Rightarrow} p (Succ n)}
+\newline
+then ~ \tc{p (Succ n) = (p n || p  (Succ n))}
+\end{lemma}
+\begin{proof}
+If ~ \tc{p n = True} ~ then
+\begin{codenott}
+\tc{p (Succ n)}\\
+\reason{assumptions: ~ \tc{p n = True} ~ and ~ \tc{p n \tm{\Rightarrow} p (Succ n)}}\\
+\tc{True}\\
+\reason{algebra of logic}\\
+\tc{True || p (Succ n)}\\
+\reason{asumption: ~ \tc{p n = True}}\\
+\tc{p n || p (Succ n)}
+\end{codenott}
+
+Otherwise (\tc{p n = False}), by a similar argument
+
+\begin{codenott}
+\tc{p (Succ n) = False || p (Succ n)}\\
+\tc{  = p n || p (Succ n)}
+\end{codenott}
+
+\end{proof}
+
+\newpage
+
+If we allow \tc{~p n~} to be \bottom ~ then \textit{Lemma 2} will
+no longer hold.
+
+However, we can define a predicate \tm{q}, which is not computable, by
+
+\color{MathColor}
+\[q ~ n \equiv \left\{
+\begin{array}{ll}
+\tc{True}, & \tmr{if} ~ \tc{p n} \equiv \tc{True}\\
+\tc{False}, & \tmr{if} ~ \tc{p n} \equiv \tc{False}\\
+\tc{False}, & \tmr{if} ~ \tc{p n} \equiv \bottom
+\end{array}
+\right.\]
+\color{black}
+
+Now, if \tm{\forall n \in \NAT . q ~ n} then
+\tm{\forall n \in \NAT . p ~ n}.
+
+\newpage
+
+%:lemma3
+
+\begin{lemma} \label{lemma-e}
+\tc{f1.g = h.f1}
+\end{lemma}
+\begin{proof} For any ~ \tc{n}\tm{\in\NAT}
+
+\begin{code}
+(f1.g) n\\
+\reason{plug and grind}\\
+(Succ n, True)\\
+\reason{algebra of logic}\\
+(Succ n, True || p (Succ n))\\
+\reason{plug and grind}\\
+(h.f1) n
+\end{code}
+
+so the result holds by extensionality.
+\end{proof}
+
+\newpage
+
+%:lemma4
+
+\begin{lemma}
+% If ~ \tc{(p Zero) ~ then ~ 
+\tc{f1 = foldn h (Zero, True)}
+\end{lemma}
+\begin{proof}
+\begin{code}
+f1\\
+\reason{Lemma 1}\\
+f1 . foldn Succ Zero\\
+\reason{fusion; Lemma 3}\\
+foldn h (f1 Zero)\\
+\reason{plug and grind}\\
+foldn h (Zero, True)
+\end{code}
+
+The fusion step uses:
+\begin{code}
+\tc{f1.foldn Succ Zero = foldn h (f1 Zero)}
+\end{code}
+\end{proof}
+
+
+\newpage
+
+%:lemma5
+
+\begin{lemma} \label{lemma-f}
+If ~ \tc{p  n \tm{\Rightarrow} p (Succ  n)} ~
+then ~
+\tc{f2.g = h.f2}
+\end{lemma}
+\begin{proof} For any ~ \tc{n}\tm{\in\NAT}
+
+\begin{code}
+(f2.g) n\\
+\reason{plug and grind}\\
+(Succ n, p (Succ n))\\
+\reason{Lemma 2}\\
+(Succ n, p n || p (Succ n))\\
+\reason{plug and grind}\\
+(h.f2) n\\
+\end{code}
+
+so the result holds by extensionality.
+\end{proof}
+
+\newpage
+
+%:lemma6
+
+\begin{lemma} \label{lemma-c}
+If ~  \tc{(p Zero}) \tm{\wedge}
+\tc{(p n \tm{\Rightarrow} p (Succ n))}
+\newline
+then ~ \tc{f2 = foldn h (Zero, True)}
+%\tc{\tmcc{\backslash}n -> (n, p n) = foldn h (Zero, True)}
+%\newline
+%where \tc{h (n, q) = (Succ n, q || p (Succ n))}
+\end{lemma}
+\begin{proof}
+\begin{code}
+f2\\
+\reason{Lemma 1}\\
+f2 . foldn Succ Zero\\
+\reason{fusion; Lemma 5}\\
+foldn h (f2 Zero)\\
+\reason{\tc{p Zero} is True}\\
+foldn h (Zero, True)
+\end{code}
+
+The fusion step uses:
+\begin{code}
+\tc{f2.foldn Succ Zero = foldn h (f2 Zero)}
+\end{code}
+\end{proof}
+
+\newpage
+
+%In the fusion step we have:
+
+%\begin{code}
+%f = \tmcc{\backslash}n -> (n, True)\\
+%g = Succ\\
+%a = Zero\\
+%h = h\\
+%b = (Zero, True)\\
+%\end{code}
+
+%\newpage
+
+\begin{theorem}[Induction] 
+If ~  \tc{(p Zero}) \tm{\wedge}
+\tc{(p n \tm{\Rightarrow} p (Succ n))}
+\newline
+then ~ \tm{\forall \tc{n} \tm{\in \NAT.}\tc{p n = True}}
+\end{theorem}
+\begin{proof}
+On \NAT ~ (but not \tc{Nat}), by \textit{Lemma 4} and \textit{Lemma 6},
+
+\begin{codenott}
+\tc{f1 = f2}
+\end{codenott}
+
+so 
+
+\begin{codenott}
+\tc{snd.f1 = snd.f2}
+\end{codenott}
+
+Since
+
+\begin{code}
+(snd.fl) n = True\\
+(snd.f2) n = p n
+\end{code}
+
+We have the desired result, that for ~
+\tm{\forall}\tc{n} \tm{\in \NAT.}\tc{p n = True}.
+
+\end{proof}
+
+\newpage
+
+We will now demonstrate the use of fusion to do the classic undergraduate
+problem of showing
+\[\textcolor{MathColor}{\sum_{i=0}^{n} i = \frac{n(n+1)}{2}}\]
+
+We will use \tc{Integer}s to represent \NAT s, with the following fold function.
+
+\begin{code}
+foldi :: (a -> a) -> a -> Integer -> a\\
+foldi g a 0 = a\\
+foldi g a (n+1) = g (foldi g a n)
+\end{code}
+
+That is, we will use the concrete type \tc{Integer} to represent the
+abstract type \NAT.  Negative \tc{Integer}s will not be used, and
+\tc{foldi} is the concrete implemetation of an abstract
+\tmtt{fold\NAT} function.  If we used \tc{Nat}s to represent \NAT s,
+then we would need to ignore partial and infinite \tc{Nat}s, and use
+\tc{foldn} to implement \tmtt{fold\NAT}.
+
+\newpage
+
+To recursively define
+
+\begin{codenott}
+\tm{h ~ n = (n,~ \sum_{i=0}^{n} i)}
+\end{codenott}
+
+we can define and use \tc{g}
+
+\begin{code}
+g :: (Integer,Integer) -> (Integer,Integer)\\
+g (a, b) = (a+1, b + (a+1))
+\end{code}
+
+so
+
+\begin{codenott}
+\tc{h (n+1)} \= \tc{= g (h n) =}
+\= \tm{= \tc{g} ~ (n,~ \sum_{i=0}^{n} i)} \= \kill
+\tc{h 0} \> \tc{= (0, 0)} \> \tm{= (0,~ \sum_{i=0}^{0} i)}\\
+\tc{h (n+1)} \> = \tc{g (h n)} \> \tm{= \tc{g} ~ (n,~ \sum_{i=0}^{n} i)}
+\> \tm{= (n+1,~ \sum_{i=0}^{n+1} i)}
+\end{codenott}
+
+or
+
+\begin{codenott}
+\tc{h n = foldi g (0, 0) n} \tm{=(n, \sum_{i=0}^{n} i)}
+\end{codenott}
+
+recalling that
+
+\begin{code}
+foldi :: (a -> a) -> a -> Integer -> a\\
+foldi g a 0 = a\\
+foldi g a (n+1) = g (foldi g a n)
+\end{code}
+
+\newpage
+
+% Define
+% 
+% \begin{code}
+% g :: (Integer,Integer) -> (Integer,Integer)\\
+% g (a, b) = (a+1, b + (a+1))
+% \end{code}
+% 
+% so
+% 
+% \begin{codenott}
+% \tc{g (0, 0) = (1, 1)}\\
+% \tc{g (n, }\tm{\sum_{i=0}^{n} i}\tc{) = (n+1, } \tm{\sum_{i=0}^{n+1} i} \tc{)}
+% \end{codenott}
+% 
+% and therefore
+% 
+% \begin{codenott}
+% \tc{h n = foldi g (0, 0) n} \tm{=(n, \sum_{i=0}^{n} i)}
+% \end{codenott}
+ 
+We now define
+
+\begin{code}
+f :: Integer -> (Integer,Integer)\\
+f n = (n, n*(n+1) `div` 2)
+\end{code}
+
+and use fusion to show that ~ \tc{f = foldi g (0, 0)} ~ from which the
+desired result follows immediately.
+
+\newslide
+
+%We will restrict our attention to \NAT, but by making \tc{f} strict the results
+%can be extended to \tc{Nat}.
+
+Since
+
+\begin{code}
+n*(n+1) `div` 2 + (n+1) = (n+1)*(n+2) `div` 2
+\end{code}
+
+we see that
+
+\begin{code}
+(g.f) n\\
+\reason{plug and grind}\\
+g (n, n*(n+1) `div` 2)\\
+\reason{plug and grind}\\
+(n+1, (n+1)*(n+2) `div` 2)\\
+\reason{plug and grind}\\
+(f.(+1)) n
+\end{code}
+
+or
+
+\begin{code}
+g.f = f.(+1)
+\end{code}
+
+\newslide
+
+Now we have
+
+\begin{code}
+f\\
+\reason{\tc{foldi (+1) 0 = id}}\\
+f . foldi (+1) 0\\
+\reason{fusion}\\
+foldi g (0, 0)
+\end{code}
+
+In the fusion step we use
+\begin{enumerate}
+\item \tc{f 0 = (0, 0)}
+\item \tc{g.f = f.(+1)}
+\end{enumerate}
+
+However, since we are working with \NAT s rather than \tc{Nat}s,
+we do not have the requirement that \tc{f} be strict.
+
+\newpage
+
+What we have show is that both ~ \tc{f} ~ and ~
+\tc{foldi g (0,0)} ~ are the unique homomorphism from ~ \tc{(\NAT,0,(+1))} ~
+to ~ \tc{(\tm{\NAT \times \NAT}, (0,0), g)}~  and therefore are equal.
+
+Since
+
+\begin{codenott}
+\tc{f n = (n, n*(n+1) `div` 2)}\\
+\tc{foldi g (0, 0) n =} \tm{(n, ~ \sum_{i=0}^{n} i)}
+\end{codenott}
+
+we have
+
+\[\textcolor{MathColor}{\sum_{i=0}^{n} i = \frac{n(n+1)}{2}}\]
+
+% \newslide
+% 
+% We will restrict our attention to \NAT, but by making \tc{f} strict the results
+% can be extended to \tc{Nat}.
+% 
+% Since
+% 
+% \begin{code}
+% n*(n+1) `div` 2 + (n+1) = (n+1)*(n+2) `div` 2
+% \end{code}
+% 
+% we see that
+% 
+% \begin{code}
+% (g.f) n\\
+% \reason{plug and grind}\\
+% g (n, n*(n+1) `div` 2)\\
+% \reason{plug and grind}\\
+% (n+1, (n+1)*(n+2) `div` 2)\\
+% \reason{plug and grind}\\
+% (f.(+1)) n
+% \end{code}
+% 
+\newslide
+
+In an induction proof we would have
+
+\begin{description}
+\item[Basic Step:] \tc{f 0 = (0, 0)}
+\item[Induction Step:] \tc{h (n+1) = g (h n) = g (f n)  = f (n+1)}
+\end{description}
+
+Notice how closely these correspond to our requirements for fusion to hold.
+
+In the fusion step we use
+\begin{enumerate}
+\item \tc{f 0 = (0, 0)}
+\item \tc{g.f = f.(+1)}
+\end{enumerate}
+
+\end{slide}
+
+\end{document}
+

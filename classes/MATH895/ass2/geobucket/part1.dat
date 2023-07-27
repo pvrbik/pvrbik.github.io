@@ -1,0 +1,54 @@
+-   -   -   -   -   - PART 1 -   -   -   -   -   -
+
+#interface(quiet=true):
+> read "geoDivision.mpl":
+> read "../DatPart1.mpl":
+
+> print("GEO"):
+                                     "GEO"
+
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C);
+                         4966, 4966, 5, 5, 19195, 19195
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=GEOdiv(C,A,var):
+> t:=time()-st;
+                                  t := 19.597
+
+> evalb(Q=B); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           70778, 24825, 2.851077543
+
+> 
+> print("DIVIDE(C,B)"):
+                                 "DIVIDE(C,B)"
+
+> N:=0:
+> st:=time():
+> N:=0:
+> (Q,R):=GEOdiv(C,B,var):
+> t:=time()-st;
+                                  t := 54.765
+
+> evalb(Q=A); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           186068, 19864, 9.367096255
+
+> 
+> quit:\
+bytes used=3162757728, alloc=273235080, time=74.96

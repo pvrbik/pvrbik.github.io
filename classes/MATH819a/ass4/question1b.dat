@@ -1,0 +1,41 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> A:=58*x^4-415*x^3-111*x+213;
+                                4        3
+                       A := 58 x  - 415 x  - 111 x + 213
+
+> B:=69*x^3-112*x^2+413*x+113;
+                                3        2
+                       B := 69 x  - 112 x  + 413 x + 113
+
+> 
+> n:=resultant(A,B,x);
+                            n := 232546626971939784
+
+> 
+> ifactor(n);
+                        3
+                     (2)   (3)  (7)  (196648119467)  (7039)
+
+> 
+> for i in [2,3,7,7039,196648119467] do
+>     print(Gcd(A,B) mod i);
+> end;
+                                    3
+                                   x  + x + 1
+
+                                     x + 2
+
+                                     x + 5
+
+                                    x + 5407
+
+                                x + 51402852970
+
+#the gcd should be 1 (in Z[x]).
+> 
+> quit;\
+bytes used=469252, alloc=458668, time=0.02

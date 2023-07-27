@@ -1,0 +1,51 @@
+    |\^/|     Maple 11 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "PGCD.mpl":
+> read "badPGCD.mpl":
+> 
+> p:=7:
+> var:=[x,y,z]:
+> 
+> g:=x^3+z*y^4+5*y^4+2:
+> a:=g*(x-y):
+> b:=g*(x+y):
+> 
+> Gcd(a,b) mod p;
+                               3      4      4
+                              x  + z y  + 5 y  + 2
+
+> PGCD(a,b,p,var);
+                               3      4      4
+                              x  + z y  + 5 y  + 2
+
+> 
+> a:=g*(x-y):
+> b:=g*(x+y):
+> 
+> expand(a); expand(b);
+              4    3        4        5      4        5
+             x  - x  y + z y  x - z y  + 5 y  x - 5 y  + 2 x - 2 y
+
+              4    3        4        5      4        5
+             x  + x  y + z y  x + z y  + 5 y  x + 5 y  + 2 x + 2 y
+
+> 
+> badPGCD(a,b,p,var);\
+quit
+ z=2
+    degree(Cb)=3 
+ z=3
+    degree(Cb)=4 
+ z=4
+    degree(Cb)=4 
+ z=5
+    degree(Cb)=4 
+ z=6
+    degree(Cb)=4 
+                                      FAIL
+
+bytes used=1961476, alloc=1703624, time=0.07

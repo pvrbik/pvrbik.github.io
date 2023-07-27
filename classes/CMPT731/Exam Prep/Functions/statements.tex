@@ -1,0 +1,98 @@
+ \documentclass[12pt]{article}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb,amsmath,color}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\newcommand{\imp}{\textbf}
+\newcommand{\dom}[1]{\textsf{dom} (#1)}
+\newcommand{\cod}[1]{\textsf{cod}(#1)}
+\newcommand{\arr}[1]{\mathcal{#1}\mathrm{-arrows}}
+\newcommand{\obj}[1]{\mathcal{#1}\mathrm{-objects}}
+\newcommand{\state}[1]{\item[#1] \textcolor{white}{.} \\ \textcolor{white}{.} \\ }
+\newcommand{\Lstate}[1]{\item[#1] \nl}
+\newcommand{\id}[1]{id_{#1}}
+\newcommand{\nl}{\textcolor{white}{.}\ }
+\newcommand{\func}[3]{#1 : #2 \rightarrow #3}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\sse}{\sqsubseteq}
+\newcommand{\point}[1]{\begin{itemize} \item[$\cdot$] #1 \end{itemize}}
+\newcommand{\blank}{\textcolor{white}{-}}
+
+\begin{document} 
+\section*{Domain Theory}
+
+\begin{description}
+
+\state{Partially Ordered Set $(\cup,\sse)$}
+A \imp{partially ordered set} is a pair $D = (\cup, \sqsubseteq)$ where
+\begin{itemize}
+\item[] $\forall x \in \cup$, $x \sse x$ (Relexivity).
+\item[] $\forall x \in \cup$,  $(x \sse y \Rightarrow x=y)$(Antisymmetry).
+\item[] $\forall x,y,z \in \cup$, $x \sse y$ and $y \sse z \Rightarrow x \sse z$ (Transitivity).
+\end{itemize}
+
+\point{If $x$ and $y$ are any enumerated data type then $$ (x\sse y) \equiv (x=\bot) \vee (x=y) $$ }
+
+\state{Bottom $\bot$}
+$\bot$ is used to represent the bottom element of the partially ordered set of Haskell values and most partially ordered sets.
+$$( \forall x \in \cup) \Rightarrow (\bot \sse x)$$
+
+\point{$1:2:3:\bot \sse [1,2,3,4,5] $}
+\point{$\bot \sse (\bot,\bot) \sse (a,\bot) \sse (a,b) $}
+\point {But not $(\bot,b) \sse (a,\bot)$ because $b \not\sse \bot$.}
+
+\state{Join $\sqcup$}
+The \imp{join} of elements $x$ and $y$ of a partially ordered set $D$ is $x \sqcup y \in D$ where
+
+\begin{itemize}
+\item[] $x \sse x \sqcup y$ and $y \sse x \sqcup y$ 
+\item[] $\forall z \in D$, $x \sse z$ and $(y \sse z) \Rightarrow (x \sqcup y \sse z)$
+\end{itemize}
+
+\state{Least Upper Bound $\bigsqcup$}
+For a subset $X$ of a partially ordered set $D$, the least upper bound $\bigsqcup X$ $\in D$ where
+\begin{itemize}
+\item[] $\forall x \in X$, $x \sse X$
+\item[]  $\forall y \in D$, if $\forall x \in X$, $(x \sse y) \Rightarrow \left( \bigsqcup X \sse y \right)$
+\end{itemize}
+
+\state{Chains}
+A \imp{chain} is a sequence of approximations, such as:
+$$\bot \sse \bot : b\bot : \bot \sse 1 : \bot : \bot \sse [1,2,3] $$
+A nonempty set $C$ is a chain if
+$$ (x,y \in C) \Rightarrow \left(  x\sse y \wedge y\sse x \right)$$
+
+\state{Complete Partial Order}
+A partial order is \imp{complete} if every chain has a least upper bound.
+\point{For any set $S$, $\texttt{powerset}(S)$ is a complete partial order on $\subseteq$.}
+
+\state{Monotonicity}
+For any two partially ordered sets, $D_1$ and $D_2$, $\func{f}{D_1}{D_2}$ is \imp{monotonic} if 
+$$ (\forall x,y\in D_1)\left( x \sse y \Rightarrow f(x) \sse f(y) \right) $$
+
+\state{Continuity}
+For any two complete partial orders, $D_1$ and $D_2$, $\func{f}{D_1}{D_2}$ is \imp{continuous} if for all chains of $D_1$,
+$$ f\left( \bigsqcup C \right) = \bigsqcup \left\{ f(c) | c \in C \right\} $$
+Or alternatively in haskell.
+$$ f (lim_{n \to \infty}) = \lim_{n \to \infty} f (x_n) $$
+
+\state{Fixpoint}
+Let $D$ be a partially ordered set and $\func{f}{D}{D}$,  $d$ is a \imp{fixpoint} of $f$ if $d \in D$ and $f(d)=d$.
+
+\state{Least Fixpoint}
+Let $D$ be a partially ordered set and $\func{f}{D}{D}$,  $d$ is a \imp{fixpoint} of $f$ if 
+$$(\forall d^\prime \in D)(f(d^\prime) = d^\prime \Rightarrow d \sse d^\prime) $$
+
+\state{Fixpoint and Continuity}
+For any continuous function $f$, the least fixpoint is \texttt{fix}$(f)$, where
+$$ \texttt{fix}(f) = \bigsqcup \left\{ f^i (\bot) | i \ge 0 \right\} $$
+$$ \rm{where} \blank f^0(x) = x \blank \rm{and} \blank f^i(x) = f(f^{i-1}(x)) $$
+\end{description}
+
+
+\end{document}

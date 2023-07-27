@@ -1,0 +1,85 @@
+myCoeff:=proc(f,t)
+    
+    if t=1 then 
+        return tcoeff(f);
+    elif type(t,`^`) then
+        return coeff(f,t);
+    else
+        return foldl( coeff, f, op(t)):
+    end if:
+    
+end proc:
+
+Mgcd:=proc(A,B,p,var)
+local g,lc:
+    g:=Gcd(A,B) mod p:
+    lc:=lcoeff(g,var):
+    
+    return 1/lc*g mod p:
+    
+end proc:
+
+sprInterp:=proc(A,B,Gf,Ind,p,var)
+local X,sbVar, g, t, AA, bb, sb, Ax, Bx, gx, cc,degGf:
+    
+    X:=var[1]:
+    sbVar:=x->seq(V=rand(p)(), V in var[2..-1]):
+    degGf:=max(op(map(degree,Ind)));
+    
+    g:=0:
+    
+    for t in Ind do
+        
+        AA:=NULL: bb:=NULL:
+        
+        if type(Gf[t], numeric) then
+            
+            while (true) do
+                sb:=sbVar():
+                Ax:=subs(sb,A): Bx:=subs(sb,B):
+                gx:=Gcd(Ax,Bx) mod p:
+                
+                if (degree(gx,X)=degGf) then
+                    break:
+                end if:
+            end do:
+            
+            g:=g+t*myCoeff(gx,t):
+        else
+            
+            while (LinearAlgebra[Rank](Matrix([AA]))<nops(Gf[t])) do
+                
+                sb:=sbVar():
+                Ax:=subs(sb,A): Bx:=subs(sb,B):
+                gx:=Gcd(Ax,Bx) mod p:
+                
+#               test for bad Gf
+                coeffs(gx,X,'gxInd'):
+                if nops(Ind)<nops([gxInd]) then
+                    return false:
+                end if:
+                
+                look:=Gf[t];
+                AA:=AA,subs(sb,Gf[t]) mod p:
+#                bb:=bb,[myCoeff(gx,t)] mod p:
+                bb:=bb,myCoeff(gx,t) mod p:
+                
+            end do:
+            
+            AA:=Matrix([AA]) mod p:
+#            bb:=Matrix([bb]) mod p:
+            bb:=vector([bb]);
+            print(bb);
+            
+#            cc:=LinearAlgebra[LinearSolve](AA,bb) mod p:
+            cc:=Linsolve(AA,bb) mod p:
+            cc:=Matrix(cc);
+            g:=g+(Matrix(Gf[t]).cc)[1,1]*t:
+            
+        end if:
+        
+    end do:
+    
+    return g mod p:
+    
+end proc:

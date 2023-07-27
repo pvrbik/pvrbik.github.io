@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage{fancyvrb,enumerate}
+\usepackage{fancyvrb}
+\usepackage{vaucanson-g}
+
+\include{header}
+
+\newcommand{\powerset}{\mathcal{P}}
+\renewcommand{\iff}{\Leftrightarrow}
+
+\title{CS 3331a - Assignment 2 - Solutions}
+\author{Paul Vrbik}
+\date{October 19, 2009}
+
+\begin{document}
+
+%FOR GRAPHS
+\input{VCPref-mystyle} 
+\ShowFrame %\ShowGrid 
+%END FOR GRAPHS
+
+\maketitle
+\subsection*{Question 1- $18$ marks}
+Let the language $L = \{ a^ib^i | i \geq 0 \}$.
+\begin{enumerate}
+\item[(a)] $L_1 = L^R$ is the language consisting of the ``reversals'' of the words in $L$ (or $L$'s transposes). That is, 
+$$L_1 = \{ b^ia^i | i> 1 \}.$$
+\item[(b)] $L_2 = L^2$ is the language consisting of words that are the concatenation of two words from $L$. That is, 
+$$L_2 = \{ a^ib^ia^jb^j | i,j \geq 1 \}.$$
+\item[(c)] $L_3 = L^*$ are those words that you can construct by concatenating as many (including zero) words from $L$. That is
+$$L_3 = \{ a^{i_1}b^{i_1}a^{i_2}b^{i_2}\cdots a^{i_k}b^{i_k}|i_1,\ldots ,i_k\geq 1,k\geq 0\}$$
+\end{enumerate}
+
+\subsection*{Question 2 - $18$ marks}
+\begin{enumerate}
+\item[(a)] The set of all words that have $aab$ as a subword.
+\begin{center}
+\begin{VCPicture}{(-1,-2)(8,1)}
+% states
+\SmallState
+\State{(0,0)}{A}\State{(2,0)}{B}\State{(4,0)}{C}\FinalState{(6,0)}{D}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeR{A}{B}{a}
+\EdgeR{B}{C}{a}
+\EdgeR{C}{D}{b}
+\ArcR{B}{A}{b}
+\LoopE{D}{a,b}
+\LoopS{C}{a}
+\LoopS{A}{b}
+%
+\end{VCPicture}
+\end{center}
+\item[(b)] The set of words that have $aab$ as a scattered subword (also called a subsequence).
+\begin{center}
+\begin{VCPicture}{(-1,-2)(8,1)}
+% states
+\SmallState
+\State{(0,0)}{A}\State{(2,0)}{B}\State{(4,0)}{C}\FinalState{(6,0)}{D}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeR{A}{B}{a}
+\EdgeR{B}{C}{a}
+\EdgeR{C}{D}{b}
+\LoopS{B}{b}
+\LoopE{D}{a,b}
+\LoopS{C}{a}
+\LoopS{A}{b}
+%
+\end{VCPicture}
+\end{center}
+
+\item[(c)] The set of all words such that the third symbol from the right-end is an $a$.
+
+\small\emph{There is a strategy which may make this question easier: create states for all possible length three substrings (there are eight of them) and draw rules for transitioning between them. The accepting states are those substrings that begin with `$a$'. (I've labelled the states below to reflect this.) You may interpret the start state as being `$bbb$' because you will at need at least three moves to get to an accepting state from there.}
+\begin{center}
+\begin{VCPicture}{(-5,-5)(5,6)}
+% states
+\State[bba]{(-4,0)}{bba}\FinalState[aba]{(4,0)}{aba}\FinalState[aaa]{(0,4)}{aaa}\FinalState[abb]{(0,-4)}{abb}
+\State[baa]{(-3,3)}{baa}\FinalState[aab]{(3,3)}{aab}\State[bab]{(3,-3)}{bab}\State[bbb]{(-3,-3)}{bbb}
+% initial--final
+\Initial{bbb}
+\EdgeBorder
+\EdgeL{aaa}{aab}{b}
+\EdgeL{aab}{aba}{a}
+\ArcL{aba}{bab}{b}
+\ArcL{bab}{aba}{a}
+\EdgeL{bab}{abb}{b}
+\EdgeL{abb}{bbb}{b}
+\EdgeL{bbb}{bba}{a}
+\EdgeL{bba}{baa}{a}
+\EdgeL{baa}{aaa}{a}
+\LoopN{aaa}{a}
+\LoopS{bbb}{b}
+
+\EdgeR{baa}{aab}{b}
+\EdgeR[0.1]{aab}{abb}{b}
+\EdgeL[0.1]{aba}{baa}{a}
+\EdgeL[0.1]{bba}{bab}{b}
+\EdgeR[0.15]{abb}{bba}{a}
+
+\EdgeBorderOff
+% transitions 
+%
+\end{VCPicture}
+\end{center}
+\end{enumerate}
+
+\subsection*{Question 3 - $15$ marks}
+Nonnegative integers divisible by eight.\\
+
+\noindent\small\emph{Explanation (not required for full credit):} \\
+This DFA describes all bit sequences that end in at least three zeros ( $(01)^* \circ 000$ ). Converting this binary number into an integer would be done like this: $$0\times2^0 + 0\times 2^1 + 0 \times 2^2 + s_3 \times 2^3 + s_4 \times 2^4 + \cdots$$ where $s_i \in \{0,1\}$. This number can be re-written as:
+$$2^3 \brac{s_3 \times 2^0 + s_4 \times 2^1 + \cdots}$$ 
+which are precisely those \textbf{nonnegative integers divisible by eight} ($8\ZZ^{+}$). 
+
+\clearpage
+\subsection*{Question 4 - $20$ marks}
+The language $L= \{ a^i b^j a^k | i,j,k \geq 0 \text{ and } j < k \}$ is not accepted by any DFA.
+\begin{proof}
+Towards a contradiction assume there is a DFA $$M=(Q,\{a,b\},\delta,s,F)$$
+such that $L=L(M)$. Let $n=\#Q$ (the number of states). Consider the accepting configuration for $b^{n}a^{n+1}$,
+$$\underbrace{s_0b^na^{n+1}\vdash s_1 b^{n-1}a^{n+1} \vdash \cdots \vdash s_n a^{n+1}}_{n+1 \text{ states required}} \vdash \cdots s_{2n+1}$$
+where $s_0 = s$ and $s_n \in F$. Note that $n+1$ states are required to read $b^n$ (as indicated). However, by our assumption there is only $n$ states; therefore by Pigeonhole principle two of these states must be the same. That is, there is $s_i=s_j$ such that $0 \leq i < j \leq n$.
+
+Now consider the accepting configuration,
+\begin{align*}
+b^{n+(j-i)}a^{n+1} \vdash \cdots & \vdash s_jb^{n-i}a^{n+1} \\
+& \vdash s_i b^{n-i}a^{n+1} \vdash \cdots \vdash s_{2n+1}
+\end{align*}
+which shows that $b^{n+(j-i)}a^{n+1} \in L$ as well. Since $j-i>0$ this is a contraction.
+
+\end{proof}
+\small\emph{Note: a similar proof was given on page 53 of the lecture notes.}
+
+\subsection*{Question 5 - $16$ marks}
+\begin{enumerate}
+\item[(a)] The set of all words that have the subword $aababcc$.
+\begin{center}
+\begin{VCPicture}{(-1,-2)(13,1)}
+% states
+\SmallState
+\State{(0,0)}{A}\State{(1.5,0)}{B}\State{(3,0)}{C}\State{(4.5,0)}{D}
+\State{(6,0)}{E}\State{(7.5,0)}{F}\State{(9,0)}{G}\FinalState{(10.5,0)}{H}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeL{A}{ B}{a}
+\EdgeL{B}{C}{a}
+\EdgeL{C}{D}{b}
+\EdgeL{D}{E}{a}
+\EdgeL{E}{F}{b}
+\EdgeL{F}{G}{c}
+\EdgeL{G}{H}{c}
+
+\LoopE{H}{a,b,c}
+\LoopS{A}{a,b,c}
+%
+\end{VCPicture}
+\end{center}
+
+\item[(b)] The set of all words such that the sixth symbol from the right-end is $c$.
+
+\begin{center}
+\begin{VCPicture}{(-1,-2)(13,1)}
+% states
+\SmallState
+\State{(0,0)}{A}\State{(2,0)}{B}\State{(4,0)}{C}\State{(6,0)}{D}
+\State{(8,0)}{E}\State{(10,0)}{F}\FinalState{(12,0)}{G}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeL{A}{ B}{c}
+\EdgeL{B}{C}{a,b,c}
+\EdgeL{C}{D}{a,b,c}
+\EdgeL{D}{E}{a,b,c}
+\EdgeL{E}{F}{a,b,c}
+\EdgeL{F}{G}{a,b,c}
+
+\LoopS{A}{a,b,c}
+%
+\end{VCPicture}
+\end{center}
+\vspace{2mm}
+\small\emph{Note: consider how hard it would be to create a DFA to do this (as in Question 2 c); such a machine would require $3^6 = 729$ states for each length six substring of $\{a,b,c\}^*$. Yet, a NFA is no more powerful than a DFA (theoretically) as every DFA can be converted to a NFA (next question). Isn't that amazing!? }
+
+\end{enumerate}
+
+\subsection*{Question 6 - $13$ marks}
+We use the iterative subset construction (lecture notes page 65), sets in bold indicate first appearance. \small\emph{This table is required for full credit}
+\begin{center}
+  \begin{tabular}{| c || c c c | }
+  \hline
+  \text{states} & a & b & c \\
+    \hline \hline
+  $\emptyset$ & $\emptyset$ & $\emptyset$ & $\emptyset$\\
+  $\{0\}$ & $\{0\}$ & $\mathbf{\{0,1\}}$ & $\{0\}$\\
+%  $\{1\}$ & $\emptyset$ & $\{2\}$ & $\emptyset$\\
+%  $\{2\}$ & $\emptyset$ & $\emptyset$ & $\emptyset$\\
+  $\{0,1\}$ & $\{0\}$ & $\mathbf{\{0,1,2\}}$ & $\{0\}$\\
+%  $\{0,2\}$ & $\{0\}$ & $\{0,1\}$ & $\{0\}$\\
+%  $\{1,2\}$ & $\emptyset$ & $\{2\}$ & $\emptyset$\\
+  $\{0,1,2\}$ & $\{0\}$ & $\{0,1,2\}$ & $\{0\}$\\
+    \hline
+  \end{tabular}
+\end{center}
+\begin{center}
+
+\begin{VCPicture}{(-2,-4)(4.5,3)}
+% states
+\LargeState
+\ChgStateLabelScale{0.70}
+\State[\{0\}]{(0,0)}{A} \State[\{0,1\}]{(3,0)}{B} \ \FinalState[\{0,1,2\}]{(1.5,-2.5)}{C}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeL{B}{C}{b} 
+\EdgeR{A}{B}{b}
+\ArcR{B}{A}{a,c}
+\EdgeL{C}{A}{a,c}
+\LoopN{A}{a,c}
+\LoopE{C}{b}
+%
+\end{VCPicture}
+\end{center}
+
+
+\PutEnd
+\end{document}

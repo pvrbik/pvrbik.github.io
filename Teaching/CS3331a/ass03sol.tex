@@ -1,0 +1,244 @@
+\documentclass[12pt]{article}
+\usepackage{fancyvrb,enumerate}
+\usepackage{fancyvrb}
+\usepackage{vaucanson-g}
+
+\include{header}
+
+\newcommand{\powerset}{\mathcal{P}}
+\renewcommand{\iff}{\Leftrightarrow}
+
+\title{CS 3331a - Assignment 3 - Solutions}
+\author{Paul Vrbik}
+\date{November 17, 2009}
+
+\begin{document}
+
+%FOR GRAPHS
+\input{VCPref-mystyle} 
+\ShowFrame %\ShowGrid 
+%END FOR GRAPHS
+
+\maketitle
+\subsection*{Question 1 - $20$ marks}
+For each language below, let $\Sigma = \{ 0, 1, 2 \}$.
+\begin{enumerate}
+\item[(1)] The set of all words that start with a $0$ or a $1$, end with a $2$, and have $201$ as a subword,
+$$(0+1)(0+1+2)^*(201)(0+1+2)^*(2).$$
+\item[(2)] The set of all words containing at least three consecutive 2's,
+$$(0+1+2)^*(222)(0+1+2)^*.$$
+\item[(3)] The set of all words of odd length,
+$$((0+1+2)(0+1+2))^*(0+1+2).$$
+\end{enumerate}
+
+\subsection*{Question 2 - $20$ marks}
+\begin{enumerate}
+\item[(1)] $(a^*b^*)^*$ is the language of all words over $\{a,b\}$.
+\item[(2)] $(a+b)^*b(a+b)(a+b)(a+b)$ is the language consisting of all words over $\{a,b\}$ whose fourth letter from the right is `$b$'.
+\end{enumerate}
+
+\subsection*{Question 3 - $20$ marks}
+Given the following regular expression $E$
+$$(1+\varepsilon)(0+01)^*$$
+construct an $\varepsilon$-NFA A such that $L(A) = L(E)$.
+
+\small{\emph{I follow the procedure on pp. 108-109 of the notes and \emph{not} that of the textbook.}}
+\clearpage
+\begin{itemize}
+\item $(1+\varepsilon)$
+\begin{center}
+\begin{VCPicture}{(-1,-2)(4,2)}
+% states
+\SmallState
+\State{(0,0)}{AA}\State{(1.5,1)}{BB}\FinalState{(1.5,-1)}{CC}\FinalState{(3,1)}{DD}
+% initial--final
+\Initial{AA}
+% transitions 
+\EdgeL{AA}{BB}{\varepsilon}
+\EdgeL{AA}{CC}{\varepsilon}
+\EdgeL{BB}{DD}{1}
+%
+\end{VCPicture}
+\end{center}
+
+\item $(0+01)$
+\begin{center}
+\begin{VCPicture}{(-1,-2)(7,2)}
+% states
+\SmallState
+\State{(0,0)}{A}\State{(1.5,1)}{B}\State{(1.5,-1)}{C}\State{(4.5,-1)}{C2}\FinalState{(3,1)}{D}\State{(3,-1)}{E}\FinalState{(6,-1)}{F}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeL{A}{B}{\varepsilon}
+\EdgeL{A}{C}{\varepsilon}
+\EdgeL{B}{D}{0}
+\EdgeL{E}{C2}{\varepsilon}
+\EdgeL{C2}{F}{1}
+\EdgeL{C}{E}{0}
+%
+\end{VCPicture}
+\end{center}
+
+\item $(0+01)^*$
+\begin{center}
+\begin{VCPicture}{(-1,-3)(7,2.5)}
+% states
+\SmallState
+%\FinalState{(0,0)}{A}\State{(1.5,1)}{B}\State{(1.5,-1)}{C}\FinalState{(3,1)}{D}\State{(3,-1)}{E}\FinalState{(4.5,-1)}{F}
+\FinalState{(0,0)}{A}\State{(1.5,1)}{B}\State{(1.5,-1)}{C}\State{(4.5,-1)}{C2}\FinalState{(3,1)}{D}\State{(3,-1)}{E}\FinalState{(6,-1)}{F}
+% initial--final
+\Initial{A}
+% transitions 
+\EdgeL{A}{B}{\varepsilon}
+\EdgeL{A}{C}{\varepsilon}
+\EdgeL{B}{D}{0}
+%\EdgeL{E}{F}{1}
+%\EdgeL{C}{E}{0}
+\EdgeL{E}{C2}{\varepsilon}
+\EdgeL{C2}{F}{1}
+\EdgeL{C}{E}{0}
+
+\VArcR{arcangle=-65}{D}{A}{\varepsilon}
+\VArcL{arcangle=55}{F}{A}{\varepsilon}
+%
+\end{VCPicture}
+\end{center}
+
+\item $(1+\varepsilon)(0+01)^*$
+\begin{center}
+\begin{VCPicture}{(-6,-3)(7,2.5)}
+% states
+\SmallState
+%\FinalState{(0,0)}{A}\State{(1.5,1)}{B}\State{(1.5,-1)}{C}\FinalState{(3,1)}{D}\State{(3,-1)}{E}\FinalState{(4.5,-1)}{F}
+\FinalState{(0,0)}{A}\State{(1.5,1)}{B}\State{(1.5,-1)}{C}\State{(4.5,-1)}{C2}\FinalState{(3,1)}{D}\State{(3,-1)}{E}\FinalState{(6,-1)}{F}
+\State{(-5,0)}{AA}\State{(-3.5,1)}{BB}\State{(-3.5,-1)}{CC}\State{(-2,1)}{DD}
+% initial--final
+\Initial{AA}
+% transitions 
+\EdgeL{A}{B}{\varepsilon}
+\EdgeL{A}{C}{\varepsilon}
+\EdgeL{B}{D}{0}
+%\EdgeL{E}{F}{1}
+%\EdgeL{C}{E}{0}
+\EdgeL{E}{C2}{\varepsilon}
+\EdgeL{C2}{F}{1}
+\EdgeL{C}{E}{0}
+
+%\LArcR{D}{A}{\varepsilon}
+%\ArcR{D}{A}{\varepsilon}
+%\LArcL{F}{A}{\varepsilon}
+\VArcR{arcangle=-65}{D}{A}{\varepsilon}
+\VArcL{arcangle=55}{F}{A}{\varepsilon}
+%
+
+\EdgeL{AA}{BB}{\varepsilon}
+\EdgeL{AA}{CC}{\varepsilon}
+\EdgeL{BB}{DD}{1}
+
+\EdgeL{DD}{A}{\varepsilon}
+\EdgeL{CC}{A}{\varepsilon}
+
+\end{VCPicture}
+\end{center}
+
+\end{itemize}
+
+
+\subsection*{Question 4 - $20$ marks}
+\begin{itemize}
+\item Add a different initial state.
+\begin{center}
+\begin{VCPicture}{(-3,-2)(4,2)}
+% states
+\SmallState \ChgStateLabelScale{0.70}
+\State[3]{(-1.5,0)}{D}\State[0]{(0,0)}{A}\State[1]{(1.5,1)}{B}\FinalState[2]{(1.5,-1)}{C}
+% initial--final
+\Initial{D}
+% transitions 
+\EdgeL{D}{A}{\varepsilon}
+\EdgeR{A}{B}{b}
+\EdgeL{B}{C}{b}
+\EdgeL{C}{A}{b}
+\LoopN{A}{a}
+\LoopE{C}{a}
+%
+\end{VCPicture}
+\end{center}
+
+\item Eliminate state $0$.
+\begin{center}
+\begin{VCPicture}{(-2.5,-2)(4.5,2)}
+% states
+\SmallState \ChgStateLabelScale{0.70}
+\State[3]{(-1.5,0)}{D}\State[1]{(0,0)}{B}\FinalState[2]{(2.5,0)}{C}
+% initial--final
+\Initial{D}
+% transitions 
+\EdgeL{D}{B}{a^*b}
+\ArcL{B}{C}{b}
+\ArcL{C}{B}{ba^*b}
+\LoopE{C}{a}
+%
+\end{VCPicture}
+\end{center}
+
+\item Eliminate state $1$.
+\begin{center}
+\begin{VCPicture}{(-1,-2)(5.5,2)}
+% states
+\SmallState \ChgStateLabelScale{0.70}
+\State[3]{(0,0)}{D}\FinalState[2]{(2,0)}{C}
+% initial--final
+\Initial{D}
+% transitions 
+\EdgeL{D}{C}{a^*bb}
+\LoopE{C}{(a+ba^*bb)}
+%
+\end{VCPicture}
+\end{center}
+
+\item Combine remaining state transition rules.
+\begin{center}
+\begin{VCPicture}{(-1,-2)(5,2)}
+% states
+\SmallState \ChgStateLabelScale{0.70}
+\State[3]{(0,0)}{D}\FinalState[2]{(4,0)}{C}
+% initial--final
+\Initial{D}
+% transitions 
+\EdgeL{D}{C}{(a^*bb)(a+ba^*bb)^*}
+%
+\end{VCPicture}
+\end{center}
+\end{itemize}
+
+\subsection*{Question 5 - $20$ marks}
+Give a CFG for each of the following languages:
+\begin{enumerate}
+\item[(1)] $L_1 = \{ 0^{i+2}1^i | i \geq 0 \}$
+\begin{align*}
+N &= \{S\}, \text{ } \Sigma = \{0,1\} \\
+P&: S\rightarrow 0S1\text{ }\big|\text{ }00
+\end{align*}
+\item[(2)] $L_2 = \{ a^ib^j | 0 \leq i < j \}$
+\begin{align*}
+N &= \{S\}, \text{ } \Sigma = \{a,b\} \\
+P&: S\rightarrow b\text{ }\big|\text{ }Sb\text{ }\big|\text{ }aSb
+\end{align*}
+\item[(3)] $L_3 = \{\text{ set of all balanced bracketed expressions }\}$
+\begin{align*}
+N &= \{S\}, \text{ } \Sigma = \{(,)\} \\
+P&: S\rightarrow \varepsilon\text{ }\big|\text{ }(S)\text{ }\big|\text{ }SS
+\end{align*}
+\item[(4)] $L_2 = \{ 0^m1^{m+n}0^n | m,n \geq 0 \}$
+\begin{align*}
+N = &\{S,A,B\}, \text{ } \Sigma = \{a,b\} \\
+P: S&\rightarrow AB \\
+A &\rightarrow \varepsilon \text{ }\big{|}\text{ } 0A1 \\
+B &\rightarrow \varepsilon \text{ }\big{|}\text{ } 1B0
+\end{align*}
+\end{enumerate}
+
+\PutEnd
+\end{document}

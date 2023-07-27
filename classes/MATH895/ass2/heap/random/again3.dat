@@ -1,0 +1,60 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> read "../DatPart3.mpl":
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> 
+> nops(a),nops(A),nops(c),nops(C);
+                                29, 217, 59, 819
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> N:=0:
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(C,A,var):
+> t:=time()-st;
+                                  t := 29.086
+
+> 
+> print(N,M,evalf(N/M)):
+                           340553, 47089, 7.232113657
+
+> 
+> q:=SMP2Maple(Q,var):
+bytes used=1248355632, alloc=8649168, time=29.13
+bytes used=1256357064, alloc=8911264, time=29.24
+bytes used=1264359080, alloc=8911264, time=29.34
+bytes used=1272361064, alloc=8911264, time=29.45
+bytes used=1280363192, alloc=8911264, time=29.55
+bytes used=1288365080, alloc=8911264, time=29.66
+bytes used=1296367648, alloc=8911264, time=29.76
+bytes used=1304370168, alloc=8911264, time=29.87
+bytes used=1312372504, alloc=8911264, time=29.97
+bytes used=1320375280, alloc=8911264, time=30.08
+bytes used=1328378056, alloc=8911264, time=30.18
+bytes used=1336380080, alloc=8911264, time=30.29
+bytes used=1344382096, alloc=8911264, time=30.39
+bytes used=1352385200, alloc=8911264, time=30.50
+> r:=SMP2Maple(R,var):
+> expand(c-q*a-r);
+bytes used=1360392960, alloc=8911264, time=30.60
+                                       0
+
+> 
+> quit:\
+bytes used=1362125744, alloc=9435456, time=30.62

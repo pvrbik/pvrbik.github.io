@@ -1,0 +1,78 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> height:=f->max(seq(abs(coeff(f,x,i)),i=0..degree(f,x))):
+> 
+> interBnd:=proc(A) local dim, degs:
+>     dim:=op([2,1,2],eval(A)):
+>     degs:=[(seq(op([3,i,2],map(f->degree(f,x),A)),i=1..dim^2))];
+>     return foldr((x,y)->x+y,0,op(sort(degs)[-dim..-1]))+1;
+> end proc:
+> 
+> pBnd:=proc(A) local dim, degs:
+>     dim:=op([2,1,2],eval(A)):
+>     degs:=[(seq(op([3,i,2],map(f->height(f),A)),i=1..dim^2))];
+>     return dim!*2*foldr((x,y)->x*y,1,op(sort(degs)[-dim..-1]));
+> end proc:
+> 
+> modDet:=proc(inA) local phi,phix,P,myDet,p,pBound,A,interBound,ds,j,d,dp:
+>     
+>     phi:=(M,p)->map(f->f mod p, M):
+>     phix:=(M,a,p)->phi(eval(M,x=a),p):
+>     
+>     `mod`:=mods:
+>     P:=1:
+>     myDet:=1:
+>     p:=100:
+>     pBound:=pBnd(inA):
+>     
+>     while (P<pBound) do
+>         p:=nextprime(p);
+>         A:=phi(inA,p):
+>         
+>         interBound:=interBnd(A):
+>         
+>         ds:=[];
+>         
+>         for j from 1 to interBound do
+>             d:=linalg[det](phix(A,j,p), algnum):
+>             ds:=[op(ds),d]:
+>         end do:
+>         
+>         dp:=Interp([seq(i,i=1..interBound)],ds,x) mod p:
+>         
+>         myDet:=chrem([myDet,dp],[P,p]):
+>         P:=P*p:
+>         
+>     end do:
+>     
+>     return myDet mod P:
+> 
+> end proc:
+> 
+> P:=()->randpoly(x,degree=2,dense):
+> A:=linalg[randmatrix](3,3,entries=P);
+           [         2                      2                            ]
+           [-55 - 7 x  + 22 x     -56 - 94 x  + 87 x        97 - 62 x    ]
+           [                                                             ]
+      A := [          2                     2                    2       ]
+           [-83 - 73 x  - 4 x     -82 - 10 x  + 62 x    71 + 80 x  - 44 x]
+           [                                                             ]
+           [          2                    2                     2       ]
+           [-10 - 17 x  - 75 x     42 - 7 x  - 40 x     75 - 50 x  + 23 x]
+
+> 
+> modDet(A);
+          6          5           4           3           2
+  463520 x  - 75964 x  - 539985 x  + 937816 x  - 455486 x  + 55203 x - 224262
+
+> 
+> simplify(linalg[det](A));
+          6          5           4           3           2
+  463520 x  - 75964 x  - 539985 x  + 937816 x  - 455486 x  + 55203 x - 224262
+
+> 
+> quit;\
+bytes used=1192472, alloc=1113908, time=0.02

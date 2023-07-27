@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Preliminaries}{1}
+\contentsline {section}{\numberline {2}Introduction}{1}
+\contentsline {section}{\numberline {3}Power Series Inversion}{2}
+\contentsline {subsection}{\numberline {3.1}By the Naive Algorithm}{2}
+\contentsline {subsection}{\numberline {3.2}By Newton Iteration}{3}
+\contentsline {section}{\numberline {4}Inversion of Matrices in $\mathbb {Q}[[t]]^{n\times n}$}{4}
+\contentsline {section}{\numberline {5}Series Roots of Univariate Polynomials}{5}
+\contentsline {section}{\numberline {6}Series Roots of Multivariate Polynomials}{6}
+\contentsline {section}{\numberline {7}Lifting a Factor of a Univariate Polynomial}{8}
+\contentsline {section}{\numberline {8}Lifting Triangular Sets}{9}

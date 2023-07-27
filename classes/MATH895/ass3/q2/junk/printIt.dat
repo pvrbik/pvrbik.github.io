@@ -1,0 +1,153 @@
+    |\^/|     Maple 11 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "zipp.mpl":
+Warning, `f` is implicitly declared local to procedure `sparseInterp`
+Warning, `Gf` is implicitly declared local to procedure `sparseInterp`
+Warning, `Ind` is implicitly declared local to procedure `sparseInterp`
+Warning, `Gs` is implicitly declared local to procedure `sparseInterp`
+Warning, `i` is implicitly declared local to procedure `sparseInterp`
+> 
+> var:=[x,y,z]:
+> t:=op(var):
+> A:=(x,y,z)->x^5+2*y*z*x^4+(13*y*z^2-21*y^3*z+3)*x^3+(26*y^2*z^3-42*y^4*z^2+2)*x^2+(39*y*z^2-63*y^3*z+4*y*z)*x+6:
+> 
+> B:=(x,y,z)->x^6+(13*y*z^2-21*y^3*z+z+y)*x^4+3*x^3+(13*y*z^3+13*y^2*z^2-21*y^3*z^2-21*y^4*z)*x^2+(13*y*z^2-21*y^3*z+2*z+2*y)*x+2:
+> 
+> a:=A(t): b:=B(t):
+> 
+> print("ANSWER");
+                                    "ANSWER"
+
+> Gcd(a,b) mod 11;
+                            3          2      3
+                           x  + 2 x y z  + x y  z + 2
+
+> 
+> print("FACTORED"):
+                                   "FACTORED"
+
+> Factor(a) mod 11; Factor(b) mod 11;
+bytes used=4000272, alloc=3407248, time=0.14
+                  3          2      3                    2
+                (x  + 2 x y z  + x y  z + 2) (2 x y z + x  + 3)
+
+bytes used=8001044, alloc=4783252, time=0.30
+                       3              3          2      3
+               (x z + x  + x y + 1) (x  + 2 x y z  + x y  z + 2)
+
+> 
+> print("LC");
+                                      "LC"
+
+> lcoeff(a,x); lcoeff(b,x);
+                                       1
+
+                                       1
+
+> 
+> print("GCD's"):
+                                    "GCD's"
+
+#Reject 
+> Gs:=[
+> Gcd( A(x,1,1), B(x,1,1) ) mod 11,
+> Gcd( A(x,2,1), B(x,2,1) ) mod 11,
+> Gcd( A(x,3,1), B(x,3,1) ) mod 11,
+> Gcd( A(x,4,1), B(x,4,1) ) mod 11,
+> Gcd( A(x,6,1), B(x,6,1) ) mod 11 ];
+              3             3           3       3             3
+      Gs := [x  + 3 x + 2, x  + x + 2, x  + 2, x  + 6 x + 2, x  + 8 x + 2]
+
+> Pts:=[1,2,3,4,6];
+                             Pts := [1, 2, 3, 4, 6]
+
+> 
+> Chk:=Interp(Pts,Gs,y) mod 11:
+> collect(Chk,x);
+                                  3     3
+                             2 + x  + (y  + 2 y) x
+
+> Gcd(A(x,y,1), B(x,y,1)) mod 11;
+                                  3     3
+                             2 + x  + (y  + 2 y) x
+
+> 
+> Gf,Ind:=AssForm(Chk,x,[y,z]);
+                                                  3
+                            Gf, Ind := A, [1, x, x ]
+
+> print(Gf);
+                                     3               3
+                      table([1 = 2, x  = 1, x = [y, y ]])
+
+> 
+> g1:=Gcd( A(x,1,2), B(x,1,2) ) mod 11;
+                                     3
+                              g1 := x  + 10 x + 2
+
+> g2:=Gcd( A(x,3,2), B(x,3,2) ) mod 11;
+                                       3
+                                g2 := x  + x + 2
+
+> 
+> Gf[x];
+                                         3
+                                    [y, y ]
+
+> 
+> AA:=[subs(y=1,Gf[x]),subs(y=3,Gf[x])] mod 11;
+                             AA := [[1, 1], [3, 5]]
+
+> AA:=Matrix(AA);
+                                       [1    1]
+                                 AA := [      ]
+                                       [3    5]
+
+> 
+> BB:=[[10],[1]]: BB:=Matrix(BB);
+                                         [10]
+                                   BB := [  ]
+                                         [ 1]
+
+> 
+> with(LinearAlgebra):
+> LinearSolve(AA,BB) mod 11;
+                                      [8]
+                                      [ ]
+                                      [2]
+
+> 
+> 
+> Gf[1];
+                                       2
+
+> Gf[x^3];
+                                       1
+
+> Gf[x];
+                                         3
+                                    [y, y ]
+
+> 
+> a:=2+x^3+(2*y^3+8*y)*x:
+#MAKE SURE GCDS ARE MONIC
+> b:=1/6 * Gcd(A(x,y,2), B(x,y,2)) mod 11;
+                                3       3
+                          b := x  + 2 (y  + 4 y) x + 2
+
+> 
+> collect(a,x);
+                                 3       3
+                            2 + x  + (2 y  + 8 y) x
+
+> collect(b,x);
+                                 3       3
+                            2 + x  + (2 y  + 8 y) x
+
+> 
+> quit
+bytes used=10089860, alloc=4783252, time=0.36

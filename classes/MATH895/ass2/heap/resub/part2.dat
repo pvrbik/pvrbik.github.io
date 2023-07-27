@@ -1,0 +1,65 @@
+-   -   -   -   -   - PART 2 -   -   -   -   -   -
+#interface(quiet=true):
+> read "heapDivision.mpl":
+> read "../DatPart2.mpl":
+>
+> print("HEAP"):
+                                     "HEAP"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> 
+> print("DIVIDE(D,A)"):
+                                 "DIVIDE(D,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,A,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 136.412      (old time: 306.763)
+
+> print(N,M,evalf(N/M)):
+                          745753, 129460, 5.760489727
+
+> print("DIVIDE(D,B)"):
+                                 "DIVIDE(D,B)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,B,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 285.076      (old time: 866.450)
+
+> print(N,M,evalf(N/M)):
+                          1832778, 146216, 12.53472944
+
+
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 358.189      (old time: 3820.389)
+
+> print(N,M,evalf(N/M)):
+                          2429383, 127320, 19.08092209
+
+> 
+> quit:\
+bytes used=14056425520, alloc=55957496, time=786.91

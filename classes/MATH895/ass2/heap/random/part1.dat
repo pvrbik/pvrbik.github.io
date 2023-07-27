@@ -1,0 +1,53 @@
+-   -   -   -   -   - PART 1 -   -   -   -   -   -
+
+#interface(quiet=true):
+> read "heapDivision.mpl":
+> read "../DatPart1.mpl":
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C);
+                         4966, 4966, 5, 5, 19195, 19195
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(C,A,var):
+> t:=time()-st;
+                                  t := 373.188
+> evalb(Q=B); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           477072, 24830, 19.21353202
+
+> 
+> restart():
+> read "../DatPart1.mpl":
+> print("DIVIDE(C,B)"):
+                                 "DIVIDE(C,B)"
+> N:=0:
+> st:=time():
+> N:=0:
+> (Q,R):=HeapDiv(C,B,var):
+> t:=time()-st;
+                                  t := 25.344
+
+> evalb(Q=A); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           71247, 24830, 2.869391865
+
+> 
+> quit:

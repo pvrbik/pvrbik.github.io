@@ -1,0 +1,188 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 
+4 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Normal" -1 256 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 
+2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {SECT 1 {PARA 3 "" 0 "" {TEXT -1 1 "\030" }}{EXCHG {PARA 256 "
+" 0 "" {TEXT -1 11 "Section 2.3" }}}{EXCHG {PARA 256 "" 0 "" {TEXT -1 
+6 " 2.3.3" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "f:=x^7*y^2+x^3*y^2-y+1: f1:=
+x*y^2-x: f2:=x-y^3:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "Groe
+bner[NormalForm](f, [f1, f2], plex(x,y));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,(%\"yG!\"\"\"\"\"F&*&\"\"#F&)F$\"\"$F&F&" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "Groebner[NormalForm](f, [f1, f2], g
+rlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG\"\"(\"\"\"F(
+*$)F&\"\"$F(F(%\"yG!\"\"F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 45 "Groebner[NormalForm](f, [f2, f1], plex(x,y));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#,*%\"yG!\"\"\"\"\"F&*$)F$\"#BF&F&*$)F$\"#6F&F&" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "Groebner[NormalForm](f, [f2,
+ f1], grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG\"\"(
+\"\"\"F(*$)F&\"\"$F(F(%\"yG!\"\"F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 104 "Therefore the division by hand was done correctly. Now we will
+ implement the division algorithm itself. " }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 11 "X:=[x,y,z]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 56 "LTlex:= proc(f) local c,m; c:=lcoeff(f,X,'m'); c*m; end:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 156 "LTgrlex:= proc(f) local d,g
+,t;\n if not type(f,`+`) then return f; fi;\n d:= max(seq(degree(t), t
+=f));\n g:= add(`if`(degree(t)=d, t, 0), t=f);\n LTlex(g);\nend:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 527 "DIVIDElex:=proc(f,F :: list
+)\nlocal LT,r,t,p,s,i,a;\n s:=nops(F);\n for i from 1 to nops(F) do\n \+
+ a[i]:=0;\n od;\n (p,r):=(f,0);\n while p<>0 do\n  i:=1;\n  while i<=s
+ and ( (degree(LTlex(F[i]),x)>degree(LTlex(p),x)) or  \n              \+
+     (degree(LTlex(F[i]),y)>degree(LTlex(p),y)) or\n                  \+
+ (degree(LTlex(F[i]),z)>degree(LTlex(p),z)) ) do \n   i:=i+1; \n  od;
+\n  if i>s then (p,r):=(sort(p-LTlex(p),X,plex), r+LTlex(p)); \n  else
+ t:=LTlex(p)/LTlex(F[i]); (p,a[i]):=(sort(expand(p-t*F[i]),X,plex), a[
+i]+t);\n  fi;\n od;\n r;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 549 "DIVIDEgrlex:=proc(f,F :: list)\nlocal LT,r,t,p,s,i,a;\n s:=no
+ps(F);\n for i from 1 to nops(F) do\n  a[i]:=0;\n od;\n (p,r):=(f,0);
+\n while p<>0 do\n  i:=1;\n  while i<=s and ( (degree(LTgrlex(F[i]),x)
+>degree(LTgrlex(p),x)) or  \n                   (degree(LTgrlex(F[i]),
+y)>degree(LTgrlex(p),y)) or\n                   (degree(LTgrlex(F[i]),
+z)>degree(LTgrlex(p),z)) ) do \n   i:=i+1; \n  od;\n  if i>s then (p,r
+):=(sort(p-LTgrlex(p),X,tdeg), r+LTgrlex(p)); \n  else t:=LTgrlex(p)/L
+Tgrlex(F[i]); (p,a[i]):=(sort(expand(p-t*F[i]),X,tdeg), a[i]+t);\n  fi
+;\n od;\n r;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "DIVID
+Elex(f, [f1, f2]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*&\"\"#\"\"\")
+%\"yG\"\"$F&F&F(!\"\"F&F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+25 "DIVIDEgrlex(f, [f1, f2]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)
+%\"xG\"\"(\"\"\"F(*$)F&\"\"$F(F(%\"yG!\"\"F(F(" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 23 "DIVIDElex(f, [f2, f1]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,**$)%\"yG\"#B\"\"\"F(*$)F&\"#6F(F(F&!\"\"F(F(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "DIVIDEgrlex(f, [f2, f1]);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG\"\"(\"\"\"F(*$)F&\"\"$F(F(
+%\"yG!\"\"F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 108 "As we can see,
+ the answers are the same as the above. Now let's compute the remainde
+rs in exercise 2 of 2.3." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 
+"f:=x*y^2*z^2+x*y-y*z: f1:=x-y^2: f2:=y-z^3: f3:=z^2-1:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "Groebner[NormalForm](f, [f1, f2, f3
+], plex(x,y,z)); DIVIDElex(f, [f1, f2, f3]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%\"zG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"zG" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "Groebner[NormalForm](f, [f2,
+ f3, f1], plex(x,y,z)); DIVIDElex(f, [f2, f3, f1]);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#%\"zG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"zG" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "Groebner[NormalForm](f, [f3,
+ f1, f2], plex(x,y,z)); DIVIDElex(f, [f3, f1, f2]);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#%\"zG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"zG" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "Groebner[NormalForm](f, [f1,
+ f2, f3], grlex(x,y,z)); DIVIDEgrlex(f, [f1, f2, f3]);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#,(*&%\"xG\"\"\"%\"yGF&F&*&F'F&%\"zGF&!\"\"*$)F%\"
+\"#F&F&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"#\"\"\"F(*&F&
+F(%\"yGF(F(*&F*F(%\"zGF(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 82 "Groebner[NormalForm](f, [f2, f3, f1], grlex(x,y,z)); DIVIDEgrlex
+(f, [f2, f3, f1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"#
+\"\"\"F(*&F&F(%\"yGF(F(*&F*F(%\"zGF(!\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,(*$)%\"xG\"\"#\"\"\"F(*&F&F(%\"yGF(F(*&F*F(%\"zGF(!\"
+\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "Groebner[NormalForm](
+f, [f3, f1, f2], grlex(x,y,z)); DIVIDEgrlex(f, [f3, f1, f2]);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"#\"\"\"F(*&F&F(%\"yGF(F(
+*&F*F(%\"zGF(!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"#
+\"\"\"F(*&F&F(%\"yGF(F(*&F*F(%\"zGF(!\"\"" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 21 "So our program works!" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 11 "" 1 "" {TEXT 
+-1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 260 "DIVIDE:=proc(f,)
+\nlocal LT, r, q, t;\n LT:= proc(f) local c,m; c:= lcoeff(f,x,'m'); c*
+m; end:\n if g=0 then error \"division by zero\" fi;\n (q,r):=(0,f);\n
+ while r<>0 and degree(r,x) >= degree(g,x) do\n  t:=LT(r)/LT(g);\n  r:
+=expand(r-t*g);\n  q:=q+t;\n od;\n (q,r);\nend:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 11 "X:=[x,y,z]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 56 "LTlex:= proc(f) local c,m; c:=lcoeff(f,X,'m'); c*m; e
+nd:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 156 "LTgrlex:= proc(f) l
+ocal d,g,t;\n if not type(f,`+`) then return f; fi;\n d:= max(seq(degr
+ee(t), t=f));\n g:= add(`if`(degree(t)=d, t, 0), t=f);\n LTlex(g);\nen
+d:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 264 "DIVIDE1:=proc(f,g,x)
+\nlocal LT, r, q, t;\n LT:= proc(f) local c,m; c:= lcoeff(f,x,'m'); c*
+m; end:\n if g=0 then error \"division by zero\" fi;\n (q,r):=(0,f);\n
+ while r<>0 and degree(r,x) >= degree(g,x) do\n  t:=LT(r)/LT(g);\n  r:
+=expand(r-t*g);\n  q:=q+t;\n od;\n (q,r);\nend:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 35 "f:=x^7*y^2+x^3*y^2-y+1; f1:=x*y^2-x" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "DIVIDE()" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 14 "with(grobner):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 26 "normalf(f, gbasis([],[]));" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 256 "" 0 "" 
+{TEXT -1 11 "Section 2.3" }}}{EXCHG {PARA 256 "" 0 "" {TEXT -1 6 "2.3.
+5 " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 45 "f:=x^3-x^2*y-x^2*z+x: f1:=x^2*y-z: f2:=x*y-1
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "Groebner[NormalForm](f
+, [f1, f2], grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**$)%\"xG
+\"\"$\"\"\"F(*&)F&\"\"#F(%\"zGF(!\"\"F&F(F,F-" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 46 "Groebner[NormalForm](f, [f2, f1], grlex(x,y));" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*$)%\"xG\"\"$\"\"\"F(*&)F&\"\"#F(%
+\"zGF(!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 150 "So the results ar
+e indeed different. The second remainder contains only 2 terms, so let
+'s go through this division by hand to see what happened there." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part c." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "Groebner[NormalForm](x-z, [f
+1, f2], grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&%\"xG\"\"\"%
+\"zG!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "Groebner[NormalForm](y*z-1, [f1, f2
+], grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*&%\"yG\"\"\"%\"z
+GF&F&F&!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 256 "" 0 "" {TEXT -1 11 "Section 2.6" }
+}}{EXCHG {PARA 256 "" 0 "" {TEXT -1 5 "2.6.9" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 42 "g1:=x*y^2-x*z+y: g2:=x*y-z^2: g3:=x-y*z^4:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "s1:=-x*z+y*z^2+y: s2:=-x*z+y
+^3*z^4+y: s3:=y^2*z^4-z^2:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+52 "Groebner[NormalForm](s1, [g1, g2, g3], plex(x,y,z));" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#,(*&%\"yG\"\"\")%\"zG\"\"#F&F&F%F&*&)F(\"\"&F&F%
+F&!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "Groebner[NormalF
+orm](s2, [g1, g2, g3], plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#,(*&)%\"yG\"\"$\"\"\")%\"zG\"\"%F(F(F&F(*&)F*\"\"&F(F&F(!\"\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "Groebner[NormalForm](s3, [g1
+, g2, g3], plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*&)%\"zG
+\"\"%\"\"\")%\"yG\"\"#F(F(*$)F&F+F(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 23 "Additional question #1." }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "with(StringTools):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "L1:=[1,x,y,x*y,x^2,y^2,x^3,y^3,x*y^2,x^2*y]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 92 "L2:=[1,x,y,z,x^2,y^2,z^2,x*y
+,x*z,y*z,x^3,y^3,z^3,x*y*z,x*y^2,x*z^2,x^2*y,x^2*z,y^2*z,y*z^2]:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 36 "First let's consider grlex orderin
+g." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 296 "grlex:= proc (f1, f2
+)\n  local s1, s2;\n  s1:=cat(degree(f1, x), degree(f1, y), degree(f1,
+ z));\n  s2:=cat(degree(f2, x), degree(f2, y), degree(f2, z));\n  if d
+egree(f1)<degree(f2) then return true;\n  elif (degree(f1)=degree(f2) \+
+and lexorder(s1,s2)) then return true;\n  else return false;\n  fi;\ne
+nd: " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "sort(L1, grlex);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#7,\"\"\"%\"yG%\"xG*$)F%\"\"#F$*&F&F$F
+%F$*$)F&F)F$*$)F%\"\"$F$*&F&F$F(F$*&F,F$F%F$*$)F&F/F$" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "sort(L2, grlex);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#76\"\"\"%\"zG%\"yG%\"xG*$)F%\"\"#F$*&F&F$F%F$*$)F&F*F
+$*&F'F$F%F$*&F'F$F&F$*$)F'F*F$*$)F%\"\"$F$*&F&F$F)F$*&F-F$F%F$*$)F&F4F
+$*&F'F$F)F$*(F'F$F&F$F%F$*&F'F$F-F$*&F1F$F%F$*&F1F$F&F$*$)F'F4F$" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 316 "grevlex:= proc (f1, f2)\n  \+
+local s1, s2;\n  s1:=Reverse(cat(degree(f1, x), degree(f1, y), degree(
+f1, z)));\n  s2:=Reverse(cat(degree(f2, x), degree(f2, y), degree(f2, \+
+z)));\n  if degree(f1)<degree(f2) then return true;\n  elif (degree(f1
+)=degree(f2) and lexorder(s2,s1)) then return true;\n  else return fal
+se;\n  fi;\nend: " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "sort(L
+1, grevlex);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7,\"\"\"%\"yG%\"xG*$)F
+%\"\"#F$*&F&F$F%F$*$)F&F)F$*$)F%\"\"$F$*&F&F$F(F$*&F,F$F%F$*$)F&F/F$" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "sort(L2, grevlex);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#76\"\"\"%\"zG%\"yG%\"xG*$)F%\"\"#F$*&F
+&F$F%F$*&F'F$F%F$*$)F&F*F$*&F'F$F&F$*$)F'F*F$*$)F%\"\"$F$*&F&F$F)F$*&F
+'F$F)F$*&F.F$F%F$*(F'F$F&F$F%F$*&F1F$F%F$*$)F&F4F$*&F'F$F.F$*&F1F$F&F$
+*$)F'F4F$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 
+1 1 }

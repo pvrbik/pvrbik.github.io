@@ -1,0 +1,77 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> a:=expand( (x^4-3*x^3*y-x^2-y)*(8*x-4*y+12)*(2*y^2-2) ):
+> 
+> a:=collect(a,x);
+          2        5        2            3          4
+a := (16 y  - 16) x  + (24 y  - 24 - 56 y  + 56 y) x
+
+                        3       4       2   3         2                 3   2
+     + (72 y + 16 - 72 y  + 24 y  - 40 y ) x  + (-24 y  + 24 - 8 y + 8 y ) x
+
+             3                4      2       3
+     + (-16 y  + 16 y) x + 8 y  - 8 y  - 24 y  + 24 y
+
+> 
+> coeff(a,x,5);
+                                       2
+                                   16 y  - 16
+
+> 
+> helpCont:=proc(a,var,n):
+>     
+>     if (n=0) then return coeff(a,var,0): end if:
+>     
+>     return gcd(coeff(a,var,n), helpCont(a,var,n-1)):
+>     
+> end proc:
+> 
+> cont:=(a,var)->helpCont(collect(a,var),var,degree(a,var)):
+> 
+> cx:=cont(a,x); ppx:=simplify(a/cx); 
+                                          2
+                                 cx := 8 y  - 8
+
+        2      3  2    2        4                      3        5      4      2
+ppx := y  + 3 x  y  + x  y - 7 x  y - 2 y x - 3 y - 9 x  y + 2 x  + 3 x  - 3 x
+
+          3
+     - 2 x
+
+> cy:=cont(a,y); ppy:=simplify(a/cy); 
+                                    cy := 8
+
+          5  2      5      4  3      4        4  2      4      3  4      3  2
+ppy := 2 x  y  - 2 x  - 7 x  y  + 7 x  y + 3 x  y  - 3 x  + 3 x  y  - 5 x  y
+
+          3  3      3        3    2  3    2        2  2      2      3
+     - 9 x  y  + 9 x  y + 2 x  + x  y  - x  y - 3 x  y  + 3 x  - 2 y  x + 2 y x
+
+        4    2      3
+     + y  - y  - 3 y  + 3 y
+
+> 
+> primpart(a,x,'c1'); c1;
+ 2      3  2    2        4                      3        5      4      2      3
+y  + 3 x  y  + x  y - 7 x  y - 2 y x - 3 y - 9 x  y + 2 x  + 3 x  - 3 x  - 2 x
+
+                                       2
+                                    8 y  - 8
+
+> primpart(a,y,'c2'); c2;
+   5  2      5      4  3      4        4  2      4      3  4      3  2
+2 x  y  - 2 x  - 7 x  y  + 7 x  y + 3 x  y  - 3 x  + 3 x  y  - 5 x  y
+
+          3  3      3        3    2  3    2        2  2      2      3
+     - 9 x  y  + 9 x  y + 2 x  + x  y  - x  y - 3 x  y  + 3 x  - 2 y  x + 2 y x
+
+        4    2      3
+     + y  - y  - 3 y  + 3 y
+
+                                       8
+
+> quit
+bytes used=636452, alloc=655240, time=0.02

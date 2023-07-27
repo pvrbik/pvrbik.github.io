@@ -1,0 +1,177 @@
+{VERSION 6 0 "SGI MIPS UNIX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading 1" 0 3 1 
+{CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }1 0 0 0 8 4 0 0 
+0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "
+" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }1 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 3 "" 0 "" {TEXT -1 59 "Examples of factoring radi
+cal ideals into prime components." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "restart; " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+52 "interface(imaginaryunit=_i):\nwith(PolynomialIdeals):" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 49 "This is the example from section 3.1 on p
+age 112." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "I := <x^2+y+z-1
+,x+y^2+z-1,x+y+z^2-1>;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"IG-%$<,>
+G6%,*%\"xG\"\"\"*$)%\"yG\"\"#F*F*%\"zGF*F*!\"\",*F)F*F-F**$)F/F.F*F*F*
+F0,**$)F)F.F*F*F-F*F/F*F*F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+47 "IsRadical(I), IsPrime(I), IsZeroDimensional(I);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6%%&falseGF#%%trueG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "G := Groebner[Basis](I,plex(x,y,z));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"GG7&,**$)%\"zG\"\"'\"\"\"F+*&\"\"%F+)F)F-F+!\"
+\"*$)F)\"\"#F+F/*&F-F+)F)\"\"$F+F+,(*(F2F+F1F+%\"yGF+F+*$F.F+F+F0F/,**
+$)F8F2F+F+F0F/F8F/F)F+,*%\"xGF+F8F+F0F+F+F/" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 18 "f := factor(G[1]);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%\"fG*()%\"zG\"\"#\"\"\",(*$F&F)F)*&F(F)F'F)F)F)!\"\"F)),&F'F)F
+)F-F(F)" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 50 "One way to try to comp
+ute the radical is to throw " }{XPPEDIT 18 0 "f[red];" "6#&%\"fG6#%$re
+dG" }{TEXT -1 48 " the square-free part of  this polynomial into I" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "I := <I,z*(z^2+2*z-1)*(z-1)
+>;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"IG-%$<,>G6&,*%\"xG\"\"\"*$)%
+\"yG\"\"#F*F*%\"zGF*F*!\"\",*F)F*F-F**$)F/F.F*F*F*F0*(F/F*,(F2F**&F.F*
+F/F*F*F*F0F*,&F/F*F*F0F*,**$)F)F.F*F*F-F*F/F*F*F0" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 47 "IsRadical(I), IsPrime(I), IsZeroDimensional(
+I);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6%%%trueG%&falseGF#" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "G := Groebner[Basis](I,plex(x,y,z))
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7&,**$)%\"zG\"\"%\"\"\"F+*$
+)F)\"\"$F+F+*&F.F+)F)\"\"#F+!\"\"F)F+,(*(F1F+F)F+%\"yGF+F+F,F+F)F2,**$
+)F5F1F+F+*$F0F+F2F5F2F)F+,*%\"xGF+F5F+F9F+F+F2" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 18 "f := factor(G[1]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"fG*(%\"zG\"\"\",(*$)F&\"\"#F'F'*&F+F'F&F'F'F'!\"\"F
+',&F&F'F'F-F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 50 "Now we are going
+ to split I into three components " }{XPPEDIT 18 0 "P[1],P[2],P[3];" "
+6%&%\"PG6#\"\"\"&F$6#\"\"#&F$6#\"\"$" }{TEXT -1 39 " corresponding to \+
+the three factors of " }{XPPEDIT 18 0 "f;" "6#%\"fG" }{TEXT -1 24 "  a
+nd then we will have " }{XPPEDIT 18 0 "I;" "6#%\"IG" }{TEXT -1 3 " = \+
+" }{XPPEDIT 18 0 "`intersect`(P[1],P[2]);" "6#-%*intersectG6$&%\"PG6#
+\"\"\"&F'6#\"\"#" }{TEXT -1 1 " " }{XPPEDIT 18 0 "`intersect`(``,P[3])
+;" "6#-%*intersectG6$%!G&%\"PG6#\"\"$" }{TEXT -1 2 " ." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 105 "P1 := Quotient(I,<quo(f,z,z)>);\nP
+2 := Quotient(I,<quo(f,z-1,z)>);\nP3 := Quotient(I,<quo(f,z^2+2*z-1,z)
+>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#P1G-%$<,>G6%%\"zG,(%\"yG\"\"
+\"%\"xGF+F+!\"\"*&,&F,F+F+F-F+F,F+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%#P2G-%$<,>G6%%\"xG%\"yG,&%\"zG\"\"\"F,!\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#P3G-%$<,>G6%,(*$)%\"zG\"\"#\"\"\"F-*&F,F-F+F-F-F-!\"
+\",&%\"xGF-F+F/,&F+F/%\"yGF-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 68 "W
+e could have done this by putting the three irreducible factors of " }
+{XPPEDIT 18 0 "f;" "6#%\"fG" }{TEXT -1 31 "  into the basis for I this
+ way" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 117 "Groebner[Basis](<I
+,z>,plex(x,y,z));\nGroebner[Basis](<I,z-1>,plex(x,y,z));\nGroebner[Bas
+is](<I,z^2+2*z-1>,plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%%
+\"zG,&*$)%\"yG\"\"#\"\"\"F*F(!\"\",(F(F*%\"xGF*F*F+" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#7%,&%\"zG\"\"\"F&!\"\"%\"yG%\"xG" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7%,(*$)%\"zG\"\"#\"\"\"F)*&F(F)F'F)F)F)!\"\",&F'F+%\"yG
+F),&%\"xGF)F'F+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "IsPrime(
+P1), IsPrime(P2), IsPrime(P3);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6%%&fa
+lseG%%trueGF$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "G := facto
+r(Groebner[Basis](P1,plex(x,y,z)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#>%\"GG7%%\"zG*&%\"yG\"\"\",&F(F)F)!\"\"F),(F(F)%\"xGF)F)F+" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "P4, P5 := Quotient(P1,<y>), \+
+Quotient(P1,<y-1>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$%#P4G%#P5G6$
+-%$<,>G6%%\"xG%\"zG,&%\"yG\"\"\"F/!\"\"-F)6%F.F,,&F+F/F/F0" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "IsPrime(P4), IsPrime(P5);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6$%%trueGF#" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 40 "We are done: the prime decomposition of " }{XPPEDIT 18 0 "sqrt(
+I);" "6#-%%sqrtG6#%\"IG" }{TEXT -1 34 "  is the following four compone
+nts" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "P2, P3, P4, P5;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6&-%$<,>G6%%\"xG%\"yG,&%\"zG\"\"\"F*!\"
+\"-F$6%,(*$)F)\"\"#F*F**&F1F*F)F*F*F*F+,&F&F*F)F+,&F)F+F'F*-F$6%F&F),&
+F'F*F*F+-F$6%F'F),&F&F*F*F+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+28 "J := Intersect(P2,P3,P4,P5);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%
+\"JG-%$<,>G6',*%\"xG\"\"\"*$)%\"yG\"\"#F*F*%\"zGF*F*!\"\",*F)F*F-F**$)
+F/F.F*F*F*F0,**$)F)F.F*F*F-F*F/F*F*F0,&*&F/F*F-F*F**&F)F*F/F*F0,&*&F)F
+*F-F*F*F9F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "Groebner[Bas
+is](J,plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,**$)%\"zG\"
+\"%\"\"\"F)*$)F'\"\"$F)F)*&F,F))F'\"\"#F)!\"\"F'F),(*(F/F)F'F)%\"yGF)F
+)F*F)F'F0,**$)F3F/F)F)*$F.F)F0F3F0F'F),*%\"xGF)F3F)F7F)F)F0" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 173 "The above example worked because \+
+when we computed the Groebner basis for I we found a polynomial that f
+actored.  This does not always happen.  Consider the following example
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "I := <x^2+1,y^2+1,z^2+1
+>;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"IG-%$<,>G6%,&*$)%\"xG\"\"#\"
+\"\"F-F-F-,&*$)%\"yGF,F-F-F-F-,&*$)%\"zGF,F-F-F-F-" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 36 "G := Groebner[Basis](I,plex(x,y,z));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7%,&*$)%\"zG\"\"#\"\"\"F+F+F+,&*
+$)%\"yGF*F+F+F+F+,&*$)%\"xGF*F+F+F+F+" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "factor(G);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%,&*$)
+%\"zG\"\"#\"\"\"F)F)F),&*$)%\"yGF(F)F)F)F),&*$)%\"xGF(F)F)F)F)" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 76 "Notice that G is a Groebner basis \+
+for I in every monomial ordering since LT(" }{XPPEDIT 18 0 "x^2+1;" "6
+#,&*$%\"xG\"\"#\"\"\"F'F'" }{TEXT -1 4 ") = " }{XPPEDIT 18 0 "x^2;" "6
+#*$%\"xG\"\"#" }{TEXT -1 88 "  in every monomial ordering.  But it is \+
+not prime over the field of rational numbers Q." }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 25 "IsPrime(I), IsRadical(I);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$%&falseG%%trueG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 86 
+"We can solve this problem by inspection.  The second generator minus \+
+the first factor." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "f := (
+x^2+1)-(y^2+1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG,&*$)%\"xG\"
+\"#\"\"\"F**$)%\"yGF)F*!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 10 "factor(f);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&,&%\"xG\"\"\"%\"
+yG!\"\"F&,&F'F&F%F&F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "P1
+, P2 := Quotient(I,<x-y>), Quotient(I,<y+x>);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>6$%#P1G%#P2G6$-%$<,>G6%,&*$)%\"yG\"\"#\"\"\"F0F0F0,&F.
+F0%\"xGF0,&*$)%\"zGF/F0F0F0F0-F)6%,&*$)F2F/F0F0F0F0,&F2!\"\"F.F0F3" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "Again, the second generator minus
+ the third factors into " }{XPPEDIT 18 0 "(y-z)*(y+z);" "6#*&,&%\"yG\"
+\"\"%\"zG!\"\"F&,&F%F&F'F&F&" }{TEXT -1 51 " so we repeat this decompo
+sition on each component." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+123 "P11, P12, P21, P22 := Quotient(P1,<y-z>), Quotient(P1,<y+z>),\n  \+
+                    Quotient(P2,<y-z>), Quotient(P2,<y+z>);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>6&%$P11G%$P12G%$P21G%$P22G6&-%$<,>G6%,&%\"z
+G!\"\"%\"yGF/,&%\"xGF/F0F/,&*$)F0\"\"#\"\"\"F/F7F/-F+6%,&F4F7F7F7,&F0F
+7F2F7,&F.F7F0F/-F+6%,&F.F7F0F7,&F.F7F2F7,&*$)F.F6F7F7F7F7-F+6%,&F2F/F.
+F7,&*$)F2F6F7F7F7F7,&F.F/F0F7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 37 "map( IsPrime, [P11, P12, P21, P22] );" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7&%%trueGF$F$F$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 32 "J := Intersect(P11,P12,P21,P22);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%\"JG-%$<,>G6%,&*$)%\"xG\"\"#\"\"\"F-F-F-,&*$)%\"yGF,F-F-F-F-,&
+*$)%\"zGF,F-F-F-F-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 99 "Now how wou
+ld we factor this ideal in general (if we cannot \"spot\" a polynomial
+ in I that factors)." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "I;" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$<,>G6%,&*$)%\"xG\"\"#\"\"\"F+F+F+
+,&*$)%\"yGF*F+F+F+F+,&*$)%\"zGF*F+F+F+F+" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 60 "One way is to use field extensions - which can be expensi
+ve." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "alias(i=RootOf(z^2+1
+)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "G[1] = factor(G[1],i
+);\nG[2] = factor(G[2],i);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/,&*$)%
+\"zG\"\"#\"\"\"F)F)F)*&,&F'F)%\"iGF)F),&F'F)F,!\"\"F)" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#/,&*$)%\"yG\"\"#\"\"\"F)F)F)*&,&F'F)%\"iGF)F),&F'F
+)F,!\"\"F)" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 26 "From here we can id
+entify " }{XPPEDIT 18 0 "i;" "6#%\"iG" }{TEXT -1 7 "  with " }
+{XPPEDIT 18 0 "x;" "6#%\"xG" }{TEXT -1 35 "  so we have found the poly
+nomials " }{XPPEDIT 18 0 "(x+z)*(-x+z);" "6#*&,&%\"xG\"\"\"%\"zGF&F&,&
+F%!\"\"F'F&F&" }{TEXT -1 6 "  and " }{XPPEDIT 18 0 "(x+y)*(y-x);" "6#*
+&,&%\"xG\"\"\"%\"yGF&F&,&F'F&F%!\"\"F&" }{TEXT -1 29 " in I.  We proce
+ed as before." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 147 "Another approac
+h is to make a linear subsitution to try to \"put the ideal in general
+ position\" so that when we compute the lex Groebner basis with " }
+{XPPEDIT 18 0 "x;" "6#%\"xG" }{TEXT -1 3 " > " }{XPPEDIT 18 0 "y;" "6#
+%\"yG" }{TEXT -1 3 " > " }{XPPEDIT 18 0 "z;" "6#%\"zG" }{TEXT -1 20 " \+
+ we get the form [ " }{XPPEDIT 18 0 "f(z);" "6#-%\"fG6#%\"zG" }{TEXT 
+-1 3 " , " }{XPPEDIT 18 0 "x-g(z);" "6#,&%\"xG\"\"\"-%\"gG6#%\"zG!\"\"
+" }{TEXT -1 3 " , " }{XPPEDIT 18 0 "y-h(z);" "6#,&%\"yG\"\"\"-%\"hG6#%
+\"zG!\"\"" }{TEXT -1 84 " ] from where the problem is easily solved - \+
+we just need to look at the factors of " }{XPPEDIT 18 0 "f(z);" "6#-%
+\"fG6#%\"zG" }{TEXT -1 43 " since the other polynomials are LINEAR in \+
+" }{XPPEDIT 18 0 "x;" "6#%\"xG" }{TEXT -1 5 " and " }{XPPEDIT 18 0 "y;
+" "6#%\"yG" }{TEXT -1 159 " .  This idea only works if the ideal is ze
+ro dimensional, i.e. the variety of the ideal has finitely many soluti
+ons.  In our example the variety has 8 points." }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 44 "J := < subs( z=z+5*x-3*y, Generators(I) ) >;" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"JG-%$<,>G6%,&*$)%\"xG\"\"#\"\"\"
+F-F-F-,&*$)%\"yGF,F-F-F-F-,&*$),(%\"zGF-*&\"\"&F-F+F-F-*&\"\"$F-F1F-!
+\"\"F,F-F-F-F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "G := Groe
+bner[Basis](J,plex(x,y,z));" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"GG7
+%,,*$)%\"zG\"\")\"\"\"F+*&\"&g3%F+)F)\"\"#F+F+\"&@d$F+*&\"%y_F+)F)\"\"
+%F+F+*&\"$S\"F+)F)\"\"'F+F+,,*&\"(;7;\"F+%\"yGF+F+*&\"#>F+)F)\"\"(F+F+
+*&\"'HN7F+)F)\"\"$F+F+*&\"(:>G\"F+F)F+F+*&\"%\\GF+)F)\"\"&F+F+,,*&\"(!
+31eF+%\"xGF+F+*&\"&*G;F+FIF+F+*&\"'lijF+FCF+F+*&\"(rhU'F+F)F+F+*&\"$:
+\"F+F?F+F+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "f := factor(G
+[1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG**,&*$)%\"zG\"\"#\"\"\"
+F+\"\"*F+F+,&F'F+\"#\\F+F+,&F'F+\"#\")F+F+,&F'F+F+F+F+" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "49 0 0" 0 }{VIEWOPTS 1 
+1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

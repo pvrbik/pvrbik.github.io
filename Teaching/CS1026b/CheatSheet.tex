@@ -1,0 +1,198 @@
+\documentclass[10pt]{article}
+
+\include{header}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usepackage{multicol}
+
+\usepackage{listings,balance}
+\lstset{language=Java}
+
+\setlength{\parindent}{0in} 
+
+\begin{document}
+
+%%%TITLE PAGE%%%
+{\large
+\begin{center}
+\textsc{CS1026b Extra Exam Material}
+\end{center}
+}
+
+\begin{multicols}{2}   
+\section*{Strings}
+To compare two strings: \texttt{s1} and \texttt{s2} do
+$$\texttt{ s1.equals(s2) }$$
+
+To get a length of a string do
+$$\texttt{s1.length()}$$
+
+To access a character (single letter) of string \texttt{s1} do
+$$\texttt{s1[i]}$$
+where $0 \leq \texttt{i}< \texttt{st.length()}$.
+
+\section*{Worlds}
+\texttt{World()}\\
+Constructor that takes no arguments.\\
+
+\texttt{World(int w, int h)}\\
+Constructor that takes a width and height for the world.
+
+\section*{Turtles}
+\subsubsection*{Partial Constructor Summary}
+
+\texttt{Turtle(int x, int y, World world)}\\
+Constructor that puts the turtle at position (x,y) in its world, facing ÒupÓ (toward the top of the world)\\
+
+\texttt{Turtle(World world)}\\
+Constructor that puts the turtle at the center of its world, facing ÒupÓ (toward the top of the world)
+
+\subsubsection*{Partial Method Summary}
+
+\texttt{void backward(int pixels)}\\
+Method to go backward a given number of pixels\\
+
+\texttt{void forward(int pixels)}\\
+Method to move the turtle forward the given number of pixels\\
+
+\texttt{int getXPos()}\\
+Method to get the current x position\\
+
+\texttt{int getYPost}\\
+Method to get the current y position\\
+
+\texttt{void hide()}\\
+Stop showing the turtle; does not affect the pen status\\
+
+\texttt{void moveTo(int x, int y)}\\
+Method to move to turtle to the given x and y location\\
+
+\texttt{void penDown()}\\
+Method to set the pen down\\
+
+\texttt{void penUp()}\\
+Method to lift the pen up\\
+
+\texttt{void show()}\\
+Make the turtle visible; does not affect the pen status\\
+
+\texttt{void turn(int degrees)}\\
+Method to turn the turtle the passed degrees use negative to turn left and pos to turn right\\
+
+\texttt{void turnLeft()}\\
+Method to turn left 90 degrees\\
+
+\texttt{void turnRight()}\\
+Method to turn right 90 degrees\\
+
+\texttt{void turnToFace(int x, int y)}\\
+Method to turn towards the given x and y\\
+
+\texttt{void turnToFace(SimpleTurtle turtle)}\\
+Method this turtle object to face the parameter turtle
+
+\section*{Pictures}
+\subsubsection*{Partial Constructor Summary}
+\texttt{Picture()}\\
+Constructor that takes no arguments\\
+
+\texttt{Picture(int width, int height)}\\
+Constructor that takes the width and height\\ 
+
+\texttt{Picture(java.lang.String fileName)}\\
+Constructor that takes a file name and creates the picture
+
+\subsubsection*{Partial Method Summary}
+\texttt{int getHeight()}\\
+Method to get the height of the picture in pixels\\
+
+\texttt{Pixel getPixel(int x, int y)}\\
+Method to get a pixel object for the given x and y location\\
+
+\texttt{Pixel[] getPixels()}\\
+Method to get a one-dimensional array of Pixels for this simple picture\\
+
+\texttt{int getWidth()}\\
+Method to get the width of the picture in pixels\\
+
+\texttt{void repaint()}\\
+Method to force the picture to redraw itself.\\
+
+\texttt{void show()}\\
+Method to show the picture in a picture frame
+
+
+\section*{Pixel}
+\texttt{java.awt.Color getColor()}\\
+Method to get a color object that represents the color at this pixel\\
+
+\texttt{int getRed()}\\
+\texttt{int getBlue()}\\
+\texttt{int getGreen()}\\
+Method to get the amount of red, blue, or green (respectively) at this pixel. The value will be between 0 (indicating no red/blue/green) and 255 (indicating maximum amount of red/blue/green).\\
+
+\texttt{int getX()}\\
+Method to get the x location of this pixel.\\
+
+\texttt{int getY()}\\
+Method to get the y location of this pixel.\\
+
+\texttt{void setColor(java.awt.Color newColor)}\\
+Method to set the pixel color to the passed in color objec\\
+
+\texttt{void setRed(int value)}\\
+\texttt{void setBlue(int value)}\\
+\texttt{void setGreen(int value)}\\
+Methods to set the red, blue, or green (respectively) to a new value in [0, 255].
+
+
+
+\section*{SimpleInput}
+\texttt{String getString}\\
+Prompts the user to input a string.\\
+
+\texttt{double getNumber}\\
+Prompts the user to input a number.
+
+\balance
+\end{multicols}
+
+
+\section*{The Student Class}
+\begin{lstlisting}
+public class Student {
+    //Attributes
+    private String name;
+    private int studentID;
+    
+    //Constructors
+    public Student(String theName, int theID) {
+        this.name = theName;
+        this.studentID = theID;
+    }
+    
+    //Methods
+    //Returns the student ID of a student
+    public int getID() {
+        return this.studentID;
+    }
+    
+    //Tests if two Student objects are the same
+    public boolean equals(Student otherStudent) {
+        if (otherStudent == null) {
+            return false;
+        } else if (studentID == otherStudent.getID() ) {
+            //student ID's are the same so:
+            return true;
+        } else {
+            //student ID's are different so:
+            return false;
+        }
+    }
+}
+\end{lstlisting}
+
+\end{document}

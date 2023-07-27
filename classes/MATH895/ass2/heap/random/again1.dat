@@ -1,0 +1,74 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> read "../DatPart1.mpl":
+bytes used=17023248, alloc=9042312, time=0.26
+bytes used=32774000, alloc=17691480, time=0.61
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C);
+                         4966, 4966, 5, 5, 19195, 19195
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(C,A,var):
+> t:=time()-st;
+                                  t := 95.869
+
+> evalb(Q=B); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           477072, 24830, 19.21353202
+
+> 
+> restart():
+> read "../DatPart1.mpl":
+bytes used=2584344432, alloc=23326544, time=96.79
+bytes used=2594251928, alloc=23326544, time=97.13
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C);
+                         4966, 4966, 5, 5, 19195, 19195
+
+> 
+> print("DIVIDE(C,B)"):
+                                 "DIVIDE(C,B)"
+
+> N:=0:
+> st:=time():
+> N:=0:
+> (Q,R):=HeapDiv(C,B,var):
+> t:=time()-st;
+                                  t := 23.994
+
+> evalb(Q=A); R;
+                                      true
+
+                                       []
+
+> print(N,M,evalf(N/M)):
+                           71247, 24830, 2.869391865
+
+> 
+> quit:\
+bytes used=3375890496, alloc=27389032, time=121.14

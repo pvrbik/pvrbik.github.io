@@ -1,0 +1,1740 @@
+\documentclass{seminar}
+\nonstopmode
+
+\input{lectures}
+
+\newcommand{\NAT}{\textcolor{MathColor}{\ensuremath{\mathbb{N}}}}
+\newcommand{\suc}{\tmi{succ}}
+\newcommand{\Ha}{\tmi{Hask}}
+\newcommand{\vs}{\vspace{0.3in}}
+\newcommand{\CC}{\tm{\cal C}}
+\newcommand{\CCC}{\tm{{\cal C}\,}}
+\newcommand{\COP}{\tm{\cal C^\mathrm{op}}}
+\newcommand{\DD}{\tm{\cal D}}
+\newcommand{\DDD}{\tm{{\cal D}\,}}
+
+\newcommand{\pb}{\textcolor{MathColor}{\ensuremath{+\!\!_{_{_{\bot}}}}}}
+
+\newpagestyle{lectures}{\makebox[1in][l]{CMPT 481/731} \hfill Functional Programming
+\hfill \makebox[1in][r]{\semester}}{\makebox[2in][l]{Category Theory} \hfill F. Warren
+Burton \hfill \makebox[2in][r]{\thepage}}
+
+% \newpagestyle{lectures}{CMPT 481/731 \hfill Functional Programming
+% \hfill \semester}{Category Theory \hfill
+% F. Warren Burton \hfill \thepage}
+
+\pagestyle{lectures}
+
+\begin{document}
+\begin{slide}
+
+\begin{center}
+\begin{LARGE}
+\textbf{Category Theory}
+\end{LARGE}\\[3ex]
+\end{center}
+
+Category theory is a generalization of set theory.
+
+By having only a limited
+number of carefully chosen
+requirements in the definition of a category, we are able to
+produce a general algebraic structure with a large number of useful
+properties, yet permit the theory to apply to many different specific
+mathematical
+systems.
+
+Using concepts from category theory in the design of a programming
+language leads to some powerful and general programming constructs.
+While it is
+possible to use the resulting constructs without
+knowing anything about category theory,
+understanding the underlying theory helps.
+
+\newslide
+
+\section*{Definition of a Category}
+
+A \definition{category} \tm{\cal{C}} is:
+\begin{enumerate}
+\item a collection of \tm{objects};
+\item a collection of \tm{arrows};
+\item operations assigning to each arrow \tm{f}
+\begin{enumerate}
+\item an object \tm{\dom f} called the \definition{domain} of \tm{f},
+and
+\item an object \tm{\cod f} called the \definition{codomain} of
+\tm{f}
+\end{enumerate}
+often expressed by \tm{f: \dom f \rightarrow \cod f};
+\item an associative composition operator \tm{\circ} assigning to
+each pair
+of arrows, \tm{f} and \tm{g}, such that \tm{\dom f = \cod g}, a
+\definition{composite} arrow \tm{f \circ g: \dom g \rightarrow \cod
+f}; and
+\item for each object \tm{A}, an identity arrow, \tm{id_A: A
+\rightarrow A}
+satisfying the law that for any arrow \tm{f:A \rightarrow B},
+\begin{codenott}
+\tm{id_B \circ f = f = f \circ id_A}.
+\end{codenott}
+\end{enumerate}
+
+\newslide
+
+In diagrams, we will usually express \tm{A = \dom f} and \tm{B =
+\cod f}
+(that
+\linebreak
+is \tm{f:A\rightarrow B}) by
+
+\begin{cdiag}
+\obj(1,1)[a]{\textmath{A}}
+\obj(11,1)[b]{\textmath{B}}
+\mor{a}{b}{\textmath{f}}
+\end{cdiag}
+
+The associative requirement for the composition operators means
+that
+when \tm{f \circ g} and \tm{g \circ h} are both defined, then
+\tm{f \circ (g \circ h) = (f \circ g) \circ h}.
+
+This allow us to think of arrows defined by paths throught diagrams.
+
+\begin{cdiag}
+\obj(1,1)[A]{\textmath{\dom h}}
+\obj(1,0)[X]{\textmath{=A}}
+\obj(11,1)[B]{\textmath{\cod h = \dom g}}
+\obj(11,0)[Y]{\textmath{=B}}
+\obj(21,1)[C]{\textmath{\cod g = \dom f}}
+\obj(21,0)[C]{\textmath{=C}}
+\obj(31,1)[D]{\textmath{\cod f}}
+\obj(31,0)[D]{\textmath{=D}}
+\mor(2,2)(30,2){\textmath{f \circ g \circ h}}
+\mor(2,0)(9,0){\tm{h}}
+\mor(13,0)(19,0){\tm{g}}
+\mor(23,0)(30,0){\tm{f}}
+\end{cdiag}
+
+\newslide
+
+I will sometimes write \tm{(;)} for \tc{flip}\tm{(\circ)}, since
+
+\begin{cdiag}
+\obj(1,1)[X]{\textmath{A}}
+\obj(11,0)[Y]{\textmath{B}}
+\obj(21,0)[C]{\textmath{C}}
+\obj(31,1)[D]{\textmath{D}}
+\mor(2,2)(30,2){\textmath{h; g; f}}
+\mor(2,0)(10,0){\tm{h}}
+\mor(12,0)(20,0){\tm{g}}
+\mor(22,0)(30,0){\tm{f}}
+\end{cdiag}
+
+is less confusing than
+
+\begin{cdiag}
+\obj(1,1)[X]{\textmath{A}}
+\obj(11,0)[Y]{\textmath{B}}
+\obj(21,0)[C]{\textmath{C}}
+\obj(31,1)[D]{\textmath{D}}
+\mor(2,2)(30,2){\textmath{f \circ g \circ h}}
+\mor(2,0)(10,0){\tm{h}}
+\mor(12,0)(20,0){\tm{g}}
+\mor(22,0)(30,0){\tm{f}}
+% \mor(2,0)(9,0){\tm{h}}
+% \mor(13,0)(19,0){\tm{g}}
+% \mor(23,0)(30,0){\tm{f}}
+\end{cdiag}
+
+
+\newslide
+
+\subsection*{Examples}
+
+The category that we will use the most has all possible \Has
+types
+(ground types, not polymorphic types) as objects and all possible
+\Has
+(non-polymorphic) functions as arrows.
+
+(A polymorphic datatype corresponds to an infinite collection of
+non-polymorphic
+datatypes, and similarly, a polymorphic function corresponds to the
+infinite
+collection of the possible non-polymorphic instances of the functions.)
+
+We will call this category \definition{Hask}.  Let us complete the
+obvious details of the definition of \Ha\, and confirm that \Ha\,
+satisfies the definition of a category.
+
+\newslide
+
+\paragraph{Set (\definition{Set}):}  Category theory grew out
+of a generalization of
+set theory.  Sets and functions between them may be viewed as a
+category.
+Objects are sets and arrows are total functions.  Usually subsets
+are regarded
+as distinct sets.  For example, the set of integers is not related
+to the
+set of reals.  Each function is associated with a particular domain
+and
+codomain.
+
+\vs
+
+\paragraph{Discrete Categories:} A discrete category is one in which
+the only
+arrows are the identity arrows.
+
+A single set can be viewed as a discrete category, where each element
+of the
+set is an object, although this is not usually particularly useful.
+
+The category, \one, is the one object discrete category, which is
+sometimes
+useful.  (Note:  Later we will use \tm{1} to denote a terminal (or
+final)
+object in a category. )
+
+\newslide
+
+\paragraph{Power Sets:}  A power set \tm{{\cal P}(S)}
+of a set \tm{S} is the set of all subsets of the set \tm{S}.  For
+any set, we have a category where the objects of the category are
+the
+elements of the power set.  There is at most one arrow between any
+two
+objects.  There is an arrow from \tm{A} to \tm{B} iff \tm{A \subseteq
+B}.
+
+\paragraph{Any Partial Order:}  The power
+set of a
+set is a partial order.  In a similar manner, any partial order can be
+view as
+a category.
+
+\paragraph{All Partial Orders(\definition{Poset}):}
+There is also a category where the objects
+are partial orders and the arrows are monotonic functions between
+these partial orders.
+
+\newslide
+
+\paragraph{Predicate Calculus:}  We can view the predicate
+calculus as a category, where predicates
+are objects and there is an arrow from \tm{A} to \tm{B} if and only
+if
+\tm{A} implies \tm{B}.  Note that \tm{A} implies itself, so we have
+identity
+arrows, and logical implication is transitive, so composition is
+well
+defined.  There is never more than one arrow between any two
+predicates.
+
+\newslide
+
+\paragraph{Any Group:}  Any group can be viewed as a category with
+a single object.  The arrows correspond to the elements of the
+group.
+The arrow composition operator corresponds to the binary group
+operation.
+
+Certain other algebraic structures can be viewed as categories in
+a
+similar manner.
+
+\paragraph{All Groups (\definition{Grp}):}  There is also
+a category where each group
+is an object and arrows are homomorphisms between groups.
+
+\newslide
+
+A homomorphism is a structure preserving mapping from one set to
+another.
+For most algebraic structures, you can build categories where
+the arrows are homomorphisms.
+
+For example, a homomorphism \tm{h} from the group of \tmi{integers}
+under \tmi{addition}, with identity element \tm{0}, to the
+\tmi{positive~rationals} under \tmi{multiplication}, with identity
+element \tm{1}, must satisfy the following equations.
+
+\begin{codenott}
+\tm{h(0) = 1}\\
+\tm{h(a + b) = h(a) * h(b)}
+\end{codenott}
+
+The exponential function (with any base) satisfies this condition,
+as does the constant function \tm{h(x) = 1}.
+
+\newslide
+
+Graphs and graph homomorphism form another category of this nature.
+
+\vs
+
+Functors (see the following page) are homomorphisms between categories.
+
+\newslide
+
+\section*{Functors}
+
+A \definition{functor} \tm{F} from category \tm{\cal C} to \tm{\cal
+D}
+is a pair of functions,
+\begin{enumerate}
+\item \tm{F_0: {\cal C}}-\tm{\unmath{objects} \rightarrow {\cal
+D}}-\tm{\unmath{objects,}}
+\item \tm{F_1: {\cal C}}-\tm{\unmath{arrows} \rightarrow {\cal
+D}}-\tm{\unmath{arrows,}}
+\end{enumerate}
+such that
+\begin{enumerate}
+\item If \tm{f} is an arrow in \tm{\cal C} and \tm{f: A \rightarrow
+B}
+then \tm{F_1(f): F_0(A) \rightarrow F_0(B)},
+\item \tm{F_1(id_A) = id_{F_0(A)}}, and
+\item \tm{F_1(f \circ g) = F_1(f) \circ F_1(g)} whenever \tm{f \circ
+g}
+is defined.
+\end{enumerate}
+
+\newslide
+
+We write \tm{F: {\cal C} \rightarrow {\cal D}} to express that
+\tm{F} is a functor from \tm{\cal C} to \tm{\cal D}.
+
+\vs
+
+Usually we will write \tm{F} for \tm{F} itself,
+and also for both \tm{F_{0}} and \tm{F_{1}}.
+\newslide
+
+Functors, as defined above, are sometimes called \definition{covariant
+functors}.
+
+\vs
+
+Once in a while, we may want a functor that reverses the direction
+of the arrows.  That is, we would like to change\\
+\begin{codenott}[black]
+If \tm{f} is an arrow in \tm{\cal C} and \tm{f: A \rightarrow B}
+then \tm{F_1(f): F_0(A) \rightarrow F_0(B)},
+\end{codenott}\\
+to\\
+\begin{codenott}[black]
+If \tm{f} is an arrow in \tm{\cal C} and \tm{f: A \rightarrow B}
+then \tm{F_1(f): F_0(B) \rightarrow F_0(A)},
+\end{codenott}
+
+Of course, this also means that\\
+\begin{codenott}[black]
+\tm{F_1(f \circ g) = F_1(f) \circ F_1(g)} whenever \tm{f \circ g}
+is defined
+\end{codenott}\\
+must be changed to\\
+\begin{codenott}[black]
+\tm{F_1(f \circ g) = F_1(g) \circ F_1(f)} whenever \tm{f \circ g}
+is defined.
+\end{codenott}
+
+\vs
+
+Functors that reverse the direction of the arrows are called
+\definition{contravariant functors}.
+
+\newslide
+
+\subsection*{Examples}
+
+\paragraph{\Ha:}  In \Ha, objects are \Has types, so the object
+part of a functor, \tm{F_{0}}, is a function from types to types.
+
+Therefore, a type constructor is suitable for use as the object
+function
+of a functor.  For example
+
+\begin{codenott}[MathColor]
+$F_{0}\,A = [A]$
+\end{codenott}
+
+is suitable.  In this case
+
+\begin{codenott}[MathColor]
+$F_{1}$ = map
+\end{codenott}
+
+completes the definition of a functor.
+
+\newslide
+
+We can think of this functor as lifting \Ha\, up to a category of
+list types,
+which is a subcategory of \Ha.
+
+\begin{cdiag}
+\obj(1,1)[A]{\textcd{a}}
+\obj(10,1)[B]{\textcd{b}}
+\obj(1,6)[FA]{\textcd{[a]}}
+\obj(10,6)[FB]{\textcd{[b]}}
+\mor{A}{B}{\textcd{f}}
+\mor{FA}{FB}{\textcd{map f}}
+\end{cdiag}
+
+\newslide
+
+This idea of lifting a type with a type constructor is common in
+\Has.
+
+Unfortunately, with this sort of functor in \Has,
+we can't use the same name for both the function on objects and the
+function on arrows, as is usually done in category theory.
+
+Instead we have a functor class
+
+\begin{code}
+class Functor f where\\
+\> fmap :: (a -> b) -> f a -> f b
+\end{code}
+
+This allows us to associate an \tc{fmap} function with a type
+constructor
+and use \tc{fmap} as a generic name for the function on arrows for
+a
+type constructor viewed as the object function part of a functor.
+
+\vs
+
+Notice that while we have previously had classes for types (e.g.
+\tc{Eq},
+\tc{Show}), \tc{Functor} is a \definition{constructor class} whose
+members
+are type constructors rather than types.
+
+\newslide
+
+The \textit{Haskell Standard Prelude} declares the list type to be a functor
+by
+
+\begin{code}
+instance Functor [] where\\
+\> fmap = map
+\end{code}
+
+so that \tc{fmap} can be used instead of map in contexts where is
+it
+clear that we are working with lists.
+
+\newslide
+
+Two other functor instances are defined in the \textit{Haskell Standard
+Prelude}.
+
+\begin{code}
+data Maybe a =\\
+\> Nothing | Just a\\
+\> \> deriving (Eq, Ord, Read, Show)\\
+\\
+instance Functor Maybe where\\
+\> fmap f Nothing = Nothing\\
+\> fmap f (Just x) = Just (f x)\\
+\\
+instance Functor IO where\\
+\> fmap f x = x >>= (return . f)
+\end{code}
+
+We won't worry about the \tc{IO} type until later in the course.
+
+\newslide
+
+\paragraph{\textcolor{black}{Quiz:}}
+
+\color{QuoteColor}
+\begin{enumerate}
+\item Find a functor \tm{G: \Ha \rightarrow \one}.
+\item Prove that \tc{Maybe} together with its \tc{fmap} instance
+obeys
+the functor laws.
+\item Show that for any category there exists an identity functor
+for that category.
+\item Show that the composition of two compatible functors is a
+functor.
+\end{enumerate}
+\color{black}
+
+\newslide
+
+\subsection*{The Category of ({\small small}) Categories:}
+
+A \definition{small category} is a category where the collection
+of objects
+is a set and the collection of arrows is a set.
+
+\vs
+
+\paragraph{The category of all small categories (\definition{Cat}):}
+The category \tmi{Cat}\, has all small categories as objects and
+all functors
+between these as arrows.
+
+\vs
+
+Of course, \tmi{Cat}\, is not a small category and therefore not
+an object
+within itself, thereby keeping Bertrand Russell happy.
+
+\newslide
+
+\section*{Duality}
+
+Given any category \CC, it is possible to produce another category,
+\COP, that is identical to \CC \, except that all arrows are reversed.
+
+A quick inspection of the definition of a category should be
+sufficient
+to see that this is so.
+
+A category \CC \, might seem
+more ``reasonable'' or ``natural'' then \COP.  For example
+consider \tmi{Set}.  \tmi{Set^\mathrm{op}} is as valid
+as \tmi{Set}\, as far as the mathematics of category theory go,
+even though
+the arrows don't have a particularly nice interpretation.
+
+We say that \COP \, is the \definition{dual} or \definition{opposite}
+of \CC.
+
+\newslide
+
+The \definition{Duality Principle} say that any statement that is
+true of
+an arbitrary category \CC \, is also true of \COP.
+
+\vs
+
+Similarly, concepts and definitions in category theory have duals.
+
+\vs
+
+As we will see below, an \textit{initial object} is the dual of a
+\textit{final object}.  We will also see later that \textit{sums}
+and
+\textit{products} of objects are dual concepts.
+
+
+\newslide
+
+\section*{Initial and Final Objects}
+
+An \definition{initial object} in a category \CC \, is an object
+\tm{0} such that for any object \tm{A} in \CC \, there is exactly
+one arrow in \CC \, from \tm{0} to \tm{A}.
+
+\vs
+
+Since \tm{0} is an object in \CC, the only arrow from \tm{0} to
+itself
+is the identity arrow.
+
+\vs
+
+Similarly, a \definition{final object} (or \definition{terminal
+object})
+in a category \CC \, is an object
+\tm{1} such that for any object \tm{A} in \CC \, there is exactly
+one arrow in \CC \, from \tm{A} to \tm{1}.
+
+\newslide
+
+In any category \CC \, we say that two objects, \tm{A} and \tm{B},
+are
+isomorphic iff there
+exist arrows
+
+\begin{codenott}
+\tm{f: A \rightarrow B}\\
+\tm{g: B \rightarrow A}
+\end{codenott}
+
+such that
+
+\begin{codenott}
+\tm{g \circ f = id_{A}}\\
+\tm{f \circ g = id_{B}}
+\end{codenott}
+
+\vs
+
+In the case of \tmi{Set}, this is just the ordinary definition of
+isomorphism.
+
+\vs
+
+A category may have no initial objects, exactly one initial object,
+or many
+initial objects.  Any two initial objects in a category are isomorphic.
+The same applies to final objects.
+
+\newslide
+
+\paragraph{\textcolor{black}{Quiz:}}
+
+\color{QuoteColor}
+\begin{enumerate}
+\item Find a category with no initial objects.
+\item Find a category with exactly one initial object.
+\item Find a category with more than one initial object.
+\item Prove that any two initial objects are isomorphic.
+\item Find a category with no final objects.
+\item Find a category with exactly one final object.
+\item Find a category with more than one final object.
+\item Prove that any two final objects are isomorphic.
+\end{enumerate}
+\color{black}
+
+
+\newslide
+
+\subsection*{Examples}
+
+In the predicate calculus, we have exactly on initial object,
+\tmi{False},
+and one final object, \tmi{True}.
+
+Similarly, with the power set \tm{{\cal P}(S)}, the initial object
+is
+\tm{\emptyset} and the final object is \tm{S}.
+
+In general, a partial order may or may not have an initial object.
+A initial
+object, if it exists, is unique.  Similarly for final objects.
+
+\newslide
+
+\subsubsection*{Initial and Final Objects in \tmi{Set}}
+
+The initial and final objects of \tmi{Set}\, are a bit more
+interesting.
+\tmi{Set}\, has a single initial object but an infinite number of
+final objects.
+
+\vs
+
+There is exactly one initial object, \tm{\emptyset}.  For any set
+\tm{S},
+there is exactly one function, \tm{f: \emptyset \rightarrow S}.
+This
+function is the empty function.  That is, if we view a function as
+a set of
+ordered pairs, \tm{\{(x,y)|x \in \dom f, y = f(x)\}}, then \tm{f}
+is the
+empty set of ordered pairs.
+
+\newslide
+
+A set \tm{S} is a final object in \tmi{Set}\, if and only if the
+set contains exactly
+one element.  If \tm{S=\{s\}}, then the only
+function from any other set is a constant function, \tm{f(x)=s}.
+
+\vs
+
+Note that there exists exactly one arrow from the initial object
+to any
+final object.
+
+\newslide
+
+We also find in \tmi{Set}\, that the arrows going in the
+``wrong direction'', to the initial
+object and from the final objects, are of interest.
+
+\vs
+
+In all of \tmi{Set}\, there is only one arrow to the initial object,
+and that
+is the identity arrow for \tm{\emptyset}.
+
+
+\vs
+
+On the other hand, there are lots of arrows from the final objects.
+We
+will let \tm{1} denote any arbitrary final object (singleton set),
+and \tm{S} be
+any set.  There is exactly one arrow from \tm{1} to \tm{S} for
+each element of
+\tm{S}.  There arrows from a final object are constants functions.
+
+That is, since there is exactly one object in \tm{1}, each function
+to
+\tm{S} takes the only element in \tm{1} to a single element of
+\tm{S}.
+
+\newslide
+
+Since the arrows from \tm{1} to \tm{S} in \tmi{Set}\, correspond
+to the
+elements of \tm{S}, category theory can deal with elements of a set
+without
+any need for a mechanism outside category theory.
+
+Furthermore, this generalizes the concept of
+\textit{element} to categories other
+than \tmi{Set}.
+
+\vs
+
+Notice that while initial objects and final objects are dual concepts,
+they are not dual to each other within the specific category
+\tmi{Set}.
+
+\newslide
+
+%\subsubsection*{Natural Numbers as an Initial Object}
+
+%Let's now consider a definition of \textit{Natural Numbers},
+%\NAT, based on Peano's axioms. 
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \tmi{succ}(m) \in \NAT}.
+%\end{enumerate}
+
+%\newslide
+
+%Oops, we forgot to exclude negative numbers!
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+%\end{enumerate}
+
+%\newslide
+
+%We also need one more axiom.
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+%\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+%\end{enumerate}
+
+%\newslide
+
+%Oh my gosh!  I just noticed that the nonnegative real numbers, the rational excluding
+%negative integers,
+%and lots of other sets, all satisfy these axioms.  I forgot the induction
+%axiom!
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+%\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+%\item For any predicate \tm{P} in the first order predicate calculus,
+%\tm{(P(0) \wedge (P(m) \Rightarrow P(\suc(m))) \Rightarrow
+%(\forall n \in \NAT.P(n))}
+%\end{enumerate}
+
+%The induction axiom insures that \NAT \, is the smallest set that satisfies
+%the above axioms.
+
+%\newslide
+
+%While you were looking at the previous page, I remembered that there are
+%some completeness issues with the axioms for number theory.  The axioms
+%on the previous page are satisfied by an infinite number of sets, most of
+%which are a bit weird.
+
+%We have to allow \tm{P} to be any predicate.
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+%\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+%\item For any predicate \tm{P},
+%\tm{(P(0) \wedge (P(m) \Rightarrow P(\suc(m))) \Rightarrow
+%(\forall n \in \NAT.P(n)))}
+%\end{enumerate}
+
+%\newslide
+
+%Since we have no way of expressing more than a countable subset of the
+%predicates on \NAT, perhaps it is better to restate the final axiom in terms
+%of sets.
+
+%\begin{enumerate}
+%\item \tm{0 \in \NAT}
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \in \NAT}.
+%\item \tm{m \in \NAT \Rightarrow \suc(m) \not= 0}
+%\item \tm{\suc(m) = \suc(n) \Rightarrow m = n}
+%\item \tm{(X \subseteq \NAT \wedge 0 \in X
+%\wedge (m \in X \Rightarrow \suc(m) \in X))
+%\Rightarrow X = \NAT}
+%\end{enumerate}
+
+%\newslide
+
+%Are you really sure we finally have a correct definition
+%for the natural numbers?
+
+%(Personally, I am not even sure I finally managed to get my parentheses
+%balanced correctly.)
+
+%\newslide
+
+%Let's try another approach.
+
+%Consider a category, \tmi{US} (for unary system), where
+
+%\begin{description}
+%\item[An Object] is any triple \tm{(S,a,f)} such that
+%\begin{itemize}
+%\item \tm{S} is a set,
+%\item \tm{a \in s}, and
+%\item \tm{f: S \rightarrow S} is a function.
+%\end{itemize}
+%\item[An Arrow] is any homomorphism between objects. 
+%\end{description}
+
+%This category has initial objects, which are all isomorphic to
+%\tm{(\NAT, 0, \suc)}.
+
+%\newslide
+
+%To see that \tm{(\NAT, 0, \suc)} is an initial object, it is sufficient
+%to show that for any other object, \tm{(S,a,f)}, in \tmi{US}
+%there is a unique homomorphism from \tm{(\NAT, 0, \suc)} to
+%\tm{(S,a,f)}.
+
+%Clearly, \tm{h} defined by
+
+%\begin{codenott}
+%\tm{h(0) = a}\\
+%\tm{\forall n \in \NAT.h(\suc(n)) = f(h(n))}
+%\end{codenott}
+
+%is the unique homomorphism.
+
+%\newslide
+
+\section*{Diagrams, Cones, Limits and their Duals}
+
+A \definition{diagram} in a category \CCC is a collection of objects
+in \CCC together with some
+(or all or none) of the arrows between those objects.
+
+We say a diagram \definition{commutes} if whenever there are two
+(or more) distinct
+paths through the diagram from some object \tm{A} to some (possible
+other)
+object \tm{B}, the composition of the arrows along one path is equal
+to
+the composition of the arrows along the other path(s).
+
+\newpage
+
+A \definition{cone} for a diagram \tm{D} in a category \CCC is a
+\CC-\tm{\unmath{object}}, \tm{A}, together with an arrow
+\tm{f_{i}: A \rightarrow B_{i}} for each
+object \tm{B_{i}} in \tm{D}, such that for any arrow
+\tm{g: B_{i} \rightarrow B_{j}} in \tm{D}, the following holds.\\
+
+\begin{codenott}
+\tm{g \circ f_{i} = f_{j}}
+\end{codenott}
+
+\vs
+
+We will use the notation \tm{\{f_{i}: A \rightarrow B_{i}\}} for
+the cone
+described above, and call the cone a
+\definition{$D$-cone} to indicate that it is a cone for the diagram
+\tm{D}.
+
+\newpage
+
+We can express the equation \tm{g \circ f_{i} = f_{j}} from
+the previous page by saying that
+\begin{cdiag}
+\obj(1,1)[B1]{\tm{B_{i}}}
+\obj(6,6)[A]{\tm{A}}
+\obj(11,1)[B2]{\tm{B_{j}}}
+\mor{A}{B1}{\tm{f_{i}}}[-1,0]
+\mor{A}{B2}{\tm{f_{j}}}
+\mor{B1}{B2}{\tm{g}}
+\end{cdiag}
+commutes.
+
+The above commutative diagram is a different diagram than \tm{D}
+but
+is useful for describing \tm{D}.
+
+\newpage
+
+A \definition{limit} for a diagram \tm{D} (when one exists) is a
+\tm{D}-cone
+\tm{\{f_{i}: A \rightarrow B_{i}\}} with the
+property that for any \tm{D}-cone
+\tm{\{f^{\prime}_{i}: A^{\prime} \rightarrow B_{i}\}} there is
+exactly
+one arrow \tm{f: A^{\prime} \rightarrow A} such
+\begin{cdiag}
+\obj(1,6)[C1]{\tm{A^{\prime}}}
+\obj(6,1)[B]{\tm{B_{i}}}
+\obj(11,6)[C2]{\tm{A}}
+\mor{C1}{B}{\tm{f^{\prime}_{i}}} [-1,0]
+\mor{C2}{B}{\tm{f_{i}}}
+\mor{C1}{C2}{\tm{f}}
+\end{cdiag}
+commutes for every object \tm{B_{i}} in \tm{D}.
+
+\vs
+
+That is, a limit is a final object in a category where the objects are the cones over a given diagram.
+
+\newpage
+
+As a trivial example, consider a limit of an empty diagram, \tm{D},
+in a category \CC.
+
+Since the empty diagram has no objects or arrows, a \tm{D}-cone is
+just an object, and every object of \CCC is a \tm{D}-cone.
+
+It follows that a limit of an empty diagram is a final object,
+since every other \tm{D}-cone has a unique arrow to this object.
+
+\newslide
+
+\subsection*{Diagrams, Cones, Limits}
+
+A \definition{cocone} is the dual of a cone.  Hence:
+\begin{quote}
+A \definition{cocone} for a diagram \tm{D} in a category \CCC is a
+\CC-\tm{\unmath{object}}, \tm{A}, together with an arrow
+\tm{f_{i}: B_{i} \rightarrow A} for each
+object \tm{B_{i}} in \tm{D}, such that for any arrow
+\tm{g: B_{i} \rightarrow B_{j}} in \tm{D}, the following holds.
+\begin{codenott}
+\tm{f_{i} = f_{j} \circ q}
+\end{codenott}
+\end{quote}
+A \definition{colimit} is the dual of a limit.
+
+\paragraph{\textcolor{black}{Quiz:}}
+
+\color{QuoteColor}
+\begin{enumerate}
+\item What is a colimit of an empty diagram, and why.
+% An initial object.
+\item Describe a limit of a diagram consisting of a single object.
+% Any isomorphic object and arrow forming half of the isomorphism.
+\end{enumerate}
+\color{black}
+
+\newslide
+
+\section*{Sums and Products}
+
+We have previously talked about sums (disjoint unions) and products
+(cartesian cross products) and their relationship to \Has algebraic
+datatypes.  We will now consider these concepts in terms of category
+theory.
+
+There are three advantages to the categorical view.  First, it
+removes the
+issue of representation.  For example, a product can be represented
+in any
+of a number of ways.  Our categorical definition of category will
+not
+specify a representation, but will instead yield all possible
+(isomorphic)
+products.  Second, the concepts of sum and product will extend to
+categories
+where object need not be sets or even similar to sets.  Third, we
+sill see
+that product and sum are dual concepts.
+
+A product will be an initial object of a suitable category and a
+sum will be
+a final object of a similar category.
+
+\newpage
+
+In order to avoid a specific representation for a product, we will
+actually consider a product of \tm{A} and \tm{B} to be an object
+\tm{C} together with two arrows \tm{\pi_{1}: C \rightarrow A} and
+\tm{\pi_{2}: C \rightarrow B}.  In the case of \tmi{Set}, these arrows
+will be the projection functions (e.g. \tc{fst} and \tc{snd} is
+\textit{Haskell}).
+\begin{cdiag}
+\obj(1,1)[A]{\tm{A}}
+\obj(6,1)[C]{\tm{C}}
+\obj(11,1)[B]{\tm{B}}
+\mor{C}{A}{\tm{\pi_{1}}}[-1,0]
+\mor{C}{B}{\tm{\pi_{2}}}
+\end{cdiag}
+
+Similarly, a sum of \tm{A}
+and \tm{B} will be an object \tm{C} together with a pair of arrows,
+which will be injection functions in the case of \tmi{Set}.
+\begin{cdiag}
+\obj(1,1)[A]{\tm{A}}
+\obj(6,1)[C]{\tm{C}}
+\obj(11,1)[B]{\tm{B}}
+\mor{A}{C}{\tm{i_{1}}}
+\mor{B}{C}{\tm{i_{2}}}[-1,0]
+\end{cdiag}
+
+\newpage
+
+A \definition{product} of two objects, \tm{A} and \tm{B} is a limit
+of the diagram \tm{D} consisting of the two objects \tm{A} and \tm{B}
+and no arrows.
+
+A \definition{coproduct} (or \definition{sum})
+of two objects, \tm{A} and \tm{B} is a colimit
+of the diagram \tm{D} consisting of the two objects \tm{A} and \tm{B}
+and no arrows.
+
+A category may or may not have products and coproducts.
+
+\newslide
+
+Let us express the definition of a produce in another way.
+
+A product of objects \tm{A} and \tm{B} is an object \tm{A \times B}
+together with two arrows \tm{\pi_{1}:  A \times B \rightarrow A} and
+\tm{\pi_{2}:  A \times B \rightarrow B},
+
+\begin{cdiag}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A \times B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{X}{A}{\textmath{\pi_1}}[-1,0]
+\mor{X}{B}{\textmath{\pi_2}}
+\end{cdiag}
+
+such that for any object \tm{C} with arrows \tm{a: C \rightarrow A} and
+\tm{b: C \rightarrow B} 
+(that is, any cone for the diagram consisting of \tm{A} and \tm{B})
+there exists a unique arrow, which we will call
+\tm{<a,b>}, such that the diagram on the following page commutes.
+
+\newslide
+
+\begin{cdiag}
+\obj(11,11)[C]{\tm{C}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A \times B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{X}{A}{\textmath{\pi_1}}[-1,0]
+\mor{X}{B}{\textmath{\pi_2}}
+\mor{C}{A}{\textmath{a}}[-1,0]
+\mor{C}{B}{\textmath{b}}
+\mor{C}{X}{\textmath{<a,b>}}[-1,1]
+\mor{C}{X}{\textmath{!}}[1,1]
+\end{cdiag}
+
+The dotted arrow asserts that the arrow must exist and the \; \tm{!} \;
+asserts that the arrow is unique.
+
+\newpage
+
+The diagram on the previous
+page states that there must exist a unique arrow, \tm{<a,b>},
+such that
+\begin{mcode}
+\tm{a = \pi_{1} \circ <a,b>}\\
+\tm{b = \pi_{2} \circ <a,b>}
+\end{mcode}
+
+\newslide
+
+Quiz:  \textcolor{QuoteColor}{In the category \tmi{Set},
+what happens if either or both sets
+in a product are empty?  What happens if either or both are singleton
+sets?}
+
+Quiz:  \textcolor{QuoteColor}{Prove that if a pair of object
+in any category has two (or more)
+distinct products then the products are isomorphic.}
+
+\newslide
+
+In \tmi{Set}, by considering the case where \tm{C = \tm{1}}
+(a singleton set), we can see that a ``value'' in \tm{A \times B}
+must be able to store any value from \tm{A} and any value from \tm{B},
+since the arrows \tm{a} and \tm{b} can ``select'' any pair of values
+in \tm{A} and \tm{B} respectively.
+
+\begin{cdiag}
+\obj(11,11)[C]{\tm{1}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A \times B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{X}{A}{\textmath{\pi_1}}[-1,0]
+\mor{X}{B}{\textmath{\pi_2}}
+\mor{C}{A}{\textmath{a}}[-1,0]
+\mor{C}{B}{\textmath{b}}
+\mor{C}{X}{\textmath{<a,b>}}[-1,1]
+\mor{C}{X}{\textmath{!}}[1,1]
+\end{cdiag}
+
+\newpage
+
+On the other hand, if \tm{A \times B} could store any additional
+information, then the arrow \tm{<a,b>} would not be unique.
+
+\begin{cdiag}
+\obj(11,11)[C]{\tm{1}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A \times B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{X}{A}{\textmath{\pi_1}}[-1,0]
+\mor{X}{B}{\textmath{\pi_2}}
+\mor{C}{A}{\textmath{a}}[-1,0]
+\mor{C}{B}{\textmath{b}}
+\mor{C}{X}{\textmath{<a,b>}}[-1,1]
+\mor{C}{X}{\textmath{!}}[1,1]
+\end{cdiag}
+
+Furthermore, while a product must contain exactly the right amount
+of information, there is no restriction on the way this information
+is ``represented''.  Any product is as good as any other, and
+they are all isomorphic to each other.
+
+\newpage
+
+A sum (or coproduct) of objects \tm{A} and \tm{B} is an object \tm{A + B}
+together with two arrows \tm{i_{1}:  A \rightarrow A + B} and
+\tm{i_{2}: B \rightarrow A + B}
+such that for any object \tm{C} with arrows \tm{a: A \rightarrow C} and
+\tm{b: B \rightarrow C} 
+(that is, any cocone for the diagram consisting of \tm{A} and \tm{B})
+there exists a unique arrow, which we will call
+\tm{[a,b]} such that the following diagram commutes.
+
+\begin{cdiag}
+\obj(11,11)[C]{\textmath{C}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A \textcolor{OtherColor}{+} B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{\textcolor{OtherColor}{i_1}}}
+\mor{B}{X}{\textmath{\textcolor{OtherColor}{i_2}}}[-1,0]
+\mor{A}{C}{\textmath{a}}
+\mor{B}{C}{\textmath{b}}[-1,0]
+\mor{X}{C}{\textmath{!}}[1,1]
+\mor{X}{C}{\textmath{\textcolor{OtherColor}{[a,b]}}}[-1,1]
+\end{cdiag}
+
+\newslide
+
+Notice that the sum figure is the same as the product figure except
+for the name changes, shown in \textcolor{OtherColor}{PineGreen},
+and the direction of the arrows, all of which are reversed.
+
+This again illustrates the duality of sums and products.
+
+\newslide
+
+To get a better feel for sums,
+let's consider some special cases of sums (disjoint unions) in \tmi{Set}.
+
+Since a sum of objects \tm{A} and \tm{B} is an object \tm{A + B}
+together with two arrows \tm{i_{1}:  A \rightarrow A + B} and
+\tm{i_{2}: B \rightarrow A + B}, we will consider the sum figure
+assuming that the bottom part of the figure,
+
+\begin{cdiag}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A + B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{i_1}}
+\mor{B}{X}{\textmath{i_2}}[-1,0]
+\end{cdiag}
+
+is fixed, but that
+consider various possible cases for \tm{C} and the arrows to \tm{C}.
+
+\newslide
+
+\begin{cdiag}
+\obj(11,11)[C]{\textmath{C}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A + B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{i_1}}[-1,0]
+\mor{B}{X}{\textmath{i_2}}
+\mor{A}{C}{\textmath{a}}[-1,0]
+\mor{B}{C}{\textmath{b}}
+\mor{X}{C}{\textmath{!}}[1,1]
+\mor{X}{C}{\textmath{[a,b]}}[-1,1]
+\end{cdiag}
+
+\begin{enumerate}
+\item Suppose \tm{C=A} and \tm{a=id_A}, with \tm{b} being arbitrary.
+(The other way around is similar.)
+\item Suppose \tm{A} and \tm{B} are nonempty and \tm{C=\{1,2\}},
+\tm{a=\tc{const}~1} and \tm{b=\tc{const}~2}.
+\end{enumerate}
+
+\newslide
+
+\begin{enumerate}
+\item Suppose \tm{C=A} and \tm{a=id_A}, with \tm{b} being arbitrary.
+(The other way around is similar.)
+
+\paragraph{Observation:}  For any \tm{a \in A}, we can insert the value
+into \tm{A+B} and get it back out again.  Similarly for any \tm{b \in B}.
+Hence, at the very least, \tm{A+B} can store either an element of \tm{A}
+or an element of \tm{B}, as we would expect from any sort of union.
+
+\item Suppose \tm{A} and \tm{B} are nonempty and \tm{C=\{1,2\}},
+\tm{a=\tc{const}~1} and \tm{b=\tc{const}~2}.
+
+\paragraph{Observation:}
+This shows that we can always determine which insertion function
+produced the value in \tm{A+B}.  Notice that this works even in
+the case where \tm{A=B}.
+\end{enumerate}
+
+\newslide
+
+\begin{cdiag}
+\obj(11,11)[C]{\textmath{C}}
+\obj(1,1)[A]{\textmath{A}}
+\obj(11,1)[X]{\textmath{A {+} B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{{i_1}}}[-1,0]
+\mor{B}{X}{\textmath{{i_2}}}
+\mor{A}{C}{\textmath{a}}[-1,0]
+\mor{B}{C}{\textmath{b}}
+\mor{X}{C}{\textmath{!}}[1,1]
+\mor{X}{C}{\textmath{{[a,b]}}}[-1,1]
+\end{cdiag}
+
+\begin{enumerate}
+\item Suppose that \tm{C=A+B} and \tm{a=i_1} and \tm{b=i_2}.
+Clearly \tm{[a,b]=id_{A+B}} will work.  Since \tm{[a,b]} must
+be unique, nothing else can work.
+\item Consider the case where \tm{A=\emptyset} and/or \tm{B=\emptyset}.
+\end{enumerate}
+
+\newslide
+
+\begin{enumerate}
+\item Suppose that \tm{C=A+B} and \tm{a=i_1} and \tm{b=i_1}.
+Clearly \tm{[a,b]=id_{A+B}} will work.  Since \tm{[a,b]} must
+be unique, nothing else can work.
+
+\paragraph{Observation:}
+\tm{A+B} can't contain any more than just the necessary information,
+since there is no extra information that can be changed in the arrow
+from \tm{A+B} back to itself.  If \tm{A+B} contained some extra junk,
+then we could get additional arrows from \tm{A+B} back to itself
+that would allow the diagram to commute.
+
+\item Consider the case where \tm{A=\emptyset} and/or \tm{B=\emptyset}.
+
+\paragraph{Observation:}  Let us do a general category theoretic proof
+here, so we can apply the result more generally.
+\end{enumerate}
+
+\newslide
+
+\begin{cdiag}
+\obj(11,11)[C]{\textmath{C}}
+\obj(1,1)[A]{\tm{0}}
+\obj(11,1)[X]{\textmath{A {+} B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{i_1}}[-1,0]
+\mor{B}{X}{\textmath{i_2}}
+\mor{A}{C}{\textmath{a}}[-1,0]
+\mor{B}{C}{\textmath{b}}
+\mor{X}{C}{\textmath{!}}[1,1]
+\mor{X}{C}{\textmath{{[a,b]}}}[-1,1]
+\end{cdiag}
+
+
+By definition, there is exactly one arrow from \tm{0} to any object.
+Therefore the left triangle must commute.  That is, \tm{i_1;[a,b] = a}
+because \tm{i_1;[a,b]} and \tm{a} are both the (same) unique arrow
+from \tm{0} to \tm{C}.
+
+Therefore, a possible sum is \tm{A+B = B} so \tm{[a,b] = b} for any
+\tm{C} and \tm{b}.
+Any other sum must be isomorphic.  (This is the dual of a property
+for products that you
+proved in a quiz.)
+
+\newslide
+
+\begin{cdiag}
+\obj(11,11)[C]{\textmath{C}}
+\obj(1,1)[A]{\tm{0}}
+\obj(11,1)[X]{\textmath{A {+} B}}
+\obj(21,1)[B]{\textmath{B}}
+\mor{A}{X}{\textmath{{!}}}[-1,0]
+\mor{B}{X}{\textmath{{i_2}}}
+\mor{A}{C}{\textmath{!}}[-1,0]
+\mor{B}{C}{\textmath{b}}
+\mor{X}{C}{\textmath{!}}[1,1]
+\mor{X}{C}{\textmath{{[a,b]}}}[-1,1]
+\end{cdiag}
+
+It follows that \tm{\tm{0} + B \cong B} for any \tm{B} in any category
+with sums.  Similarly, \tm{A + \tm{0} \cong A} and \tm{\tm{0} + \tm{0} \cong
+\tm{0}}.
+
+\newslide
+
+Since \tm{\tm{0} + B \cong B}, by duality (reversing the arrows to produce the
+opposite category) \tm{\tm{1} \times B \cong B} in any category.  This proves:
+
+In \tmi{Set} \, this gives us the obvious results.
+
+In the predicate calulus, this says \tm{true \wedge B \meq B} and
+\tm{false \vee B \meq B}.
+
+In powersets, where \tm{S} is the universal set, we have
+\tm{S \cap B = B} and \tm{\emptyset \cup B = B}.
+
+With partial orders, where everything is defined,
+\tm{\top \sqcap B = B}.  (That is the minimum of the maximal element and
+\tm{B} is \tm{B}.  For
+example \tm{\infty \min B = B} with integers --- or reals.)
+Similarly \tm{\bot \sqcup B = B}.
+
+Lots of similar results in other categories also follow.
+
+\newpage
+
+Remember that \tm{\tm{0} \times B \cong \tm{0}} in the category of sets.
+
+Similar results apply in lots of other categories, for example
+\tm{false \wedge B = false}, \tm{\emptyset \cap B = \emptyset}, etc.
+
+The duals of these last properties, \tm{true \vee B = true} and
+\tm{S \cup B = S} also hold.
+
+However, in all of these cases, we have categories
+where there is a unique initial object (or unique final object in the dual
+cases), and
+no other object has an arrow to the unique initial object (or in the dual
+cases, from the unique final object).
+
+The dual of our first result above (in the
+category of sets) is \tm{\tm{1} + B \cong \tm{1}}, which
+is not true in the category of sets.  In this category there are
+multiple final objects, and every object except the initial object
+has arrows from every final object.
+
+\newslide
+
+\input{PolyFun}
+
+\newslide
+
+\input{F-algebras}
+
+%\section*{F-Algebras}
+
+%Let \CC \, be a category and \tm{F: {\CC} \rightarrow {\CC}} \, be
+%an endofunctor.
+
+%An \definition{F-algebra} is a pair \tm{(A,a)} where \tm{A} is a
+%\CC-\tm{\unmath{object}} and \tm{a: F \, A \rightarrow A} is a
+%\CC-\tm{\unmath{arrow}}.  The object \tm{A} is called the
+%\definition{carrier} of the F-algebra.
+
+%\newslide
+
+%For example, let \tmi{Natural} be the set of natural numbers in the
+%category
+%\tmi{Set}.  We will now define an F-algebra on the carrier \tmi{Natural}
+%with two ``operators''.  The first operator is really a constant,
+%which can
+%be viewed as an operator that takes zero arguments.  This operator,
+%which we
+%will call \tmi{zero}, ``returns'' the natural number \tm{0}.  The
+%other
+%operator is a binary operator, \tmi{plus}, that returns the sum of
+%its two
+%arguments.  This gives us a group with an identity element and a
+%binary
+%operation.
+
+%This example could easily be extended to include more constants and
+%operators, such as the constant \tmi{one} and the binary operator
+%\tmi{times}, as well up operators of different arity, such as a
+%unary
+%operator, \tmi{negate}, and operators of arity three or more.
+
+%\newslide
+
+%Let \tm{F: F \, \tmi{Set} \rightarrow \tmi{Set}} be the functor
+%defined by \tm{F_{0} \, S = 1 + S \times S} and
+%\tm{F_{1} \, f = [\tmi{id}_{1},<f,f>]}.
+
+%We now define the arrow \tm{a: F \, A \rightarrow A} as follows.
+
+%\begin{codenott}
+%\tm{a (i_{1} (x)) = 0}\\
+%\tm{a (i_{2} (a,b)) = a + b}
+%\end{codenott}
+
+%\newslide
+
+%Let us revisit this example in \Has.
+
+%We will need to assume that we have a \textit{Haskell} type
+%\tcx{Natural}
+%that contains the natural numbers and nothing else.  This is not
+%actually
+%possible in \textit{Haskell}, because every type contains a $\bottom$
+%value,
+%but we can pretend.  Similarly, for a later example, we will assume
+%that
+%\textit{Haskell} contains a type \tcx{PosReal}, which includes all
+%positive
+%real numbers (so it has an uncountable number of values), does not
+%contain
+%$\bot$.  We will distinguish that fake types having no $\bottom$
+%element by
+%using a \tcx{special color (PineGreen)}.
+
+%\newslide
+
+%We start by defining the functor (type constructor) \tcx{F}.
+
+%\begin{code}
+%datatype \tcx{F} a = Ident \tcx{|} Op a a\\
+%\\
+%instance Functor \tcx{F} where\\
+%   fmap f Ident = Ident\\
+%   fmap f (Op x y) = Op (f x) (f y)
+%\end{code}
+
+%As the color suggests, we assume that no $\bottom$ element is added
+%by the
+%type constructor \tcx{F}\@.  We also create labels, \tc{Zero} and
+%\tc{Add}
+%for the two cases in the domain sum.
+
+%\newslide
+
+%We now define
+
+%\begin{code}
+%a :: \tcx{F Natural} -> \tcx{Natural}\\
+%a Ident = 0\\
+%a (Op x y) = x + y
+%\end{code}
+
+%Notice how a single function, \tc{a}, defined both (or in general
+%case, all) operations at once.
+
+%\newslide
+
+%Using the same functor, \tcx{F}, we also can define an F-algebra
+%over the
+%positive real numbers with a constant \tmi{one} and an operation
+%\tmi{times}.
+
+%\begin{code}
+%a :: \tcx{F PosReal} -> \tcx{PosReal}\\
+%a Ident = 1\\
+%a (Op x y) = x * y
+%\end{code}
+
+%\newslide
+
+%\begin{cdiag}
+%\obj(1,1)[B]{\tcx{F \, Real}}
+%\obj(1,11)[A]{\tcx{F \, Natural}}
+%\obj(21,1)[D]{\tcx{Real}}
+%\obj(21,11)[C]{\tcx{Natural}}
+%\mor{A}{B}{\tc{fmap h}}
+%\mor{C}{D}{\tc{h}}
+%\mor{A}{C}{\tc{a}}
+%\mor{B}{D}{\tc{b}}
+%\end{cdiag}
+
+
+%The signature of an algebra is basically a collection of type
+%definitions
+%for the operations defined in the algebra.  To keep things simple,
+%we will assume that we have only one basic type, so the type of
+%each operation is determined by its arity.
+
+%A group, for example has two operators, one, which we will call
+%\tmi{Times}, of arity two and one of
+%arity zero (i.e. a constnat), which we will call \tmi{Unit}.
+
+%We can express this idea with a \textit{Haskell} datatype declaration.
+%\begin{code}
+%datatype Group a = Times a a | Unit
+%\end{code}
+
+%A group must also satisfy certain equations (laws), but we will
+%ignore this
+%for the moment.  We will also ignore the fact that algebraic
+%datatypes in
+%\textit{Haskell} are lifted (contain a \tm{\bot} element that we
+%do not
+%really want at this point).
+
+%\newslide
+
+%A specific group is determined by the set of elements in the group
+%together
+%with the specification of the two operators.  The two operators
+%can
+%be determined by a function from \tc{Group} \tm{A} to \tm{A}.
+
+%For example, (ignoring \tm{\bot}) \tc{addition}, defined by
+
+%\begin{code}
+%addition :: Group Integer -> Integer\\
+%addition (Times m n) = m + n\\
+%addition (Unit)      = 0
+%\end{code}
+
+%defines the group consisting of the set of \tmi{Integers} under
+%\tmi{addition}.
+
+%(The group laws, which we are ignoring, would determine that
+%\tc{Unit} must
+%be \tm{0}.)
+
+%Notice how the single \tc{addition} function defines both \tmi{Times}
+%and
+%\tmi{Unit}, and in general could define any number of operators
+%for an
+%algebra with more operators.
+
+%\newslide
+
+%Another group is defined by \tc{bool}.
+
+%\begin{code}
+%bool :: Group Bool -> Bool\\
+%bool (Times a b) = a == b\\
+%bool (Unit)      = True
+%\end{code}
+
+%Let \tc{h :: Integer -> Bool} be a function that we will view as
+%being
+%from the group of \tmi{Integers} (under \tmi{addition}) to the
+%group of
+%\tmi{Bools} as defined above.
+
+%We say that \tc{h} is a \definition{homomorphism} if it maintains
+%the structure
+%of the algebra.  That is
+
+%\begin{codenott}
+%\tc{h 0 }\tm{\equiv}\tc{ True}\\
+%\tc{h (m + n) }\tm{\equiv}\tc{ h m == h n}
+%\end{codenott}
+
+%\newslide
+
+%There are exactly two functions with the type specified for \tc{h}
+%that
+%are homomorphisms, and an infinite number that are not.
+
+%\vs
+
+%How can we use the methods of category theory to
+%specify in a general way
+%that a function from one algebra to another algebra with
+%the same signature as the first is a homomorphism?
+
+%\newslide
+
+%First, we should view the type constructor, \tc{Graph} in this
+%case, as
+%a functor.  This means we need a definition for \tc{fmap}, which
+%for
+%\tc{graph} must be defined as follows.
+
+%\begin{code}
+%instance Functor Group where\\
+%\> \> fmap h (Times a b) = Times (h a) (h b)\\
+%\> \> fmap h  Unit       = Unit
+%\end{code}
+
+%Now our requirements for \tc{h} to be a homomorphism can be expressed
+%by the following two equations
+%
+%\begin{codenott}
+%\tc{bool (fmap h (Times m n)) }\tm{\equiv}\\
+%\> \> \> \tc{ h (addition (Times m n))}\\
+%\tc{bool (fmap h Unit) }\tm{\equiv}\tc{ h (addition Unit)}
+%\end{codenott}
+
+%or the single equation
+
+%\begin{codenott}
+%\tc{bool.fmap h  }\tm{\equiv}\tc{ h.addition}
+%\end{codenott}
+
+%\newslide
+
+%We note that by using abstract data types, which can be implemented
+%in Haskell by using modules and controlling exports, we can implement
+%groups in such a way that \bottom, or elements containing \bottom,
+%can't be produced.
+
+%In general, let \tm{G} be any group, where the ele
+
+%\begin{codenott}
+%\tc{bool.fmap h  }\tm{\equiv}\tc{ h.addition}
+%\end{codenott}
+
+%from the previous page says, exactly, that the following diagram
+%commutes.
+
+%\begin{cdiag}
+%\obj(1,1)[B]{\tc{Group Bool}}
+%\obj(1,11)[A]{\tc{Group Integer}}
+%\obj(21,1)[D]{\tc{Bool}}
+%\obj(21,11)[C]{\tc{Integer}}
+%\mor{A}{B}{\tc{fmap h}}
+%\mor{C}{D}{\tc{h}}
+%\mor{A}{C}{\tc{addition}}
+%\mor{B}{D}{\tc{bool}}
+%\end{cdiag}
+
+%%Let $\Omega =\{f_{1}, f_{2}, \ldots f_{n}\}
+
+%%An algebra, $A$, is a set, $|A|$, called the carrier of the set
+%together
+%%with a collection of
+%%Quoting from http://mathworld.wolfram.com/UniversalAlgebra.html:
+%%\begin{quote}
+%%\color{QuoteColor}
+%%A universal algebra is a pair $\Bbb{A}=(A,(f_{i}^{A})_{i \in I})$,
+%where $A$
+%%and $I$ are sets and for each ,   is an operation on A. The algebra
+%is finitary if each of its operations is finitary.
+
+%%A set of function symbols (or operations) of degree  is called a
+%signature (or type). Let  be a signature. An algebra A is defined
+%by a domain S (which is called its carrier or universe) and a mapping
+%that relates a function  to each n-place function symbol from .
+
+%%Let  and  be two algebras over the same signature , and their
+%carriers are A and B, respectively. A mapping  is called a homomorphism
+%from  to  if for every  and all  ,
+
+%%\color{black}
+%%\end{quote}
+
+%\newslide
+
+%We note in passing that the previous several pages hold if we allow
+%\bottom amd
+%values containing \bottom in types \tc{Integer} and \tc{Group
+%Integer}, but that we no longer have a group if these values are
+%allowed.
+
+%If we are interested in the group of integers under addition, then
+%the above applies, but we should note that by using datatypes
+%\tc{Integer} and
+%\tc{Group Integer} we can represent values that are not in the
+%sets that we really want.  We can think of these extra values (e.g.
+%\tc{Times 5 \bottom})
+%as ill formed.
+
+%In a similar manner, if we are interested in addition mod 5, we
+%might represent
+%values using \tc{Int}s with the understanding that only the values
+%\tc{0},
+%\tc{1}, \tc{2}, \tc{3} and \tc{4} are valid.
+
+\newslide
+
+%\subsection*{Catamorphisms}
+
+%{\tiny Add some details and examples here.}
+
+%\newslide
+
+%\section*{Natural Transformations}
+
+%{\tiny Add some details and examples here.}
+
+%\newslide
+
+%\section*{Monads}
+
+%{\tiny Add some details and examples here.}
+
+%\newslide
+
+%{\tiny Move and fix, or discard, the rest of this document.}
+
+%\newslide
+
+\subsubsection*{The \textit{Natural Numbers} as an Initial Object}
+
+Consider the \textit{Haskell} datatype declaration:
+
+\begin{code}
+data Nat = Zero | Succ Nat
+\end{code}
+
+This suggests that \tc{Nat} corresponds to a domain \tmi{Nat}\,
+that
+satisfies the following isomorphism.
+
+\begin{codenott}[MathColor]
+$\tmi{Nat} \cong (\one + \tmi{Nat})_{\bot}$
+\end{codenott}
+
+If we define a type constructor, \tc{NatF}, which we will view as
+a functor,
+by
+
+\begin{code}
+data NatF nat = Zero | Succ nat
+\end{code}
+
+then we will take \tc{Nat} to be isomorphic to a type \tc{Nat2}
+such that
+
+\begin{code}
+Nat2 \tm{\cong} NatF Nat2
+\end{code}
+
+\newslide
+
+\begin{code}
+newtype Mu f = In f (Mu f))
+\end{code}
+
+\newslide
+
+\subsubsection*{Initial and Final Objects in \tmi{Grp}}
+
+The category \tmi{Grp}\, has a final object, a single element group,
+but no
+initial object.
+
+\newslide
+
+
+
+\end{slide}
+
+\end{document}
+

@@ -1,0 +1,95 @@
+\documentclass[12pt]{report}
+
+\include{header}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subfigure}
+\usepackage{tikz}
+
+\usepackage{listings}
+\lstset{language=Java}
+
+\newcommand{\Ans}{\hfill {\Huge\begin{tabular}{|c|} \hline \hspace{2.5cm} \hfill \\ \hline \end{tabular}} }
+
+\newcommand{\AnsBox}[1]{
+\hspace{-0.6cm}\fbox{
+\begin{minipage}[b][#1][c]{17.6cm}
+\hfill
+\end{minipage}}
+}
+
+\begin{document}
+
+%%%TITLE PAGE%%%
+{\large
+\begin{center}
+\textsc{The University of Western Ontario}
+\end{center}
+\begin{center}
+\textbf{\textsc{Computer Science 1026b, Spring 2010}}\\
+\textbf{\textsc{Computer Science Fundamentals I}}\\
+{\large{Final Exam} }\\
+\textsc{2:00pm - 5:00pm, Friday, April 16, 2010.}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ r c}
+\textsc{Name (last, first):} & \rule{2.5in}{0.01in} \\
+\textsc{Student Number: }& \rule{2.5in}{0.01in}
+\end{tabular}
+\end{center}
+
+{\normalsize
+\vspace{20pt}
+\begin{center}\textbf{Instructions}\end{center}
+\begin{enumerate}
+\item TURN OFF YOUR CELL PHONE AND ALL ELECTRONIC DEVICES.
+\item Do not turn this page until instructed to do so.
+\item Cheating (e.g. copying someone else's solutions, using prohibited material like your textbook and notes, 
+or using electrical communication devices) will result in a zero grade and possible expulsion from the course.We reserve the right to orally examine you regarding your solutions and then regrade accordingly.
+\item For each question, provide your solution in the answer box. {\bf All writing outside boxes will be ignored} by the markers. 
+\item The exam document consists of twenty-three (23) pages, the last five (5) of them
+       are meant for rough work and will not be marked.No other paper document than the exam document
+ is permitted during the exam.
+\item {\bf The entire exam document}, including the five (5) pages of rough work,
+ {\bf must be returned} to 
+      the proctoring personnel before leaving the exam room.
+     Failing to do will result in a zero grade.
+\item Only those exams written in pen are eligible for regrading.
+\item Correct java code is preferable but pseudo-code 
+(i.e. something resembling code) is 
+acceptable and if appropriate will be accepted for marks.
+\end{enumerate}
+\vspace{10pt}
+}
+
+\begin{center}
+{\Large
+\begin{tabular}{||c|c|r||} \hline 
+  \S 1 & 20 &\hspace{10mm} \hfill \\ \hline 
+  \S 2 & 20 &       \\ \hline
+  \S 3 & 40 &      \\ \hline
+  \S 4 &  20 &    \\ \hline
+Total & 100 & \\ \hline 
+\end{tabular}
+}
+\end{center}
+}
+\clearpage
+
+\begin{titlepage}
+\newpage
+\mbox{}
+\newpage
+\end{titlepage}
+%%%END TITLE PAGE%%%
+
+\input{VeryShort.tex}
+\input{Short.tex}
+\input{Long.tex}
+\input{VeryLong.tex}
+
+%\input{RoughPage.tex}
+
+\end{document}

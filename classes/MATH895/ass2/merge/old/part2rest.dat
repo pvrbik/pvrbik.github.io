@@ -1,0 +1,53 @@
+    |\^/|     Maple 11 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "merge_division.mpl":
+> read "../DatPart2.mpl":
+bytes used=32163676, alloc=14808424, time=1.08
+bytes used=36417028, alloc=17363860, time=1.28
+bytes used=55363456, alloc=27389032, time=2.45
+> 
+> print("MERGE"):
+                                    "MERGE"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> 
+#print("DIVIDE(D,A)"):
+#st:=time():
+#N:=0;
+#(Q,R):=SMPdiv(D,A,var): Q; R;
+#t:=time()-st;
+#print(N,M,evalf(N/M)):
+> 
+#print("DIVIDE(D,B)"):
+#st:=time():
+#N:=0;
+#(Q,R):=SMPdiv(D,B,var): R;
+#t:=time()-st;
+#print(N,M,evalf(N/M)):
+> 
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 168.308
+
+> print(N,M,evalf(N/M)):
+                          1176504, 127320, 9.240527804
+
+> 
+> quit:\
+bytes used=5750710772, alloc=275135276, time=170.80

@@ -1,0 +1,94 @@
+myCoeff:=proc(f,t)
+    
+    if t=1 then 
+        return tcoeff(f);
+    elif type(t,`^`) then
+        return coeff(f,t);
+    else
+        return foldl( coeff, f, op(t)):
+    end if:
+    
+end proc:
+
+sprInterp:=proc(A,B,Gf,Ind,p,var)
+local X,sbVar, g, t, AA, bb, sb, Ax, Bx, gx, cc,degGf,Rnk,tRnk:
+    
+    print(Ind);
+    
+    if nops(var)=1 then
+        return Gcd(A,B) mod p:
+    end if:
+    
+    X:=var[1]:
+    sbVar:=x->seq(V=rand(p)(), V in var[2..-1]):
+    degGf:=max(op(map(degree,Ind)));
+    
+    g:=0:
+    
+    for t in Ind do
+        
+        AA:=NULL: bb:=NULL:
+        
+        if type(Gf[t], numeric) then
+            
+            while (true) do
+                sb:=sbVar():
+                Ax:=subs(sb,A): Bx:=subs(sb,B):
+                gx:=Gcd(Ax,Bx) mod p:
+                
+                if (degree(gx,X)=degGf) then
+                    break:
+                end if:
+            end do:
+            
+            g:=g+t*myCoeff(gx,t):
+        else
+            
+            Rnk:=0:
+            
+            while (Rnk<nops(Gf[t])) do
+                
+                sb:=sbVar():
+                Ax:=subs(sb,A): Bx:=subs(sb,B):
+                gx:=Gcd(Ax,Bx) mod p:
+                
+#               test for bad Gf
+                coeffs(gx,X,'gxInd'):
+                st:=time():
+                if nops(Ind)<nops([gxInd]) then
+                    return false:
+                end if:
+                print("wrong form",time()-st);
+                
+                AA:=AA,subs(sb,Gf[t]) mod p:
+                bb:=bb,myCoeff(gx,t) mod p:
+                
+                st:=time():
+                tRnk:=LinearAlgebra[Rank](Matrix([AA])):
+                print("Rank", time()-st);
+                
+                if (tRnk=Rnk) then
+                    AA:=AA[1..-2]:
+                    bb:=bb[1..-2]:
+                end if:
+                
+                Rnk:=tRnk:
+                
+            end do:
+            
+            st:=time():
+            AA:=Matrix([AA]) mod p:
+            bb:=vector([bb]);
+            
+            cc:=Linsolve(AA,bb) mod p:
+            cc:=Matrix(cc);
+            g:=g+(Matrix(Gf[t]).cc)[1,1]*t:
+            print("Solve Linear System",t,time()-st()):
+            
+        end if:
+        
+    end do:
+    
+    return g mod p:
+    
+end proc:

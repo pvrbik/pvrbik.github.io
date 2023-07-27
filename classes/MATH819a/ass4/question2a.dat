@@ -1,0 +1,34 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> myPadic:=proc(f,p) local u, ut, ans:
+>     
+>     u:=f:
+>     ans:=[]:
+>     
+>     while (u <> 0) do
+>         ut:=u mod p:
+>         ans:=[op(ans),ut]:
+>         u:=(u-ut)/p:
+>     end do:
+>     
+>     return ans:
+>     
+> end proc:
+> 
+> myPadic(28*x^2+24*x+58,3);
+                           2                     2
+                         [x  + 1, 2 x + 1, 2 x, x  + 2]
+
+> 
+> `mod`:=mods:
+> myPadic(28*x^2+24*x+58,3);
+                         2                  2
+                       [x  + 1, -x + 1, 0, x  + x - 1, 1]
+
+> 
+> quit;\
+bytes used=305800, alloc=327620, time=0.02

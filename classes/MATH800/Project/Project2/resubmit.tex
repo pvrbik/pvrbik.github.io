@@ -1,0 +1,26 @@
+\documentclass[12pt,article,oneside]{memoir}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb, hyperref,color}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\newcommand{\blank}{\textcolor{white}{-}}
+
+\begin{document}
+
+\subsection*{Question 4.9}
+
+Suppose $h_2$ is \emph{not} collision resistant then we have $x,x^\prime \in \{0,1\}^{4m} $ such that $x \neq x^\prime$ and $h_2(x)=h_2(x^\prime)$.
+
+We write $x=x_1 || x_2$ and  $x^\prime = x_1 ^\prime || x_2^\prime$, where $x_1,x_2,x_1^\prime,x_2^\prime \in \{0,1\}^{2m}$ yielding:
+$$h_1 (h_1(x_1) || h_1(x_2))=h_1 (h_1(x_1^\prime) || h_1(x_2^\prime)) $$
+
+First suppose $A=h_1(x_1) || h_1(x_2) \neq h_1(x_1^\prime) || h_1(x_2^\prime)=B$ then we have $h_1(A) \neq h_1(B)$ where $A \neq B$ which implies that $h_1$ is \emph{not} collision resistant. A contradiction.
+
+Now suppose $h_1(x_1) || h_1(x_2) = h_1(x_1^\prime) || h_1(x_2^\prime)$ which means $h_1(x_1) = h_1(x_1^\prime) $ where $x_1 \neq x_1^\prime$ implying that $h_1$ is \emph{not} collision resistant. A contraction.
+
+Collectively this implies that there is no such $x,x^\prime \in \{0,1\}^{4m} $ where $x \neq x^\prime$ and $h_2(x)=h_2(x^\prime)$, which means that $h_2$ is collision resistant as required.$\Box$
+\end{document}

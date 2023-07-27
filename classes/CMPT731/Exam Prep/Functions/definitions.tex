@@ -1,0 +1,218 @@
+ \documentclass[10pt]{article}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb,amsmath,color}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\newcommand{\imp}{\textbf}
+\newcommand{\dom}[1]{\textsf{dom} (#1)}
+\newcommand{\cod}[1]{\textsf{cod}(#1)}
+\newcommand{\arr}[1]{\mathcal{#1}\mathrm{-arrows}}
+\newcommand{\obj}[1]{\mathcal{#1}\mathrm{-objects}}
+\newcommand{\state}[1]{\item[#1] \textcolor{white}{.} \\ \textcolor{white}{.} \\ }
+\newcommand{\Lstate}[1]{\item[#1] \nl}
+\newcommand{\id}[1]{id_{#1}}
+\newcommand{\nl}{\textcolor{white}{.}\ }
+\newcommand{\func}[3]{#1 : #2 \rightarrow #3}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\point}[1]{\begin{itemize} \item[$\cdot$] #1 \end{itemize}}
+\newcommand{\blank}{\textcolor{white}{-}}
+
+\begin{document} 
+
+\begin{description}
+
+\Lstate{$>>=$}
+\begin{verbatim}
+(>>=) :: Monad f => f a -> (a -> f b) -> f b
+x >>= h = join (fmap h x)
+\end{verbatim}
+For example, with the list monad, \texttt{>>=} will have the following definition.
+\begin{verbatim}
+(>>=) :: [a] -> (a -> [b]) -> [b]
+x >>=  h = concat (map h x)
+\end{verbatim}
+
+\state{Arrow}
+Is a homorphism between objects.
+
+\state{Cat} Is the category of small categories which has categories as objects all functors between these as arrows.
+
+\state{Catamorphisms}
+Catamorphisms are homorphisms from $Nat$, or more generally homorphisms from types defined by Haskell \texttt{data} statements.
+
+\point{The catamorphisms for a type are exactly the functions that can be defined using the \texttt{fold} function for the type.}
+
+\item[Category] \textcolor{white}{.}
+
+\begin{enumerate}
+\item A collection of \imp{objects}.
+\item A collection or \imp{arrows}.
+\item Operations assigning to each arrow $f$
+
+\begin{enumerate}
+\item An object $\dom{f}$ called the \imp{domain} of $f$, and
+\item An object $\cod{f}$ called the \imp{codomain} of $f$ often expressed by $f : \dom{f} \rightarrow \cod{f}$
+\end{enumerate}
+
+\item An associative operator $\circ$ assigning to each pair of arrows, $f$ and $g$, where $\dom{f}=\cod{g},$ a \imp{composite} arrow $$f \circ g : \dom{g} \rightarrow \cod{f}.$$
+
+\item For each object $A$, an identity arrow, $\func{id_A}{A}{A}$ satisfying the law that for any arrow $\func{f}{A}{B}$ as $${id_B \circ f}={f}={f \circ id_A}.$$
+\end{enumerate}
+
+\state{Cocone}
+A cocone is the dual of a cone.
+\point{A cocone for a diagram $\DD$ in a cateogry $\CC$ is a $\obj{C}$, $A$, together with an arrow $\func{f_i}{B_i}{A}$ for each object $B_i$ in $\DD$, such that for any arrow $\func{G}{B_i}{B_j}$ in $\DD$ such that $f_i = f_j \circ q$.}
+
+\state{Colimit}
+A colimit is the dual of a limit.
+
+\state{Cone} 
+For a diagram $\DD$ in a category $\CC$ is a $\obj{C}$, $A$, together with an arrow $\func{f_i}{A}{B_i}$ for each object $B_i$ in $\DD$, such that for any arrow $\func{g}{B_i}{B_j}$ in $\DD$, the following holds
+$$ g \circ f_i = f_j $$
+We will use the notation ${\func{f_i}{A}{B_i}}$ for the cone described above, and call the cone a $\DD$-cone to indicate that it is a cone for the diagram $\DD$.
+
+\state{Constant Functor}
+Let $\CC$ and $\DD$ be categories and let $A$ be an object of $\DD$. A constant functor $K_A$ is a functor $\func{K_A}{\CC}{\DD}$ that maps every object of $\CC$ to the object $A$ and every arrow of $\CC$ to $id_A$.
+
+\state{Diagram}
+A diagram in category $\CC$ is a collection of objects in $\CC$ together with some (or all or none) of the arrows between those objects.
+
+\point{A diagram \imp{commutes} if whenever there are two (or more) distinct paths through the diagram from some object $A$ to some (possible other) object $B$, the composition of the arrows along the other path(s).}
+
+\state{Dual}
+The dual of a category $\mathcal{C}$ is identical to $\mathcal{C}$ but all the arrows are reversed. This is sometimes denoted $\mathcal{C}^{op}$.
+
+\state{Endofunctor}
+A functor from a category $\CC$ to the same category $\CC$.
+
+\state{F-Algebra}
+Let $\CC$ be a category and $\func{F}{\CC}{\CC}$ be an endofunctor. An $F$-algebra is a pair $(A,a)$ where $A$ is a $\obj{C}$ and $\func{a}{F A}{A}$ is a $\arr{C}$. The object $A$ is called the \imp{carrier} of the $F$-algebra.
+
+
+\state{Final Object}
+A final object (or \emph{terminal object}) in a category $\CC$ is an object $1$ such that for any object $A$ in $\CC$ there is exactly one arrow $\CC$ from $A$ to $1$.
+
+\state{Functors}
+A \imp{functor} $F$ from category $\mathcal{C}$ to $\mathcal{D}$ is a pair of functions.
+
+\begin{enumerate}
+\item $\func{F_0}{\obj{C}}{\obj{D}}$
+\item $\func{F_1}{\arr{C}}{\arr{D}}$
+\end{enumerate}
+such that
+\begin{enumerate}
+\item If $f$ is an arrow in $\mathcal{C}$ and $\func{f}{A}{B}$ then $\func{F_1(f)}{F_0 (A)}{F_0(B)}$
+\item $F_1(id_{a})=id_{F_0(A)}$, and
+\item $F_1 (f \circ g) = F_1 (f) \circ F_1 (g)$ whenever $f \circ g$ defined.
+\end{enumerate}
+
+
+\state{Functors - HASK}
+A typical definition of a functor in haskell:
+\begin{description}
+\item[Object Functor] \nl
+\begin{verbatim}
+data NAME type =
+         Base | Constructor1 type | Consrtuctor2 type . . .
+\end{verbatim}
+\item[Function Functor] \nl
+\begin{verbatim}
+instance Functor Name where
+         fmap f BASE = something
+         fmap f (Constructor x) = Constructor (f x)
+\end{verbatim}
+\end{description}
+
+
+\state{HASK}
+In Hask, \imp{objects are Haskell types}, so the object part of a functor, $F_0$, is a function from types to types.
+
+\point{Therefore, a type constructor is suitable for use as the object function of a functor. 
+For example $$ F_0 A = [A] $$ is suitable. In this case $$F_1 = \textsf{map}$$
+completes the definition of a functor.}
+
+\state{Identity Functor}
+The identity functor, $Id$, is an endofunctor that maps every object to itself and every arrow to itself. The identity functor for a category is just the identity arrow for that category viewed as an object in the category $Cat$.
+
+\state{Initial Object}
+An initial object in a category $\CC$ is an object $0$ such that for any object $A$ in $\CC$ there is exactly one arrow in $\CC$ from $0$ to $A$.
+
+\point{Since 0 is an object in $\CC$, the only arrow from $0$ to itself is the identity arrow.}
+
+\state{Isomorphic}
+We say that two object $A$ and $B$ are isomorphic if and only if there are arrows
+$$\func{f}{A}{B}$$ $$\func{g}{B}{A}$$ such that $$g \circ f = id_A$$ $$f \circ g = id_B$$
+
+\point{Any two initial object in a category are isomorphic. The same applies to final objects.}
+
+\state{Limit}
+A limit for a diagram $\DD$ (when one exists) is a $\DD$-cone ${\func{f_i}{A}{B_i}}$ with the property that for any $\DD$-cone $\{\func{f^\prime_i}{A^\prime}{B_i}\}$ there is exactly one arrow $\func{A^\prime}{A^\prime}{A}$
+$$ \rm{insert-picture-on-page-35} $$
+commutes for every object $B_i$ in $\DD$,
+\point{That is, a limit is a final object in a category where the objects are the cones over a given diagram}
+
+\state{Monads}
+A monad is a functor, $F$ with two natural transformations,
+\begin{verbatim}
+return :: a -> F a
+return : Id -> F
+
+join :: F (F a) -> F a
+join : F x F -> F
+\end{verbatim}
+
+such that the following laws are satisfied
+
+\begin{verbatim}
+join.return = id
+join.fmap return = id
+join.fmap join = join.join
+\end{verbatim}
+
+\state{Monads - HASK}
+Monads in Hask are implemented as:
+\begin{verbatim}
+return = wrap
+join = concat
+fmap = map
+\end{verbatim}
+
+\state{Natural Transformation}
+Let $\CC$ and $\DD$ be two categories. Let $F$ and $G$ be functors from $\CC$ to $\DD$.
+
+We write $\func{\tau}{F}{G}$ to mean that $\tau$ is a natural transformation from $F$ to $G$.
+
+A natural transformation from $F$ to $G$ is an assignment $\tau$ that provides, for each $\obj{C}$ $A$, a $\arr{D}$, $\func{\tau_A}{F(A)}{G(A)}$ such that for any $\arr{C}$ $\func{f}{A}{B}$,
+$$ \tau_B \circ \tt{fmap}_F(f)= \tt{fmap}_G (f) \circ \tau_A$$
+
+\state{Object}
+Is any triple $(S,a,f)$ such that
+\point{$S$ is a set}
+\point{$a \in s$}
+\point{$\func{f}{S}{S}$}
+
+\state{Product}
+A product of objects $A$ and $B$ is an object $A \times B$ together with two arrows $\func{\pi_1}{A \times B}{A}$ and $\func{\pi_2}{A \times B}{B}$,
+$$ \rm{insert-picture-on-page-41} $$
+such that for any object $\CC$ with arrows $\func{a}{C}{A}$ and $\func{b}{C}{B}$.
+
+\state{Small Category} Is a category where the collection of objects is a set and the collection of arrows is a set.
+
+\point{Any statement that is true of an arbitrary category $\CC$ is also true of $\mathcal{C}^{op}$.}
+
+
+\state{Strict}
+A function is called strict if $f \bot \equiv \bot$
+
+\point{For example $\texttt{const 5}$ is not strict since $\texttt{const 5 } \bot \not\equiv 5$.}
+
+
+
+\end{description}
+
+\end{document}

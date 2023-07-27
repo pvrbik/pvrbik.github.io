@@ -1,0 +1,90 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "with(Groebner): with(StringTools): \+
+with(ListTools):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "LTlexx:
+= proc(f,Y) local c,m; c:=lcoeff(f,Y,'m'); c*m; end:" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 606 "LTelim:= proc(f,U,V) \n local d,du,gu,gv
+,i,k,lu;\n if not type(f,`+`) then return f; fi;\n d:= max(seq(degree(
+a,U), a=f));\n gu:= add(`if`(degree(a,U)=d, a, 0), a=f);\n if type(gu,
+`+`) then du:=[op(sort(gu,plex))]; \n  else return gu;\n fi;\n gv:=du[
+1];\n lu:=[seq(degree(gv,a),a=U)]; member(gv,du,'k');\n du:=subsop(k=N
+ULL,du);\n for i from 1 to nops(du) do\n  if [seq(degree(du[i],a),a=U)
+]=lu then gv:=gv+du[i];\n  fi; #so gv is now a sum of monomials with x
+^alpha=x^gamma \n od;\n if not type(gv,`+`) then return gv; fi;\n d:= \+
+max(seq(degree(a,V), a=gv));\n gv:= add(`if`(degree(a,V)=d, a, 0), a=g
+v);\n LTlexx(gv,V);\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+32 "LTelim(x^2*y^2+x^2*y^3,[x],[y]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#*&)%\"xG\"\"#\"\"\")%\"yG\"\"$F'" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "LTelim(x*y^2+x^2*y,[x],[y]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#*&)%\"xG\"\"#\"\"\"%\"yGF'" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 40 "LTelim(x^3*y^2*z^5+x^2*y^3*z,[x,y],[z]);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#*()%\"xG\"\"$\"\"\")%\"yG\"\"#F')%\"zG\"\"&F
+'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "LTelim(x^2*y*z^2+x^2*y
+*z^3,[x,y],[z]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*()%\"xG\"\"#\"\"
+\"%\"yGF')%\"zG\"\"$F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 65 "Looking
+ good, let's now apply it to the two elimination problems." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 99 "f1:=x-t
+-u: f2:=y-t^2-2*t*u: f3:=z-t^3-3*t^2*u: F:=[f1,f2,f3]: U:=[t,u]: V:=[x
+,y,z]: X:=[t,u,x,y,z]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "G
+:=BBi(F, elim(U,V)); remove(has,G,\{t,u\});" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"#7" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~a
+pplicable~is6\"\"#?" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of
+~times~criteria~2~was~applicable~is6\"\"\"%" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#>%\"GG7),(%\"xG!\"\"%\"tG\"\"\"%\"uGF*,(*$)F+\"\"#F*F**
+$)F'F/F*F(%\"yGF*,,*(F/F*F+F*F1F*F**(F/F*F+F*F2F*F(*&F/F*)F'\"\"$F*F(*
+(F8F*F'F*F2F*F*%\"zGF(,,*&F1F*F2F*F(*(F+F*F'F*F2F*F**&F+F*F:F*F(*&F/F*
+)F2F/F*F**&F'F*F:F*F(,,*&F'F*F@F*F(*(F/F*F+F*F@F*F(**F/F*F+F*F'F*F:F*F
+**(F/F*F:F*F1F*F**&F:F*F2F*F(,,*(\"\"%F*F7F*F:F*F***\"\"'F*F'F*F:F*F2F
+*F(*(F8F*F@F*F1F*F(*&FJF*)F2F8F*F**$)F:F/F*F*,.**FJF*F:F*F1F*F2F*F(*(F
+/F*F+F*FQF*F(*(\"\"&F*F:F*F@F*F**(F/F*F'F*FQF*F(*&F'F*FOF*F**(F/F*F+F*
+FOF*F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7#,,*(\"\"%\"\"\")%\"xG\"\"$
+F'%\"zGF'F'**\"\"'F'F)F'F+F'%\"yGF'!\"\"*(F*F')F.\"\"#F')F)F2F'F/*&F&F
+')F.F*F'F'*$)F+F2F'F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 85 "Therefor
+e the basis for I with t and u eliminated consists of one polynomial, \+
+namely " }{XPPEDIT 18 0 "4*x^3*z-6*x*y*z-3*y^2*x^2+4*y^3+z^2;" "6#,,*(
+\"\"%\"\"\")%\"xG\"\"$F&%\"zGF&F&**\"\"'F&F(F&%\"yGF&F*F&!\"\"*(F)F&)F
+-\"\"#F&)F(F1F&F.*&F%F&)F-F)F&F&*$)F*F1F&F&" }{TEXT -1 1 "." }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 40 "Let's just check our result using \+
+Maple." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "Basis(F,'lexdeg'(
+[t,u],[x,y,z])): remove(has,%,\{t,u\});" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#7#,,*(\"\"%\"\"\")%\"xG\"\"$F'%\"zGF'!\"\"*(F*F')%\"yG\"\"#F')F)
+F0F'F'*&F&F')F/F*F'F,**\"\"'F'F)F'F+F'F/F'F'*$)F+F0F'F," }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 48 "Looks good, let's move on to the second p
+roblem." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 107 "f1:=t^2+x^2+y^2
++z^2: f2:=t^2+2*x^2-x*y-z^2: f3:=t+y^3-z^2: F:=[f1,f2,f3]: U:=[t]: V:=
+[x,y,z]: X:=[t,x,y,z]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "G
+:=BBi(F, elim(U,V)); remove(has,G,t);" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6$QJThe~number~of~S-polynomials~considered~is6\"\"\"#" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~applicable~is
+6\"\"\"(" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~crit
+eria~2~was~applicable~is6\"\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%\"GG7%,(%\"tG\"\"\"*$)%\"yG\"\"$F(F(*$)%\"zG\"\"#F(!\"\",**$)%\"xGF0F
+(F(*$)F+F0F(F1*&F0F(F.F(F1*&F5F(F+F(F1,.*$)F+\"\"'F(F(*(F0F(F*F(F.F(F1
+*$)F/\"\"%F(F(F9F(*&F0F(F7F(F(*&F,F(F.F(F(" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7$,**$)%\"xG\"\"#\"\"\"F)*$)%\"yGF(F)!\"\"*&F(F))%\"zGF
+(F)F-*&F'F)F,F)F-,.*$)F,\"\"'F)F)*(F(F))F,\"\"$F)F/F)F-*$)F0\"\"%F)F)F
+1F)*&F(F)F+F)F)*&F8F)F/F)F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+48 "Basis(F,'lexdeg'([t],[x,y,z])): remove(has,%,t);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#7$,**$)%\"xG\"\"#\"\"\"F)*$)%\"yGF(F)!\"\"*&F(F))%\"
+zGF(F)F-*&F'F)F,F)F-,.*$)F,\"\"'F)F)*(F(F))F,\"\"$F)F/F)F-*$)F0\"\"%F)
+F)F1F)*&F(F)F+F)F)*&F8F)F/F)F)" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+104 "Hence the basis for the first elimination ideal in this case cons
+ists of two polynomialsspecified above." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "29" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 
+1 1 }

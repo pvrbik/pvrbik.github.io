@@ -1,0 +1,39 @@
+-   -   -   -   -   - PART 3 -   -   -   -   -   -
+
+#interface(quiet=true):
+> read "merge_division.mpl":
+> read "../DatPart3.mpl":
+> 
+> print("MERGE"):
+                                     "MERGE"
+
+> 
+> nops(a),nops(A),nops(c),nops(C);
+                                29, 217, 59, 819
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> N:=0:
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(C,A,var):
+> t:=time()-st;
+                                   t := 6.991
+
+> 
+> print(N,M,evalf(N/M)):
+                           146773, 47089, 3.116927520
+
+> 
+> q:=SMP2Maple(Q,var):
+> r:=SMP2Maple(R,var):
+> expand(c-q*a-r);
+                                       0
+
+> 
+> quit:\
+bytes used=228135476, alloc=5045348, time=9.45

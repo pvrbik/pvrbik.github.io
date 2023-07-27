@@ -1,0 +1,111 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> ModGcd:=proc(a,b) local gamma, G, M, Phi, symR, p, lcA, gp, u, g:
+>     
+>     Phi:=(p,f)-> mods(f,p):
+>     
+>     gamma:=igcd(lcoeff(a), lcoeff(b) ):
+>     G:=0:
+>     M:=1:
+>     u:=0;
+>     p:=22:
+>     
+>     while (true) do
+>         lcA:=lcoeff(a):
+>         p:=nextprime(p);
+>         while (lcA mod p = 0) do
+>             p:=nextprime(p):
+>             print("bad prime",p):
+>         end do:
+>         
+>         gp:=Gcd( Phi(p,a), Phi(p,b) ) mod p:
+>         
+>         if (degree(gp)=0) then 
+>             return 1:
+>         end if:
+>         
+>         gp:=mods( (Phi(p,gamma)*gp) ,p):
+>         
+>         if (G=0) then 
+>             G:=gp:
+>             M:=p:
+>         elif degree(gp) > degree(G) then
+#           do nothing
+#           here for debugging purposees
+>         elif degree(gp) < degree(G) then
+>             G:=gp:
+>             M:=p:
+>         else
+>             u:=chrem([G,gp],[M,p]):
+>             u:=mods(u,M*p):
+>             G:=G:
+>             if u=mods(G,M*p) then
+>                 g:=simplify(u/content(u)):
+>                 if ( divide(a,g) and divide(b,g)) then
+>                     return g:
+>                 end if:
+>             end if:
+>             G:=u:
+>             M:=M*p:
+>         end if:
+>         
+>     end do:
+>     
+> end proc:
+> 
+> "Part 1";
+                                    "Part 1"
+
+> a1:=58*x^4-415*x^3-111*x+213:
+> b1:=69*x^3-112*x^2+413*x+113:
+> 
+> ModGcd(a1,b1);
+                                       1
+
+> gcd(a1,b1);
+                                       1
+
+> 
+> "Part 2";
+                                    "Part 2"
+
+> a2:=x^5-111*x^4+112*x^3+8*x^2-888*x+896:
+> b2:=x^5-114*x^4+448*x^3-672*x^2+669*x-336:
+> Gcd(a2,b2) mod 29;
+                               3      2
+                              x  + 7 x  + 6 x + 21
+
+> Gcd(a2,b2) mod 31;
+                              3       2
+                             x  + 23 x  + 25 x + 4
+
+> 
+> ModGcd(a2,b2);
+                                 2
+                                x  - 111 x + 112
+
+> gcd(a2,b2);
+                                 2
+                                x  - 111 x + 112
+
+> 
+> "Part 3";
+                                    "Part 3"
+
+> a3:=396*x^5-36*x^4+3498*x^3-2532*x^2+2844*x-1870:
+> b3:=156*x^5+69*x^4+1371*x^3-332*x^2+593*x-697:
+> 
+> ModGcd(simplify(a3),b3);
+                                   3
+                                3 x  + 24 x - 17
+
+> gcd(a3/2,b3);
+                                   3
+                                3 x  + 24 x - 17
+
+> 
+> quit:\
+bytes used=557132, alloc=524192, time=0.01

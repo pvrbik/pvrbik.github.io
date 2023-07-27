@@ -1,0 +1,32 @@
+convertBin:=proc local i,ans:
+   ans:=0:
+   for i from 0 to (nops-1) do
+       ans:=ans+10^i*(x[nops-i]):
+  end do:
+  return(convert(ans,decimal,binary));
+end proc:
+
+L2OrDsLo:= proc (p,palpha,pbeta) local alpha,beta,gamma, x, L1,oracleL2, i:
+   (alpha,beta):=(palpha,pbeta);
+   oracleL2:=x->if evalb(x in {25,219,841}) then 1 else 0 end if:
+   L1:=x->`if`(x&^((p-1)/2) mod p = 1, 0,1):
+   x[0]:=L1(beta):
+   beta:=(beta / (alpha &^ x[0])) mod p:
+   i:=1:
+   while (beta <> 1) do
+       x[i]:=oracleL2(beta):
+       gamma:=beta&^((p+1)/4) mod p:
+       if (L1(gamma)=x[i]) then
+           beta:=gamma:
+       else
+           beta:=p-gamma:
+       end if:
+       beta:= beta / alpha&^x[i] mod p:
+       i:=i+1:
+   end do:
+   return convertBin(ListTools[Reverse]([seq(x[i],i=0..i-1)])):
+end proc:
+
+L2OrDsLo(1103,5,896);
+
+5^147 mod 1103;

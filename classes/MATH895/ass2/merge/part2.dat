@@ -1,0 +1,64 @@
+-   -   -   -   -   - PART 2 -   -   -   -   -   -
+> read "merge_division.mpl":
+> read "../DatPart2.mpl":
+> print("MERGE"):
+                                    "MERGE"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> 
+> print("DIVIDE(D,A)"):
+                                 "DIVIDE(D,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(D,A,var): R;
+
+                                       []
+
+> t:=time()-st;
+                                 t := 7947.625          (old time: 22408.561)
+
+> print(N,M,evalf(N/M)):
+                         217549459, 129460, 1680.437656
+
+> 
+> print("DIVIDE(D,B)"):
+                                 "DIVIDE(D,B)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(D,B,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 727.517          (old time: 2271.760)
+
+> print(N,M,evalf(N/M)):
+                         18794737, 146216, 128.5409052
+
+> 
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=SMPdiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 50.673           (168.308)
+
+> print(N,M,evalf(N/M)):
+                          1173407, 127320, 9.216203267
+
+> 
+> quit:

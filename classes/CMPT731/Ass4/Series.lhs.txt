@@ -1,0 +1,114 @@
+>  module Series (Series(),
+>                 Ratio(..),
+>                 Complex(..),
+>                 x,
+>                 integrate,
+>                 sine,
+>                 cosine,
+>                 expo,
+>                 evaluate
+>                ) where
+
+We import Ratio and Complex so we can reexport them for use in your solution
+to this assignment.  Neither Ratio or Complex is used in this module.
+
+>  import Monad
+>  import Ratio
+>  import Complex
+
+We make Series a newtype to avoid a very minor inefficiency.  We allow
+coefficients to have in type in class Fractional, so series over the
+rational or complex are possible.  In fact, a Series over Series is
+possible.  Try looking at both the type and the value of (evaluate expo
+expo).  What is the meaning of the result?
+
+Notice that the derivied Eq instance is somewhat limited.  (Series as ==
+Series bs) can return False but never True, since computing a True result
+would require comparing corresponding elements in a pair of infinite lists.
+
+>  newtype (Fractional a) => Series a = Series [a] deriving (Eq)
+
+While we do not export the Series data constructor, making it impossible for
+a Series to be constructed outside this module, the inverse deconstruction
+process can be useful at times.  For example, consider the following
+generator for the Fibonacci sequence:
+
+      fibs = unSeries (1/(1-x-x^2))
+
+>  unSeries :: (Fractional a) => Series a -> [a]
+>  unSeries (Series as) = as
+
+The functions abs and signum are best left undefined in the Num instance of
+Series, since they do not have an obvious meaning.
+
+>  instance (Fractional a) => Num (Series a) where
+>     Series as + Series bs = ???
+>     negate (Series as) = ???
+>     fromInteger n = ???
+>     Series as * Series bs = ???
+
+>  instance (Fractional a) => Fractional (Series a) where
+>     fromRational a = ???
+>     Series as / Series (b:bs) = ???
+
+We include x as a primitive for construction series.  See the end of section
+3.2 of the Haskell 98 Report to see how constant valued power series are
+generated.
+
+>  x :: (Fractional a) => Series a
+>  x = Series $ 0 : 1 : repeat 0
+
+This is a somewhat arbitrary and not enirely satisfactory implementation of
+Show.  It is unsatisfactory because the reault produced cannot be used to
+reproduce the original value.  This is unavoidable with an infinite series.
+Class Num requires that any instance be an instance of Show.  The show
+function is arbitrary because if yields only the first 20 terms.  (Terms
+with coefficients of 0, except for the first, are not printed.)Maclaurin
+
+>  instance (Fractional a) => Show (Series a) where
+>     show (Series (a:bs))
+>        = show a ++ concat (zipWith term bs [1..maxPower]) ++ " + ..."
+>          where
+>          maxPower = 20
+>          term coeff power =
+>             let c_string@(c:cs) = show coeff
+>                 p_string = if power == 1 then "*x" else "*x^" ++ show power
+>             in if coeff == 0 then ""
+>                else if c == '-' then " - " ++ cs ++ p_string
+>                      else " + " ++ c_string ++ p_string
+
+The integrate function takes a constant of integration and integrates a
+Maclaurin series from 0.  See the examples at the bottom of this module.
+
+>  integrate :: (Fractional a) => a -> Series a -> Series a
+>  integrate constant (Series series) =
+>     Series $ constant : zipWith (/) series (iterate (1+) 1)
+
+It is not really possible to write a foolproof function to sum an infinite
+series.  I have attempted to write a fairly robust evaluate function, but
+feel free to suggest improvements in you assignment solution.  As written,
+we stop looking for a better approximation once three partial sums have the
+same value.  This satisfactorily deals with the case where alternative terms
+in the sum are zero, as in sine and cosine, but would fail if there were
+two consecutive nonzero terms before the series has really started to
+converge to zero.  We always stop after 100 partial sums regardless.  For
+example, consider the expression (evaluate expo expo).  Since the comparison
+of infinite lists for equality cannot return True, such an expression could
+not be evaluated without our special 100 term limit.
+
+>  evaluate :: (Fractional a, Show a) => Series a -> a -> a
+>  evaluate (Series as) x =
+>     best . scanl (+) 0 . zipWith (*) as . iterate (*x) $ 1
+>     where
+>     best = last . take 100 . limit
+>     limit (x:xs@(y:ys@(z:zs))) = if x==y && y==z then [x] else x:limit xs
+
+The Maclaurin series for sin, cos and exp (spelled differently to avoid a
+name conflict) should probably be defined outside this module, since they do
+not use depend on the representation of Series and are not otherwise
+primitive operations.
+
+>  sine, cosine, expo :: (Fractional a) => Series a
+>  sine = integrate 0 cosine
+>  cosine = integrate 1 (0 - sine)
+>  expo = integrate 1 expo

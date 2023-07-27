@@ -1,0 +1,256 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading 1" 0 3 1 
+{CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }1 0 0 0 8 4 0 0 
+0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "
+" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }1 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 11 "Question 4." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "with(Groebne
+r): with(PolynomialIdeals):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+28 "interface(imaginaryunit=_i):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 35 "I:=<x^3+y+z-1,x+y^3+z-1,x+y+z^3-1>;" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%\"IG-%$<,>G6%,*%\"xG\"\"\"%\"yGF**$)%\"zG\"\"$F*F*
+F*!\"\",**$)F)F/F*F*F+F*F.F*F*F0,*F)F**$)F+F/F*F*F.F*F*F0" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,plex(x,y,z));" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%\"GG7',D*&\"\"$\"\"\"%\"zGF)!\"\"*&\"\"#F)
+)F*F(F)F)*&\"\"&F))F*F-F)F)*&F(F))F*\"\"%F)F)*&F(F))F*F0F)F)*&F0F))F*
+\"\"'F)F)*&\"#;F))F*\"\"(F)F+*&F;F))F*\"\")F)F+*&F0F))F*\"\"*F)F)*&\"#
+7F))F*\"#5F)F)*&FEF))F*\"#6F)F)*&F0F))F*FEF)F+*&F0F))F*\"#8F)F+*&F0F))
+F*\"#9F)F+*$)F*\"#:F)F)*$)F*F;F)F)*$)F*\"#<F)F),6*(F-F)FBF)%\"yGF)F)*$
+FLF)F)*&F4F)FBF)F+*&F4F)F8F)F)*$F.F)F+F*F+*$F3F)F)*(F9F)F8F)FgnF)F+*(F
+-F)F.F)FgnF)F)*(F-F)F*F)FgnF)F),>*(FEF)F*F))FgnF-F)F)*(FEF)F3F)FgnF)F)
+FSF+*&FJF)F<F)F)*&\"#AF)F3F)F+*&F0F)F*F)F+*&F0F)FLF)F)*&FEF)FBF)F+*&F0
+F)F8F)F)*&\"#>F)F.F)F)*(FEF)F.F)FgnF)F+*&FEF)FgnF)F)*(FEF)F*F)FgnF)F+*
+&FEF)FboF)F+,**$)FgnF(F)F)F[oF+F*F)FgnF+,*%\"xGF)FgnF)F[oF)F)F+" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "remove(has,G,x): remove(has,
+%,y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7#,D*&\"\"$\"\"\"%\"zGF'!\"\"
+*&\"\"#F')F(F&F'F'*&\"\"&F')F(F+F'F'*&F&F')F(\"\"%F'F'*&F&F')F(F.F'F'*
+&F.F')F(\"\"'F'F'*&\"#;F')F(\"\"(F'F)*&F9F')F(\"\")F'F)*&F.F')F(\"\"*F
+'F'*&\"#7F')F(\"#5F'F'*&FCF')F(\"#6F'F'*&F.F')F(FCF'F)*&F.F')F(\"#8F'F
+)*&F.F')F(\"#9F'F)*$)F(\"#:F'F'*$)F(F9F'F'*$)F(\"#<F'F'" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 86 "Therefore a Groebner Basis for I inersect
+ Q[z] is formed by a single polynomial above." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 13 "factor(G[1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#*0%\"zG\"\"\",&F$F%F%!\"\"F%,&F$F%F%F%F%,(*$)F$\"\"$F%F%F$F'F%F'F%,**
+$)F$\"\"%F%F%F*F%*&\"\"#F%)F$F2F%F%F%F%F%,*F.F%*$F3F%F'*&F2F%F$F%F'F,F
+%F%,(F*F%*&F2F%F$F%F%F%F'F%" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "fsolve(G[1],z);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6'$!+++++5!\"*$\"
+\"!F'$\"+:l(R`%!#5$\"+++++5F%$\"+dzrC8F%" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "Gz0:=eval(G,z=0);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%$Gz0G7'\"\"!F&,&*&\"#7\"\"\"%\"yGF*F**&F)F*)F+\"\"#F*!\"\",&*$)F+\"
+\"$F*F*F+F/,(%\"xGF*F+F*F*F/" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 19 "gcd(Gz0[3],Gz0[4]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&%\"yG\"
+\"\",&F$F%F%!\"\"F%" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 149 "Since the
+ solutions for y must satisfy gcd(Gz0[3],Gz0[4])=0, y=0 or y=1, and th
+en we have x=1 or x=0. So we've got 2 solutions: (1,0,0) and (0,1,0). \+
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "Gz_1:=eval(G,z=-1);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%Gz_1G7'\"\"!,&*&\"#7\"\"\"%\"yGF*!
+\"\"F)F*,(*&\"#CF*)F+\"\"#F*F,*&\"#[F*F+F*F*F/F,,&*$)F+\"\"$F*F*F+F,,(
+%\"xGF*F+F*F1F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "gcd(gcd(
+Gz_1[2],Gz_1[3]),Gz_1[4]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&%\"yG
+\"\"\"F%!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 30 "Hence we get a p
+oint (1,1,-1)." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "Gz1:=eval
+(G,z=1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$Gz1G7'\"\"!F&F&,&*$)%\"
+yG\"\"$\"\"\"F,F*!\"\",&%\"xGF,F*F," }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "solve(y^3-y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6%\"\"
+!\"\"\"!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 52 "Here we get 3 poi
+nts: (0,0,1),(-1,1,1) and (1,-1,1)." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "alias(alpha=RootOf(z^3+2*z-1)):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 13 "evalf(alpha);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#$\"+:l(R`%!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Gz2:
+=subs(z=alpha,G);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%$Gz2G7',D*&\"\"
+$\"\"\"%&alphaGF)!\"\"*&\"\"#F))F*F(F)F)*&\"\"&F))F*F-F)F)*&F(F))F*\"
+\"%F)F)*&F(F))F*F0F)F)*&F0F))F*\"\"'F)F)*&\"#;F))F*\"\"(F)F+*&F;F))F*
+\"\")F)F+*&F0F))F*\"\"*F)F)*&\"#7F))F*\"#5F)F)*&FEF))F*\"#6F)F)*&F0F))
+F*FEF)F+*&F0F))F*\"#8F)F+*&F0F))F*\"#9F)F+*$)F*\"#:F)F)*$)F*F;F)F)*$)F
+*\"#<F)F),6*(F-F)FBF)%\"yGF)F)*$FLF)F)*&F4F)FBF)F+*&F4F)F8F)F)*$F.F)F+
+F*F+*$F3F)F)*(F9F)F8F)FgnF)F+*(F-F)F.F)FgnF)F)*(F-F)F*F)FgnF)F),>*(FEF
+)F*F))FgnF-F)F)*(FEF)F3F)FgnF)F)FSF+*&FJF)F<F)F)*&\"#AF)F3F)F+*&F0F)F*
+F)F+*&F0F)FLF)F)*&FEF)FBF)F+*&F0F)F8F)F)*&\"#>F)F.F)F)*(FEF)F.F)FgnF)F
++*&FEF)FgnF)F)*(FEF)F*F)FgnF)F+*&FEF)FboF)F+,**$)FgnF(F)F)F[oF+F*F)Fgn
+F+,*%\"xGF)FgnF)F[oF)F)F+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "gcd(gcd(Gz2[2],Gz2[3]),Gz2[4]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#,&%&alphaG!\"\"%\"yG\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 15 "He
+nce y=alpha. " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "subs(y=alp
+ha,Gz2[5]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,*%\"xG\"\"\"%&alphaGF%
+*$)F&\"\"$F%F%F%!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "so
+lve(%=0,x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&alphaG" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 52 "So we have a point (alpha,alpha,alpha), w
+here alpha=" }{XPPEDIT 18 0 ".4533976515;" "6#$\"+:l(R`%!#5" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "alias(beta=RootOf(z^3-z-1)):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "evalf(beta);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#$\"+dzrC8!\"*" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "Gz3:=subs(z=beta,G);" }}{PARA 12 "" 1 "" {XPPMATH 20 
+"6#>%$Gz3G7',D*&\"\"$\"\"\"%%betaGF)!\"\"*&\"\"#F))F*F(F)F)*&\"\"&F))F
+*F-F)F)*&F(F))F*\"\"%F)F)*&F(F))F*F0F)F)*&F0F))F*\"\"'F)F)*&\"#;F))F*
+\"\"(F)F+*&F;F))F*\"\")F)F+*&F0F))F*\"\"*F)F)*&\"#7F))F*\"#5F)F)*&FEF)
+)F*\"#6F)F)*&F0F))F*FEF)F+*&F0F))F*\"#8F)F+*&F0F))F*\"#9F)F+*$)F*\"#:F
+)F)*$)F*F;F)F)*$)F*\"#<F)F),6*(F-F)FBF)%\"yGF)F)*$FLF)F)*&F4F)FBF)F+*&
+F4F)F8F)F)*$F.F)F+F*F+*$F3F)F)*(F9F)F8F)FgnF)F+*(F-F)F.F)FgnF)F)*(F-F)
+F*F)FgnF)F),>*(FEF)F*F))FgnF-F)F)*(FEF)F3F)FgnF)F)FSF+*&FJF)F<F)F)*&\"
+#AF)F3F)F+*&F0F)F*F)F+*&F0F)FLF)F)*&FEF)FBF)F+*&F0F)F8F)F)*&\"#>F)F.F)
+F)*(FEF)F.F)FgnF)F+*&FEF)FgnF)F)*(FEF)F*F)FgnF)F+*&FEF)FboF)F+,**$)Fgn
+F(F)F)F[oF+F*F)FgnF+,*%\"xGF)FgnF)F[oF)F)F+" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 34 "g:=gcd(gcd(Gz3[2],Gz3[3]),Gz3[4]);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"gG,*\"\"\"!\"\"*$)%%betaG\"\"#F&F&*&F*F&%\"yGF
+&F&*$)F-F+F&F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "sols:=sol
+ve(g,y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%solsG6$,&*&\"\"#!\"\"%%
+betaG\"\"\"F)*&F(F),&*&\"\"$F+)F*F(F+F)\"\"%F+#F+F(F+,&*&F(F)F*F+F)*&F
+(F)F-F2F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "evalf(sols);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6$^$$!+&y*eBm!#5$\"+?^zAcF&^$F$$!+?^zA
+cF&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 106 "Hence this case gives us \+
+no rational solutions and thus altogether in V(I) there are 7 rational
+ solutions." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 
+1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "
+Question 5." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "f,g:=x^2+y-1,x+y^2-1;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>6$%\"fG%\"gG6$,(*$)%\"xG\"\"#\"\"\"F-%\"yGF-F-!
+\"\",(F+F-*$)F.F,F-F-F-F/" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+23 "Basis([f,g],plex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,(*$)
+%\"yG\"\"%\"\"\"F)*&\"\"#F))F'F+F)!\"\"F'F),(%\"xGF)*$F,F)F)F)F-" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 44 "So by Elimination Theorem I inters
+ect K[y]=<" }{XPPEDIT 18 0 "y^4-2*y^2+y;" "6#,(*$)%\"yG\"\"%\"\"\"F(*&
+\"\"#F()F&F*F(!\"\"F&F(" }{TEXT -1 25 ">, so r does generate it." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "Question 8." }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 37 "I:=<(x+y)*(x^2+y^2-1),z*(x^2+y^2-1)>:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 63 "First thing we have to check is wh
+ether I is radical and prime." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 25 "IsRadical(I); IsPrime(I);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%t
+rueG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&falseG" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 46 "So now we can continue with the decomposition." }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,plex(x,y,z));" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7$,(*&%\"zG\"\"\")%\"xG\"\"#F)F
+)*&F(F))%\"yGF,F)F)F(!\"\",.*$)F+\"\"$F)F)*&F+F)F.F)F)F+F0*&F/F)F*F)F)
+*$)F/F4F)F)F/F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "f:=facto
+r(G[1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG*&%\"zG\"\"\",(*$)%
+\"xG\"\"#F'F'*$)%\"yGF,F'F'F'!\"\"F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 81 "So we will first decompose I onto 2 component corresponding to \+
+two factors above." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "P1:=Q
+uotient(I,<z>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#P1G-%$<,>G6#,(*$
+)%\"xG\"\"#\"\"\"F-*$)%\"yGF,F-F-F-!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "P2:=Quotient(I,<x^2+y^2-1>);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#P2G-%$<,>G6$%\"zG,&%\"xG\"\"\"%\"yGF+" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "IsPrime(P1); IsPrime(P2);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%
+%trueG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 94 "So we have our 2 prime \+
+components, let us now make sure that the decomposition is irredundant
+." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "IdealContainment(P1,P2
+);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&falseG" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 24 "IdealContainment(P2,P1);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%&falseG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 65 "Indeed
+ no prime component is contained in another. A quick check:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "evalb(Intersect(P1,P2)=<op(G
+)>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 21 "I:=<x^2+1,y^2+1,z^2>:" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 48 "Notice that Radical of I is <x^2+1,y^2+1,z>, so:
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "I:=<x^2+1,y^2+1,z>:" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "IsRadical(I); IsPrime(I);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%&falseG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 14 "First \+
+let K=R." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,plex
+(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7%%\"zG,&*$)%\"yG\"
+\"#\"\"\"F,F,F,,&*$)%\"xGF+F,F,F,F," }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 113 "Here it's a different story, since polynomials in G don't fact
+or over R. WE can solve this problem by inspection." }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 17 "f:=x^2+1-(y^2+1);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"fG,&*$)%\"xG\"\"#\"\"\"F**$)%\"yGF)F*!\"\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "factor(f);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#*&,&%\"xG\"\"\"%\"yG!\"\"F&,&F'F&F%F&F&" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "P1,P2:=Quotient(I,<x-y>),Quotient(I
+,<x+y>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$%#P1G%#P2G6$-%$<,>G6%%
+\"zG,&*$)%\"yG\"\"#\"\"\"F1F1F1,&F/F1%\"xGF1-F)6%F+,&*$)F3F0F1F1F1F1,&
+F/F1F3!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "IsPrime(P1);
+ IsPrime(P2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 43 "
+So we're done and I=P1 intersect P2. Check:" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 32 "evalb(Intersect(P1,P2)=<op(G)>);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 12 "Now \+
+let K=C." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "alias(i=RootOf(
+x^2+1)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "G;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#7%%\"zG,&*$)%\"yG\"\"#\"\"\"F*F*F*,&*$)%\"xGF)F*
+F*F*F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "G[1]:=factor(G[3]
+,i); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"GG6#\"\"\"*&,&%\"xGF'%\"
+iGF'F',&F*F'F+!\"\"F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "G1
+,G2:=Basis(<I,x+i>,plex(x,y,z)),Basis(<I,x-i>,plex(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>6$%#G1G%#G2G6$7%%\"zG,&*$)%\"yG\"\"#\"\"\"F
+/F/F/,&%\"xGF/%\"iGF/7%F)F*,&F1F/F2!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 73 "G11,G12:=Basis([op(G1),y+i],plex(x,y,z)),Basis([op(G1
+),y-i],plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$%$G11G%$G12
+G6$7%%\"zG,&%\"yG\"\"\"%\"iGF,,&%\"xGF,F-F,7%F),&F+F,F-!\"\"F." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "G21,G22:=Basis([op(G2),y+i],
+plex(x,y,z)),Basis([op(G2),y-i],plex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>6$%$G21G%$G22G6$7%%\"zG,&%\"yG\"\"\"%\"iGF,,&%\"xGF,F-
+!\"\"7%F),&F+F,F-F0F." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 104 "Here we
+ see that G11, G12, G21, G22 are all prime over C, hence I is the inte
+rsection of these 4 ideals." }{MPLTEXT 1 0 1 " " }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 51 "Intersect(<op(G11)>,<op(G12)>,<op(G21)>,<op(G2
+2)>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$<,>G6%%\"zG,&*$)%\"xG\"\"#
+\"\"\"F,F,F,,&*$)%\"yGF+F,F,F,F," }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 12 "Question 10." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 35 "I:=<x^3+y+z-1,x+y^2+z-1,x+y+z^2-1>:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "J:=Radical(I);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"JG-%$<,>G6&,*%\"xG\"\"\"*$)%\"yG\"\"#F*F*%\"
+zGF*F*!\"\",*F)F*F-F**$)F/F.F*F*F*F0,**$)F)\"\"$F*F*F-F*F/F*F*F0,**$)F
+)\"\"(F*F**&\"\"%F*)F)F.F*F**&F=F*)F)F=F*F0F)F0" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 35 "Let's first consider plex ordering." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,plex(x,y,z));" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%\"GG7&,2*$)%\"zG\"#5\"\"\"F+*&\"\"#F+)F)\"
+\"(F+!\"\"*&\"\"%F+)F)\"\"&F+F0*$)F)\"\"$F+F+*&F-F+)F)F2F+F0*&F*F+)F)
+\"\"'F+F+*&F4F+)F)\"\")F+F0*$)F)\"\"*F+F+,8*(\"#\\F+%\"yGF+)F)F-F+F+*&
+\"#sF+FAF+F0*&\"$%QF+F.F+F+*&\"$Q(F+F3F+F0*&\"$<\"F+F6F+F0*&FEF+F)F+F+
+*&\"#)*F+FGF+F0*&\"$j'F+F9F+F+*&\"#KF+F;F+F0*&\"#RF+F>F+F0*(FEF+FFF+F)
+F+F0,**$)FFF-F+F+*$FGF+F0F)F+FFF0,*%\"xGF+FFF+FgnF+F+F0" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "G1:=Basis(J,plex(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%#G1G7&,**$)%\"zG\"\"'\"\"\"F+*&\"\"&F+)F)
+\"\"$F+!\"\"F)F+*&F/F+)F)F-F+F+,**&%\"yGF+)F)\"\"#F+F+*&F5F+F)F+F0*$F.
+F+F0*$F6F+F+,**$)F5F7F+F+F:F0F)F+F5F0,*%\"xGF+F5F+F:F+F+F0" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "LeadingMonomial(G,plex(x,y,z));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7&*$)%\"zG\"#5\"\"\"*&%\"yGF()F&\"\"#F
+(*$)F*F,F(%\"xG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "LeadingM
+onomial(G1,plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&*$)%\"zG
+\"\"'\"\"\"*&%\"yGF()F&\"\"#F(*$)F*F,F(%\"xG" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 246 "Therefore the monomial basis for K[x,y,z]/I is \{1,y,z
+,yz,z^2,z^3,...z^9\} and for K[x,y,z]/J it's \{1,y,z,yz,z^2,z^3,...z^5
+\}.Therefore by Proposition 8 of 5.3 the number of points in V(I) is a
+t most 12 and the number of points in V(J) is exactly 8." }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 26 "And now the tdeg ordering." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,tdeg(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"GG7%,*%\"xG\"\"\"%\"yGF(*$)%\"zG\"\"#F(F
+(F(!\"\",*F'F(*$)F)F-F(F(F,F(F(F.,**$)F'\"\"$F(F(F)F(F,F(F(F." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "G1:=Basis(J,tdeg(x,y,z));" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G1G7&,*%\"xG\"\"\"%\"yGF(*$)%\"zG
+\"\"#F(F(F(!\"\",*F'F(*$)F)F-F(F(F,F(F(F.,&*&F'F(F)F(F(*&F'F(F,F(F.,**
+$)F'\"\"$F(F(F)F(F,F(F(F." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "LeadingMonomial(G,tdeg(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#7%*$)%\"zG\"\"#\"\"\"*$)%\"yGF'F(*$)%\"xG\"\"$F(" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 32 "LeadingMonomial(G1,tdeg(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#7&*$)%\"zG\"\"#\"\"\"*$)%\"yGF'F(*&%\"xGF(F+
+F(*$)F-\"\"$F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 174 "So here the mo
+nomial basis for K[x,y,z]/I is \{1,x,x^2,y,z,xy,x^2y,xz,x^2z,yz\} and \+
+for K[x,y,z]/J it's \{1,x,x^2,z,y,xz,x^2z,yz\}. So the number of point
+s in V(I) is at most 10." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "3 18 0 0" 173 }{VIEWOPTS 1 1 0 1 
+1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

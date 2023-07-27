@@ -1,0 +1,94 @@
+    |\^/|     Maple 11 (APPLE PPC OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#Additonal Question 1
+> 
+#(A)
+> 
+> f:=x^2+2*y^2-3;
+                                     2      2
+                               f := x  + 2 y  - 3
+
+> g:=x^2+x*y+y^2;
+                                     2          2
+                               g := x  + x y + y
+
+> 
+> R:=resultant(f,g,x);
+                                      4      2
+                              R := 3 y  - 9 y  + 9
+
+> 
+#(B)
+> 
+> G:=Groebner[Basis]([f,g],plex(x,y));
+                                    2    4         3
+                       G := [3 - 3 y  + y , 2 y - y  + x]
+
+> map(indets,G);
+                                 [{y}, {x, y}]
+
+> 
+> G[1];
+                                        2    4
+                                 3 - 3 y  + y
+
+> 
+#Since 3*G[1] = R. R indeed genetates I \int Q[y]. That is <R>=I \in Q[y].
+> 
+#(C)
+> gcdex(f,g,x,'s','t');
+                                       1
+
+> s;t;
+                                                     2
+                            y x              -3 + 2 y
+                     ----------------- + -----------------
+                               2    4              2    4
+                     3 (3 - 3 y  + y )   3 (3 - 3 y  + y )
+
+                                                     2
+                             y x               -3 + y
+                    - ----------------- - -----------------
+                                2    4              2    4
+                      3 (3 - 3 y  + y )   3 (3 - 3 y  + y )
+
+> 
+#and it should be the case that s*f + t*g = 1. Lets check (cause you never know with maple):
+> simplify(s*f+t*g);
+                                       1
+
+> 
+#Notice that the following are all equal.
+> denom(s); denom(t); factor(R);
+                                   4      2
+                                3 y  - 9 y  + 9
+
+                                   4      2
+                                3 y  - 9 y  + 9
+
+                                   4      2
+                                3 y  - 9 y  + 9
+
+> 
+#This means that multiplying s*f + t*g = 1 by R will give the desired result. That is
+> A:=simplify(s*R);
+                                                 2
+                              A := -3 + x y + 2 y
+
+> B:=simplify(t*R);
+                                      2
+                               B := -y  + 3 - x y
+
+> 
+#where
+> 
+> simplify( A*f + B*g ) = R;
+                          4      2          4      2
+                       3 y  - 9 y  + 9 = 3 y  - 9 y  + 9
+
+> 
+> quit:
+bytes used=1333228, alloc=1113908, time=0.14

@@ -1,0 +1,40 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> a:=x^3-1:
+> b:=x^2+1:
+> c:=x^2:
+> 
+> g:=gcdex(a,b,x,'s','t'):
+> 
+> divide(c,g):
+> 
+> sigmaBar:=s*c/g;
+                                                     2
+                          sigmaBar := (- 1/2 + x/2) x
+
+> tauBar:=t*c/g;
+                                            2           2
+                      tauBar := (1/2 - 1/2 x  + 1/2 x) x
+
+> 
+> r:=rem(sigmaBar,b/g,x,'q'):
+> 
+> sigma:=r:
+> 
+> tau:=expand(tauBar+q*a/g):
+> 
+> evalb(degree(sigma,x)<degree(tau,x));
+                                      true
+
+> expand(sigma*a+tau*b); c;
+                                        2
+                                       x
+
+                                        2
+                                       x
+
+> quit
+bytes used=387096, alloc=393144, time=0.01

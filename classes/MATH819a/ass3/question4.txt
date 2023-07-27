@@ -1,0 +1,71 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> 
+> a:=(9*y-7)*x+12:
+> b:=(13*y+23)*x^2+(21*y-11)*x+(11*y-13):
+> 
+> 2*maxnorm(a)*maxnorm(b)*min(degree(a)+1,degree(b)+1);
+                                      1656
+
+#We will need this many primes to be in excess
+> 23*29*31;
+                                     20677
+
+> 
+> `mod`:=mods;
+                                  mod := mods
+
+> P:=1:
+> cpts:=[]:
+> for p in [23,29,31] do
+>     
+>     xpt:=[]:
+>     for alpha from 0 to degree(a,x)+degree(b,x) do
+>         
+>         ai:=Eval(a,x=alpha) mod p:
+>         bi:=Eval(b,x=alpha) mod p:
+>         ypt:=[]:
+>         for beta from 0 to degree(ai,y)+degree(bi,y) do
+>             ypt:=[ op(ypt),(Eval(ai,y=beta) mod p)*(Eval(bi,y=beta) mod p) ]:
+>         end do:
+>         xpt:=[op(xpt), Interp( [seq(i,i=0..degree(ai,y)+degree(bi,y))],ypt,y) mod p]:
+>         
+>     end do:
+>     
+>     cp:=Interp( [seq(i,i=0..degree(a,x)+degree(b,x))], xpt,x) mod p:
+>     cpts:=[op(cpts),cp]:
+>     
+> end do:
+> 
+> c:=chrem(cpts,[23,29,31]) mod 23*29*31;
+               2       3            2             2            2
+c := -9889 (2 y  + y) x  - 9889 (5 y  + 2 y + 8) x  - 9889 (7 y  - 11 y + 5) x
+
+                            2        3              2             2
+     + 132 y - 156 + 8556 (y  + 13) x  + 8556 (-14 y  + 5 - 3 y) x
+
+                 2                     2             3
+     + 8556 (12 y  - 12) x + 1334 (-7 y  - 8 y - 6) x
+
+                2              2            2
+     + 1334 (3 y  + 3 y + 12) x  + 1334 (6 y  - 4 y - 10) x
+
+> 
+> collect(c,x) mod 23*29*31;
+      2                 3         2                2        2
+(117 y  + 116 y - 161) x  + (189 y  - 90 y + 353) x  + (99 y  + 58 y - 41) x
+
+     - 156 + 132 y
+
+> collect(expand(a*b),x);
+      2                 3         2                2        2
+(117 y  + 116 y - 161) x  + (189 y  - 90 y + 353) x  + (99 y  + 58 y - 41) x
+
+     - 156 + 132 y
+
+> 
+> quit:\
+bytes used=591484, alloc=589716, time=0.02

@@ -1,0 +1,60 @@
+    |\^/|     Maple 11 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "padic.mpl":
+> 
+> with(LinearAlgebra): 
+> B:=2^16; m := 3; 
+                                   B := 65536
+
+                                     m := 3
+
+> 
+#parti
+> U:=rand(B^m):
+> A:=RandomMatrix(50,50,generator=U):
+> b:=RandomVector(50,generator=U):
+> 
+> st:=time():
+> x:=padicLinearSolve(A,b):
+> time()-st;
+                                     17.000
+
+> 
+> st:=time():
+> LinearSolve(A,b):
+> time()-st;
+                                     1.291
+
+> 
+> convert( A.x-b, set ); # should be {0} 
+                                      {0}
+
+> 
+#partii
+> y:=[1,0,-1/2,2/3,4,3/4,-2,-3,0,-1]:
+> x:=Vector( [seq( op(y), i=1..5 )] ):
+> b:=A.x:
+> b:=12*b:
+> A:=12*A: # clear fractions 
+> 
+> st:=time():
+> x:=padicLinearSolve(A,b):
+> time()-st;
+                                     0.234
+
+> 
+> st:=time():
+> LinearSolve(A,b):
+> time()-st;
+                                     1.078
+
+> 
+> convert(A.x-b, set ); # should be {0} 
+                                      {0}
+
+> quit;
+bytes used=1014454320, alloc=7666308, time=20.00

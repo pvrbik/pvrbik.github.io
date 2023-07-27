@@ -1,0 +1,84 @@
+    |\^/|     Maple 11 (APPLE PPC OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#Additional 8
+> 
+> with(Groebner):
+> with(PolynomialIdeals):
+> 
+> IC:=IdealContainment:
+> IdealEqual:=(I,J)->IC(I,J) and IC(J,I):
+> 
+> g:=y^5+y^3*z+y^3-3*y^4*z-3*y^2*z^2-3*y^2*z+3*y^3*z^2+3*y*z^3+3*y*z^2-z^3*y^2-z^3+6-5*z^2:
+> 
+> I:=<(z^2-2)*(z^2-3),g>:
+> J:=<(z^2-2),g>:
+> K:=<(z^2-3),g>:
+> 
+#Notive that V(I) = V(J) U V(K) which means that,
+#I(V(I)) = I(V(J)) \intersect I(V(K))
+#So if we determine the radicals of I(V(J)) and I(V(K)) we get the solution.
+> 
+> alias(alpha=RootOf(z^2-2)):
+> gr:=subs(z=alpha,g):
+> factor(gr);
+                           2                         3
+                         (y  + 1 + alpha) (y - alpha)
+
+#we identify z with alpha and take the square free part
+> RadJ:=Simplify(<J,(y^2+1+z)*(y-z)>);
+          2       4        3          2             2          3
+RadJ := <z  - 2, y  - 4 + y  + z y - y  - 3 z + y, y  z + 2 - y  - z y + z - y>
+
+> IdealEqual(Radical(J),RadJ);
+                                      true
+
+> 
+> 
+> alias(beta=RootOf(z^2-3)):
+> gr:=subs(z=beta,g):
+> factor(gr);
+                            2                       3
+                          (y  + 1 + beta) (y - beta)
+
+#we identify z with beta and take the square free part
+> RadK:=Simplify(<K,(y^2+1+z)*(y-z)>);
+RadK :=
+
+      2       4        3            2             2          3
+    <z  - 3, y  - 6 + y  + z y - 2 y  - 4 z + y, y  z + 3 - y  - z y + z - y>
+
+> IdealEqual(Radical(K),RadK);
+                                      true
+
+> 
+#So we have that Rad(I) = RadJ \intersect RadK
+> RadI:=(Intersect(RadJ,RadK));
+                2    4
+RadI := <6 - 5 z  + z ,
+
+            2      3                     2          2    3      4    5    6
+    -6 y + y  - 5 y  + 12 z - 7 z y + 7 z  + 6 - y z  + z  - 4 y  + y  + y ,
+
+          3              2    2
+    -y - y  + z - z y + z  + y  z>
+
+> 
+#check
+> IdealEqual( Radical(I), RadI );
+                                      true
+
+> IdealEqual( <-(y^2+1+z)*(-y+z), (z^2-2)*(z^2-3)>, Radical(I) );
+                                      true
+
+> 
+#"TIDY" FINAL ANSWER
+> RadI:=factor(Basis(RadI,plex(x,y,z)));
+                         2        2          2
+              RadI := [(z  - 2) (z  - 3), -(y  + 1 + z) (-y + z)]
+
+> 
+> quit:
+bytes used=9108880, alloc=4717728, time=1.68

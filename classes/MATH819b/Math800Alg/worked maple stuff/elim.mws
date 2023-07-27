@@ -1,0 +1,19 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "with(Groebner): with(StringTools):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "LTlex:= proc(f) local c
+,m; c:=lcoeff(f,X,'m'); c*m; end:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 156 "LTgrlex:= proc(f) local d,g,t;\n if not type(f,`+`) \+
+then return f; fi;\n d:= max(seq(degree(t), t=f));\n g:= add(`if`(degr
+ee(t)=d, t, 0), t=f);\n LTlex(g);\nend:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 229 "LTelim:= proc(f) \n local dx,dy,gx,gy,t,c,m,l,h;\n i
+f not type(f,`+`) then return f; fi;\n dx:= max(seq(degree(t,X), t=f))
+;\n gx:= add(`if`(degree(t,X)=d, t, 0), t=f);\n c:=lcoeff(gx,X,'m'); l
+:=c*m;\n h:=0;\n for i from 1 to nops()\nend:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "?lexorder" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "4 0 0" 223 }{VIEWOPTS 1 1 0 
+1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

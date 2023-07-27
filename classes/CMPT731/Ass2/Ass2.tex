@@ -1,0 +1,144 @@
+ \documentclass[10pt]{report}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb, amsmath}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\title{Assignment 1}
+\author{Paul Vrbik : 301056796 : CMPT 731 : Fall 2006}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Assignment 2}
+
+\subsection*{Question 1.2.4}
+
+This can be reduced in two ways:
+
+\begin{enumerate}
+\item 
+\begin{verbatim}
+=add(succ(pred(Zero),Zero)
+=succ(add(pred(Zero),Zero))
+=succ(pred(add(Zero,Zero)))
+=succ(pred(Zero)
+=Zero
+\end{verbatim}
+
+\item
+\begin{verbatim}
+=add(succ(pred(Zero)),Zero)
+=add(Zero,Zero)_
+=Zero
+\end{verbatim}
+\end{enumerate}
+
+\subsection*{Question 1.3.2}
+
+Suppose $f$ and $g$ are strict then we have that $f \bot =\bot$ and $g \bot =\bot$, 
+
+\begin{align*}
+{}& \Rightarrow h \bot = f (g \bot)=f \bot= \bot \\
+{}& \Rightarrow h \bot = \bot \\
+{}& \Rightarrow \text{h is strict}
+\end{align*}
+
+\subsection*{Question 1.4.3}
+
+\begin{verbatim}
+mylog :: Float -> Float -> Float
+mylog x b = log(x)/log(b)
+\end{verbatim}
+
+\subsection*{Question 1.4.7}
+\begin{verbatim}
+uncurry :: (a->b->t) -> ((a,b)->t)
+uncurry g (x,y) = g x y
+\end{verbatim}
+
+\subsection*{Question 1.6.2}
+
+Defining $\mathtt{swap(x,y)=(y,x)}$ we verify:
+
+\begin{verbatim}
+flip(curry f) x y = (curry f) y x = f(y,x)
+\end{verbatim}
+
+\begin{verbatim}
+curry(f.swap) x y = (f.swap)(x,y) = f(swap(x,y))=f(y,x)
+\end{verbatim}
+
+\subsection*{Question 2.4.1}
+
+\begin{verbatim}
+=cross(f,g).cross(h,k)
+=cross(f,g).pair(h.fst,k.snd)        (by defn. of cross)
+=pair(f.h.fst,g.k.snd)               (by property 3)
+=cross(f.h,g.k)                      (by defn. of pair)
+\end{verbatim}
+
+\subsection*{Question 2.4.3}
+
+\begin{verbatim}
+age (d1,m1,y1) (d2,m2,y2) 
+        | m1>m2                         = y1-y2
+        | (d1>=d2) && (m1==m2)          = y1-y2
+        | otherwise                     = (y1-y2)-1
+\end{verbatim}
+
+\subsection*{Question 2.5.1}
+\begin{verbatim}
+case2 (Left x) = 1
+case2 (Right x) = 2
+\end{verbatim}
+
+\subsection*{Question 2.5.2}
+
+\begin{verbatim}
+=case(f,g).plus(h,k)
+=case(f,g).case(Left.h,Right.k)		(by defn.)
+=case(case(f,g).Left.h,case(f,g).Right.l)		(by prop. 3)
+=case(f.h,g.k)	(by prop 1. and prop 2)
+\end{verbatim}
+
+\subsubsection*{Question 3.2.4}
+
+Let $\Pi(p)$ be the proposition $\Pi(p) \Leftrightarrow (m+n)+p = m+(n+p)$ $\forall m,n \in \mathbb{N}$ where $p\in \mathbb{N}$.
+
+\begin{description}
+\item[Base:] $\Pi(0)$ \\
+
+Utilizing the definition $x+0=x$ for $p=0$ we have
+
+$$\text{LHS} = (m+n)+0 = (m+n) = m+n$$
+$$\text{RHS} = m+(n+0)=m+(n)=m+n$$
+
+So $\Pi(0)$ is true.
+
+\item[Assumption:] 
+
+We will assume $\Pi(p)$, that is,  $(m+n)+p=m+(n+p)$ $\forall m,n \in \mathbb{N}$.
+
+\item[Induction step:] (Show $\Pi(P) \Rightarrow \Pi(suc(p))$) \\
+
+	\begin{align*}
+	{}& = (m+n)+suc(p) \\
+	{}& = suc((m+n)+p) \text{ by defn. of +} \\
+	{}& = suc(m+(n+p)) \text{ by assumption} \\
+	{}& = m+suc(n+p) \text{ by defn. of +} \\
+	{}& = m+(n+succ(p))
+	\end{align*}
+
+So we have that $\Pi(p) \Rightarrow (m+n)+suc(p) = m+(n+succ(p)) \Rightarrow \Pi(suc(p))$. So by induction we have that $\Pi(p)$ $\forall p \in \mathbb{N}$ as desired.
+
+\end{description}
+
+
+\end{document}

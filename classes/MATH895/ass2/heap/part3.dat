@@ -1,0 +1,37 @@
+-   -   -   -   -   - PART 3 -   -   -   -   -   -
+#interface(quiet=true):
+> read "heapDivision.mpl":
+> read "../DatPart3.mpl":
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> 
+> nops(a),nops(A),nops(c),nops(C);
+                                29, 217, 59, 819
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> N:=0:
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(C,A,var):
+> t:=time()-st;
+                                  t := 15.006           (old time: 38.978)
+
+> 
+> print(N,M,evalf(N/M)):
+                           340553, 47089, 7.232113657
+
+> 
+> q:=SMP2Maple(Q,var):
+> r:=SMP2Maple(R,var):
+> expand(c-q*a-r);
+                                       0
+
+> 
+> quit:\

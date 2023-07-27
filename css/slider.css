@@ -1,0 +1,20 @@
+.clear {
+    clear:both
+}
+
+#gallery {
+    position:relative;
+    height:360px;
+}
+
+#gallery a {
+    position:absolute;
+}
+
+#gallery a img {
+    border:2px solid black;
+}
+
+#gallery a.show {
+    z-index:500
+}

@@ -1,0 +1,579 @@
+* {
+    margin:0px;
+    padding:0px;
+/*    border:1px dotted grey;   */
+}
+
+
+* a:link,a:visited {
+    color:inherit;
+}
+
+* a:hover,a:active {
+    color:#000000;
+}
+
+body {
+    margin:0px auto 0px !important;
+    text-align:left;
+    
+    display:block;
+    
+    font-family: 'Open Sans', sans-serif; 
+/*    font-family: Ovo,serif;
+    font-family: "Lato", sans-serif; */
+
+}
+
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+
+div#Bottom {
+    color:#393939;
+    text-align:center;
+    border-top:1px solid #393939;
+    padding-top:3px;
+    margin-bottom:-11px;
+    font-size:9pt;
+    font-family:Vollkorn,serif;
+}
+
+div#Logo {
+    width:160px;
+    height:195px;
+    
+    display:table;
+    background-repeat:no-repeat; 
+    
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-image:url("../images/shield.png");
+    
+    margin-top:-120px;
+    margin-left:5px;
+    
+    position:absolute;
+    z-index: 100;
+}
+
+div#Name {
+    color:#00000;
+    
+    font-family:Vollkorn,serif;
+    
+    font-size:30pt;
+    
+    margin-left:150px;
+    margin-top:-50px;
+    
+/*    letter-spacing: -.03em;*/
+    
+    float:left;
+}
+
+
+div#Uni {
+    color:#000000;
+    
+/*    font-family: 'Antic Slab', serif;
+    font-family: Ovo,serif; */
+    
+    font-size:10pt;
+    
+    margin-left:151px;
+    margin-top:-28px;
+    margin-right:10px;
+    
+    letter-spacing:.10em;
+
+    text-transform:uppercase;
+
+    float:left;
+}
+
+
+
+div#ClassCode {
+    color:#000000;
+    color:white;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    font-size:13pt;
+    
+    padding-left:85px;
+    padding-right:15px;
+    
+    margin-left:50px;
+    margin-top:-5px;
+    
+    background-color:#000000;
+    border:2px solid black;
+    
+    letter-spacing: +.03em;
+    
+    float:left;
+}
+
+#Wrapper {
+    margin:180px auto 30px !important;
+    
+    padding-bottom:12px;
+    padding-top:30px;
+    
+    width:900px;
+    
+    border-bottom:1px solid #393939;
+/*    border-top:5px solid #000000; */
+}
+
+/* NavBar */
+#NavBar {
+    width:900px;
+    height:35px;
+    background-color:#393939;
+    
+    color:#FFFFFF;
+    
+    padding-right:1px;
+    margin-top:-8px;
+    font-size:11pt;
+    font-weight:300;
+   
+    border-top:4px solid #ef6a6c; 
+     
+/*     border-bottom:3px solid #f7b8b1; 
+/*    display:inline; */
+}
+
+#NavBar ul {
+    float:right;
+    list-style-type:none;
+    overflow:hidden;
+    
+    padding-top:7px;
+    padding-right:10px;
+    
+/*    width:890px; */
+}
+
+#NavBar li {
+    float:left;
+    display:inline;
+    
+    padding-left:35px;
+    padding-right:2px;
+
+}
+
+#NavBar a {
+    display:block;
+    text-align:center
+}
+
+#NavBar a:link,a:visited {
+    text-decoration:none;
+}
+
+#NavBar a:hover,a:active {
+    text-decoration:underline;
+    color:#FFFFFF;
+}
+
+
+/* FrontPage */
+#FrontPage {
+    padding:20px;
+    margin:100px;
+    margin-top:60px;
+    margin-bottom:0px;
+    
+    font-weight:light;
+    
+    background-color:#FFFFFF;
+    border:2px solid #393939;
+    
+    line-height: 180%;
+    font-size:12pt;
+    
+    list-style-position:inside;
+
+}
+
+div#Shore {
+    width:901px;
+    height:302px;
+    
+    display:table;
+    background-repeat:no-repeat; 
+    
+    background-repeat:no-repeat;
+    background-size:contain;
+    
+    background-image:url("../images/su.png");
+    
+    margin-top:-22px;
+    margin-bottom:-240px;
+    margin-left:0px;
+    
+    z-index: 1;
+}
+
+#FrontPage ul {
+    margin-top:-15px;
+}
+
+#FrontPage li {
+    margin-bottom:10px;
+}
+
+#FrontPage p {
+    margin-bottom:20px;
+}
+
+#FrontPage a {
+    text-decoration:none;
+    font-weight:bold;
+};
+
+#FrontPage a:link,a:visited {
+    text-decoration:none;
+}
+
+#FrontPage table {
+    width:100%;
+}
+
+#FrontPage td,tr {
+    padding-top:0px; 
+}
+
+#FrontPage td#left {
+    font-weight:300;
+    font-size:10pt;
+    
+    text-align:left;
+    letter-spacing:0.1em;
+    
+    padding:15px;
+}
+
+#FrontPage td#right {
+    width:762px;
+}
+
+
+#FrontPage p#role {
+
+    color:#000000;
+    font-weight:800;
+    font-size:7pt;
+    
+    text-transform:uppercase;
+    margin-bottom:1px;
+
+    padding-top:30px;
+}
+
+#FrontPage p#name {
+}
+
+#FrontPage p#email {
+    font-weight:200;
+    font-size:8pt;
+}
+
+#FrontPage div#dates {
+    width:inherit;
+    letter-spacing: -.05em;
+    padding:0px;
+}
+
+#FrontPage table#dates {
+    width:100%;
+    float-left;
+}
+
+#dates a {
+    color:#000000;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:8pt;
+}
+
+#dates a:hover,a:active {
+    color:#000000;
+}
+
+#Notes {
+
+}
+
+#NotFrontPage {
+    list-style-position:inside;
+    margin-top:20px;
+    padding-left:55px;
+    padding-right:55px;
+    line-height: 125%;
+    
+/*    border-top:2px solid #000000; */
+/*    border-top:2px solid black; */
+}
+
+
+#NotFrontPage table{
+    table-layout: fixed;
+    width: 400px;
+}
+
+#NotFrontPage th, td {
+    overflow: hidden;
+    width: 400px;
+}
+
+#NotFrontPage ul {
+    list-style-position:inside;
+}
+
+#NotFrontPage h1 {
+    margin-left:0px;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-weight:200;
+    font-size:18pt;
+    color:#393939;
+    border-bottom:1px dotted #000000;
+}
+
+#NotFrontPage h2 {
+    margin-top:20px;
+    margin-bottom:5px;
+    font-weight:400;
+    font-size:12pt;
+    color:#ef6a6c;
+}
+
+#NotFrontPage li {
+    font-size:11pt;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+div#Coming {
+    opacity : 0.4;
+    filter: alpha(opacity=40); /* msie */
+}
+
+
+div#Notes {
+    display:block;
+    float:left;
+    margin:33px;
+/*    border:1px dotted red; */
+    
+    width:206px;
+    height:125px;
+}
+
+
+#Notes table {
+    width:inherit;
+    font-size:10pt;
+}
+
+#contents td {
+    border-bottom:0.1em solid #000000;
+    border-top:0.1em solid #000000;
+
+    border-bottom:0.1em solid #000000;
+    border-top:0.1em solid #9A70B	;
+    
+    padding:3px;
+    
+    height:25pt;
+    
+    font-size:8pt;
+    text-align:center;
+    
+    width:1000px;
+}
+
+#Notes p#what {    
+    color:#000000;
+    
+    text-transform:uppercase;
+    text-align:right;
+    
+    margin-top:7px;
+    
+    font-size:10pt;
+    
+}
+
+#Notes p#whatis {
+    text-align:right;
+    font-size:10pt;
+}
+
+img#icon {
+    float:left;
+    width:96px; /* you can use % */
+    height: auto;
+}
+
+img#cover {
+    float:right;
+    height: auto;
+    
+    -moz-box-shadow: 3px 3px 3px grey;
+    -webkit-box-shadow: 3px 3px 3px grey;
+     box-shadow: 3px 3px 3px grey;
+}
+
+
+div#Book {
+    display:block;
+    float:left;
+    
+    background-color:FFFFFF;
+    
+    border-top:.1em solid #000000;
+    border-bottom:.1em solid #000000; 
+    
+    padding:10px;
+    
+    margin:55px;
+    margin-bottom:0px;
+    
+    width:700px;
+}
+
+#Book p {
+    float:left;
+    width:600px;
+    
+    font-size:10pt;
+}
+
+#Book p#whatis {
+    font-size:8pt;
+    letter-spacing: .1em;
+    padding-bottom:10px;
+}
+
+
+#Book p#what {
+    text-transform:uppercase;
+    color:#000000;
+    font-size:10pt;
+    text-align:left;
+}
+
+#AssN table  {
+    float:left;
+    width:180px;
+    
+/*    margin-left:130px;
+    margin-top:30px; */
+    
+    margin-top:40px;
+    margin-right:35px;
+    padding:5px;
+    
+    border:1px solid black;
+}
+
+#AssN td {
+    text-align:center;
+/*    padding-top:10px;  */
+} 
+
+#AssN td#AssNumber {
+    -moz-box-shadow: 1px 1px 5px black;
+    -webkit-box-shadow: 1px 1px 5px black;
+     box-shadow: 2px 2px 3px grey;
+     
+    font-family:'Open Sans', sans-serif;
+    color:#000000;
+    font-weight:200;
+    font-size:50pt;
+}
+
+#AssN img {
+    padding-top:5px; 
+    width:70px;
+    height:70px;
+}
+
+#AssN #Due, #Day, #Month, #Digit {
+    text-transform:uppercase;
+}
+
+#AssN #Due {
+    color:#000000;
+    color:#000000;;
+    padding-top:10px;
+    font-weight:600;
+    font-size:7pt;
+    text-align:center;
+}
+
+#AssN #Day {
+
+    color:#000000;
+    font-weight:500;
+    letter-spacing:-.05em;
+    
+    
+    font-size:13pt;
+}
+
+#AssN #Month {
+    margin-top:-10px;
+    margin-bottom:-15px;
+    color:#000000;
+    font-weight:300;
+    letter-spacing:-.05em;
+    font-size:30pt;
+
+}
+
+#AssN #Digit {
+    color:#000000;
+    font-weight:200;
+    font-size:25pt;
+}
+
+
+
+#DatesContainer {
+    margin-right:30px;
+    padding-left:120px;
+    padding-right:100px;
+}
+
+#DatesContainer p {
+    width:49%;
+    
+    font-weight:300;
+    margin-top:20px;
+    
+    font-size:18pt;
+}
+
+#NotFrontPage p#thing {
+    color:#000000;
+    float:left;
+    text-align:left;
+    text-transform:uppercase;
+}
+
+#NotFrontPage p#when {
+    color:#000000;
+    float:right;
+    text-align:right;
+}

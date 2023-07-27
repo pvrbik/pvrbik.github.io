@@ -1,0 +1,57 @@
+% !TEX root = OurExam.tex
+\clearpage
+\section*{\S 4 Very Long Answer}
+There is one question in this section with five parts. Each part is worth \emph{4 points} for a total of \emph{20 pionts}.
+
+\subsection*{Question 12}
+For this question you will create a new class that represents information about students in a university course. Use the following code as a starting point:
+
+\begin{verbatim}
+    public class Course {
+        private String instructor;   //the name of the instructor
+        private String course;       //the name of the course
+        private Student[] students;  //an array for the students in the course
+    }
+\end{verbatim}
+
+\noindent Specifications for \texttt{Student} class is part of the extra exam material (i.e. the ``cheat sheet'').
+
+\subsubsection*{Part i.}
+Write a constructor method for inclusion in the \texttt{Course} class with the header: 
+$$\texttt{public Course (String instructorName, String courseName, int maxClassSize)}$$
+that initializes the course in the obvious way (\texttt{maxClassSize} is used to initialize the \texttt{students} array).\\
+
+\AnsBox{10cm}
+
+\subsubsection*{Part ii.}
+Write three methods for inclusion in the \texttt{Course} class with headers:
+\begin{enumerate}
+\item[1.] \texttt{  public String getInstructor() } 
+\item[2.] \texttt{  public String getCourse() }
+\item[3.] \texttt{  public int getMaxClassSize() }
+\end{enumerate}
+which return (respectively) the name of the instructor, the name of the course, and the maximum class size.\\
+
+\AnsBox{17cm}
+
+\subsubsection*{Part iii.}
+Write a method for inclusion in the \texttt{Course} class with the header 
+$$ \texttt{ public boolean enrollStudent(Student theStudent) } $$
+that \emph{adds} a students to the course. More precisely, this method returns \texttt{false} if there is no room for the student in the course; otherwise it puts \texttt{theStudent} in the \texttt{students} array and returns \texttt{true}.
+\\
+
+\AnsBox{18cm} \clearpage
+
+\subsubsection*{Part iv.}
+Write a method for inclusion in the \texttt{Course} class with the header 
+$$ \texttt{ public boolean removeStudent(Student theStudent) } $$
+that \emph{removes} a student from the course. Return \texttt{true} if successful and \texttt{false} otherwise. (Removing a student that is not in the course should be considered a success).\\
+
+\AnsBox{18cm} \clearpage
+
+\subsubsection*{Part v.}
+Write a method for inclusion in the \texttt{Course} class with the header 
+$$ \texttt{ public int getNumberOfEnrolledStudents() } $$
+that returns the number of enrolled students in the course.\\
+
+\AnsBox{19cm} \clearpage

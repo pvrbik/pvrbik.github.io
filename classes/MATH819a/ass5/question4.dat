@@ -1,0 +1,55 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> 
+> ZQRST:=proc(a,u0,p) local u,pk,k,e,uk,i:
+>     `mod`:=mods:
+>     u:=mods(u0,p):
+>     i:=modp (1/(2*u0),p):
+>     pk:=p:
+>     e:=a-u0^2:
+>     e:=e/p:
+>     
+>     for k do
+>         if e = 0 then
+>             return u:
+>         elif (e<0) then
+>             return "FAIL":
+>         end if:
+>         
+>         uk:=mods( e*i, p):
+>         
+>         e:=(e-2*u*uk-uk^2*pk)/p:
+>         
+>         u:=u+uk*pk:
+>         pk:=p*pk:
+>     end do:
+>     
+> end proc:
+> 
+> `mod`:=mos:
+Error, invalid assignment to mod
+> p:=9973;
+                                   p := 9973
+
+> a:=nextprime(p)^2;
+                                 a := 100140049
+
+> Factor(x^2-a) mod p;
+                              (x + 9939) (x + 34)
+
+> ZQRST(a,34,p);
+                                     10007
+
+> ZQRST(a,-34,p);
+                                     -10007
+
+> nextprime(p);
+                                     10007
+
+> 
+> quit;
+bytes used=433720, alloc=458668, time=0.02

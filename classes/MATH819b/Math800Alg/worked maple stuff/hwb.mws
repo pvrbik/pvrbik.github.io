@@ -1,0 +1,501 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Text Output" -1 2 
+1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 
+0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 
+-1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 4 1 0 1 0 2 2 
+0 1 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 "" 0 1 0 0 255 1 0 0 0 
+0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output
+" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }
+{PSTYLE "" 0 256 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 
+0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 11 "Section 5.3" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 5 "5.3.
+5" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "I:=<y+x^2-1,x*y-2*y^2+2*y>:
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "G:=Basis(I,plex(x,y));
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7%,(*&\"\"%\"\"\")%\"yG\"\"$
+F)F)*&\"\"(F))F+\"\"#F)!\"\"*&F,F)F+F)F),(*&%\"xGF)F+F)F)*&F0F)F/F)F1*
+&F0F)F+F)F),(F+F)*$)F5F0F)F)F)F1" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 38 "seq(LeadingMonomial(p,plex(x,y)),p=G);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6%*$)%\"yG\"\"$\"\"\"*&%\"xGF'F%F'*$)F)\"\"#F'" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 15 "R:=[1,x,y,y^2]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 122 "A:=array(1..4,1..4):\n for i from 1 to 4 do\n  for j
+ from 1 to 4 do\n   A[i,j]:=NormalForm(R[i]*R[j],G,plex(x,y));\n  od;
+\n od;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "eval(A);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#K%'matrixG6#7&7&\"\"\"%\"xG%\"yG*$)F*\"\"#F(
+7&F),&F*!\"\"F(F(,&*&F-F(F,F(F(*&F-F(F*F(F0,&*&#\"\"$F-F(F+F(F(*&#F7F-
+F(F*F(F07&F*F1F+,&*&#\"\"(\"\"%F(F+F(F(*&#F7F?F(F*F(F07&F+F4F;,&*&#\"#
+P\"#;F(F+F(F(*&#\"#@FGF(F*F(F0Q(pprint56\"" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 13 "IsMaximal(I);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&
+falseG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 126 "Recall that by Theorem
+ 8 the quotient ring R is a field if and only if I is maximal. Since I
+ is not maximal, R is not a field." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 62 "Let us now find the inverse of 1+y by solving a linear system.
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "f:=1+y:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "finv:=add(c[i]*R[i],i=1..4);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%finvG,*&%\"cG6#\"\"\"F)*&&F'6#\"\"#
+F)%\"xGF)F)*&&F'6#\"\"$F)%\"yGF)F)*&&F'6#\"\"%F))F3F-F)F)" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "zero:=NormalForm(f*finv,G,plex(x,y)
+)-1;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%zeroG,,&%\"cG6#\"\"\"F)*&&F
+'6#\"\"#F)%\"xGF)F)*&,*F&F)*&F-F)F+F)!\"\"*&#\"\"$\"\"%F)&F'6#F6F)F2&F
+'6#F5F)F)%\"yGF)F)*&,(*&#\"#6F6F)F7F)F)F9F)*&F-F)F+F)F)F))F;F-F)F)F)F2
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "eqns:=\{coeffs(zero,[x,
+y])\}:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "sol:=solve(eqns);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$solG<&/&%\"cG6#\"\"#\"\"!/&F(6#
+\"\"%#F*\"\"(/&F(6#\"\"$#!#6\"#9/&F(6#\"\"\"F<" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 28 "Hence the inverse of 1+y is:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 21 "finv:=subs(sol,finv);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%%finvG,(\"\"\"F&*&#\"#6\"#9F&%\"yGF&!\"\"*&#\"\"#\"\"
+(F&*$)F+F/F&F&F&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 52 "Let us check \+
+it by multiplying in the quotient ring:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "NormalForm(f*finv,G,plex(x,y));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 
+"" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 6 "5.3.10" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part c." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 23 "I:=<y[1]^2-2,y[2]^2-3>:" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 28 "G:=Basis(I,plex(y[1],y[2]));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"GG7$,&*$)&%\"yG6#\"\"#F,\"\"\"F-\"\"$!\"\",&*$
+)&F*6#F-F,F-F-F,F/" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "seq(L
+eadingMonomial(p,plex(y[1],y[2])),p=G);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$*$)&%\"yG6#\"\"#F(\"\"\"*$)&F&6#F)F(F)" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 87 "So the possible remainders are linear combinations of e
+lements of R as indicated below." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "R:=[1,y[1],y[2],y[1]*y[2]]:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 128 "A:=array(1..4,1..4):\n for i from 1 to 4 do\n  \+
+for j from 1 to 4 do\n   A[i,j]:=NormalForm(R[i]*R[j],G,plex(y[1],y[2]
+));\n  od;\n od;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "eval(A);
+" }{TEXT -1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#K%'matrixG6#7&7&\"
+\"\"&%\"yG6#F(&F*6#\"\"#*&F)F(F,F(7&F)F.F/,$*&F.F(F,F(F(7&F,F/\"\"$,$*
+&F4F(F)F(F(7&F/F1F5\"\"'Q(pprint86\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "f:=x+y[1]+y[2]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "finv:=add(a[i]*R[i],i=1..4);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%%finvG,*&%\"aG6#\"\"\"F)*&&F'6#\"\"#F)&%\"yGF(F)F)*&&
+F'6#\"\"$F)&F/F,F)F)*(&F'6#\"\"%F)F.F)F4F)F)" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 45 "zero:=NormalForm(f*finv,G,plex(y[1],y[2]))-1;" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%zeroG,0*&%\"xG\"\"\"&%\"aG6#F(F(F(
+*&\"\"#F(&F*6#F-F(F(*&\"\"$F(&F*6#F1F(F(*&,(*&F'F(F.F(F(F)F(*&F1F(&F*6
+#\"\"%F(F(F(&%\"yGF+F(F(*&,(*&F'F(F2F(F(F)F(*&F-F(F8F(F(F(&F<F/F(F(*(,
+(*&F'F(F8F(F(F.F(F2F(F(F;F(FAF(F(F(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 33 "eqns:=\{coeffs(zero,[y[1],y[2]])\}:" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 36 "sol:=solve(eqns,[seq(a[i],i=1..4)]);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$solG7#7&/&%\"aG6#\"\"\"*(%\"xGF+,&*
+$)F-\"\"#F+F+\"\"&!\"\"F+,(F+F+*&\"#5F+F0F+F3*$)F-\"\"%F+F+F3/&F)6#F1,
+$*&,&F/F+F+F+F+F4F3F3/&F)6#\"\"$,$*&F4F3,&F+F3F/F+F+F3/&F)6#F9,$*(F1F+
+F-F+F4F3F+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 28 "Hence the inverse o
+f 1+y is:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "finv:=subs(op(
+sol),finv);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%finvG,**(%\"xG\"\"\"
+,&*$)F'\"\"#F(F(\"\"&!\"\"F(,(F(F(*&\"#5F(F+F(F.*$)F'\"\"%F(F(F.F(*(,&
+F*F(F(F(F(F/F.&%\"yG6#F(F(F.*(F/F.,&F(F.F*F(F(&F86#F,F(F.*,F,F(F'F(F/F
+.F7F(F<F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "simplify(fin
+v);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&,0*$)%\"xG\"\"$\"\"\"F)*&\"\"
+&F)F'F)!\"\"*&&%\"yG6#F)F))F'\"\"#F)F,F.F,&F/6#F2F)*&F3F)F1F)F,**F2F)F
+'F)F.F)F3F)F)F),(F)F)*&\"#5F)F1F)F,*$)F'\"\"%F)F)F," }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 46 "And now we indeed have a rational denominator.
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "
+" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 5 "6.4.6" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "g:=u1*u3/2-u1*y-u3/2*x+
+u2/2*y:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "I:=<x*u3/2-(u1+u
+2)/2*y,-u2*y-u1*u3/2+x*u3+u1/2*y,1-v*u3,1-w*g>:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 26 "G:=Basis(I,tdeg(v,w,x,y));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%\"GG7#\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+14 "Alternatively:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "I:=<x
+*u3/2-(u1+u2)/2*y,-u2*y-u1*u3/2+x*u3+u1/2*y>:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "G:=Basis(I,tdeg(x,y)):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 26 "NormalForm(g,G,tdeg(x,y));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 62 "Hence the
+ conclusion follows generically from the hypothesis. " }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT 
+-1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 5 "6.4.8" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "g:=(x2-x6)*(x5-x7)-(x3-x7)*(
+x4-x6):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 199 "I:=<-x2*(u6-x3)
++x3*(u5-x2),-x3*(u3-x2)-(u4-x3)*(u1-x2),x4*(u7-x5)-x5*(x1-x4),-x5*(u3-
+x4)-(u4-x5)*(u2-x4),(u1-x6)*(u7-x7)+x7*(x1-x6),-x7*(u5-x6)-(u6-x7)*(u2
+-x6),(u3-x1)*(u6-u7)-(u4-u7)*(u5-x1),1-z*g>:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 41 "G:=Basis(I,tdeg(z,x1,x2,x3,x4,x5,x6,x7));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7#\"\"\"" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 62 "Hence the conclusion follows generically from the hy
+pothesis. " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT 
+-1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 6 "6.4.10" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "g:=x1^2-2*x1*x3-2*x2*x4+x2^2
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "I:=<x2-u3,(x1-u1)*u3-u
+2*x2,x4*x1-x3*u3,x4*(u2-u1)-(x3-u1)*u3,1-y*g>:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 41 "G:=Basis(I,tdeg(y,u1,u2,u3,x1,x2,x3,x4));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7),&%#x2G!\"\"%#u3G\"\"\",&*&%#x
+4GF*%#u2GF*F**&F-F*%#x1GF*F(*&F-F*%#u1GF*,&F/F(*&%#x3GF*F'F*F*,&*&F.F*
+F'F*F**&F0F*F'F*F(*&F2F*F'F*,,F*F(*&%\"yGF*)F0\"\"#F*F***F>F*F<F*F0F*F
+5F*F(**F>F*F<F*F'F*F-F*F(*&F<F*)F'F>F*F*" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 6 "6.4.11" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 62 "I:=<x2-u3,(x1-u1)*u3-u2*x2,x4*x1-x3*u3,x4*(u2-
+u1)-(x3-u1)*u3>:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "f:=Basi
+s(I,plex(x1,x2,x3,x4,u1,u2,u3)):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "factor(f);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7(,$*(%
+#u3G\"\"\"%#u1GF',&*&\"\"#F'%#x4GF'!\"\"F&F'F'F-,$*(F(F',&%#u2GF-F(F'F
+'F)F'F-,**&F,F'F1F'F-*&F,F'F(F'F'*&%#x3GF'F&F'F'*&F&F'F(F'F-,&%#x2GF'F
+&F-*&F&F',(%#x1GF'F(F-F1F-F',**&F,F'F<F'F'F4F'F3F-F7F-" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "I1:=<f[1],f[2],f[3],f[4],u3,f[6]>: \+
+I2:=<f[1],f[2],f[3],f[4],x1-u1-u2,f[6]>:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 51 "Basis(Intersect(I1,I2),plex(x1,x2,x3,x4,u1,u2,u3));" 
+}}{PARA 12 "" 1 "" {XPPMATH 20 "6#7(,&**\"\"#\"\"\"%#x4GF'%#u3GF'%#u1G
+F'F'*&)F)F&F'F*F'!\"\",**&F)F')F*F&F'F-*(F*F'%#u2GF'F)F'F'**F&F'F*F'F(
+F'F2F'F-*(F&F'F0F'F(F'F',**&F(F'F2F'F-*&F(F'F*F'F'*&%#x3GF'F)F'F'*&F)F
+'F*F'F-,&%#x2GF'F)F-,(*&F)F'%#x1GF'F'F:F-*&F2F'F)F'F-,**&F(F'F?F'F'F7F
+'F6F-F:F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "evalb(%=f);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 60 "Hence V(I)=V(I1 intersect I2)=V(I1) union V(I2)=V1 union \+
+V2." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 12 "Parts b,c,d." }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 26 "Let us first decompose I1." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "G1:=Basis(I1,plex(x1,x2,x3,x4,u1,u2
+,u3)): " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "factor(G1);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7&%#u3G*&%#x4G\"\"\",&%#u2G!\"\"%#u1GF
+'F'%#x2G*&F&F'%#x1GF'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "P[
+1] := Quotient(I1,<u1>);\nP[2] := Quotient(I1,<2*x4-u3>);" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>&%\"PG6#\"\"\"-%$<,>G6&%#x2G%#u3G*&%#x4GF'%#x1
+GF',$*&F.F',&%#u2G!\"\"%#u1GF'F'F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>&%\"PG6#\"\"#-%$<,>G6&%#x2G%#u3G%#x1G,&%#u2G\"\"\"%#u1G!\"\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "IsPrime(P[1]), IsPrime(P[2])
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%&falseG%%trueG" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 52 "G11:=factor(Basis(P[1],plex(x1,x2,x3,x4,u
+1,u2,u3)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$G11G7&%#u3G*&%#x4G\"
+\"\",&%#u2G!\"\"%#u1GF)F)%#x2G*&F(F)%#x1GF)" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 59 "P[3], P[4] := Quotient(P[1],<x4>), Quotient(P[1],<
+-u2+u1>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$&%\"PG6#\"\"$&F&6#\"\"
+%6$-%$<,>G6&%#x2G%#u3G%#x1G,&%#u2G\"\"\"%#u1G!\"\"-F.6%,$%#x4GF7,$F0F7
+,$F1F7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "IsPrime(P[3]), Is
+Prime(P[4]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%%trueGF#" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "J:=Intersect(P[2],P[3],P[4]);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"JG-%$<,>G6&%#x2G%#u3G*&%#x4G\"\"\"
+%#x1GF,,&*&F+F,%#u2GF,F,*&F+F,%#u1GF,!\"\"" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 46 "evalb(G1=Basis(J,plex(x1,x2,x3,x4,u1,u2,u3)));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 23 "Now let's decompose I2." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 41 "G2:=Basis(I2,plex(x1,x2,x3,x4,u1,u2,u3)):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "factor(G2);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7&,$*&%#u1G\"\"\",&%#u3GF'*&\"\"#F'%#x4GF'!\"\"F'F-,(*(
+F+F'F,F'%#u2GF'F-*(F+F'%#x3GF'F)F'F'*&F)F'F&F'F-,&%#x2GF'F)F-,(%#x1GF'
+F&F-F0F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "P[5],P[6] := Qu
+otient(I2,<u1>), Quotient(I2,<u3-2*x4>);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>6$&%\"PG6#\"\"&&F&6#\"\"'6$-%$<,>G6&,&%#x2G\"\"\"%#u3G!\"\",(%#
+x1GF2%#u1GF4%#u2GF4,&F3F4*&\"\"#F2%#x4GF2F2,$*&F3F2,(*&F;F2%#x3GF2F4F8
+F2F7F2F2F4-F.6&,$F7F4,&F1F4F3F2,&F6F4F8F2,&*&F<F2F8F2F4*&FAF2F3F2F2" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "IsPrime(P[5]), IsPrime(P[6
+]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%&falseG%%trueG" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "G21:=factor(Basis(P[5],plex(x1,x2,x
+3,x4,u1,u2,u3)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$G21G7&,&%#u3G!
+\"\"*&\"\"#\"\"\"%#x4GF+F+,$*&F'F+,(*&F*F+%#x3GF+F(%#u2GF+%#u1GF+F+F(,
+&%#x2GF+F'F(,(%#x1GF+F3F(F2F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 64 "P[7], P[8] := Quotient(P[5],<u3>), Quotient(P[5],<-2*x3+u2+u1>);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$&%\"PG6#\"\"(&F&6#\"\")6$-%$<,>
+G6&,&%#x2G\"\"\"%#u3G!\"\",(%#x1GF2%#u1GF4%#u2GF4,&F3F4*&\"\"#F2%#x4GF
+2F2,(*&F;F2%#x3GF2F2F8F4F7F4-F.6&,$F<F4,$F1F4,$F3F4,(F6F4F7F2F8F2" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "IsPrime(P[7]), IsPrime(P[8])
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%%trueGF#" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 29 "J:=Intersect(P[6],P[7],P[8]);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"JG-%$<,>G6',&%#x2G\"\"\"%#u3G!\"\",(%#x1GF*%#u
+1GF,%#u2GF,,&*(\"\"#F*%#x4GF*F/F*F**&F+F*F/F*F,,(**F3F*F/F*%#x3GF*F+F*
+F,*(F/F*F0F*F+F*F**&F+F*)F/F3F*F*,(*(F3F*F4F*F0F*F**(F3F*F8F*F+F*F,F5F
+*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "evalb(G2=Basis(J,plex(
+x1,x2,x3,x4,u1,u2,u3)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 18 "So we have that I=" }{XPPEDIT 
+18 0 "`intersect`(P[2],P[3]);" "6#-%*intersectG6$&%\"PG6#\"\"#&F'6#\"
+\"$" }{XPPEDIT 18 0 "`intersect`(``,P[4]);" "6#-%*intersectG6$%!G&%\"P
+G6#\"\"%" }{XPPEDIT 18 0 "`intersect`(%?,P[6]);" "6#-%*intersectG6$%#%
+?G&%\"PG6#\"\"'" }{TEXT -1 1 " " }{XPPEDIT 18 0 "`intersect`(``,P[7]);
+" "6#-%*intersectG6$%!G&%\"PG6#\"\"(" }{XPPEDIT 18 0 "`intersect`(``,P
+[8]);" "6#-%*intersectG6$%!G&%\"PG6#\"\")" }{TEXT -1 68 " . Now we hav
+e to check whether any of them are contained in others." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 137 "for i from 2 to 8 do\n for j from \+
+2 to 8 do\n  if i<>j and i<>5 and j<>5 and IdealContainment(P[i],P[j])
+ then print(i,j);\n  fi;\n od;\nod;   " }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$\"\"#\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$\"\"$\"\"#" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$\"\"%\"\")" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 7 "Hence  " }{XPPEDIT 18 0 "P[2];" "6#&%\"PG6#\"\"#" }{TEXT 
+-1 2 "= " }{XPPEDIT 18 0 "P[3];" "6#&%\"PG6#\"\"$" }{TEXT -1 37 " and \+
+we can discard one of them and  " }{XPPEDIT 18 0 "P[4];" "6#&%\"PG6#\"
+\"%" }{TEXT -1 17 " is contained in " }{XPPEDIT 18 0 "P[8];" "6#&%\"PG
+6#\"\")" }{TEXT -1 89 " and so we can remove it. Then we have that I i
+s an intersection of the following ideals:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 20 "P[2],P[4],P[6],P[7];" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6&-%$<,>G6&%#x2G%#u3G%#x1G,&%#u2G\"\"\"%#u1G!\"\"-F$6%,$%#x4GF-,$F
+&F-,$F'F--F$6&,$F,F-,&F&F-F'F+,&F(F-F*F+,&*&F1F+F*F+F-*&%#x3GF+F'F+F+-
+F$6&,&F&F+F'F-,(F(F+F,F-F*F-,&F'F-*&\"\"#F+F1F+F+,(*&FCF+F<F+F+F*F-F,F
+-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 197 "Therefore V is the unions o
+f the varieties of the above ideals. Notice that these are the varieti
+es defined in the text and since the corresponding ideals are prime, t
+he varieties are irreducible. " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "
+Part e." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "g:=x1^2-2*x1*x3-
+2*x2*x4+x2^2:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "Basis(<x2,
+ u3, x1, u2-u1,1-y*g>,plex(y,x1,x2,x3,x4,u1,u2,u3));" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#7#\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+58 "Basis(<-x4, -x2, -u3,1-y*g>,plex(y,x1,x2,x3,x4,u1,u2,u3));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7&%#u3G%#x4G%#x2G,(*&%\"yG\"\"\")%#x1G
+\"\"#F*F***F-F*F)F*F,F*%#x3GF*!\"\"F*F0" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 78 "Basis(<-u1, -x2+u3, -x1+u2, -x4*u2+x3*u3,1-y*g>,plex(
+y,x1,x2,x3,x4,u1,u2,u3));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7(%#u1G,&
+*&%#x4G\"\"\"%#u2GF(!\"\"*&%#x3GF(%#u3GF(F(,&%#x2GF(F-F*,&%#x1GF(F)F*,
+,*(%\"yGF(F-F()F)\"\"#F(F**&F4F()F-\"\"$F(F***F6F(F'F(F4F(F5F(F(**F6F(
+F'F(F4F()F-F6F(F(F-F(,,*&F4F(F5F(F***F6F(F4F(F,F(F)F(F(**F6F(F4F(F'F(F
+-F(F(*&F4F(F<F(F*F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "Ba
+sis(<x2-u3, x1-u1-u2, -u3+2*x4, 2*x3-u2-u1,1-y*g>,plex(y,x1,x2,x3,x4,u
+1,u2,u3));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7#\"\"\"" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 106 "Therefore the conclusion of the theorem \+
+is true on P2 and P7. However, P2 contains a degenerate case u3=0." }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part f." }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 54 "I:=<x4*x1-x3*u3,x4*(u2-u1)-(x3-u1)*u3,x1-u1-u2,x2-
+u3>:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "f:=Basis(I,plex(x1,
+x2,x3,x4,u1,u2,u3)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "fac
+tor(f);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,$*&%#u1G\"\"\",&%#u3GF'*
+&\"\"#F'%#x4GF'!\"\"F'F-,(*(F+F'F,F'%#u2GF'F-*(F+F'%#x3GF'F)F'F'*&F)F'
+F&F'F-,&%#x2GF'F)F-,(%#x1GF'F&F-F0F-" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "I1:=<u1,f[2],f[3],f[4]>: I2:=<u3-2*x4,f[2],f[3],f[4]>
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "Basis(Intersect(I1,I2)
+,plex(x1,x2,x3,x4,u1,u2,u3));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,&*
+(\"\"#\"\"\"%#x4GF'%#u1GF'F'*&%#u3GF'F)F'!\"\",(*(F&F'F(F'%#u2GF'F,*(F
+&F'%#x3GF'F+F'F'F*F,,&%#x2GF'F+F,,(%#x1GF'F)F,F/F," }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 11 "evalb(%=f);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#%%trueG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "IsPrime(I1
+), IsPrime(I2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%%trueG%&falseG" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "G:=Basis(I2,plex(x1,x2,x3,x
+4,u1,u2,u3));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7&,&%#u3G!\"\"*
+&\"\"#\"\"\"%#x4GF+F+,(*(F*F+%#x3GF+F'F+F+*&F'F+%#u1GF+F(*&%#u2GF+F'F+
+F(,&%#x2GF+F'F(,(%#x1GF+F1F(F3F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "factor(G);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,&%#u
+3G!\"\"*&\"\"#\"\"\"%#x4GF)F),$*&F%F),(*&F(F)%#x3GF)F&%#u2GF)%#u1GF)F)
+F&,&%#x2GF)F%F&,(%#x1GF)F1F&F0F&" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 60 "K[1], K[2] := Quotient(I2,<u3>), Quotient(I2,<-2*x3+u
+2+u1>);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>6$&%\"KG6#\"\"\"&F&6#\"\"#
+6$-%$<,>G6&,&%#x2GF(%#u3G!\"\",(%#x1GF(%#u1GF3%#u2GF3,&F2F3*&F+F(%#x4G
+F(F(,(*&F+F(%#x3GF(F(F7F3F6F3-F.6&,$F:F3,$F1F3,$F2F3,(F5F3F6F(F7F(" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "IsPrime(K[1]), IsPrime(K[2]
+);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$%%trueGF#" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 24 "J:=Intersect(K[1],K[2]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"JG-%$<,>G6&,&%#x2G\"\"\"%#u3G!\"\",(%#x1GF*%#u1GF,%
+#u2GF,,&F+F,*&\"\"#F*%#x4GF*F*,(*(F3F*%#x3GF*F+F*F**&F+F*F/F*F,*&F0F*F
++F*F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "evalb(G=Basis(J,pl
+ex(x1,x2,x3,x4,u1,u2,u3)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 174 "Therefore V is reducible and
+ it has 3 componments corresponding to ideals I1, K1 and K2 above. Not
+ice that I2 here was euqal to P5 in part e, so we skipped one decompos
+ition." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 0 
+{PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 256 "" 0 "" {TEXT -1 8 "C
+ircles." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "with(Groebner): " }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 20 "Boundary conditions." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+8 "y[4]:=0:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "x[9]:=1: x[4
+]:=m: y[9]:=1-m: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "Symmetry and
+ Pythagoras." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 121 "eqns:= \{x
+[6]=y[5],y[6]=x[5],\n (x[6]-x[4])^2+(y[6])^2=m^2, (1-x[6])^2+(1-m-y[6]
+)^2=m^2,  (x[6]-x[5])^2+(y[6]-y[5])^2=m^2\}:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 31 "F:=[seq(lhs(e)-rhs(e),e=eqns)];" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"FG7',&&%\"xG6#\"\"'\"\"\"&%\"yG6#\"\"&!\"\",&&
+F-F)F+&F(F.F0,(*$),&F'F+F3F0\"\"#F+F+*$),&F2F+F,F0F8F+F+*$)%\"mGF8F+F0
+,(*$),&F+F+F'F0F8F+F+*$),(F+F+F>F0F2F0F8F+F+F<F0,(*$),&F'F+F>F0F8F+F+*
+$)F2F8F+F+F<F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "G:=Basis(
+F, lexdeg([x[6],x[5],y[6],y[5]],[m]));" }}{PARA 12 "" 1 "" {XPPMATH 
+20 "6#>%\"GG7*,.*&\"\"(\"\"\")%\"mG\"\"&F)F)*&\"#OF))F+\"\"#F)F)*&\"#?
+F)F+F)!\"\"*&\"#GF))F+\"\"$F)F3\"\"%F)*$)F+F8F)F),0*(\"#;F)&%\"yG6#F,F
+)F+F)F)*&\"#EF)F/F)F)*&F(F)F:F)F3*&\"#MF)F+F)F3*$F6F)F3F=F)*&F=F)F>F)F
+3,.*(F=F)F+F)&F?6#\"\"'F)F)*&FBF)F/F)F3*&\"#=F)F+F)F)*&F(F)F:F)F)FFF)*
+&F=F)FJF)F3,&FJF3&%\"xGF@F),&&FTFKF)F>F3,0*(F=F)FJF)F>F)F)*&F(F)F:F)F3
+*&\"#IF)F/F)F)*&FEF)F+F)F3FFF3F=F)*&F=F)F>F)F3,2*&\"\")F))FJF0F)F)*&FB
+F)F/F)F)*&FjnF))F>F0F)F)*&F(F)F:F)F3*&FEF)F+F)F3FFF3F=F)*&F=F)F>F)F3,4
+*&\"#kF))F>F7F)F)*&\"#DF)F6F)F3*&\"#oF)F/F)F)*&\"#]F)F+F)F3\"#7F)*&\"$
+G\"F)F^oF)F3*&\"#@F)F:F)F3*&FdoF)F>F)F)*&F=F)FJF)F3" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7*<#%\"mG<$F%&%\"yG6#\"\"&<$F%&F(6#\"\"'<$F,&%\"xGF)<$&
+F1F-F'<%F%F'F,F4F4" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "So we are l
+ooking for the roots of the first polynomial. " }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 8 "M:=G[1]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 10 "factor(M);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&,&%\"mG\"\"\"F
+&!\"\"F&,,*&\"\"(F&)F%\"\"%F&F&*&\"\")F&)F%\"\"$F&F&*&\"#?F&)F%\"\"#F&
+F'*&\"#;F&F%F&F&F,F'F&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "Clearly
+ m cannot be 1, so we'll work with the second factor." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "fsolve(7*m^4+8*m^3-20*m^2+16*m-4,m)
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$$!+MZ@2E!\"*$\"+64U&>%!#5" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 66 "Since the first number is negative
+, the root we're looking for is " }{XPPEDIT 18 0 ".4195420911;" "6#-%&
+FloatG6$\"+64U&>%!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "r:=
+m/(2*m+2):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "m:=.419542091
+1: evalf(r);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+7utx9!#5" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "with(Groebner):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 20 "Boundary c
+onditions." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "y[1],y[6]:=0,
+0: x[2],y[3],y[8]:=0,1,1:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+19 "x[9]:=1: x[10]:=1: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "Symmet
+ry and Pythagoras." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 370 "eqns
+:= \{x[8]=y[10],x[3]=y[9],x[6]=y[2],x[4]=y[4],x[7]=y[5],x[5]=y[7],(x[1
+]-x[4])^2+(y[1]-y[4])^2=m^2, (x[6]-x[4])^2+(y[6]-y[4])^2=m^2, (x[4]-x[
+7])^2+(y[4]-y[7])^2=m^2, (x[6]-x[7])^2+(y[6]-y[7])^2=m^2, (x[6]-x[9])^
+2+(y[6]-y[9])^2=m^2, (x[9]-x[7])^2+(y[9]-y[7])^2=m^2, (x[7]-x[10])^2+(
+y[7]-y[10])^2=m^2, (x[7]-x[5])^2+(y[7]-y[5])^2=m^2, (x[10]-x[8])^2+(y[
+10]-y[8])^2=m^2\}:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "F:=[s
+eq(lhs(e)-rhs(e),e=eqns)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+18 "nops(F);indets(F);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#:" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#<0%\"mG&%\"xG6#\"\")&%\"yG6#\"#5&F&6#
+\"\"$&F*6#\"\"*&F&6#\"\"'&F*6#\"\"#&F&6#\"\"%&F*F:&F&6#\"\"(&F*6#\"\"&
+&F&FA&F*F>&F&6#\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 107 "G
+:=Basis([op(F),1-m*z], lexdeg([x[8],y[10],x[3],y[9],x[6],y[2],x[4],y[4
+],x[7],y[5],x[5],y[7],x[1],z],[m]));" }}{PARA 12 "" 1 "" {XPPMATH 20 "
+6#>%\"GG71,(*&\"$@\"\"\"\")%\"mG\"\"%F)F)*&\"$7\"F))F+\"\"#F)!\"\"\"#;
+F),(*&F2F)%\"zGF)F)*&F(F))F+\"\"$F)F)*&F.F)F+F)F1,(*&\"#5F)&%\"yG6#\"
+\"(F)F)*&\"#6F)F/F)F)\"\"'F1,(*&F<F)&%\"xG6#\"\"&F)F)*&FBF)F/F)F)FCF1,
+(*&\"#?F)&F>FHF)F)*&FBF)F/F)F)F2F1,(*&FBF)F/F)F)*&FMF)&FGF?F)F)F2F1,(*
+&FMF)&F>6#F,F)F)*&FBF)F/F)F1F,F1,(*&FMF)&FGFWF)F)*&FBF)F/F)F1F,F1,(*&F
+<F)&F>6#F0F)F)*&FBF)F/F)F1F,F1,(*&F<F)&FG6#FCF)F)*&FBF)F/F)F1F,F1,(*&F
+MF)&F>6#\"\"*F)F)*&\"#LF)F/F)F)\"\")F1,(*&FMF)&FG6#F8F)F)*&FgoF)F/F)F)
+FhoF1,(*&FMF)&F>6#F<F)F)*&FBF)F/F)F)F2F1,(*&FMF)&FG6#FhoF)F)*&FBF)F/F)
+F)F2F1,(*&F<F))&FG6#F)F0F)F)*(FBF)F[qF)F/F)F1*&F,F)F[qF)F1" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#71<#%\"mG<$F%%\"zG<$F%&%\"yG6#\"\"(<$F%&%\"xG6#\"\"&<$F
+%&F*F0<$F%&F/F+<$F%&F*6#\"\"%<$F%&F/F8<$F%&F*6#\"\"#<$F%&F/6#\"\"'<$F%
+&F*6#\"\"*<$F%&F/6#\"\"$<$F%&F*6#\"#5<$F%&F/6#\"\")<$F%&F/6#\"\"\"" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "So we are looking for the roots o
+f the first polynomial. " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "
+M:=G[1]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "factor(M);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*&\"$@\"\"\"\")%\"mG\"\"%F&F&*&\"$7
+\"F&)F(\"\"#F&!\"\"\"#;F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+29 "fsolve(121*m^4-112*m^2+16,m);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6&$
+!+AB0b')!#5$!+3YV,UF%$\"+3YV,UF%$\"+AB0b')F%" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 100 "Since the first two numbers are negative and the last \+
+one is too big, the root we're looking for is " }{XPPEDIT 18 0 ".42014
+34608;" "6#$\"+3YV,U!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "
+r:=m/(2*m+2):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "m:=.420143
+4608: evalf(r);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+Q*G#z9!#5" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part c." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "y[4]
+,y[8],x[9],y[9],x[10],x[4]:=0,1,1,0,1,m: x[2],y[6],y[2],y[5]:=0,1,m,1-
+m:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 226 "eqns:=\{x[4]=y[2],x[
+8]=x[6]+m,(x[4]-x[7])^2+(y[4]-y[7])^2=m^2,(x[9]-x[7])^2+(y[9]-y[7])^2=
+m^2,(x[7]-x[10])^2+(y[7]-y[10])^2=m^2,(x[8]-x[10])^2+(y[8]-y[10])^2=m^
+2,(x[2]-x[5])^2+(y[2]-y[5])^2=m^2,(x[5]-x[6])^2+(y[5]-y[6])^2=m^2\}:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "F:=[seq(lhs(e)-rhs(e),e=e
+qns)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "G:=Basis([op(F),1
+-m*z],lexdeg([x[7],y[7],y[10],x[8],x[5],x[6],z],[m])):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#77<#%\"mG<$F%%\"zG<$F%&%\"xG6#\"\"'<%F%F)&F*6#\"\"&<%F%
+&F*6#\"\")F)<$F%&%\"yG6#\"#5<$F%&F76#\"\"(<$F%&F*F<F(F-<%F%F)F6<%F%F)F
+;<$F%F.<&F%F)F6F.<&F%F)F;F.F@<&F%F)F;F6F:<%F%F?F;F-FE" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "M:=G[1]:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 10 "factor(M);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*(),(
+*&\"#@\"\"\")%\"mG\"\"#F(F(*&\"#5F(F*F(!\"\"\"\"&F(F+F(),**&\"\"*F()F*
+\"\"$F(F(*&\"#LF(F)F(F.*&\"#))F(F*F(F(\"#KF.F+F(),&F*F(F(F.\"\"%F(" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 77 "Clearly m cannot be one, so let's
+ solve for the roots of the other 2 factors." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 23 "solve(21*m^2-10*m+5,m);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$,&#\"\"&\"#@\"\"\"*&^##\"\"%F&F'F%#F'\"\"#F',&F$F'*&^##
+!\"%F&F'F%F,F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "These solutions
+ are both complex, so we can discard them." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 31 "fsolve(9*m^3-33*m^2+88*m-32,m);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#$\"+:!>*HU!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 5 "m:=%;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG$\"+:!>*HU!#5" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "r:=m/(2*m+2):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "r;" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#$\"+flF'[\"!#5" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 46 "Now let's che
+ck whether circles 5 and 7 touch." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "eval(eqns,m=m);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#<*
+/,&*$)&%\"xG6#\"\"&\"\"#\"\"\"F-$\"+%*))4sB!#6F-$\"+([@#*y\"!#5/,&*$),
+&F(F-&F)6#\"\"'!\"\"F,F-F-F1F-F1/$\"+:!>*HUF3F>/&F)6#\"\"),&F9F-F>F-/,
+&*$),&F>F-&F)6#\"\"(F<F,F-F-*$)&%\"yGFKF,F-F-F1/,&*$),&F-F-FJF<F,F-F-F
+MF-F1/,&*$),&FJF-F-F<F,F-F-*$),&FOF-&FP6#\"#5F<F,F-F-F1/,&*$),&FAF-F-F
+<F,F-F-*$),&F-F-FhnF<F,F-F-F1" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 43 "solve(x[5]^2+.2372098894e-1 = .1789221487);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$$\"+SybRR!#5$!+SybRRF%" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "x[5]:=.3939557840:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 5 "y[5];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+&)43qd!#5
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "solve(\{(.4229919015-x[
+7])^2+y[7]^2 = .1789221487, (1-x[7])^2+y[7]^2 = .1789221487\});" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$<$/&%\"yG6#\"\"($\"+E1M$4$!#5/&%\"xGF'
+$\"+3&f\\6(F+<$/F%$!+E1M$4$F+F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 37 "x[7]:=.7114959508: y[7]:=.3093340626:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 39 "evalb((x[5]-x[7])^2+(y[5]-y[7])^2=m^2);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%&falseG" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 37 "Therefore these circles do not touch." }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 7 "Part d." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebne
+r):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "x[1],x[2],x[3],y[3],
+y[4],y[7],y[8],x[9],x[10]:=0,0,0,1,0,1,0,1,1:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 335 "eqns:=\{y[10]-y[9]=m,y[2]-y[1]=m,x[8]-x[4]=m,(x
+[4]-x[1])^2+(y[4]-y[1])^2=m^2,(x[2]-x[5])^2+(y[2]-y[5])^2=m^2,(x[3]-x[
+5])^2+(y[3]-y[5])^2=m^2,(x[4]-x[6])^2+(y[4]-y[6])^2=m^2,(x[5]-x[6])^2+
+(y[5]-y[6])^2=m^2,(x[5]-x[7])^2+(y[5]-y[7])^2=m^2,(x[6]-x[9])^2+(y[6]-
+y[9])^2=m^2,(x[8]-x[9])^2+(y[8]-y[9])^2=m^2,(x[10]-x[7])^2+(y[10]-y[7]
+)^2=m^2\}:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "nops(eqns);in
+dets(eqns);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#7" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#<.%\"mG&%\"yG6#\"#5&F&6#\"\"*&F&6#\"\"#&F&6#\"\"\"&%
+\"xG6#\"\")&F36#\"\"%&F36#\"\"&&F&F:&F36#\"\"'&F&F>&F36#\"\"(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "F:=[seq(lhs(e)-rhs(e),e=eqns
+)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "G:=Basis(F,lexdeg([x
+[5],y[9],y[5],y[1],y[2],x[4],x[6],y[6],x[7],x[8],y[10]],[m])):" }}
+{PARA 7 "" 1 "" {TEXT -1 33 "Warning, computation interrupted\n" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);" }}{PARA 12 "
+" 1 "" {XPPMATH 20 "6#7:<#%\"mG<#%\"zG<$&%\"yG6#\"#5&F*6#\"\"*<#&%\"xG
+6#\"\")<#&F26#\"\"%<#&F*6#\"\"#<#&F*6#\"\"\"<#F)<$F)&F26#\"\"(<$F)&F*6
+#\"\"'<#FC<%&F*6#\"\"&FGFC<$&F2FMFC<$&F2FHFG<&FPFLFRFG<$FPFL<%F)FLFRFU
+<&F)FPFLFR<$FGFCFSFSFSFS" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "M
+:=G[1]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "factor(M);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#,&%\"mG\"\"\"F%!\"\"" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 23 "solve(21*m^2-10*m+5,m);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6$,&#\"\"&\"#@\"\"\"*&^##\"\"%F&F'F%#F'\"\"#F',&F$F'*&
+^##!\"%F&F'F%F,F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "fsolve
+(9*m^3-33*m^2+88*m-32,m);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+:!>*H
+U!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "m:=%;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"mG$\"+:!>*HU!#5" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 13 "r:=m/(2*m+2):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 2 "r;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+flF'[\"!#5" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 23 "Additional question #2." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdeals):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "IsPrime(<x^2-y^2+1>);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "IsPrime(<x^2+1,y^2+1>);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#%&falseG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}}{MARK "6 31 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 
+1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

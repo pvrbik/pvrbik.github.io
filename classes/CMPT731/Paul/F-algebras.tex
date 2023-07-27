@@ -1,0 +1,122 @@
+\section*{F-Algebras}
+
+Let \CC \, be a category and \tm{F: {\CC} \rightarrow {\CC}} \, be
+an endofunctor.
+
+An \definition{F-algebra} is a pair \tm{(A,a)} where \tm{A} is a
+\CC-\tm{\unmath{object}} and \tm{a: F \, A \rightarrow A} is a
+\CC-\tm{\unmath{arrow}}.  The object \tm{A} is called the
+\definition{carrier} of the F-algebra.
+
+\newslide
+
+For example, let \tmi{Natural} be the set of natural numbers in the
+category
+\tmi{Set}.  We will now define an F-algebra on the carrier \tmi{Natural}
+with two ``operators''.  The first operator is really a constant,
+which can
+be viewed as an operator that takes zero arguments.  This operator,
+which we
+will call \tmi{zero}, ``returns'' the natural number \tm{0}.  The
+other
+operator is a binary operator, \tmi{plus}, that returns the sum of
+its two
+arguments.  This gives us a group with an identity element and a
+binary
+operation.
+
+This example could easily be extended to include more constants and
+operators, such as the constant \tmi{one} and the binary operator
+\tmi{times}, as well up operators of different arity, such as a
+unary
+operator, \tmi{negate}, and operators of arity three or more.
+
+\newslide
+
+Let \tm{F: F \, \tmi{Set} \rightarrow \tmi{Set}} be the functor
+defined by \tm{F_{0} \, S = 1 + S \times S} and
+\tm{F_{1} \, f = [\tmi{id}_{1},<f,f>]}.
+
+We now define the arrow \tm{a: F \, A \rightarrow A} as follows.
+
+\begin{codenott}
+\tm{a (i_{1} (x)) = 0}\\
+\tm{a (i_{2} (a,b)) = a + b}
+\end{codenott}
+
+\newslide
+
+Let us revisit this example in \Has.
+
+We will need to assume that we have a \textit{Haskell} type
+\tcx{Natural}
+that contains the natural numbers and nothing else.  This is not
+actually
+possible in \textit{Haskell}, because every type contains a $\bottom$
+value,
+but we can pretend.  Similarly, for a later example, we will assume
+that
+\textit{Haskell} contains a type \tcx{PosReal}, which includes all
+positive
+real numbers (so it has an uncountable number of values), does not
+contain
+$\bot$.  We will distinguish that fake types having no $\bottom$
+element by
+using a \tcx{special color (PineGreen)}.
+
+\newslide
+
+We start by defining the functor (type constructor) \tcx{F}.
+
+\begin{code}
+datatype \tcx{F} a = Ident \tcx{|} Op a a\\
+\\
+instance Functor \tcx{F} where\\
+   fmap f Ident = Ident\\
+   fmap f (Op x y) = Op (f x) (f y)
+\end{code}
+
+As the color suggests, we assume that no $\bottom$ element is added
+by the
+type constructor \tcx{F}\@.  We also create labels, \tc{Zero} and
+\tc{Add}
+for the two cases in the domain sum.
+
+\newslide
+
+We now define
+
+\begin{code}
+a :: \tcx{F Natural} -> \tcx{Natural}\\
+a Ident = 0\\
+a (Op x y) = x + y
+\end{code}
+
+Notice how a single function, \tc{a}, defined both (or in general
+case, all) operations at once.
+
+\newslide
+
+Using the same functor, \tcx{F}, we also can define an F-algebra
+over the
+positive real numbers with a constant \tmi{one} and an operation
+\tmi{times}.
+
+\begin{code}
+a :: \tcx{F PosReal} -> \tcx{PosReal}\\
+a Ident = 1\\
+a (Op x y) = x * y
+\end{code}
+
+\newslide
+
+\begin{cdiag}
+\obj(1,1)[B]{\tcx{F \, Real}}
+\obj(1,11)[A]{\tcx{F \, Natural}}
+\obj(21,1)[D]{\tcx{Real}}
+\obj(21,11)[C]{\tcx{Natural}}
+\mor{A}{B}{\tc{fmap h}}
+\mor{C}{D}{\tc{h}}
+\mor{A}{C}{\tc{a}}
+\mor{B}{D}{\tc{b}}
+\end{cdiag}

@@ -1,0 +1,517 @@
+This is pdfeTeX, Version 3.141592-1.30.4-2.2 (Web2C 7.5.5) (format=pdflatex 2006.6.8)  20 SEP 2006 19:46
+entering extended mode
+\write18 enabled.
+**test.tex
+(./test.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, d
+utch, italian, norsk, portuges, spanish, swedish, nohyphenation, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 S
+     ample LaTeX file
+? 
+Missing character: There is no S in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no X in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 T
+     he name of this file is intro.tex.
+? 
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no . in font nullfont!
+(/usr/local/teTeX/share/texmf.local/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/teTeX/share/texmf.local/tex/latex/base/size12.clo
+File: size12.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--284
+[]
+ []
+
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+[1{/usr/local/teTeX/share/texmf.local/fonts/map/pdftex/updmap/pdftex.map}])
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/teTeX/share/texmf.local/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.local/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/local/teTeX/share/texmf.local/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.local/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count99
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/teTeX/share/texmf.local/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+)
+(/usr/local/teTeX/share/texmf.local/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip49
+\c@subfigure=\count100
+\c@lofdepth=\count101
+\c@subtable=\count102
+\c@lotdepth=\count103
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen116
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing OFF on input line 1900.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count106
+\Field@Width=\dimen117
+\Fld@charsize=\dimen118
+\Choice@toks=\toks22
+\Field@toks=\toks23
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing OFF on input line 2633.
+Package hyperref Info: Link coloring OFF on input line 2638.
+\c@Item=\count107
+\c@Hfootnote=\count108
+)
+*hyperref using default driver hpdftex*
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/pifont.sty
+Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count109
+\@outlinefile=\write3
+)
+No file test.aux.
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+(/usr/local/teTeX/share/texmf.local/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf.local/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count110
+\scratchcounter=\count111
+\scratchtoks=\toks24
+\scratchdimen=\dimen119
+\scratchskip=\skip52
+\scratchmuskip=\muskip12
+\scratchbox=\box28
+\scratchread=\read2
+\scratchwrite=\write4
+\zeropoint=\dimen120
+\onepoint=\dimen121
+\onebasepoint=\dimen122
+\minusone=\count112
+\thousandpoint=\dimen123
+\onerealpoint=\dimen124
+\emptytoks=\toks25
+\nextbox=\box29
+\nextdepth=\dimen125
+\everyline=\toks26
+\!!counta=\count113
+\!!countb=\count114
+\recursecounter=\count115
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen126
+\MPnumerator=\count119
+\everyMPtoPDFconversion=\toks27
+)
+Package hyperref Info: Link coloring OFF on input line 31.
+ (/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count120
+)
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+\openout3 = `test.out'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+
+(/usr/local/teTeX/share/texmf.local/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+
+
+LaTeX Warning: Citation `latex' on page 2 undefined on input line 48.
+
+
+LaTeX Warning: Reference `eq:ising' on page 2 undefined on input line 78.
+
+[2
+
+
+! pdfTeX warning (ext4): destination with the same identifier (name{equation.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.84 \begin{verbatim}
+                     
+! pdfTeX warning (ext4): destination with the same identifier (name{equation.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.84 \begin{verbatim}
+                     ]
+
+LaTeX Warning: Reference `eq:fine' on page 3 undefined on input line 110.
+
+[3] [4]
+
+LaTeX Warning: Reference `fig:lj' on page 5 undefined on input line 207.
+
+
+! LaTeX Error: File `figures/sine' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.212 \includegraphics{figures/sine}
+                                    
+? 
+
+! LaTeX Error: File `figures/lj' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 \scalebox{0.5}{\includegraphics{figures/lj}}
+                                                  
+? 
+[5]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\@ifnextchar' on input line 303.
+
+[6]
+
+! LaTeX Error: File `figures/reim' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.317 \includegraphics[scale=0.5]{figures/reim}}
+                                                
+? 
+
+Overfull \hbox (8.86119pt too wide) in paragraph at lines 317--317
+[]\OT1/cmr/m/n/10 (a)
+ []
+
+
+Overfull \hbox (15.66673pt too wide) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 Real
+ []
+
+
+Overfull \hbox (12.19453pt too wide) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 and
+ []
+
+
+Overfull \hbox (20.52788pt too wide) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 imag-
+ []
+
+
+Overfull \hbox (2.19449pt too wide) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 i-
+ []
+
+
+Overfull \hbox (17.77788pt too wide) in paragraph at lines 317--317
+\OT1/cmr/m/n/10 nary. 
+ []
+
+
+! LaTeX Error: File `figures/phase' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.319 \includegraphics[scale=0.5]{figures/phase}}
+                                                 
+? 
+
+Overfull \hbox (9.41675pt too wide) in paragraph at lines 319--319
+[]\OT1/cmr/m/n/10 (b)
+ []
+
+
+Overfull \hbox (15.25008pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10 Am-
+ []
+
+
+Overfull \hbox (10.52785pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10 pli-
+ []
+
+
+Overfull \hbox (15.52786pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10 tude
+ []
+
+
+Overfull \hbox (12.19453pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10 and
+ []
+
+
+Overfull \hbox (23.3612pt too wide) in paragraph at lines 319--319
+\OT1/cmr/m/n/10 phase. 
+ []
+
+
+Overfull \hbox (0.34619pt too wide) in paragraph at lines 325--329
+[]\OT1/cmr/m/n/12 We first have to in-clude the nec-es-sary pack-age, []\OT1/cm
+tt/m/n/12 \usepackage{subfigure}\OT1/cmr/m/n/12 , which
+ []
+
+[7] (./test.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3471 strings out of 95125
+ 46178 string characters out of 1182970
+ 2095970 words of memory out of 4550723
+ 6551 multiletter control sequences out of 10000+50000
+ 12692 words of font info for 45 fonts, out of 2000000 for 2000
+ 58 hyphenation exceptions out of 5000
+ 27i,14n,40p,314b,283s stack positions out of 5000i,500n,6000p,200000b,40000s
+PDF statistics:
+ 127 PDF objects out of 300000
+ 49 named destinations out of 131072
+ 17 words of extra memory for PDF output out of 10000
+</usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmsl8.pfb></usr/lo
+cal/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/teTeX/
+share/texmf.tetex/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/teTeX/share/texmf
+.tetex/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/teTeX/share/texmf.tetex/fo
+nts/type1/bluesky/cm/cmtt12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1
+/bluesky/cm/cmsl12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/
+cm/cmti12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr8.p
+fb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmmi6.pfb></usr/l
+ocal/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr6.pfb></usr/local/teTeX/
+share/texmf.tetex/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/teTeX/share/texm
+f.tetex/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/teTeX/share/texmf.tetex/f
+onts/type1/bluesky/cm/cmbx12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type
+1/bluesky/cm/cmsy10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky
+/cm/cmr10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr12.
+pfb>
+Output written on test.pdf (7 pages, 120670 bytes).

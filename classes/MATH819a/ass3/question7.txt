@@ -1,0 +1,264 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> 
+> Maple2Smp:=proc(f,var) local i:
+#   note Maple2Smp(0,var) = 0 NOT [0]
+#   this line is required since degreee(0,x)=-infinity
+>     if (f=0) then return 0: end if:
+>     if (var=[]) then return f: end if:
+>     [seq(Maple2Smp(coeff(f,var[1],i),var[2..-1]),i=0..degree(f,var[1]))];
+> end proc:
+> 
+> Smp2Maple:=proc(f,var)
+> 
+>     if (type(f,numeric)) then return f: end if:
+>     
+>     return add(var[1]^i*Smp2Maple(f[i+1],var[2..-1]), i=0..nops(f)-1):
+> 
+> end proc:
+> 
+> SMPzero:=proc(A) local f:
+> 
+>     f:=x->evalb(x=0):
+>     
+>     if (type(A,numeric)) then
+>         return f(A)
+>     end if:
+>     
+>     foldr(`and`, true, op(map(SMPzero,A))):
+> 
+> end proc:
+> 
+> SMPsimp:=proc(A)
+> 
+>     if (SMPzero(A[-1])) then return SMPsimp(A[1..-2]): end if:
+>     return A:
+> 
+> end proc:
+> 
+> h_SMPadd:=proc(A,B):
+>     
+>     if (A=0) then return B: 
+>     elif (B=0) then return A:
+>     elif (type(A,numeric)) then
+>         return A+B:
+>     end if:
+>     
+>     return zip((x,y)->h_SMPadd(x,y),A,B,0):
+>     
+> end proc:
+> 
+> SMPadd:=proc(A,B) local temp:
+>     temp:=h_SMPadd(A,B):
+>     if SMPzero(temp) then return 0: end if:
+>     return SMPsimp(temp):
+> end proc:
+> 
+> SMPneg:=proc(B)
+>     if type(B,numeric) then
+>         return -B:
+>     end if:
+>     
+>     return map(SMPneg,B):
+> end proc:
+> 
+> SMPsub:=(A,B)-> SMPadd(A,SMPneg(B)):
+> 
+> SMPpow:=proc(A,n)
+>     if (n=0) then return 1: end if:
+>     
+>     return SMPmult(A, SMPpow(A,n-1)):
+>     
+> end proc:
+> 
+> SMPmult:=proc(A,B) local Bt,C,ans,i:
+>     
+>     if (A=0 or B=0) then 
+>         return 0:
+>     elif (type(A,numeric) and type(B,numeric)) then 
+>         return A*B:
+>     elif (type(A,numeric)) then
+>         return SMPmult([A],B):
+>     elif (type(B,numeric)) then
+>         return SMPmult(A,[B]):
+>     end if:
+>     
+>     ans:=0:
+>     
+>     for i from 1 to nops(A) do
+>         Bt:=B:
+>         C:=map(x->SMPmult(A[i],x),Bt):
+>         C:=[seq(0,j=0..i-2),op(C)]:
+>         ans:=SMPadd(ans,C):
+>     end  do:
+>     
+>     return ans:
+>     
+> end proc:
+> 
+> deg:=proc(F)
+>     if (F=0) then return -infinity: end if:
+>     nops(F);
+> end proc:
+> 
+> SMPdiv:=proc(A,B,var,Q) local R,q,lco,temp,x,t;
+>     
+>     lco:=F->F[-1]:
+>     
+>     if (B=0) then return "error": end if:
+>     
+>     if type(A,numeric) and type(B,numeric) then
+>         if (irem(A,B,'q')=0) then
+>             if nargs>3 then Q:=q: end if:
+>             return true:
+>         end if:
+>         
+>         return false:
+>     end if:
+>     
+>     R:=A:
+>     x:=Maple2Smp(var[1],var):
+>     q:=0;
+>     
+>     while deg(R) >= deg(B) do
+>         if (SMPdiv(lco(R), lco(B), var[2..-1],'t')) then
+>             t:=[t];
+>             
+>             temp:=SMPpow(x, deg(R)-deg(B)):
+>             temp:=SMPmult(t,temp):
+>             
+>             q:=SMPadd(q,temp):
+>             
+>             temp:=SMPmult(temp,B):
+>             
+>             R:=SMPsub(R,temp):
+>         else return false:
+>         end if:
+>     end do:
+>     
+>     if (SMPzero(R)) then
+>         if nargs>3 then Q:=q: end if:
+>             return true:
+>         else return false:
+>     end if:
+>     
+> end proc:
+> 
+> var:=[x,y,z];
+                                var := [x, y, z]
+
+> a:=randpoly([x,y,z], degree=6, terms=15);
+                  3       2         2             3         3       4
+a := -10 x y - 7 y  - 40 y  z + 42 x  y z - 50 x y  + 23 y z  + 75 x  z
+
+           2  2        2    2       2  3       4         5       5
+     - 92 x  y  z + 6 x  y z  + 74 x  z  + 72 y  z + 37 z  - 23 x  z
+
+           2  2  2         5
+     + 87 x  y  z  + 44 y z
+
+> b:=randpoly([x,y,z], degree=6, terms=15);
+                  2        2       3  2       3               3       5
+b := 77 + 95 y + x  y + y z  + 55 x  y  - 28 x  y z + 16 x y z  + 30 y
+
+           3  2       3  3       2  4       2    3       2  4         5       6
+     - 27 y  z  - 15 x  y  - 59 x  y  - 96 x  y z  + 72 x  z  - 87 x z  + 47 y
+
+> A:=Maple2Smp(a,var);
+A := [[[0, 0, 0, 0, 0, 37], [0, 0, 0, 23, 0, 44], [0, -40], [-7], [0, 72]],
+
+    [0, [-10], 0, [-50]], [[0, 0, 0, 74], [0, 42, 6], [0, -92, 87]], 0,
+
+    [[0, 75]], [[0, -23]]]
+
+> B:=Maple2Smp(b,var);
+B := [[[77], [95, 0, 1], 0, [0, 0, -27], 0, [30], [47]],
+
+    [[0, 0, 0, 0, 0, -87], [0, 0, 0, 16]],
+
+    [[0, 0, 0, 0, 72], [1, 0, 0, -96], 0, 0, [-59]], [0, [0, -28], [55], [-15]]
+
+    ]
+
+> C:=SMPadd(A,B,var);
+C := [[[77, 0, 0, 0, 0, 37], [95, 0, 1, 23, 0, 44], [0, -40], [-7, 0, -27],
+
+    [0, 72], [30], [47]], [[0, 0, 0, 0, 0, -87], [-10, 0, 0, 16], 0, [-50]],
+
+    [[0, 0, 0, 74, 72], [1, 42, 6, -96], [0, -92, 87], 0, [-59]],
+
+    [0, [0, -28], [55], [-15]], [[0, 75]], [[0, -23]]]
+
+> expand(a+b - Smp2Maple(C,var));
+                                       0
+
+> C:=SMPmult(A,B);
+C := [[[0, 0, 0, 0, 0, 2849], [0, 0, 0, 1771, 0, 6903, 0, 37],
+
+    [0, -3080, 0, 2185, 0, 4203, 0, 44], [-539, -3800, 0, -40, 0, 0, 0, -999],
+
+    [-665, 5544, -7, 0, 0, -621, 0, -1188], [0, 6840, 0, 1152, 0, 1110],
+
+    [0, 0, 189, 690, 0, 3059], [0, -1200, 0, -863, 0, 2068], [-210, -1880],
+
+    [-329, 2160], [0, 3384]], [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3219],
+
+    [-770, 0, 0, 0, 0, 0, 0, 0, -1409, 0, -3828],
+
+    [-950, 0, -10, 0, 0, 0, 3848, 0, 704], [-3850, 0, 0, 0, -640, 609],
+
+    [-4750, 0, 220, -112, 0, 0, -6264], [0, 0, 0, 0, 1152], [-300, 0, 1350],
+
+    [-470], [-1500], [-2350]], [[0, 0, 0, 5698, 0, 0, 0, 0, 0, 2664],
+
+    [0, 3234, 462, 7030, 0, 981, 0, 1656, -3552, 3168],
+
+    [0, -3094, 7269, -95, 6, -2836, -2208, 0, -4224],
+
+    [0, -8780, 8265, -92, 3423, 2352], [-7, 0, 0, -1262, -162, 3001],
+
+    [0, 72, 0, 3347, -9261, -2596], [0, 3620, 180, 3478], [413, -786, 2892],
+
+    [0, -8572, 4089]], [[0, 0, 0, 0, 0, 0, 0, 0, -6438],
+
+    [0, 0, 0, 0, -720, 0, -3506, -522], [-10, 0, 0, 960, 28, 2131, 6772, -7569],
+
+    [0, 0, 1120, 1265, -5072, 3257], [-50, -2004, 0, 4455, 0, -660],
+
+    [205, 600, -2016], [105, 3960], [2950, -1080]], [
+
+    [0, 5775, 0, 0, 0, 0, 0, 5328], [0, 7125, 0, 149, 0, 3024, -6672],
+
+    [0, 322, 6, 0, -4032, -7200, 6264], [-550, -92, 87, -2025, 8832, -8352],
+
+    [150, 1400, 0, -4366], [-2750, -228, -354], [750, 8953, -5133]], [
+
+    [0, -1771, 0, 0, 0, 0, -6525], [0, -2185, 0, -23, -872],
+
+    [0, 0, -1176, 3902], [0, 2310, 2906, -2925], [0, -5690, 4695],
+
+    [0, 690, -1305], [0, -1081]],
+
+    [[0, 0, 0, 0, 0, 5400, 2001], [0, 75, 0, 0, -7568], 0, 0, [0, -4425]], [
+
+    [0, 0, 0, 0, 0, -1656], [0, -23, -2100, 0, 2208], [0, 4125], [0, -1125],
+
+    [0, 1357]], [0, [0, 0, 644], [0, -1265], [0, 345]]]
+
+> expand(a*b - Smp2Maple(C,var) );
+                                       0
+
+> SMPdiv(A,B,var);
+                                     false
+
+> SMPdiv(C,B,var);
+                                      true
+
+> if SMPdiv(C,A,var,'Q') then expand(b-Smp2Maple(Q,var)) else "error" fi;
+                                       0
+
+> quit
+

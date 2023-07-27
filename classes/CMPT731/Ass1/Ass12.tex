@@ -1,0 +1,78 @@
+
+\documentclass[11pt]{article}
+\usepackage{geometry} 
+\geometry{letterpaper} 
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Brief Article}
+\author{Richard Koch}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+TeXShop is a front end for \TeX. You can use it to edit your source, typeset, and preview
+the resulting pdf file.
+
+However, TeXShop by itself cannot typeset. You need to install TeXLive/teTeX, a vast
+collection of command line programs, fonts, style files, and so forth. TeXShop's job is to hide the complexity of
+this \TeX\ distribution. To obtain TeXLive/teTeX, go to 
+\begin{verbatim}
+          http:www.uoregon.edu/~koch/texshop
+\end{verbatim}
+download ii2, and follow the directions under the tab
+``Installing teTeX/TeXLive.''
+
+You can use this example to experiment with TexShop
+before you install TeXLive/teTeX. Since the typeset pdf file is included,
+all of the TexShop windows appear. But you cannot change the source and
+typeset again until you have installed TeXLive/teTeX. 
+
+\section{Style Changes}
+{\em Here is a sentence in italics.} 
+{\bf Here is a sentence in bold face.} 
+
+\section{Lists}
+You need to understand two things:
+\begin{itemize}
+\item this
+\item and this
+\end{itemize}  
+
+\section{Mathematics}
+\TeX\ understands mathematics. It can typeset
+Greek letters: $\alpha, \beta, \gamma.$ It can typeset formulas: $\sqrt{x^2 + 1}$ and 
+$\sqrt{ {{x + 1} \over {x + 2}} }.$ It can display formulas:
+$$\int_0^\infty e^{- x^2} \ dx = { \sqrt{\pi} \over 2}$$
+It can display matrices.
+$$A = \left( \begin{array}{ccc} 
+	1  &  \sqrt{2} & 3 \\
+	\sqrt{x + 1} & {{x + 1} \over {x - 1}} & \sin x \\
+	0 & 1 & 5
+\end{array} \right)$$
+
+\section{Graphics}
+
+TeX understands graphic commands.
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics[width=2in]{saddle} 
+   \caption{A Saddle}
+\end{figure}
+
+\section{License:}
+TeXShop is provided under the GNU General Public License. This means that you are
+free to use, copy, and modify the program. If you give your modifications to others,
+you must also provide the modified source code under the same GPL.
+
+The source code is available on my web site.
+
+
+
+ \end{document}
+

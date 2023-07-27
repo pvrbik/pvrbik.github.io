@@ -1,0 +1,3 @@
+nohup maple prodMergePart1.mpl > part1.dat
+nohup maple prodMergePart2.mpl > part2.dat
+nohup maple prodMergePart3.mpl > part3.dat

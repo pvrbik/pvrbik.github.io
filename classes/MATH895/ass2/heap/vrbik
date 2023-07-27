@@ -1,0 +1,3 @@
+nohup maple prodHeapPart1.mpl > part1.dat
+nohup maple prodHeapPart2.mpl > part2.dat
+nohup maple prodHeapPart3.mpl > part3.dat

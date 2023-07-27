@@ -1,0 +1,51 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+##############
+#Question 4 A#
+##############
+> 
+> with(Groebner):
+> 
+#Letting alpha = sqrt(2) + sqrt(3) + sqrt(6)
+#We have z - alpha = 0 
+#So z - t - s - st = 0 where t^2 = 2, s^2 = 3
+#And we can use a lex GB to eliminate s,t from:
+> 
+> I:=[ z-t-s-s*t, t^2-2, s^2-3 ];
+                                             2       2
+                     I := [z - t - s - s t, t  - 2, s  - 3]
+
+> G:=Basis(I, plex(s,t,z) );
+                       2    4                 2    3
+G := [-23 - 48 z - 22 z  + z , -3 - 15 z - 3 z  + z  + 4 t,
+
+                   2    3
+    14 + 17 z + 2 z  - z  + 2 s]
+
+> map(indets,G);
+                             [{z}, {t, z}, {s, z}]
+
+> mz:=G[1];
+                                                2    4
+                         mz := -23 - 48 z - 22 z  + z
+
+> 
+> irreduc(mz);
+                                      true
+
+> 
+> alpha := sqrt(2) + sqrt(3) + sqrt(6);
+                                    1/2    1/2    1/2
+                          alpha := 2    + 3    + 6
+
+> 
+> Z:=eval( mz , z=alpha ):
+> simplify( Z );
+                                       0
+
+> 
+> quit
+bytes used=2837536, alloc=2227816, time=0.02

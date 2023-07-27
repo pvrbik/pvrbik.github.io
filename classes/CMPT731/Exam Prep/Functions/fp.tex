@@ -1,0 +1,960 @@
+\documentclass{seminar}
+\nonstopmode
+
+\input{lectures}
+
+% \newpagestyle{lectures}{CMPT 383 \hfill Comparative Programming Languages
+% \hfill \semester}{Functional Programming
+% \hfill F. Warren Burton \hfill \thepage}
+
+\newpagestyle{lectures}{\makebox[1in][l]{CMPT 481/731} \hfill Functional Programming
+\hfill \makebox[1in][r]{\semester}}{\makebox[2in][l]{The Lambda Calculus} \hfill F. Warren
+Burton \hfill \makebox[2in][r]{\thepage}}
+
+\pagestyle{lectures}
+
+\begin{document}
+\begin{slide}
+
+\begin{center}
+\begin{LARGE}
+Functional Programming
+\end{LARGE}\\[3ex]
+\end{center}
+
+
+Sometimes people divide programming languages into various paradigms,
+where a paradigm is ``a theoretical framework''.
+
+These might be:
+\begin{itemize}
+\item Procedural,
+\item Object-Oriented,
+\item Functional, and
+\item Logic
+\end{itemize}
+
+These are neither exhaustive or exclusive.  A lot of research is being done
+on how to combine the best aspects of different paradigms.
+
+\newslide
+
+\section*{What is Functional Programming?}
+
+The book (p. 471) mentions the following properties:
+\begin{itemize}
+\item The uniform view of programs as functions,
+\item The treatment of functions as data,
+\item The limitation of side effects, and
+\item The use of automatic memory management
+\end{itemize}
+
+I would add that functional languages support \definition{higher order 
+functions}
+(functions that take other functions as arguments or compute new
+functions as results).
+
+\newslide
+
+From the comp.lang.functional FAQ:
+
+{\color{QuoteColor}
+What is a ``functional programming language''?
+
+Opinions differ, even within the functional programming community,
+on the precise definition of what constitutes a functional programming
+language. However, here is a definition that, broadly speaking,
+represents the kind of languages that are discussed in
+comp.lang.functional:
+
+Functional programming is a style of programming that emphasizes
+the evaluation of expressions, rather than execution of commands.
+The expressions in these language are formed by using functions to
+combine basic values.  A functional language is a language that
+supports and encourages programming in a functional style.
+}
+
+\newslide
+
+A functional program is a set of recursive mathematical equations
+defining the output in terms of the input.
+
+A pure functional language contains no assignment statements.  A
+variable never changes its value.
+
+However, there may be a number of different copies of a variable,
+at different levels of recursion, each with its own value.
+
+\newslide
+
+Functional languages do not require a strong type system.  Scheme does not
+have strong typing.
+
+However, most modern functional programming languages do have a strong
+polymorphic type system.  Many users and designers of these systems
+regard the strong typing as being even more important than the functional
+nature of their languages.
+
+The type systems of languages such as Pascal and Ada were not sufficient
+for functional languages.  A polymorphic type system was invented to
+meet the needs of functional programming languages.
+
+\newslide
+
+\section*{Getting Started with Hugs}
+
+\begin{code}[SystemColor]
+[burton@amadeus Examples]% \textcd{hugs}\\
+\color{red}
+{\LARGE ...}\\
+Reading file "/USO/local/lib/hugs/lib/Prelude.hs":\\
+                   \\
+Hugs session for:\\
+/usr/local/lib/hugs/lib/Prelude.hs\\
+Type :? for help\\
+Prelude> \color{CodeColor}1+3\\
+4\\
+Prelude>\textcd{ sum . map square \$ [1..10]}\\
+ERROR - Undefined variable "square"\\
+Prelude>\textcd{ sum . map (^2) \$ [1..10]}\\
+385\\
+Prelude>
+\end{code}
+
+\newslide
+
+In Hugs, expressions can be entered interactively,
+but declarations and definitions must be placed in
+a file and loaded.
+
+Typing \textcdlr{:?} in Hugs will produce a list of
+possible commands.
+
+Finally, typing \textcdlr{:quit} will exit Hugs.
+
+\newslide
+
+\begin{code}
+\color{SystemColor}
+[burton@amadeus Examples]% \textcd{head Sect11_6.hs} \\
+\color{SystemColor}
+-- Collected Haskell code of Section 11.6 from\\
+\color{SystemColor}
+-- Kenneth C. Louden, Programming Languages\\
+\color{SystemColor}
+-- Principles and Practice 2nd Edition\\
+\color{SystemColor}
+-- Copyright (C) Brooks-Cole/ITP, 2003\\
+\\
+\color{SystemColor}
+-- page 513\\
+\\
+\color{SystemColor}
+fact 0 = 1\\
+\color{SystemColor}
+fact n = n * fact (n - 1)\\
+\color{SystemColor}
+square x = x * x\\
+\color{SystemColor}
+[burton@amadeus Examples]%
+\end{code}
+
+\newslide
+\begin{code}[SystemColor]
+Prelude>\color{CodeColor} :load Sect11\_6.hs\\
+Reading file "Sect11\_6.hs":\\
+                   \\
+Hugs session for:\\
+/usr/local/lib/hugs/lib/Prelude.hs\\
+Sect11\_6.hs\\
+Main>\textcd{ sum . map square \$ [1..10]}\\
+385\\
+Main>\textcd{ fact 40}\\
+815915283247897734345611269596115894272000000000\\
+Main> 
+\end{code}
+
+\newslide
+
+\section*{Haskell Basics}
+
+Many of the ML examples in the book apply more or less to Haskell.
+Some examples of syntactic differences to look out for are the following:
+
+\begin{center}
+\begin{tabular}{lll}
+ML & Haskell &
+Purpose\\
+\hline
+\textcd{::} & \textcd{:} & cons\\
+\textcd{:} & \textcd{::} & Has type\\
+\textcd{int} & \textcd{Int} & integer\\
+\textcd{int * int} & \textcd{(Int,Int)} & integer pair\\
+\textcd{int list} & \textcd{[Int]} & List of integers\\
+\textcd{'a} & \textcd{a} & Type variable\\
+\textcd{fun} &  & Keyword for function definition\\
+\textcd{val} &  & Keyword for value definition\\
+\textcd{datatype} & \textcd{data} & Keyword for algebraic
+datatype definition\\
+\end{tabular}
+\end{center}
+
+\newslide
+
+\subsection*{Predefined Types}
+
+Haskell has a number of predefined types including:
+
+\begin{code}
+'A'  :: Char\\
+"ABC"  :: String \color{black} \textrm{or} \color{CodeColor} [Char]\\
+False :: Bool\\
+5 :: Int\\
+5 :: Integer\\
+5.0 :: Float\\
+5.0 :: Double\\
+() :: () \color{black} \textrm{similar to type} void\\
+(True, 'A') :: (Bool, Char) \color{black} \textrm{and tuple types in general}\\
+[1,2,3] :: [Int]
+\end{code}
+
+\newslide
+
+In most cases, you are not required to declare the types of variables
+and functions in Haskell.
+
+However, if you declare the type of almost everything,
+then error messages are much more likely to be meaningful.
+I will not answer questions about error messages for
+programs where type declarations are not given, at least
+for functions.
+
+Also, declaring types helps avoid some special cases.
+
+\newslide
+
+\begin{code}[SystemColor]
+
+[burton@alison Examples]% \textcd{cat CMPT383.hs} \\
+a = 5\\
+[burton@alison Examples]% \textcd{hugs CMPT383.hs} \\
+\color{red}{\LARGE ...}\\
+
+Main> \textcd{5 + 3.2}\\
+8.2
+\end{code}
+
+\newslide
+
+\begin{code}[SystemColor]
+Main> \textcd{a + 3.2}\\
+ERROR - Illegal Haskell 98 class constraint in \\
+inferred type \\
+*** Expression : a + 3.2\\
+*** Type       : Fractional Integer => Integer\\
+\\
+Main> \textcd{:set +t}\\
+Main> \textcd{a}\\
+5 :: Integer\\
+Main> 
+\end{code}
+
+\newslide
+
+\subsection*{Function Types}
+
+Consider:
+
+\begin{code}
+f, g :: Integer -> Integer\\
+f x = x + 3\\
+g y = f y + f (y + 1)
+\end{code}
+
+The first line declares that both \textcd{f}
+and \textcd{g} are functions from \textcd{Integer}s
+to \textcd{Integer}s.
+
+Notice that we do not need parenthesis around the arguments
+or parameters of a function.
+
+Function application binds more tightly that any other operation
+(e.g. \textcd{+} or \textcd{`mod`}) and is represented by juxtaposition.
+
+\newslide
+
+Function application is left associative, so \textcdlr{f g x} means
+\textcdlr{(f g) x}.
+
+\begin{code}
+f :: (a -> a) -> (a -> a)\\
+f h a = h (h a)\\
+\\
+g :: Double -> Double\\
+g x = sqrt x + 1.0
+\end{code}
+
+Quiz:  \textcolor{QuoteColor}{What is the value of:
+\textcdlr{f g 9.0}?}
+
+The function \textcd{f} is a higher order function that both takes a
+function as an argument and returns a function as a result.
+
+\newslide
+
+\subsection*{Curried Functions and Higher Order Functions}
+
+If we load a file with the following definitions
+\begin{code}
+plus :: (Int, Int) -> Int\\
+plus (a,b) = a + b\\
+\\
+plus\_curried :: Int -> Int -> Int\\
+plus\_curried a b = a + b
+\end{code}
+
+\newslide
+
+then we can evaluate the following expressions
+\begin{code}[SystemColor]
+Main> \textcd{plus (3, 4)}\\
+7\\
+Main> \textcd{plus\_curried 3 4}\\
+7\\
+Main>\textcd{(+) 3 4}\\
+7\\
+Main> \textcd{3 `plus\_curried` 4}\\
+7\\
+Main>
+\end{code}
+
+A function that takes it arguments one at a time, like \textcd{plus\_curried},
+is said to be \definition{curried} (see p. 504 of \textit{Louden}).
+
+\newslide
+
+There are two different ways to think of curried functions.
+
+A useful, informal way to think of a curried function
+is as a function that takes
+multiple arguments one at a time.
+
+Actually, a curried function is really a higher order function that
+takes a single argument and returns a function.
+
+The operator \textcd{->} is right associative, so
+\begin{code}
+plus\_curried :: Int -> Int -> Int
+\end{code}
+means
+\begin{code}
+plus\_curried :: Int -> (Int -> Int)
+\end{code}
+
+Formally, all Haskell functions take exactly one argument and return
+a single result.  The argument and/or result may be a data structure
+or a function.
+
+\newslide
+
+Assume that
+\textcdl{f :: Int -> (Int -> Int)}
+\newline
+so \textcdlr{g :: Int -> Int} in the following examples.
+\begin{code}[SystemColor]
+Main> \textcd{let f = (+); g = f 3 in f (g 4) (g 6)}\\
+16\\
+Main> \textcd{let f = (+); g = f 3 in (f.g) 4 \$ g 6}\\
+16\\
+Main>
+\end{code}
+
+The second example uses the infix function composition operator, \textcd{.},
+and an infix, low priority, explicit function application operator,
+\textcd{\$}.
+
+Note:  We could have included type declarations in the above expressions.
+\begin{code}
+let f :: Int -> Int; f x = x + 1 in f 3
+\end{code}
+
+My excuse for not doing this is
+that I am trying to fit examples onto slides.  In your
+homework you won't have this excuse.
+
+\newslide
+
+\subsection*{Some Useful Higher Order Functions}
+On p. 491, \textit{Louden} defines the function \textcd{map} in Scheme.
+This is a standard and frequently used function in Haskell.  It is defined
+in the \textit{Haskell Standard Prelude} as follows:
+
+\begin{code}
+map :: (a -> b) ->[a] -> [b]\\
+map f []     = []\\
+map f (x:xs) = f x : map f xs
+\end{code}
+
+The result of evaluating \textcdlr{map f [x1, x2, x3]}
+\newline
+is \textcdlr{[f x1, f x2, f x3]}.
+
+The higher order function, \textcd{map}, encapsulates what would be a
+control structure in a procedural language.
+
+\newslide
+
+In a procedural language, such as C, with just recursion and some sort of conditional
+branching you can do
+anything you can do with other control structures.
+
+Similarly, in a functional language, all you need is recursion and
+some form of branching to enable any desired control over program
+execution.
+
+Just as common patterns of control are encapsulated in control structures in
+procedural languages, these common patterns of control are captured by
+standard higher order functions in a functional language.
+
+However, while control structures must be part of the fundamental
+structure of the syntax of a procedural language, higher order functions
+can be implemented in a functional language using more primitive constructs.
+
+This means that it is easy to define additional ``control structures'',
+for example to use with particular data structures.
+
+\newslide
+
+We can think of the \textcd{map} function in a couple of different ways.
+
+Informally, we can think of \textcd{map} as a function that takes two
+arguments.
+
+However, we can also think of \textcd{map} as a function that raises
+a function of type
+\newline
+\textcdr{a -> b} for any types \textcd{a} and
+\textcd{b} to a function of type \textcdlr{[a] -> [b]}.  That
+is, \textcd{map} lifts a function from the space of ordinary type up to
+the subspace of list types.
+\begin{cdiag}
+\obj(1,1)[A]{\textcd{a}}
+\obj(10,1)[B]{\textcd{b}}
+\obj(1,6)[FA]{\textcd{[a]}}
+\obj(10,6)[FB]{\textcd{[b]}}
+\mor{A}{B}{\textcd{f}}
+\mor{FA}{FB}{\textcd{map f}}
+\end{cdiag}
+
+In functional programming, it is common to lift functions.
+
+\newslide
+
+Let \textcd{T} be a type constructor and
+\begin{code}
+fmap :: (a -> b) -> (T a -> T b)
+\end{code}
+be a higher
+order (lifting) function.  If
+\begin{eqnarray*}
+\textcd{fmap id} & \textcd[MathColor]{$\equiv$} & \textcd{id}\\
+\textcd{fmap (f.g)} & \textcd[MathColor]{$\equiv$} & \textcd{fmap f . fmap g}
+\end{eqnarray*}
+whenever the types make these equations valid,
+then the \textcd{T} and \textcd{fmap} together are called a
+\definition{functor}.
+
+We can reresent these two equations with \definition{commutative diagrams}.
+
+\newslide
+
+\begin{cdiag}
+\obj(0,4)[A]{\textcd{a}}
+\obj(10,0)[B]{\textcd{b}}
+\obj(20,4)[C]{\textcd{c}}
+\obj(0,14)[FA]{\textcd{T a}}
+\obj(10,10)[FB]{\textcd{T b}}
+\obj(20,14)[FC]{\textcd{T c}}
+\obj(4,20)[TA1]{\textcd{T a}}
+\obj(16,20)[TA2]{\textcd{T a}}
+\mor(5,21)(15,21){\textcd{fmap id}}
+\mor(5,19)(15,19){\textcd{id}}[-1,0]
+\mor{A}{B}{\textcd{g}}
+\mor{B}{C}{\textcd{f}}
+\mor{A}{C}{\textcd{f.g}}
+\mor{FA}{FB}{\textcd{fmap g}}[-1,0]
+\mor{FB}{FC}{\textcd{fmap f}}[-1,0]
+\mor{FA}{FC}{\textcd{fmap (f.g)}}
+\end{cdiag}
+
+\newslide
+
+In a commutative diagram, nodes represent types and directed edges
+represent functions.
+
+A path in a commutative diagram represents a composition of functions.
+
+Any two paths between a pair of nodes must represent equivalent functions.
+
+The top two diagrams on the previous page illustrate the two functor
+laws.  The bottom diagram follows from the definition of function
+composition, but when lifted gives the middle diagram.
+
+\newslide
+
+A higher order function for working with lists that is
+even more powerful than \textcd{map} is the
+\textcd{foldr} function:
+\begin{code}
+foldr            :: (a -> b -> b) -> b -> [a] -> b\\
+foldr f z []     =  z\\
+foldr f z (x:xs) =  f x (foldr f z xs)
+\end{code}
+
+All elements of a list must have the same type.  Let's consider a list of
+\textcd{Int}s.
+
+Any (finite and total) \textcd{[Int]} is constructed using
+the constructors \textcd{[]} and \textcd{:} and, of course, \textcd{Int}s.
+
+The list \textcdlr{[1,2,3,4]} is really the list
+\textcdlr{1:2:3:4:[]}.
+
+The expression \textcdlr{foldr ($\oplus$) z xs} evaluates to the result
+of replacing every \textcd{:} is \textcd{xs} with a \textcd{$\oplus$} and
+the \textcd{[]} at the end of \textcd{xs} with \textcd{z}.
+
+Hence, \textcdlr{foldr (+) 0 [1,2,3,4]} evaluates to
+\newline
+\textcdr{1 + (2 + (3 + (4 + 0)))} or \textcdlr{10}.
+
+
+\newslide
+
+By using infix notation, we can rewrite the
+\textcd{foldr} function as follows:
+\begin{code}
+foldr            :: (a -> b -> b) -> b -> [a] -> b\\
+foldr f z []     =  z\\
+foldr f z (x:xs) =  x `f` (foldr f z xs)
+\end{code}
+
+This should make it easier to see our previous claim, restated below.
+
+The expression \textcdlr{foldr ($\oplus$) z xs} evaluates to the result
+of replacing every \textcd{:} is \textcd{xs} with a \textcd{$\oplus$} and
+the \textcd{[]} at the end of \textcd{xs} with \textcd{z}.
+
+Hence,
+\newline
+\textcdr{foldr (+) 0 [1 ,~~2 ,~~3 ,~~4]}, or
+\newline
+\textcdr{foldr (+) 0 (1 :~(2 :~(3 :~(4 :~[]))))}, produces
+\newline
+\verb|            |\textcdr{(1 + (2 + (3 + (4 + 0 ))))} or \textcdlr{10}.
+
+\newslide
+
+Before looking at more examples,
+let's review a bit of notation that has been slipped into earlier example,
+and add some more.
+
+Putting an operator inside parentheses, e.g. \textcd{(+)}, makes it
+behave as an ordinary function, and putting a function name in back
+quotes, e.g. \textcd{`f`} makes it act like an infix operator.
+
+You can also include either argument of a binary operator within the
+parentheses.
+
+\begin{eqnarray*}
+\textcd{($\oplus$) a b} & \meq &\textcd{a $\oplus$ b}\\
+\textcd{(a $\oplus$) b} & \meq &\textcd{a $\oplus$ b}\\
+\textcd{($\oplus$ b) a} & \meq &\textcd{a $\oplus$ b}\\
+\textcd{a `f` b} & \meq &\textcd{f a b}
+\end{eqnarray*}
+
+\newslide
+
+You can declare the priority and associativity 
+of operators and functions used as operators.
+ 
+When operators are enclosed in parentheses, or functions are not enclosed
+in back quotes, then their priority and associativity is ignored.
+
+That is, only infix operators, including functions inside back quotes,
+have priorities and associativity.
+
+The following examples come from the Standard Prelude.
+\begin{code}
+infixr 9  .\\
+infixr 8  ^, ^^, **\\
+infixl 7  *, /, `quot`, `rem`, `div`, `mod`\\
+infixl 6  +, -\\
+\\
+infixr 0  \$
+\end{code}
+
+\newslide
+
+Syntax is important.
+
+Since expressions are so fundamental in functional programming languages, 
+being able to define new operators and specify their priority and
+associativity, as well as being able to use function names in
+an infix position, is handy.
+
+However, this doesn't really have anything to do with functional
+programming, and could be supported in almost any sort of language.
+
+\newslide
+
+An active area of research, well funded in the U.S., is 
+\textit{domain specific
+languages}.
+
+Prof.~Paul Hudak, of Yale University, has been able to get a lot of mileage
+out of Haskell.
+
+He has designed a number of new, domain specific languages, which are
+really just Standard Haskell, unmodified.
+
+Hudak defines new operators that are well suited to an application area,
+and captures common patterns of control for the application area, or for
+the commom data structures of the application area, in new higher order
+functions.  In some cases, the new higher order functions take the form
+of operators.
+
+This yields a new and powerful domain specific notation, which any Haskell
+compiler can understand without modification.
+
+\newslide
+
+Let us now return to some examples using the \textcd{foldr} function.
+
+First, let us reconsider our claim that \textcd{foldr} is even more
+powerful than \textcd{map}
+
+We could define \textcd{map} as follows.
+
+\begin{code}
+map f = foldr ((:).f) []
+\end{code}
+
+Try computing \textcdlr{map (2*) [1..3]} with both definitions of
+\textcd{map}.
+
+In this case, the earlier definition of \textcd{map} is actually easier
+to understand.
+
+\newslide
+
+Some useful functions from the Standard Prelude include the following.
+\begin{codenott}
+\texttt{(\$)~~~~~~~~~::~(a~->~b)~->~a~->~b}\\
+\texttt{f~\$~x~~~~~~~=~~f~x}\\[1.5ex]
+
+\texttt{(.)~~~~~~~~~::~(b~->~c)~->~(a~->~b)~->~a~->~c}\\
+\texttt{f~.~g~~~~~~~=~}~~$\backslash$~\texttt{x~->~f~(g~x)}\\[1.5ex]
+
+\texttt{id~~~~~~~~~~::~a~->~a}\\
+\texttt{id a~~~~~~~~=~~a}\\[1.5ex]
+
+\texttt{const~~~~~~~::~a~->~b~->~a}\\
+\texttt{const a b~~~=~~a}\\[1.5ex]
+
+\texttt{flip~~~~~~~~::~(a~->~b~->~c)~->~b~->~a~->~c}\\
+\texttt{flip~f~x~y~~=~~f~y~x}
+\end{codenott}
+
+An equivalent defining equation for \textcd{.} would be:
+\begin{code}
+(f . g) x = f (g x)
+\end{code}
+
+\newslide
+
+Other functions that can be defined using \textcd{foldr}
+include the following.
+\begin{code}
+sum, product :: Num a => [a] -> a\\
+sum = foldr (+) 0\\
+product = foldr (*) 1\\
+factorial :: Integer -> Integer\\
+factorial n = product [1..n]
+\end{code}
+
+\newslide
+
+Other functions that can be defined using \textcd{foldr}
+include the following.
+\begin{code}
+sum, product :: Num a => [a] -> a\\
+sum = foldr (+) 0\\
+product = foldr (*) 1\\
+factorial :: Integet -> Integer\\
+factorial n = product [1..n]\\
+append :: [a] -> [a] -> [a]\\
+append = flip (foldr (:))\\
+concat :: [[a]] -> [a]\\
+concat = foldr append []
+\end{code}
+
+\newslide
+
+Other functions that can be defined using \textcd{foldr}
+include the following.
+\begin{code}
+sum, product :: Num a => [a] -> a\\
+sum = foldr (+) 0\\
+product = foldr (*) 1\\
+factorial :: Integet -> Integer\\
+factorial n = product [1..n]\\
+append :: [a] -> [a] -> [a]\\
+append = flip (foldr (:))\\
+concat :: [[a]] -> [a]\\
+concat = foldr append []\\
+reverse :: [a] -> [a]\\
+reverse = foldr (flip append) [] . map (:[])
+\end{code}
+
+\newslide
+
+Other functions that can be defined using \textcd{foldr}
+include the following.
+\begin{code}
+sum, product :: Num a => [a] -> a\\
+sum = foldr (+) 0\\
+product = foldr (*) 1\\
+factorial :: Integet -> Integer\\
+factorial n = product [1..n]\\
+append :: [a] -> [a] -> [a]\\
+append = flip (foldr (:))\\
+concat :: [[a]] -> [a]\\
+concat = foldr append []\\
+reverse :: [a] -> [a]\\
+reverse = foldr (flip append) [] . map (:[])\\
+length :: [a] -> Int\\
+length = sum . map (const 1)
+\end{code}
+
+In some cases there are better ways to implement these functions.
+
+\newslide
+
+\textcd{foldr} groups list elements from the right for evaluation.
+To group from the left, we can use \textcd{foldl} instead.
+
+Informally,
+
+\begin{codenott}
+\textcd{foldl ($\oplus$) z [x1, x2, ... , xn]}
+\meq\\
+\> \textcd{(...((z {$\oplus$} x1) {$\oplus$} x2) ... ) {$\oplus$} xn}
+\end{codenott}
+
+whereas
+
+\begin{codenott}
+\textcd{foldr ($\oplus$) z [x1, x2, ... , xn]}
+\meq\\
+\> \textcd{x1 {$\oplus$} (x2 {$\oplus$} ( ... (xn {$\oplus$} z)...))}
+\end{codenott}
+
+so we have the following law:
+
+\begin{laws}
+\textcd{foldl ($\oplus$) z xs}
+\meq\\
+\hspace{0.075in}\textcd{foldr (flip ($\oplus$)) z (reverse xs)} & \law{foldl-foldr.1}\\
+\end{laws}
+
+\newslide
+
+Let us revisit some of our previous examples that used \textcd{foldr}.
+
+In the Haskell Standard Prelude, \textcd{sum} and \textcd{product} are defined
+using \textcd{foldl} instead of \textcd{foldr}.  In some cases this may
+result in a more space efficient program.  We will reconsider this
+when we talk about lazy evaluation.
+
+\newslide
+
+The \textcd{append} function is provided in the Haskell Standard Prelude
+as an infix operator, \textcd{++}, defined as follows:
+
+\begin{code}
+(++) :: [a] -> [a] -> [a]\\
+[]     ++ ys = ys\\
+(x:xs) ++ ys = x : (xs ++ ys)
+\end{code}
+
+We can easily prove that \textcd{++} is equivalent to
+our earlier \textcd{append} function.
+
+We will consider three cases, depending on the form of the first
+argument to \textcd{append} (and \textcd{++}).  These cases will be
+exclusive and exhaustive.
+
+\newslide
+
+We will use the following laws, which come from the corresponding
+function definitions:
+
+\begin{laws}
+\textcd{append \meq ~flip (foldr (:))}               & \sublaw{append.1} \\
+\textcd{foldr f z []     \meq ~z}                   & \law{foldr.1} \\
+\textcd{foldr f z (x:xs) \meq ~f x (foldr f z xs)}   & \law{foldr.2} \\
+\textcd{[]     ++ ys \meq ~ys}                       & \law{++.1} \\
+\textcd{(x:xs) ++ ys \meq ~x : (xs ++ ys)}           & \law{++.2} \\
+\textcd{flip f x y \meq ~f y x}                      & \law{flip.1}\\
+\textcd{(f.g) x \meq ~f (g x)}                       & \law{(.).1}\\
+\textcd{id x \meq ~x}                                & \law{id.1}
+\end{laws}
+
+\newslide
+
+We will start by considering the case
+where the first argument is to \textcd{append}
+is \textcd{[]}.
+
+\begin{lemma}\label{LemmaAppend1} 
+\textcdlr{append [] ys = ys}.
+\end{lemma}
+
+\begin{codenott}
+\textcd{append [] ys}\\
+\subreason{append.1}\\
+\textcd{flip (foldr (:)) [] ys}\\
+\reason{flip.1}\\
+\textcd{foldr (:) ys []}\\
+\reason{foldr.1}\\
+\textcd{ys}\\
+\end{codenott}
+
+\newslide
+
+Next, we will consider the case
+where the first argument is to \textcd{append} is of the
+form \textcd{(x:xs)} (i.e. a nonempty list).
+
+\begin{lemma}\label{LemmaAppend2}
+\textcdlr{append (x:xs) ys = x : (append xs ys)}.
+\end{lemma}
+
+\begin{codenott}
+\textcd{append (x:xs) ys}\\
+\subreason{append.1}\\
+\textcd{flip (foldr (:)) (x:xs) ys}\\
+\reason{flip.1}\\
+\textcd{foldr (:) ys (x:xs)}\\
+\reason{foldr.2}\\
+\textcd{x : foldr ys xs}\\
+\reason{flip.1}\textcolor{black}{~~ used backwards}\\
+\textcd{x : flip (foldr (:)) xs ys}\\
+\subreason{append.1}\textcolor{black}{~~ used backwards}\\
+\textcd{x : append xs ys}\\
+\end{codenott}
+
+\newslide
+
+From Lemmas \ref{LemmaAppend1} and \ref{LemmaAppend2} we see that
+changing the original definition of \textcd{append},
+
+\begin{code}
+append = flip (foldr (:))
+\end{code}
+
+to
+
+\begin{code}
+append [] ys = ys\\
+append (x:xs) ys = x : (append xs ys)
+\end{code}
+
+will preserve the meaning of the function in the
+cases where the first argument is either an empty list or a nonempty list.
+
+One other case must be considered in order to justify this change.
+
+\newslide
+
+We must consider the case where the first argument of \text{append}
+is completely undefined.
+
+Let us consider what happens with our original definition of
+\textcd{append}.
+
+\begin{codenott}
+\textcd{append~\bottom ~ys}\\
+\subreason{append.1}\\
+\textcd{flip (foldr (:))~\bottom ~ys}\\
+\reason{flip.1}\\
+\textcd{foldr (:)~\bottom ~ys}\\
+\reason{case exhaustion on the definition of \textcd{foldr}}\\
+\bottom
+\end{codenott}
+
+\newslide
+
+Similarily, if we consider the proposed new definition of \textcd{append}
+
+\begin{code}
+append [] ys = ys\\
+append (x:xs) ys = x : (append xs ys)
+\end{code}
+
+we get
+
+\begin{codenott}
+\textcd{append~\bottom ~ys}\\
+\reason{case exhaustion on the new definition of \textcd{append}}\\
+\bottom
+\end{codenott}
+
+\newslide
+
+We can now use our new definition of \textcd{append}
+
+\begin{code}
+append [] ys = ys\\
+append (x:xs) ys = x : (append xs ys)
+\end{code}
+
+in place of our
+original definition.
+However, this is identical to the definition of \textcd{++}, except for
+the name change and the use of infix notation.
+
+\begin{code}
+(++) :: [a] -> [a] -> [a]\\
+[]     ++ ys = ys\\
+(x:xs) ++ ys = x : (xs ++ ys)
+\end{code}
+
+Therefore,
+
+\begin{codenott}
+\textcd{append~\meq~(++)}
+\end{codenott}
+
+\newslide
+
+Minor syntatic note:
+
+The Haskell Standard Prelude declares
+
+\begin{code}
+infixr 5 ++
+\end{code}
+
+while the default fixity is \textcd{infixl 9}.  Therefore, using
+\textcd{`append`} as an infix operator in place of \textcd{++} may
+be a syntatic error or even produce the wrong result.
+
+\newslide
+
+\ack
+
+\end{slide}
+
+\end{document}

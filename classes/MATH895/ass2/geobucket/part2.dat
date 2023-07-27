@@ -1,0 +1,72 @@
+-   -   -   -   -   - PART 2 -   -   -   -   -   -
+
+#interface(quiet=true):
+> read "geoDivision.mpl":
+> read "../DatPart2.mpl":
+bytes used=57868896, alloc=27389032, time=0.85
+bytes used=66538256, alloc=32762000, time=1.07
+bytes used=99629520, alloc=50191384, time=2.12
+> 
+> print("GEO"):
+                                     "GEO"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> var;
+                               [u, v, w, x, y, z]
+
+> print("DIVIDE(D,A)"):
+                                 "DIVIDE(D,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=GEOdiv(D,A,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 391.383
+
+> print(N,M,evalf(N/M)):
+                          1239463, 122987, 10.07800011
+
+> 
+> print("DIVIDE(D,B)"):
+                                 "DIVIDE(D,B)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=GEOdiv(D,B,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 340.836
+
+> print(N,M,evalf(N/M)):
+                          1016965, 145843, 6.973012075
+
+> 
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=GEOdiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 158.427
+
+> print(N,M,evalf(N/M)):
+                          465153, 127300, 3.653990573
+
+> 
+> quit:\
+bytes used=27106421520, alloc=873828064, time=892.81

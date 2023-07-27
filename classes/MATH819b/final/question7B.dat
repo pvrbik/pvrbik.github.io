@@ -1,0 +1,134 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#############
+#Question 7B#
+#############
+> with(PolynomialIdeals):
+> with(Groebner):
+> 
+> f1:=x^2+y+z-1;
+                                     2
+                              f1 := x  + y + z - 1
+
+> f2:=x+y^2+z-1;
+                                         2
+                              f2 := x + y  + z - 1
+
+> f3:=x+y+z^2-1;
+                                             2
+                              f3 := x + y + z  - 1
+
+> 
+#First we will computer the radical of I
+> 
+> I:=<f1,f2,f3>;
+                    2                   2                   2
+             I := <x  + y + z - 1, x + y  + z - 1, x + y + z  - 1>
+
+> IsRadical(I);
+                                     false
+
+> 
+> G:=factor(Basis(I,plex(x,y,z)));
+       2   2                    2   2   2
+G := [z  (z  + 2 z - 1) (-1 + z) , z  (z  - 1 + 2 y), (-1 + z + y) (y - z),
+
+             2
+    x + y + z  - 1]
+
+#I will try my luck and throw the square-free part of G[1] into I
+> 
+#the square-free part of G[1] is
+> f4:=z*(z^2+2*z-1)*(z-1);
+                                  2
+                        f4 := z (z  + 2 z - 1) (-1 + z)
+
+> 
+> I:=<f1,f2,f3,f4>;
+I :=
+
+      2                   2                   2          2
+    <x  + y + z - 1, x + y  + z - 1, x + y + z  - 1, z (z  + 2 z - 1) (-1 + z)>
+
+> IsRadical(I);
+                                      true
+
+> 
+#Now that we have that I is radical we can proceed 
+> G:=factor(Basis(I,plex(x,y,z)));
+          2                          2
+G := [z (z  + 2 z - 1) (-1 + z), z (z  - 1 + 2 y), (-1 + z + y) (y - z),
+
+             2
+    x + y + z  - 1]
+
+> 
+> f:=G[1];
+                                  2
+                         f := z (z  + 2 z - 1) (-1 + z)
+
+> 
+#Now we will split I into three components corresponding to the three factors of f
+> P1:=Basis(<I,z>,plex(x,y,z));
+                                         2
+                         P1 := [z, -y + y , -1 + y + x]
+
+> P2:=Basis(<I,z-1>,plex(x,y,z));
+                              P2 := [-1 + z, y, x]
+
+> P3:=Basis(<I,z^2+2*z-1>,plex(x,y,z));
+                              2
+                      P3 := [z  + 2 z - 1, y - z, -z + x]
+
+> 
+> P1:=<op(P1)>: P2:=<op(P2)>: P3:=<op(P3)>:
+> IsPrime(P1); IsPrime(P2); IsPrime(P3);
+                                     false
+
+                                      true
+
+                                      true
+
+> 
+> G:=factor(Basis(P1,plex(x,y,z)));
+                        G := [z, y (-1 + y), -1 + y + x]
+
+> P4:=Basis(<P1,y>,plex(x,y,z));
+                              P4 := [z, y, -1 + x]
+
+> P5:=Basis(<P1,y-1>,plex(x,y,z));
+                              P5 := [z, -1 + y, x]
+
+> 
+> P4:=<op(P4)>: P5:=<op(P5)>:
+> 
+> IsPrime(P4); IsPrime(P5);
+                                      true
+
+                                      true
+
+> 
+#This means the prime decomposition of rad(I) is into the following:
+> P2;P3;P4;P5;
+                                 <x, y, -1 + z>
+
+                           2
+                         <z  + 2 z - 1, y - z, -z + x>
+
+                                 <y, z, -1 + x>
+
+                                 <x, z, -1 + y>
+
+> 
+#CHECK#
+> ans:=Radical(I):
+> Simplify(PrimeDecomposition(ans));
+                                                   2
+ <x, y, -1 + z>, <x, z, -1 + y>, <y, z, -1 + x>, <z  + 2 z - 1, y - z, -z + x>
+
+> 
+> quit:\
+bytes used=8796072, alloc=6159256, time=0.22

@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{fancyvrb,enumerate}
+
+\include{header}
+
+\newcommand{\powerset}{\mathcal{P}}
+\renewcommand{\iff}{\Leftrightarrow}
+
+\title{CS 3331a - Assignment 1 - Solutions}
+\author{Paul Vrbik}
+\date{October, 5 2009}
+
+\begin{document}
+
+\maketitle
+\subsection*{Question 1 - $20$ marks}
+
+Show 
+\begin{equation}
+\sum_{i=0}^n i = \frac { n(n+1) } {2} \label{star}
+\end{equation}
+
+\begin{proof} \blank \\
+\begin{description}
+\item[Base - $5$ marks] \blank\\
+Let $n=0$  we have 
+$$
+\sum_{i=0}^0 i=0  \text{ and } \frac{0 \cdot 1}{2}=0 
+$$
+so (1) holds for $n=0$.
+\item[Assumption - $5$ marks]\blank \\
+Assume that:
+$$
+\sum_{i=0}^{n-1} i = \frac { (n-1)(n) } {2}
+$$
+\item[Induction - $10$ marks]
+\begin{align*}
+\sum_{i=0}^n i &=n + \sum_{i=0}^{n-1} i  & \text{ by def. of sum}\\
+&=n + \frac{(n-1)(n)}{2} & \text{ by assumption} \\
+&=\frac{2n + n^2 -n}{2} &\\
+&= \frac{n(n+1)}{2} & \text{ as desired}
+\end{align*}
+\end{description}
+So (\ref{star}) is proved by induction.
+\end{proof}
+\emph{Assuming $\sum_{i=0}^{n} i = \frac { (n)(n+1) } {2}$ and showing  $\sum_{i=0}^{n+1} i = \frac { (n+1)(n+2) } {2}$ is fine as well.}
+
+\clearpage
+\subsection*{Question 2 - $15$ marks}
+Show $[a]_R = [b]_R$ or $[a]_R \cap [b]_R = \emptyset$.
+
+\begin{proof}
+Suppose that $[a]_R \cap [b]_R \neq \emptyset$,
+
+\begin{align*}
+[a]_R \cap [b]_R \neq \emptyset &\implies \exists x, \text{ such that }x \in [a]_R \land x \in [b]_R &\\
+&\implies aRx \land bRx & \text{def. of class}\\
+&\implies aRb & \text{symmetry and transitivity} \\
+&\implies \forall c \in \Sigma,  ( aRc \implies bRc) & \text{symmetry and transitivity}\\
+&\implies \forall x \in [a]_R, (aRx \implies bRx \implies x \in[b]_R) &\text{def. of class} \\
+&\implies [a]_R \subseteq [b]_R
+\end{align*}
+
+By similar argument $[b]_R \subseteq [a]_R$ giving $[a]_R = [b]_R$. So it has been shown that either $[a]_R = [b]_R$ or $[a]_R \cap [b]_R = \emptyset$, as desired.
+\end{proof}
+\emph{Marks were awarded for ``reasonable progress''}
+
+\subsection*{Question 3 - $15$ marks}
+Transitive closure $$R^+ = R \cup \{(a,c),(a,d),(b,d),(c,c),(d,d)\}.$$
+Reflexive transitive closure $$R^* = R^+ \cup \{(a,a),(b,b),(e,e)\}$$
+\emph{Deduct 2 marks for each missing element.}
+
+\subsection*{Question 4 - $15$ marks}
+Let $L = \{aa,abc,cba\}$. The set of all sets of $L$, or the \emph{power set} of $L$, denoted $2^L$, is 
+\begin{align*}
+2^L &= \{\emptyset \} \cup \{ \{aa\}, \{abc\}, \{cba\}  \} \cup \{ \{aa,abc\}, \{aa,cba\}, \{abc,cba\} \} \cup \{ \{aa,abc,cba\} \} \\
+&=\{\emptyset, \{aa\}, \{abc\}, \{cba\}, \{aa,abc\}, \{aa,cba\}, \{abc,cba\}, \{aa,abc,cba\} \}
+\end{align*}
+\emph{Deduct 2 marks for each missing element.}
+
+\subsection*{Question 5 - $3 \times 7 = 21$ marks}
+\begin{enumerate}[(a)]
+\item The language $L_1 = \{a^n b^n | n \geq 0 \}$ consists of all words starting with a sequence of $a's$ ending in a sequence of $b's$ of the same length. Since $x_1 = abab \neq a^n b^n$ for some $n$ ($aabb$ would) $x_1$ is \emph{not} in $L_1$.
+
+\item The set $\{a,b\}^*$ contains \emph{any} word one can construct with $a,b$, therefore $L_2 = \{waa | w \in {a,b}* \}$ is the language consisting of all words ending with two $a's$. It is easy to see that $x_2 = ababaa$ would be in this language.
+
+\item The language $L_3 = \{a^{2^n} | n \geq 0\}$ consists of sequences of $a$ that are length some power of two. As $x_3 = aaaa = a^{2^2}$, $x_3$ is in the language.
+\end{enumerate}
+
+\subsection*{Question 6 - $14$ marks}
+The language $L_1 = \{ w \in \{ a,b\}^* | |w|_a = |w|_b \}$ consists of all words of $\{a,b\}^*$ that have an equal number of $a$'s and $b$'s. The language $L_2 = \{a^ib^j | i,j \geq 0 \}$ consists of all words of $\{a,b\}^*$ that begin with a sequence of $a$'s followed by a sequence of $b$'s. The words in both languages are those that begin with a sequence of $a$'s followed by an equally long sequence of $b$'s, or more simply
+$$L = \{ a^kb^k | k \geq 0 \} .$$
+
+\clearpage
+
+\subsection*{TA Comments - Typical Mistakes}
+
+\subsection*{Question 1}
+\textbf{Base case}
+\begin{enumerate}
+\item If you assume that the base case is $n=1$ then you must also show that the $n=0$ case is true as this wouldn't be captured by the induction. 
+\item The left hand side and right hand side need to be worked out separately. Saying:
+$$\sum_{i=0}^0 = \frac{0\cdot1}{0} = 0$$ is bad style. A \emph{small} deduction was made for doing this. (Better now then on the midterm!)
+\item You must \textbf{clearly state your assumption}.
+\item Do not assume (1) for \emph{some} $n$. It doesn't help to know that (1) works when say $n=57$. What you must do is assume \emph{any arbitrary} $n$ satisfies (1) and then show this implies that $n+1$ also satisfies (1). 
+\item The whole $LHS = RHS$ proof style is what we learned in high school, but is generally considered bad form. Dr.\ James Stewart (the guy who wrote your calculus textbook), once reamed me out in front of the class for doing a proof this way. I've never done it again.
+\end{enumerate}
+
+\subsection*{Question 2}
+Proofs are hard and this question is not an exception to this rule. All I can suggest is that you avoid writing out your arguments in sentence form. It's easier to see / follow your argument when using the ``language of math'', i.e. symbols (that's why they were invented). Also, if at all possible, get someone to read your proof, if it doesn't make sense to them you've probably done something wrong.
+
+If you feel that you deserve more marks for this question I would be glad to discuss it with you at my office hour. However I caution that you better have a strong argument as I spent a \emph{lot} of time carefully combing through your proofs. Also, my last two degrees are in pure mathematics.
+
+One nit-picky thing. The symbol for set inclusion is $\in$ not $\varepsilon$.
+
+\subsection*{Question 3}
+Nearly everyone (including me) forgot to include $(e,e) \in R^*$. Remember, the reflexive closure must satisfy $xR^*x$ for every $x \in A = \{a,b,c,d,e \}$. I apologize to the first few people I marked and had to go back and correct. TA's make mistakes too I suppose!
+
+The easiest way to do this question is by drawing the graph (on next page). Also, it's not cheating to check your work with someone else.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=1.3]{file.12}
+\caption{$R^+$, the transitive closure, dashed arrows indicate the relations that are added. Note that the arrow connecting $d$ and $c$ is bidirectional.}
+\end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=1.3]{file.11}
+\caption{$R^*$, the reflexive transitive closure, dashed arrows indicate the relations that are added. Note that the arrow connecting $d$ and $c$ is bidirectional.}
+\end{center}
+\end{figure}
+
+\subsection*{Question 4}
+The symbol $\emptyset = \{ \}$ is the empty set, and is indeed in the power set of $L$. The symbol $\varepsilon$ is the empty \emph{word} and is \textbf{not} in the powerset. In fact $\varepsilon$ isn't even a set. The set $\{ \varepsilon \}$ isn't a subset of $L$ either as $\varepsilon \not \in L$.
+
+\subsection*{Question 5}
+Read instructions carefully. Many did not include english descriptions or failed to address if $x_i \in L_i$.
+
+\subsection*{Question 6}
+Saying $L = \{a^i b^i | i\geq 0\}$ got you full marks and is the most concise and preferable solution. Sometimes (especially in mathematics) less \emph{is} more.
+
+\PutEnd
+
+\end{document}

@@ -1,0 +1,3629 @@
+    |\^/|     Maple 10 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> interface(quiet=true):
+Warning, `pPr` is implicitly declared local to procedure `dynSMPadd`
+[H[2J!
+                                     "H/G"
+
+Error, (in SUM) too many levels of recursion
+                                 t := 2580.956
+
+                                     false
+
+                                   t := 0.001
+
+                                     Q[-1]
+
+                                       1
+
+                                      2982
+
+Error, (in zip) invalid input: zip expects its 3rd argument, b, to be of type
+{Matrix, Vector, Array, array, list}, but received Q[2]
+Error, (in zip) invalid input: zip expects its 3rd argument, b, to be of type
+{Matrix, Vector, Array, array, list}, but received R[2]
+          4  2  2         2    2  2       4    4       4         2  5  2
+-47 - 37 x  y  z  + 10 u v  x y  z  + 51 x  y z  - 85 x  y + 82 x  y  z
+
+             2  2  3      3    3    2           4  2
+     - 16 u x  y  z  - 2 u  v x  y z  + 96 u v x  y  - 10 v x + 62 v y - 82 v z
+
+           2         2         2          2                               2
+     - 23 v  x + 10 v  y - 61 v  z - 8 v x  - 29 v x y + 95 v x z + 11 v y
+
+                        2       3    2  2  2       3         3         3
+     - 49 v y z - 47 v z  + 10 u  v x  y  z  + 96 v  x - 17 v  y + 25 v  z
+
+           2  2       4  3  3       2             2  2  3       2  2
+     + 91 v  x  - 80 u  x  y  + 98 v  x z - 66 u v  x  z  - 64 v  y
+
+           2           4    3           7         3  4       4  3
+     + 64 v  y z - 12 x  y z  + 15 x y z  - 41 x y  z  + 21 x  y  z
+
+             4  3         5  2         3  5         6                  5
+     - 54 x y  z  - 23 x y  z  - 91 x y  z  + 86 x y  z - 55 v + 41 u x  y z
+
+           3  3  3         4  2  2  2       4  3  2         3
+     - 24 u  v  y  z - 74 u  x  y  z  - 12 x  y  z  - 97 x y  z - 94 x + 87 y
+
+               5                2  3  3       3  2           3  2
+     - 22 u v x  y - 56 z - 75 x  y  z  + 49 x  z  - 20 u v x  y  z
+
+           2  2  5       3  2  5       2  4  2       3  2  2  2         2  5
+     + 51 x  y  z  - 14 u  v  z  - 20 x  y  z  + 27 u  v  x  y  z + 95 x  y  z
+
+           2  2  3        5       2           3  2    4       3  2
+     - 42 x  y  z  + 4 x z  - 89 x  y z - 81 u  v  x y  - 38 x  y  z
+
+           3      3  2           4  2               4       3  3      2
+     - 94 u  v x y  z  - 69 u v y  z  - 62 u v x y z  - 20 u  v  x y z
+
+                 3  2       4  4         3    2       3  2  4        4  5
+     - 84 u v x y  z  + 63 x  y  z + 45 x  y z  + 18 u  v  x  z + 4 u  y  z
+
+           5           2    4       3  3             2  3         2  4  3
+     + 63 x  y z + 30 x  y z  - 98 x  y  z - 73 u v x  y  z - 65 x  y  z
+
+           3    3        3  3           3  3       3  2      3       6
+     + 14 x  y z  - 9 x y  z  + 73 u v x  z  + 22 u  v  x y z  - 41 x  y z
+
+             2  5       2  6       4      4       3  2  3       3  4
+     - 36 u v  y  + 20 x  y  + 71 u  x y z  + 62 x  y  z  - 23 x  y  z
+
+           5  2  2         2    4    3  2  4         3  4             2      3
+     + 85 x  y  z  - 55 u v  x z  - u  v  y  z - 11 u  v  y z + 27 u v  x y z
+
+                 5       3  3  3      3  3  4       4  2  3           3  3
+     + 44 u v x z  - 58 u  x  y  + 9 u  x  z  - 22 u  x  y  z + 49 u x  y  z
+
+                      2    3       2  4  4       5  2       2    6        3  2
+     + 22 u + 97 u v x  y z  + 69 u  y  z  + 16 x  z  + 91 x  y z  + 5 x y  z
+
+           3  3  3        8  2       4  2  4       3  3    3       3  5
+     + 97 u  v  x  y - 5 x  z  - 56 u  x  z  + 90 u  v  x y  - 53 x  z
+
+             2  5       6  2       8           4  2    3         3       2  2
+     + 84 u v  z  + 43 x  z  + 68 x  y z + 36 u  x  y z  + 50 x z  + 49 x  y  z
+
+           3  4  2           2       6  2         2    4         4  2
+     - 12 u  v  y  z + 68 x y  - 77 x  y  - 62 u x  y z  - 35 u x  y  z
+
+           3    5       3    2  3           2  3  2       8  2         4  4
+     + 71 x  y z  - 25 u  v x  y  z - 38 u v  x  z  + 37 x  y  - 76 x y  z
+
+           9         9            6         2  5       4  4           6
+     + 12 x  z + 22 x  y + 9 x y z  + 39 x y  z  + 33 x  y  + 47 u v y
+
+           2  4       2  8         9         8           8           7  2
+     - 80 x  y  - 11 v  z  + 85 v x  - 49 v x  y - 82 v x  z - 43 v x  y
+
+             7             7  2         6  3        6  2           6    2
+     + 99 v x  y z + 87 v x  z  - 61 v x  y  + 5 v x  y  z - 37 v x  y z
+
+             5  4         5  3           5  2  2         5    3         5  4
+     + 56 v x  y  - 82 v x  y  z - 54 v x  y  z  - 55 v x  y z  + 55 v x  z
+
+             4  5         4  4           4  3  2         4  2  3         4    4
+     + 33 v x  y  - 51 v x  y  z - 29 v x  y  z  - 53 v x  y  z  - 72 v x  y z
+
+             4  5         3  6       2    7       3  2  5           2  6
+     - 65 v x  z  - 11 v x  y  + 38 v  y z  - 21 u  x  y  - 87 u v x  z
+
+           4  2  3       4    2  3         3  2  2       3    2    3
+     - 39 u  y  z  + 90 u  x y  z  + 67 u x  y  z  - 69 u  v x  y z
+
+           3  2  3  2       3  5         3  2  3             2  4       6    2
+     - 16 u  x  y  z  - 76 u  v  z - 32 u  v  x  y z - 77 x y  z  - 88 x  y z
+
+             7       4  2  3          5  2      8         8         8
+     - 18 x y  - 47 x  y  z  - 3 u v x  z  - 4 v  x + 10 v  y + 95 v  z
+
+           7  2       7           3  3           9               3  5
+     + 25 v  x  - 75 v  x y + 26 u  v  x y + 16 v  - 62 u v - 6 u  x  z
+
+                    2  7       6           2  3       7  2               4
+     + 97 u x - 51 x  z  - 34 x  y - 40 x y  z  + 92 x  y  z + 38 u v x y  z
+
+           2  3  2       5    2       3  5        2    3       2  4
+     - 81 x  y  z  + 33 x  y z  - 93 x  y  z + 7 x  y z  - 11 x  z  - 73 u y
+
+                   2         2  3    3         4  2  3       6    2       6  3
+     - 4 u z - 83 v  + 12 u v  x  y z  + 39 u v  x  z  - 95 v  y z  + 82 v  z
+
+           5  4       5  3         5  3         5  2  2      5  2
+     + 25 v  x  + 46 v  x  y - 98 v  x  z - 11 v  x  y  - 4 v  x  y z
+
+           5  2  2       5    3       5    2         5      2       5    3
+     - 74 v  x  z  + 68 v  x y  + 66 v  x y  z - 83 v  x y z  - 19 v  x z
+
+           7  3         9       4         4  2         5  3       2  3
+     + 78 x  y  + 33 u z  - 44 x  z - 43 x  y  z - 62 x  z  - 58 x  y  - 44 x y
+
+             4  2                2  2  4       2  5    2    2       2  3
+     + 14 x y  z  + 71 x z + 48 x  y  z  - 21 x  z  + x  y z  + 42 x  y  z
+
+             4       4    2       2       3  2  2  2       2    4  3
+     - 96 x z  - 34 x  y z  + 80 x  + 70 u  x  y  z  - 19 u  x y  z
+
+           3      4         2         8       3  2       8           8  2
+     - 59 u  v x y  z - 17 y  + 12 x y  - 31 x  y  - 75 v  x z - 38 v  y
+
+                    3      5       3  4  2           8       2      3
+     - 75 y z - 95 u  v x y  - 88 u  x  z  + 34 u y z  - 10 z  - 7 u
+
+           3    5         3  3  3       2           4    3       3  2  4
+     - 69 u  x z  - 12 u v  x  y  - 40 u  v - 37 u v  x z  - 90 u  x  y  z
+
+             4  4       2         2         3  2  4       3  6       3    4
+     + 63 u v  y  + 42 u  x - 50 u  y - 47 x  y  z  - 79 x  y  - 80 x  y z
+
+           8        4  3          2  3  2           5  3       2
+     + 26 x  z + 7 x  y  + 4 u v x  y  z  - 63 u x y  z  + 23 u  z
+
+                 6         5  3  2         2       6  2                    6  2
+     + 47 u v x y  z + 14 u  v  z  + 75 u v  - 40 u  z  - 92 u v x + 48 x y  z
+
+           2  5       5         5  4                              2
+     - 27 x  y  - 45 x  z + 95 x  z  + 6 u v y + 74 u v z + 72 u x
+
+                 7                  3  3  3                  6  2             2
+     - 72 u v x y  + 37 u x y + 62 u  y  z  - 23 u x z - 38 u  v  x z + 87 u y
+
+                        2       7             6       3  2  2      3  6       3
+     + 44 u y z + 29 u z  + 22 x  y z - 27 x y  - 86 x  y  z  - 6 u  x  + 98 v
+
+               4  2       3  2  2  3          7       3  3       5  4
+     + 41 u x y  z  - 48 u  x  y  z  + 8 u x y  + 95 x  y  + 50 x  y
+
+           6  2       2  5         3       5    3      7    2       2
+     - 92 y  z  - 65 u  v  z + 40 x  - 45 x  y z  - 7 x  y z  - 81 x  y
+
+           3  3  4       2            5           5  3
+     - 82 u  v  z  + 91 x  z - 9 u v y  z - 73 x y  z  - 10 x y z
+
+             2  5             3  3      3  4  2         3  5  2       2
+     + 57 u v  y  z + 89 u x y  z  - 6 u  x  y  z + 72 u  v  y  + 77 y  z
+
+           2  6       5  3         2       5  2           2  3  2          4
+     - 17 x  z  + 54 x  y  + 31 x z  - 38 x  y  z + 68 u x  y  z  + 5 x y z
+
+           7  3       5         3       6             3    3         2
+     - 19 x  z  - 77 x  y - 51 y  - 75 u  v x - 14 u x  y z  + 95 y z
+
+              5    3            2  3       2  2  4      4         2  4
+     - u v x y  + z  + 8 u v x y  z  + 66 u  x  y  z + u  - 15 u x  y  z
+
+           6  2           4  2  2         2  3    3       3         3
+     + 18 x  y  z + 20 u v  x  y  z - 53 u  v  y z  + 55 u  v - 28 u  x
+
+           3            2  4       3         3  4           2  2       3  2  4
+     + 16 u  y - 6 u x y  z  + 30 u  z - 93 u  v  x y - 27 u  v  + 85 u  y  z
+
+           2             5    2         6  4       2           4  2  3
+     - 15 u  v x - 23 u v  x y  z + 96 u  z  - 59 u  v y + 25 u  x  z
+
+               2  2  3       2           2  2         3  4        4           6
+     + 50 u v x  y  z  - 96 u  v z + 72 u  x  + 62 u x  z  - 4 x y  z + 29 x z
+
+           7         3  2    4       2           2  7       2           2  2
+     + 20 x  y - 68 u  v  y z  - 87 u  x y - 41 u  z  + 47 u  x z - 90 u  y
+
+           2           2  2       4  2  2           3  3  3         3
+     + 43 u  y z + 92 u  z  + 38 u  v  y  z - 57 u v  y  z  - 91 u v
+
+          2  5           6  3         2        2  5  3         2
+     - 7 u  v  x y + 27 u  v  - 88 u v  x + 5 u  x  y  - 48 u v  y
+
+           4    2         3  2    4         2         3    5           2
+     - 23 u  v y  z + 42 u  x  y z  + 53 u v  z - 45 u  y z  - 28 u v x
+
+           3  3  2       2  2  2       3  5      5  2       3  3       4  3
+     + 67 x  y  z  + 86 x  y  z  + 29 x  y  + 9 x  y  - 99 x  z  - 20 x  z
+
+             5    3       3  4  2       3  2    2  2
+     + 75 u v  y z  + 18 u  v  x  - 19 u  v  x y  z  + 5 u v x y
+
+             3  2    2         2  5  2         3  2  3         2  2    2
+     + 30 u v  x  y z  - 72 u v  x  z  + 44 u v  x  z  + 43 u v  x  y z
+
+                            2       2  2  2  2       3  5  2             5
+     + 13 u v x z - 10 u v y  + 28 u  v  x  y  + 47 u  v  z  - 96 u x y z
+
+                            2         3         2          2           3  2  2
+     - 82 u v y z + 71 u v z  + 16 u x  + 83 u x  y + 9 u x  z + 92 u v  y  z
+
+           2    4         3  5           2        5  3       3    6
+     - 14 u  y z  - 82 u v  x  - 60 u x y  + 7 u y  z  - 51 u  x y
+
+             3    2  2                        2       3  5  2         3
+     - 22 u v  x y  z  - 83 u x y z + 98 u x z  - 48 u  x  z  - 48 u y
+
+             4  3           2         2  3       3  3  3        5         4
+     + 40 u v  y  z - 19 u y  z - 95 x  z  + 22 x  y  z  + 2 x y  + 86 x y
+
+             2  2       2    5       4  4             2       5      3
+     - 14 x y  z  + 60 x  y z  + 33 u  y  z + 62 u y z  + 85 u  v x z
+
+           3    4           3       2    4         4    3        4       3    5
+     + 23 u  x y  z + 37 u z  + 59 u  v y  z + 94 u  x y  z + 5 v  - 11 u  x y
+
+           2      4       2  3  3         3           4  2       2  4
+     + 27 u  v x y  - 19 u  v  y  z + 45 x  y z + 67 x  z  - 99 x  y  z
+
+            2  5  2       4  5             5       2  2         3         2
+     + 2 u x  y  z  + 97 x  z  - 16 u v y z  - 90 v  z  - 60 v x  - 34 v x  y
+
+             2             2                       2         3         2
+     - 13 v x  z + 44 v x y  - 2 v x y z + 71 v x z  - 47 v y  - 39 v y  z
+
+               2         3       4         4         4        3  2       3
+     - 53 v y z  - 72 v z  + 58 v  x + 29 v  y + 37 v  z + 5 v  x  - 36 v  x y
+
+           3           3  2       3           3  2       2  3       2  2
+     - 57 v  x z + 85 v  y  + 80 v  y z + 90 v  z  + 74 v  x  + 27 v  x  y
+
+          2  2         2    2       2             2    2       2  3
+     + 9 v  x  z - 91 v  x y  + 81 v  x y z + 65 v  x z  - 12 v  y
+
+           2  2           2  4  2        5         4    4       3    2
+     + 78 v  y  z - 40 u v  y  z  - 5 u x  y - 69 u  x z  - 10 u  v x  y z
+
+           3    3  3       8       2  2  6           3       6         7
+     - 86 u  v x  z  - 99 y  + 58 u  y  z  + 83 x y z  - 12 x  z + 15 x  z
+
+           3         3        2  2       2  3  4       4  2            5  2
+     + 33 x  y + 10 x  z + 7 x  y  + 35 x  y  z  - 34 x  y  - 7 u v x y  z
+
+           3    5       4  2    3       3      4       4       2    6
+     + 87 u  v x  + 16 u  v  x z  - 20 u  v x y  - 97 x  - 50 u  v y
+
+           7    2       3  4  2         5        2       4  6       4    2  2
+     - 78 u  v z  + 75 u  v  x  y - 30 u  v x y z  + 84 u  y  - 18 u  x y  z
+
+           2  3  4             3  4       3    4  2         3  2  3
+     + 53 u  x  y  z - 36 u v x  y  + 91 u  x y  z  + 41 u v  x  y  z
+
+             4             2  4       4             5             5       2  2
+     + 14 u v  x z + 21 u v  y  + 94 x  y z + 13 x y  z - 35 x y z  + 65 x  z
+
+           6  3         3           3  3         2             2  4           2
+     + 57 x  y  + 12 x y  + 74 u v y  z  - 25 x y  z - 95 u v y  z  - 96 x y z
+
+               2  4       2  2  4           3    4       3    5           4  3
+     + 55 u v x  z  + 77 u  v  x  y + 62 u v  x z  - 22 u  x y  z - 35 u x  y
+
+          5  4       5  3         5  2  2      5    3       5  4      4  5
+     - 9 v  y  - 50 v  y  z - 13 v  y  z  - 5 v  y z  + 41 v  z  + 9 v  x
+
+          4  4        4  4      4  3  2       4  3           4  3  2
+     + 3 v  x  y + 2 v  x  z - v  x  y  - 51 v  x  y z + 93 v  x  z
+
+           4  2  3       4  2  2         4         2  2  2  2       2  2  2  2
+     - 87 v  x  y  + 51 v  x  y  z - 60 y  - 91 u v  x  y  z  - 75 u  v  x  z
+
+           3  4  2       3  2  3  2       3        2  2         7         3
+     + 70 u  v  y  + 54 u  v  y  z  - 42 y  z + 7 y  z  + 95 u x  - 89 y z
+
+               2  4       3  6       3    4             2  3         3      3
+     + 57 u v x  y  + 78 x  z  + 47 u  v y  z + 82 v x y  z  + 36 u v  x y z
+
+           4       3  3  4           6  2       5       3  2  3         2    4
+     - 70 z  - 92 u  v  y  + 58 u v x  z  + 34 u  + 97 u  x  y  z - 65 u  v x
+
+           4           2      2       2  4  3       4         2  3  2
+     - 68 u  v + 70 u v  x y z  - 58 u  v  z  - 60 u  x - 21 u  v  x  y
+
+           6    2       4           5  2        2  4    2       4
+     + 57 u  v x  + 16 u  y - 81 u v  y  - 3 u v  x  y z  + 52 u  z
+
+           3    3  3       2  2    2       3  2      3          6  4       5  5
+     + 45 u  x y  z  + 44 u  v  y z  - 20 u  v  - 4 u  v x - 2 y  z  + 91 y  z
+
+           3           5  2    2      3  5       3             2  6
+     - 89 u  v y + 10 u  v  x z  - 8 y  z  - 77 u  v z + 17 u v  x  z
+
+           3  2       2  2    3      6    3       6  2             6
+     + 69 u  x  + 34 u  x  y z  - 9 u  v x  - 56 u  v  z + 59 u x z
+
+           4  2  2       3           3           3  2  2       3  2         9
+     - 58 u  v  z  + 80 u  x y + 28 u  x z - 28 u  v  z  - 42 u  y  + 59 u y
+
+           3           6  2         2  2  5       3  2       2  3       6  2
+     - 33 u  y z + 91 u  x  - 58 u v  x  z  + 21 u  z  - 35 u  v  + 33 u  v  x
+
+          6  2         2  2         4  4         7       2  6         3  4
+     - 4 u  v  y + 97 u  v  x - 55 x  z  + 11 x z  - 61 x  y  z + 78 x  y
+
+           2  2         2  2         2  6         2    2       2
+     + 30 u  v  y - 64 u  v  z + 46 u  v  x + 89 u  v x  - 16 u  v x y
+
+           2               2  6       3  7       2  8       2    2
+     + 59 u  v x z - 89 u v  y  - 13 y  z  - 70 y  z  - 69 u  v y
+
+           3  4  2       2            4  2       4    4         6
+     + 53 u  v  z  - 46 u  v y z - u x  y  + 99 u  y z  - 48 u y  z
+
+           2    2       2  3           2  2  2           8       2  2
+     - 33 u  v z  + 87 u  x  - 97 u v x  y  z  + 63 u v x  - 34 u  x  y
+
+                 4  3       4                 2  5        4    4             6
+     - 81 u v x y  z  + 88 u  v x z - 99 u v x  z  + 3 u v  x y  - 21 u v x y
+
+            3  6       2  2         2    2    2               7       3  3  3
+     + 3 u v  x  + 40 u  x  z + 77 u  x y  + u  x y z + 45 u y  - 99 u  x  y  z
+
+           2    2       2  3        3  3  2       2    3  4       3    3  2
+     - 10 u  x z  - 65 u  y  - 6 u v  y  z  - 32 u  x y  z  + 93 u  v x  y
+
+           2  2             4  3         2    2       4  3           2  3  3
+     - 85 u  y  z - 55 u v x  y  z + 54 u  y z  - 31 u  y  z + 40 u v  y  z
+
+           2  8       2  7         3  7         4         3         6
+     - 18 v  x  - 82 v  x  y + 58 u  x  + 18 u v  + 52 u v  x + 28 u  v x y
+
+             4  2        7           2  5  2         7           3  5
+     + 33 u v  x  z - 4 u  x y + 51 u  x  y  z + 37 u  x z + 96 u  v  y z
+
+             3         3  6         3  4  2       2  7         3         9
+     + 36 u v  y + 51 u  z  + 30 u v  y  z  - 26 u  v  + 91 u v  z - 64 z
+
+             2  2         2             2           5  3       4  4
+     - 22 u v  x  + 51 u v  x y - 27 u v  x z - 17 y  z  - 62 y  z
+
+             2  2           2  3  3       3    6         2           2  3    3
+     + 50 u v  y  + 68 u v x  y  z  + 24 u  v x  + 60 u v  y z + 38 u  x  y z
+
+           4      3         2  2         2  2  4      3      5           3
+     + 78 u  v x z  - 91 u v  z  + 62 u v  y  z  - 6 u  x y z  - 47 u v x
+
+               2         3  6            2           5           2  2  2
+     - 97 u v x  y - 65 u  x  y - 2 u v x  z - 83 u y  z - 66 u v  x  y  z
+
+           2  2    4       4  2  2  2             2         2  2  2
+     + 61 u  v  x y  + 76 u  v  y  z  - 31 u v x y  + 86 u x  y  z
+
+             2  4  3                        2  6               2           3
+     - 81 u v  y  z  + 25 u v x y z - 83 u v  y  z + 31 u v x z  - 27 u v y
+
+           3  5             5  2       3  4  3           2         3  4
+     - 33 u  v  x z - 68 u y  z  - 55 u  x  z  + 65 u v y  z - 27 x  z
+
+           3    4  2       2  7         7           2  6         3  3    2
+     + 15 u  v y  z  + 40 x  y  + 62 x y  z + 36 x y  z  - 99 u v  x  y z
+
+        4  2                 2       5  3  2           3        4
+     + u  v  x z + 88 u v y z  - 72 u  y  z  + 10 u v z  - 6 u x
+
+               4  3        2  4  3         3         2  6           3
+     + 95 u v x  y  + 5 u v  x  y  + 80 u x  y - 60 u  v  z - 84 u x  z
+
+           2  4             2  6         2  2       4    4               5
+     + 63 u  v  y z + 66 u y  z  + 57 u x  y  - 50 u  x y  + 72 u v x y z
+
+             2          2  2    3         2  2       5  3       5      2
+     - 49 u x  y z + 2 u  v  x z  + 31 u x  z  + 21 u  x  + 92 u  v x y  z
+
+             2  2  2  3         2  4             3           8       3    2  4
+     - 85 u v  x  y  z  - 76 u v  y  z + 73 u x y  + 86 u x y  + 33 u  x y  z
+
+               2         3  7       6    3         3  2  3             2
+     + 95 u x y  z - 71 u  v  + 83 u  x y  - 83 u v  y  z  + 68 u x y z
+
+            4  2             3       4    2          4         2  5  2
+     + 5 u v  x  y - 29 u x z  + 56 u  v x  y + 5 u y  + 81 u v  x  y
+
+             3           2  2         3    5           3       2  3  2
+     - 26 u y  z - 51 u y  z  + 62 u v  y z  + 88 u y z  - 84 u  v  x  z
+
+           3  3    2       5         4       3  5       3    3       2  4  3
+     + 67 u  x  y z  - 67 v  + 97 u z  - 61 u  v  - 15 u  v y  - 82 u  v  x
+
+               3  4      2  5  2       2  2  2  2       4  3         6  2
+     - 46 u v x  y  z - u  v  z  + 76 u  v  y  z  + 71 u  x  y - 50 v  y  z
+
+           2  5          2  2    2       2  5  2      2  2  6       2  6
+     - 46 u  v  y z + 7 u  v  x y  + 23 u  y  z  - 6 u  x  y  + 34 u  y
+
+           2  5  2       2  2  3       3      2  2       7           3  4
+     + 42 u  v  y  - 38 u  y  z  - 78 u  v x y  z  + 22 u  v x - 84 u  x  z
+
+             4  3       6    2       2  4               3    2       2  5
+     - 19 u y  z  + 25 u  v y  + 39 u  v  x y z - 84 u v  x y  + 96 u  v  x z
+
+            2  2  4         3  4       2  3               2    5       2  6
+     - 6 u v  x  y  z - 45 u  v  + 61 u  v  x y z + 78 u v  y z  - 64 u  y  z
+
+           2  6  2      2    2       2  3        4         3          3
+     - 36 u  x  z  + 5 v  y z  - 63 v  z  - 5 v x  + 36 v x  y - 8 v x  z
+
+             2  2        2             2  2           3           2
+     + 30 v x  y  - 3 v x  y z - 56 v x  z  - 91 v x y  - 70 v x y  z
+
+                 2          3         4         3           2  2           3
+     + 42 v x y z  + 9 v x z  - 21 v y  - 27 v y  z - 79 v y  z  - 22 v y z
+
+             4         3  4  2       3  3  2           4  5           6
+     - 51 v z  - 16 u x  y  z  + 97 u  v  x  y + 70 u y  z  - 75 u y z
+
+           2  3  4       4    5       4  4           2  6       3  7
+     - 49 u  x  z  + 19 u  v z  + 84 u  v  x z - 81 y  z  + 41 u  y
+
+             3    4         3  5           2  5       4      3       2  4  2
+     + 47 u v  y z  - 67 u v  x  y - 84 u y  z  - 23 u  v y z  + 12 u  v  x  y
+
+           2  4  2           2  7       4  3  3           4           6
+     - 51 u  v  x  z - 16 u x  z  + 33 u  v  z  - 93 u v y  z - 70 u v  y
+
+           3    6             3  4       3  4    2         3  4
+     + 19 u  x z  + 39 u v x y  z  - 63 u  v  x z  + 47 u y  z
+
+             4  3           5  2  3         2  4  3       3  2  2         7
+     - 64 u v  x  y z - 89 u  y  z  + 75 u v  x  z  - 23 u  v  y  z - 76 y  z
+
+             2  6       5       4    2  2       2    7       2    2  3
+     + 67 u x  y  + 16 x  + 44 u  v y  z  - 96 u  y z  + 54 u  x y  z
+
+             3  3  3       3    4       2  2  3         4    3           7
+     + 25 u x  y  z  - 74 u  y z  - 91 u  v  x  z + 62 u  v y  z - 11 u z
+
+           8       3    4  2       3  5      3  3  2         2      4
+     - 59 v  + 54 u  v x  y  + 51 u  z  + 2 u  v  x  z - 97 u  x y z
+
+           6  3           2  5       3  3  2         7  2      5  2  2
+     + 13 u  v  x - 31 u x  y  + 69 u  v  y  z - 74 u  x  - 8 u  v  y  z
+
+          3  3  2           7           7          2  4  2       2    5
+     - 4 u  v  x  y z - 79 u  v y + 34 u  v z + 3 u  v  y  + 20 u  v x
+
+           3  6           2  6       3  2  2               6         6        5
+     + 42 u  y  z + 12 u v  x  + 34 u  x  y  z + 97 u v y z  + 76 u x  y - 8 y
+
+               6       4           5  2       3  2  5       3  2       2  3
+     + 56 u v z  - 54 y  z + 63 u x  z  - 33 u  v  y  + 62 y  z  + 96 y  z
+
+           3  4         4    5         2  6         4         2  7
+     - 28 u  v  z + 60 u  x y  - 63 u v  z  - 51 y z  + 30 u v  x
+
+             2  6         2  2  5       6    2       3  2    3
+     - 95 u v  x  y - 61 u  x  z  + 13 u  v z  - 63 u  v  x y  z
+
+           3  2  2  3       5       3  3  2  2       3  6           3    3
+     + 94 u  v  y  z  + 89 z  + 21 u  v  y  z  + 48 u  v  y - 84 u v  x y
+
+           6                 4  2  2       6       5         5         5
+     + 76 u  v y z - 40 u v x  y  z  + 14 u  - 79 u  v - 58 u  x - 95 u  y
+
+           3  3  2       4  5       5         8         3  2  5      4    4
+     + 95 u  v  x  - 23 u  y  + 61 u  z + 26 u  x + 22 u  y  z  + 2 u  v z
+
+          4    2        4  2      3  3  4       3  3    2       4
+     + 3 u  v x  z - 2 u  v  - 9 u  y  z  - 94 u  v  x y  + 86 u  v x
+
+           2  4  3       4           2  4    2       3  3           4
+     - 24 u  v  y  + 57 u  v y - 36 u  v  x z  + 42 u  v  x z - 35 u  v z
+
+           4  2       4           4           4  3           4  4       4  2
+     + 57 u  x  + 28 u  x y + 63 u  x z + 11 u  x  y z + 31 u  x  + 21 u  y
+
+           6  3         3  3  2       4           7           4  2       7
+     - 73 u  x  + 63 u x  y  z  - 71 u  y z - 66 u  y z - 66 u  z  - 44 v  x
+
+           7         6  2       6           6           6  2       6
+     - 81 v  z + 63 v  x  - 67 v  x y + 42 v  x z - 80 v  y  + 19 v  y z
+
+           6  2       5  3       5  2         5  2         5    2       5
+     + 46 v  z  + 27 v  x  + 35 v  x  y + 33 v  x  z + 36 v  x y  + 59 v  x y z
+
+           5    2       5  3       5  2         4  3  2         5    2
+     - 58 v  x z  + 82 v  y  + 96 v  y  z + 55 u  x  y  z - 34 v  y z
+
+           7         3  3       6    3       6  4       5  5       5  4
+     + 76 v  y - 34 u  v  - 95 v  y z  - 96 v  z  - 49 v  x  + 34 v  x  y
+
+           5  4         5  3  2       5  3           5  3  2       5  2  3
+     + 84 v  x  z + 75 v  x  y  + 73 v  x  y z - 47 v  x  z  + 45 v  x  y
+
+          3  4  3       3  2         3  2         3  3    2         4    3
+     + 5 u  y  z  + 72 u  v  x - 40 u  v  y + 77 u  v  x y  z - 66 u  v x
+
+           3  2           8       3    2       3                   4  2
+     - 68 u  v  z - 56 u z  - 15 u  v x  - 32 u  v x y + 35 u v x y  z
+
+           3  3    3       3             3    2       9       3  5  2
+     + 47 u  x  y z  + 17 u  v x z + 87 u  v y  - 56 x  + 48 u  y  z
+
+           3             4    4       2  4    2      3    2       2  3  3
+     - 60 u  v y z + 43 u  v y  + 48 u  v  x y  + 7 u  v z  + 43 u  v  y
+
+           3  3         4    3         3  2         3  2         9       3    2
+     - 61 u  x  - 75 u v  x y  z + 45 u  x  y - 50 u  x  z - 47 u  - 22 u  x y
+
+           6  2           5  3       3             5    2       5  2
+     + 11 u  x  z - 57 u v  y  + 48 u  x y z + 63 u  v z  - 24 u  x  z
+
+          2  4    2         2  4  2         2  6           3    2       4    3
+     + 3 u  v  y z  - 15 u v  x  y  z + 88 u  x  y z - 82 u  x z  + 48 u  v y
+
+           3  3       3  7       3  2         2    2  3         6  3
+     + 46 u  y  + 13 u  z  - 49 u  y  z + 56 u  v x  z  - 85 v x  z
+
+             2  4  2       3    2       3  3       6  2         2  4
+     + 82 u v  x  z  - 66 u  y z  + 18 u  z  + 34 u  x  y + 16 u  v
+
+           3  2  4         8  2           2    4       2  3         3    3
+     + 24 u  v  x  y + 46 u  x  + 61 u v x  y z  - 22 u  v  x + 74 u  v x  z
+
+           2      4       2    4         2  3             7         7
+     - 46 u  v x z  - 45 u  x y  z + 38 u  v  y - 16 u x y  z - 23 u  v x y
+
+           2  3           4             2  4  2           2  4
+     - 48 u  v  z - 37 u v  x y z - 11 u  v  y  z + 72 u v  x  z
+
+           4  2  2  2         4  4         2  2  3  3       2  2
+     - 14 u  v  x  y  + 65 u v  x  z - 78 u  x  y  z  - 87 u  v  x y
+
+             3  2  4       2  2             2  3  2               6       10
+     + 46 u v  x  y  - 13 u  v  x z - 28 u v  y  z  + 26 u v x y z  - 78 y
+
+           3    6       3      2  3       2  2  2           7       2  8
+     + 99 u  y z  + 37 u  v x y  z  - 87 u  v  y  - 54 u v x  + 90 u  z
+
+           2  2          6  2  2       2  2  2           2  2  4
+     - 63 u  v  y z + 5 u  x  y  - 31 u  v  z  - 88 u v x  y  z
+
+             4  3  2       3  2    3       2  3  3  2       2    3
+     + 79 u v  x  z  + 23 u  x  y z  - 65 u  x  y  z  + 90 u  v x
+
+           2    2         2    2           8       2      2       7  3
+     + 66 u  v x  y + 88 u  v x  z - 35 u y  + 74 u  v x y  + 98 u  y
+
+                 2  5       2               2      2       3  6         2  4  3
+     + 58 u v x y  z  - 39 u  v x y z - 20 u  v x z  - 86 u  y  + 37 u x  y  z
+
+           2    3         2  3    2      2  7       2    2         2      2
+     + 31 u  v y  - 17 u v  x  y z  - u v  z  - 52 u  v y  z + 37 u  v y z
+
+           2  2  2    2       2    3         2  3  2        2  7         2  4
+     + 81 u  v  x  y z  - 59 u  v z  - 90 u v  x  y  z + 4 u  v  x - 54 u  x
+
+             3  3           3  4             6           2  2    4       2  3
+     - 20 u v  x  z + 27 u v  x  z - 81 u v x  y + 22 u v  x  y z  - 22 u  x  y
+
+           3  2  2         5  3       2  8       2  3           2  3  3
+     - 71 u  v  x  z + 48 u  v  + 14 u  v  + 17 u  x  z - 93 u x  y  z
+
+           2  2  2       2  2           2    5              6       2  2  2
+     + 63 u  x  y  + 21 u  x  y z - 20 u  v x  z - 7 u x y z  - 12 u  x  z
+
+           2  2  2           2    3         5      2       5  3  2
+     - 51 u  v  x  y z - 21 u  x y  - 72 u v  x y z  + 80 u  v  y
+
+           6    2         2    2         8  2       2      2       4    4
+     - 27 u  v x  z - 74 u  x y  z - 55 u  y  + 55 u  x y z  - 28 u  v x
+
+           5  4         2    3           4  2         2  4       3    3  2
+     + 97 u  x  y - 17 u  x z  + 29 u v x  y  z + 83 u  y  + 49 u  v y  z
+
+           4  2    2       4    4       4    3         4    2  2       4      3
+     + 57 v  x  y z  - 81 v  x y  + 20 v  x y  z - 25 v  x y  z  + 88 v  x y z
+
+           4    4       4  5       4  4        4  3  2       4  2  3
+     + 70 v  x z  - 47 v  y  + 86 v  y  z + 2 v  y  z  - 66 v  y  z
+
+           4    4       4  5       3  6       3  5         3  5         3  4  2
+     - 68 v  y z  + 77 v  z  - 99 v  x  + 63 v  x  y + 13 v  x  z - 10 v  x  y
+
+           3  4           3  4  2       3  3  3       3  3  2         3  3    2
+     - 64 v  x  y z + 60 v  x  z  + 81 v  x  y  - 81 v  x  y  z - 44 v  x  y z
+
+           3  3  3      4  2  3       2  3         2    4  2       2  2  2
+     + 22 v  x  z  + 8 v  x  z  - 65 u  y  z + 69 u  v x  z  - 28 u  y  z
+
+            2  3  3      2    3           5         5         5         5
+     + 7 u v  x  y  - 5 u  y z  + 20 u x y  z - 63 v  x + 61 v  y + 46 v  z
+
+           4  2       4           4           4  2       4           4  2
+     - 36 v  x  - 76 v  x y - 22 v  x z - 55 v  y  - 34 v  y z + 52 v  z
+
+        3  3       3  2         3  2         3    2       3             3    2
+     + v  x  + 87 v  x  y + 11 v  x  z - 11 v  x y  + 88 v  x y z + 94 v  x z
+
+          3  3       3  2         3    2       3  3       2  4       2  3
+     + 6 v  y  + 21 v  y  z + 18 v  y z  + 75 v  z  + 10 v  x  + 18 v  x  y
+
+           2  3         2  2  2       2  2           2  2  2         2    4
+     + 60 v  x  z - 90 v  x  y  + 11 v  x  y z - 91 v  x  z  - 35 u v  x y
+
+           2    3       2    2         2      2       2    3       2  4
+     - 53 v  x y  + 37 v  x y  z + 76 v  x y z  - 44 v  x z  + 67 v  y
+
+           2  3        2  2  2      2    3       2  4         5         4
+     - 72 v  y  z + 2 v  y  z  + 4 v  y z  - 84 v  z  - 60 v x  - 83 v x  y
+
+        3    4       2  4       5    2       4  5         4         3  6
+     + u  x z  + 27 u  z  - 88 u  x y  - 90 u  x  + 26 u v  x + 94 u  v  z
+
+             4           5             4         7           3  2         3  5
+     + 13 u v  y - 41 u v  x z + 83 u v  z + 50 u  y - 19 u v  x  + 89 u y  z
+
+             3             3             3  4       2  7         2  5
+     - 62 u v  x y - 12 u v  x z - 73 u v  z  - 65 u  v  z - 91 u  x  z
+
+             3  2         3           4  2  2       4  3  3         3  2
+     + 48 u v  y  - 84 u v  y z + 13 u  y  z  - 92 u  y  z  - 83 u v  z
+
+             3  2  2  2         2  3         2  3  3        2  2
+     + 95 u v  x  y  z  + 96 u v  x  - 21 u v  x  z  + 6 u v  x  y
+
+           2  4             2  2           8           2    2         2
+     - 98 u  v  x y + 76 u v  x  z - 39 u v  x + 95 u v  x y  - 14 u v  x y z
+
+             4  3         2    2         2  3         5    3         9
+     - 63 u v  x  + 61 u v  x z  + 83 u v  y  + 23 u v  x z  - 32 u v
+
+           6    2       3    2  2         2  2           2    2        2  3
+     - 48 u  x y  - 11 u  v y  z  - 83 u v  y  z + 53 u v  y z  - 6 u v  z
+
+             6             4      2  7         2  3  4           3
+     - 35 u v  x + 52 u v x  - 3 u  v  y - 19 u  v  x  - 40 u v x  y
+
+          2  2  4  2            2  4         5  2  2           3         3  4
+     - 7 u  v  x  z  + 2 u v x y  z  + 51 u v  y  z  + 45 u v x  z + 96 u  x  y
+
+               2  2           2             4    2       2  6
+     - 86 u v x  y  - 88 u v x  y z - 58 u v  x y  + 99 u  v  x z
+
+               2  2       3  2  2  2             3       3  3  2
+     - 21 u v x  z  + 95 u  v  y  z  + 28 u v x y  - 49 u  x  y  z
+
+                 2         5  2  3         4  4               2             3
+     + 92 u v x y  z - 74 u  v  x  - 61 u x  z  + 35 u v x y z  - 31 u v x z
+
+           4  3  2           4           3         5  2  2       6
+     + 84 u  v  x  - 17 u v y  + 17 u v y  z + 23 u  x  z  - 12 u  x y z
+
+               2  2             3         6  3           4         2  2  3
+     + 31 u v y  z  - 52 u v y z  + 57 u v  x  + 44 u v z  + 40 u v  x  y  z
+
+             5       3  4  3         4         2  3  3         2    2  5
+     - 16 u x  + 92 u  x  y  - 37 u x  y - 16 u  v  x  z + 23 u  x y  z
+
+          2  3  2  2         4               3           2  2  4         3  2
+     - 7 u  v  x  y  - 59 u x  z + 69 u v x y  z - 95 u v  x  y  - 47 u x  y
+
+           2  6             3             3  2       6  2  2         2  3
+     + 23 u  v  x y + 58 u x  y z - 56 u x  z  - 28 u  y  z  - 45 u x  y
+
+             2  2           2    2       3    2  2           3  5
+     - 15 u x  y  z - 67 u x  y z  + 70 u  v x  y  z - 60 u v  z
+
+             4  2  2         4    3       3    6         2  3       3  3  2
+     - 10 u v  y  z  + 61 u v  y z  - 13 u  v y  - 62 u x  z  + 63 u  x  y
+
+               4       2  3    2       2  6  2         4  4         4    2
+     + 70 u x y  + 38 u  v  x z  + 81 u  v  x  + 94 u v  z  - 74 u x  y z
+
+               3         2  3    3       4      2  2           2  2
+     + 93 u x y  z + 46 u  v  x y  - 13 u  v x y  z  + 74 u x y  z
+
+           2  5               3           7             4         5
+     + 82 u  v  x + 95 u x y z  - 54 u v x  z + 65 u x z  - 10 u y
+
+           2  6         2  3  2  2         4         3  3  3             7
+     + 60 u  x  y + 67 u  v  x  z  + 11 u y  z + 73 u  v  x  + 83 u x y z
+
+             3  2      2  3       2    2  3           4       3  2  3
+     - 56 u y  z  - u y  z  + 42 u  v x  y  + 49 u y z  + 80 u  x  z
+
+           2    4           8             5           5       3      3
+     - 99 u  v x  z + 41 u v  y + 49 u v x  z - 27 u z  - 94 u  v y z
+
+           4  3  3       6       2  4  2  2       2  3  2           3    3  3
+     + 37 u  v  y  + 88 v  + 86 u  x  y  z  + 54 u  v  x  y z - 39 u  v y  z
+
+          3  5         3  4    2         2    5       2  6  2             7
+     + 7 u  v  y - 30 u  v  y z  + 22 v x  y z  - 80 u  v  y  + 59 u v x z
+
+           3  2  2    2           4  2         3  3  2         4  4
+     - 54 u  v  x  y z  + 99 u v x  z  + 94 u v  x  y  z + 83 u  x  z
+
+             2  5         4    5       4    4         4    3  2      4    2  3
+     + 75 u x  y  z - 57 v  x y  + 88 v  x y  z + 75 v  x y  z  + 7 v  x y  z
+
+           4      4       4    5       4  6       4  5         4  4  2
+     + 61 v  x y z  + 14 v  x z  + 78 v  y  - 43 v  y  z - 39 v  y  z
+
+          4  2  4       4    5       4  6       3  7       3  6        3  6
+     + 7 v  y  z  + 18 v  y z  + 28 v  z  + 58 v  x  + 69 v  x  y + 8 v  x  z
+
+          3  5  2       3  5        3  5  2       3  4  3       3  4  2
+     + 4 v  x  y  - 57 v  x  y z + v  x  z  + 33 v  x  y  + 45 v  x  y  z
+
+           3  4    2       3  4  3       3  3  4       3  3  3
+     + 15 v  x  y z  - 94 v  x  z  - 59 v  x  y  + 16 v  x  y  z
+
+           3  3  2  2       3  3    3    3  3  4       3  2  5       3  2  4
+     - 82 v  x  y  z  + 69 v  x  y z  - v  x  z  + 68 v  x  y  + 44 v  x  y  z
+
+             2  5  2      5  4             6        4  2  2           8
+     - 84 u v  y  z  + 9 u  x  z - 53 u v x  z - 6 u  v  x  + 43 u x z
+
+           4  4             7       2  5  3       4  4  2         3  5
+     + 41 u  x  y + 10 u x z  - 34 u  v  x  + 91 u  x  z  + 48 u v  y
+
+           5    4       2  5  2         3  3  2       2  3  2         4  3  2
+     - 99 u  v z  + 99 u  v  x  - 21 u v  x  y  - 14 u  v  y  z + 36 u  x  y
+
+           3  3  4             6         4  4       6  3           2  5
+     - 32 u  v  x  - 49 u v x z  + 93 u y  z  - 44 u  y  - 74 u v x  y  z
+
+           5  2  2             8         4  3        2  2  5       5    2  2
+     - 79 u  v  x  z + 35 u v y  + 18 u v  y  + 3 u v  y  z  - 24 u  x y  z
+
+             8           8       3    3         3  5  2       3  3  3
+     + 16 u y  z - 91 u v  - 32 u  v x  y - 55 u  x  y  - 61 u  v  y
+
+           4    3  2       5    2  2       2  2  4       2  2    2
+     + 46 u  v x  z  - 30 u  v x  z  + 27 u  v  x  - 38 u  v  x y  z
+
+           2    5         2  3  4         3    3             4    2
+     - 10 u  x z  + 53 u v  x  y  - 36 u v  x y  z + 63 u v x  y z
+
+           3  3    2       2  3      2         4  2    2       3      3
+     + 28 u  v  x z  - 94 u  v  x y z  - 94 u v  x  y z  + 29 u  v x z
+
+             2    6       6    2      8         2  6  2           5    2
+     - 74 u v  x y  + 40 u  x z  - 2 u  y + 95 u  v  z  + 55 u v x  y z
+
+             5    2         4  3  2       2  3    2         3      5
+     - 26 u v  y z  + 79 u v  x  y  - 63 u  v  x y  z + 53 u  v x z
+
+           7    2         3  2    3         2  5         2  6          6    2
+     - 57 u  x z  - 57 u v  x  y z  - 10 u v  x  y + 20 u  v  y z - 7 u  y z
+
+           2    5         3  2         3             3  2         2  3
+     - 36 u  v z  + 84 v x  y  + 77 v x  y z - 46 v x  z  + 63 v x  y
+
+             2  2           2    2         2  3           4          3
+     + 27 v x  y  z - 43 v x  y z  + 72 v x  z  - 64 v x y  + 8 v x y  z
+
+               2  2             3           4         5         4          3  2
+     + 43 v x y  z  + 58 v x y z  - 84 v x z  + 78 v y  - 12 v y  z - 2 v y  z
+
+             2  3           4         5       2  5    2       4      2
+     - 45 v y  z  - 85 v y z  + 58 v z  + 69 u  v  x y  + 90 u  v y z
+
+           3  3  3       3  4  2       3    2  3       3  2  4       2  2  3
+     + 89 u  x  z  + 82 x  y  z  + 80 u  x y  z  + 19 u  x  y  + 98 u  v  y  z
+
+               5  2       2    6      4  2  4         2  4  2       3      4
+     + 85 u v x  y  - 98 u  x y  + 2 u  v  x  + 38 u v  x  y  - 67 u  x y z
+
+           2  5  2         4  4       2    4  2        7         2  2
+     - 14 u  v  x  z + 94 u  y  + 46 u  v y  z  - u v y  z + 24 u  v  x y z
+
+           2  3    3       2  5  2         2  5             8         6  2
+     - 43 u  v  x z  + 99 u  v  x  y - 96 u  x  y z - 65 u v  z - 64 u  y  z
+
+           5  3      4  3         4  3         4  2  2       4  2
+     - 27 v  z  + 5 v  x  y + 84 v  x  z - 31 v  x  y  + 86 v  x  y z
+
+           4  2  2       4    3       4    2         4      2       4    3
+     - 46 v  x  z  - 56 v  x y  + 60 v  x y  z - 51 v  x y z  + 65 v  x z
+
+           4  4       4  3         4  2  2       4  4       3  5       3  4
+     + 46 v  y  - 26 v  y  z - 62 v  y  z  + 10 v  z  - 71 v  x  - 51 v  x  y
+
+           4  4         2  2  3           7       4  2           4    4
+     + 25 v  x  - 96 u v  y  z  + 13 u v y  - 25 u  v  y z - 72 u  x y  z
+
+           2  5    2           3  3       5  3         2    3           6  2
+     + 25 u  v  x z  + 85 u v x  y  - 60 u  v  x - 61 u  v x  y z + 54 v  x  z
+
+             7    4  3  2    3  4             4  2  3         6         6
+     - 32 y z  + u  y  z  - u  x  y z + 34 u v  x  y  - 77 u x  z - 62 x
+
+           7  2         4    2       4  4        2  3  4       2  2  5
+     + 14 u  z  - 97 u v  x z  + 17 u  v  z - 5 u  y  z  + 49 u  x  y  z
+
+           5  4       3  4  3    5  4         2  5        4  3       3  2  3
+     - 48 u  v  - 47 u  v  y  - u  y  z - 13 u  v  y + u v  z  + 29 u  x  y
+
+           6  3           4  3         3    5       3  4             7  2
+     - 16 u  z  + 37 u v x  z  - 50 u v  x y  + 29 u  v  x z - 14 u v  x
+
+             2  2  4       4      4         5  2            3  2  4
+     - 83 u v  x  z  - 36 u  v x y  + 94 u v  x  y z + 6 u v  x  z
+
+             4  2  2       3    2  3      4  4  2         3  2  4       8  2
+     - 54 u v  x  y  - 37 u  v x  z  + 8 u  y  z  + 25 u x  y  z  + 87 u  v
+
+             3  2  3      2  4  2      3        3    2      6      2  3  4
+     - 76 u v  x  y  - 2 u  x  z  - 3 u  v x y z  - u  x y z  + 7 u  v  y
+
+           2  5               2  2    3         3  2            5  3
+     + 84 u  v  x y z - 92 u v  x  y z  + 13 u v  x  y + 2 u v x  y
+
+           2  3  3         3  3    2       6  3         3  2    2
+     - 34 u  v  x  y - 53 u  v  y z  - 15 u  x  y - 33 u  v  y z
+
+               2  4           3  2  3         7             4    2  2
+     + 46 u v x  y  z + 95 u x  y  z  - 75 u v  x z - 39 u v  x y  z
+
+           5  3         3    6       6       3  5         2  2  4       5
+     + 83 u  v  y + 97 u  v z  - 89 y  + 16 u  y  z - 41 u  x  y  - 54 y  z
+
+           4  2       3  3       2  5  2         3    5       2  4         5
+     - 81 y  z  + 22 y  z  + 80 u  v  y  z + 31 u  v z  - 38 y  z  - 50 y z
+
+           4    3       2  2  3         3  4  3       2  5  3       4  2  3
+     - 84 u  x y  + 42 u  x  y  z + 71 u  v  x  - 84 u  v  y  - 47 u  x  y
+
+           4  5         6       7       6      2       6         6         6
+     + 38 u  v  z - 75 z  + 11 u  - 19 u  v y z  + 80 u  v + 14 u  x - 56 u  y
+
+           4  3  2      6         2  2  5       5  2       2  4    3
+     + 29 u  x  z  + 8 u  z + 21 u  v  y  + 80 u  v  + 21 u  x  y z
+
+           2  2  4         5             7           2  3  2  2         2    6
+     + 55 u  v  y  z - 91 u  v x - 21 u v  x y - 85 u  v  y  z  + 41 u x  y z
+
+           5               3  4       5             5  4       4  2  2
+     - 48 u  v y + 83 u x y  z  + 53 u  v z - 87 u v  y  - 78 u  x  y  z
+
+           5  2       2  2  3  2       2  2  3           5          5
+     - 68 u  x  - 87 u  v  x  y  - 61 u  v  x  y z + 27 u  x y - 5 u  x z
+
+           4  2  2             6  2       3  2  4       3  3    3
+     - 77 u  v  x  z + 68 u v y  z  + 28 u  v  x  + 25 u  v  x z
+
+           4  3  2         2  3  2  3       5  2       5             2    6
+     + 15 u  v  x  y - 94 u  x  y  z  + 33 u  y  - 87 u  y z - 60 u v  x z
+
+            2  7         3  3         5  2       4  3       4  5        4  2
+     + 3 u v  y  + 18 u v  y  z + 24 u  z  - 18 u  v  + 65 u  v  x - 8 u  v  x
+
+           2  2  4         4  2         4    5         4  3         2  5    2
+     - 52 u  v  x  z + 37 u  v  y - 20 u  x z  - 93 u v  x  y - 28 u  v  y z
+
+           4  2           2    4         4    2       4             4    2
+     - 96 u  v  z - 42 u v  x y  z - 82 u  v x  + 50 u  v x y - 73 u  v y
+
+           4               7         2  5    2       4    2      2  2  5
+     - 88 u  v y z + 59 u y  z + 22 u  x  y z  - 52 u  v z  - 3 u  v  x
+
+           2  2  5         2  2  4  2       2  2  3  3       2  2  2  4
+     - 65 v  x  y  z + 20 v  x  y  z  - 48 v  x  y  z  + 79 v  x  y  z
+
+           2  2    5       2  2  6       2    7       2    6         2    5  2
+     + 94 v  x  y z  + 68 v  x  z  - 59 v  x y  + 75 v  x y  z - 64 v  x y  z
+
+           2    4  3       2    3  4       2    2  5       2      6
+     + 63 v  x y  z  - 26 v  x y  z  - 35 v  x y  z  + 39 v  x y z
+
+           2    7       2  8       2  7         2  6  2       2  5  3
+     - 55 v  x z  - 23 v  y  - 73 v  y  z - 55 v  y  z  + 29 v  y  z
+
+           2  4  4       2  3  5       2  2  6       4  5      4  3
+     + 91 v  y  z  - 85 v  y  z  - 95 v  y  z  - 89 x  y  + 3 u  x
+
+           4  2           3    4         4  2         3  3  3      2  3  4
+     - 86 u  x  y + 49 u v  x y  z - 80 u  x  z - 59 u  v  z  - 7 u  v  z
+
+               3  3  2             5         4    2       5  3  2
+     - 46 u v x  y  z  - 54 u v x y  z - 96 u  x y  - 49 u  x  z
+
+             2    5       4             4    2       5    2  2       4  3
+     - 59 u v  x y  - 72 u  x y z - 16 u  x z  - 67 u  v y  z  - 11 u  y
+
+           2      2  2       4  2        4    2       2  2  2  3         2    5
+     - 92 u  v x y  z  + 94 u  y  z + 5 u  y z  - 58 u  v  x  y  - 48 u v  x z
+
+           4  3       2  4  3             2  5       5  2           3  2  3  2
+     + 65 u  z  - 73 u  v  x  y + 73 u x y  z  - 48 u  v  x z + 75 u  v  x  y
+
+             3    3  2       3  3          4  2             2    6       3  3
+     - 31 u v  x y  z  - 59 u  v  x - 3 u v  x  y z + 59 u v  y z  + 83 u  v  y
+
+           5  2               4    3      3  3             4  3       3  2  2
+     + 58 u  v  x y - 36 u v x  y z  - 3 u  v  z - 84 u x y  z  - 21 u  v  x
+
+           3  2           3  2            2  4  3       3  2           2  4  4
+     - 80 u  v  x y - 73 u  v  x y z + 9 u  y  z  + 98 u  v  x z + 93 u  v  x
+
+           3  2  2       3  2           2  2  3  2       3    3
+     + 77 u  v  y  - 60 u  v  y z + 31 u  v  x  z  - 47 u  v x
+
+             2    5             4  3       3    2        3    2
+     - 85 u v  x y  z + 23 u v y  z  + 34 u  v x  y - 4 u  v x  z
+
+           3  2  3  2       3  2  2  3       3  2    4       3  2  5
+     + 14 v  x  y  z  - 11 v  x  y  z  + 87 v  x  y z  - 12 v  x  z
+
+           3    6       3    5         3    4  2       3    3  3      3    2  4
+     + 62 v  x y  + 59 v  x y  z + 42 v  x y  z  - 13 v  x y  z  + 5 v  x y  z
+
+           3      5      3    6       3  7       3  6         3  5  2
+     + 61 v  x y z  + 8 v  x z  + 71 v  y  - 16 v  y  z + 37 v  y  z
+
+           3  4  3       3  3  4       3  2  5       3    6       3      2
+     + 45 v  y  z  + 96 v  y  z  - 56 v  y  z  - 55 v  y z  + 31 u  v x y
+
+           3               5  2  3       3      2           5
+     - 81 u  v x y z - 65 u  x  y  + 98 u  v x z  + 94 u v x  y z
+
+           3    2          2  3  3         5  3        5  2  2       3    2  3
+     + 42 u  v y  z - 9 u v  x  y  z - 84 u  v  z + 9 u  v  x  - 92 u  v y  z
+
+               4  4       3  3             2  5  3       3      2
+     - 81 u v x  y  + 64 u  v  x y z - 32 u  v  z  - 37 u  v y z
+
+          3  2  2  3      7  2       3    3       3  4           2  5
+     - 3 u  v  x  z  + 2 u  v  + 67 u  v z  + 39 u  x  + 94 u v y  z
+
+           3  3         2  2    2  2       3  3          2    2  3
+     - 27 u  x  y + 18 u  v  x y  z  + 11 u  x  z - 6 u v  x y  z
+
+           3  2  2           6       3  2           3  4    2         3    2  3
+     + 72 u  x  y  + 87 u v x  - 51 u  x  y z + 10 u  v  x y  - 89 u v  x y  z
+
+           2  2    3        2  3  5       4  2  2       3  2  2         3  6
+     - 73 u  v  x y  z - 3 u  y  z  + 62 u  v  y  - 33 u  x  z  + 72 u v  z
+
+           3    3       2  4  2  2       8         3  3  2       3  3
+     + 81 u  x y  + 48 u  v  x  y  + 11 u  v - 70 v  x  y  + 64 v  x  y z
+
+           3  3  2       3  2  3       4  3    2       3  2  2
+     + 93 v  x  z  + 13 v  x  y  + 32 u  x  y z  - 78 v  x  y  z
+
+           3  2    2       3  2  3       3    4       3    3         3    2  2
+     + 73 v  x  y z  + 79 v  x  z  - 17 v  x y  + 18 v  x y  z + 99 v  x y  z
+
+           3      3       3    4       3  5       3  4         3  3  2
+     - 94 v  x y z  + 73 v  x z  - 20 v  y  - 34 v  y  z - 77 v  y  z
+
+           3  2  3       3  4         3    2         3      4       2  6
+     - 84 v  y  z  - 71 v  x  z + 39 u  x y  z + 94 u  v x z  - 53 u  z
+
+               5  3       3      2       2  2  3  2       3    3      2  4  3
+     - 74 u v y  z  + 76 u  x y z  + 54 u  v  y  z  + 57 u  x z  - 9 u  v  x  z
+
+           3  4       7           7  2       7           7  2       6  3
+     + 78 u  y  + 75 v  x z + 90 v  y  + 12 v  y z - 84 v  z  + 96 v  x
+
+           6  2         3  3         3  2  2       3    3           3  4
+     + 22 v  x  y + 49 u  y  z - 10 u  y  z  + 61 u  y z  - 66 u v y  z
+
+           2    7         7  2       3  4       2    2  4       2  2  2  3
+     - 94 u  x z  - 66 u v  y  - 57 u  z  + 13 u  v y  z  + 32 u  v  x  z
+
+           2  5      2  4           3    5       3  2  3        2  4
+     + 26 u  v  - 8 u  v  x + 95 u x  y z  - 15 u  v  x  y - 4 u  v  y
+
+           2  4        6    3       2  3  2       3  2    3      2  3
+     - 76 u  v  z + 6 u  x z  + 92 u  v  x  - 81 u  v  x z  - 2 u  v  x y
+
+           2  2  2  2         2  3           4  5       2  3  2       6
+     + 31 u  v  x  y  z + 64 u  v  x z - 34 u  z  - 21 u  v  y  - 81 u  v x z
+
+           2  3           2  3  2       6         6         6         5  2
+     - 81 u  v  y z + 86 u  v  z  - 32 v  x + 15 v  y - 57 v  z + 93 v  x
+
+           5           5           5  2       5           5  2       4  3
+     + 82 v  x y - 85 v  x z - 28 v  y  - 90 v  y z - 27 v  z  - 45 v  x
+
+           4  2         4  2         4    2       4             4    2
+     + 20 v  x  y - 49 v  x  z - 48 v  x y  + 51 v  x y z - 56 v  x z
+
+           4  3       4  2        4    2      4  3       3  4       3  3
+     - 20 v  y  - 77 v  y  z - 5 v  y z  + 7 v  z  - 15 v  x  + 62 v  x  y
+
+           2  2  3       2  2  2         2  4  2  2         3  6       5  2
+     + 71 u  v  x  - 80 u  v  x  y - 74 u  v  x  z  + 85 x y  z  + 81 u  v  y z
+
+          2  2  2            7       4  2    2           3  3             7  2
+     + 2 u  v  x  z - 3 u v z  + 10 u  v  x y  z - 67 u v  x  y z + 39 u v  z
+
+           2  2    2         6  2       2  2  3       2  2  2           3  2  4
+     - 91 u  v  x z  - 55 u y  z  - 16 u  v  y  - 98 u  v  y  z + 50 u v  y  z
+
+             3  4         3  2  3       2  2  3       5  2  2       2    3
+     + 55 u v  x  y - 80 u  v  y  + 41 u  v  z  + 46 u  v  y  - 20 u  v x  y
+
+           2  4  2           2    3           7           2    2  2
+     - 10 u  v  x  y z - 55 u  v x  z - 75 u v  y z - 64 u  v x  y
+
+           2    2           2    2  2       2      3       2  2      3
+     - 62 u  v x  y z - 86 u  v x  z  + 67 u  v x y  - 13 u  v  x y z
+
+           2  2    4      2    3  2       2      2         4  2    3
+     + 80 u  v  x z  - 6 u  v x  z  + 11 u  v x y  z - 53 u  v  y z
+
+           2    5         3    3  2             3  3       2        2
+     + 27 u  x y  z - 18 u  x y  z  + 85 u v x y  z  + 78 u  v x y z
+
+           2      3       4  2  4       2    4         4      3       2    3
+     + 38 u  v x z  - 95 u  y  z  - 63 u  v y  - 40 u v  x y z  + 89 u  v y  z
+
+              2  5       6  3         2    2  2           3  5       3    5
+     - 2 u v x  y  - 92 u  y  z + 30 u  v y  z  + 24 u v y  z  + 30 u  v y
+
+          6      2       2      3      2  3  3       2    4       2  5
+     - 2 u  v x y  - 42 u  v y z  - 8 u  y  z  - 97 u  v z  - 78 u  x
+
+               6           5  2  2           3    3       2  4         2    6
+     + 76 u v x  y z - 16 u  v  z  - 44 u v x  y z  + 17 u  x  y + 90 u  v x
+
+           2  4         2  4  2       2  3  2       2  4    2        2  3
+     - 43 u  x  z - 70 u  x  y  + 89 u  x  y  - 66 u  v  x y  z - 3 u  x  y z
+
+           4  2  2  2       2  2  5       2  3  2       2  5  3      8
+     + 67 u  v  x  z  - 66 u  v  z  + 80 u  x  z  - 17 u  x  z  - 9 v  y z
+
+          8  2       7  3       7  2         7  2         7    2       7
+     + 2 v  z  + 78 v  x  + 97 v  x  y + 46 v  x  z - 87 v  x y  + 46 v  x y z
+
+           7    2       7  3       7  2         7    2       7  3       6  4
+     + 65 v  x z  + 93 v  y  - 37 v  y  z - 19 v  y z  + 35 v  z  - 73 v  x
+
+           6  3         6  3         6  2  2       6  2           6  2  2
+     + 62 v  x  y + 97 v  x  z + 23 v  x  y  + 76 v  x  y z + 42 v  x  z
+
+           6    3       6    2         6      2       6    3      6  4
+     - 17 v  x y  + 68 v  x y  z - 27 v  x y z  - 75 v  x z  + 7 v  y
+
+           6  3         6  2  2       2  2  3       3  2  3        4    2  3
+     - 43 v  y  z - 68 v  y  z  - 37 u  x  y  - 83 u  v  x  z + 7 u  v x  y
+
+           2  2  2         5  2             2  2  2  3       2  2    4
+     - 89 u  x  y  z + 87 u  v  x y z + 91 u  v  y  z  + 34 u  v  y z
+
+           2  2    2       2      4         2  2  3       2    4       2    3
+     + 58 u  x  y z  + 22 u  v x y  z + 32 u  x  z  - 61 u  x y  + 83 u  x y  z
+
+             3  4  2       4  2  4       4        3      2    2  2
+     + 26 u v  x  z  - 53 u  v  z  + 43 u  v x y z  - 9 u  x y  z
+
+           2      3       2    4       2  5       2  4  2  2       2  4
+     - 52 u  x y z  + 51 u  x z  - 75 u  y  - 20 u  v  y  z  + 23 u  y  z
+
+             6  2         2  3  2         2  4          3  2  2  2
+     + 66 u v  x  y - 27 u  y  z  - 37 u v  x  y z - 3 u  v  x  y
+
+           5      3         2      4      6    2           8       7  2
+     + 64 u  v x y  - 20 u v  x y z  + 3 u  v x  y - 21 u x  + 37 u  v  x
+
+           2  5       2  4  3         2    4           4  3  2           5    3
+     - 77 u  z  + 89 u  v  y  z - 74 u  v x  y z - 40 u  v  x  z - 37 u v  x y
+
+             6        5           5           5         2  3      3
+     + 24 u v  + 4 u v  x - 39 u v  y + 44 u v  z + 77 u  v  x y z
+
+             4  2       4  2    2       3  5  2           3  2  2       2  4  4
+     - 49 u v  x  - 28 u  v  x y  - 98 u  v  x  + 45 u v x  y  z  - 41 u  v  y
+
+          4    2           4           2    4  2         2  3  2
+     - 6 u  x y  z + 75 u v  x y - 51 u  v x  y  - 51 u v  x  y
+
+           2    2    2         4  2         4           5    3         4  2
+     - 15 u  v x  y z  + 61 u v  y  - 80 u v  y z - 16 u  v x  - 17 u v  z
+
+           8         3  3        3      4       2    6           3  2
+     - 50 x  - 90 u v  x  + 4 u v  x y z  - 58 u  x y  z + 68 u v  x  z
+
+           2  4    3       2  4      2         3               4  5
+     - 15 u  v  x z  + 28 u  v  x y z  - 81 u v  x y z + 77 u v  x
+
+             3    2         3  3       2  4  4         3  2         5    2
+     - 60 u v  x z  + 68 u v  y  + 62 u  v  z  + 11 u v  y  z - 67 u  v x  z
+
+             3    2         3  3         3    5         2  4       4  2
+     - 29 u v  y z  - 25 u v  z  + 19 u v  x z  - 95 u v  x  + 44 u  v  x y z
+
+           4  5         6  3         2  3           2  3           2  2  2
+     + 45 u  x  z - 37 v  y  - 22 u v  x  y + 57 u v  x  z + 18 u v  x  y
+
+             2  2           2  3  5         2  2  2       3  4  2
+     + 51 u v  x  y z + 29 u  x  z  + 49 u v  x  z  - 82 u  v  x  z
+
+           2    3  3       2    3  2           2    3       2  4    3
+     + 57 u  v x  y  + 41 u  v x  y  z + 34 u v  x y  - 37 u  v  y z
+
+             2    2           2    3       2  2  2  4           5  2
+     - 64 u v  x y  z + 97 u v  x z  + 98 u  x  y  z  - 12 u v y  z
+
+             2  5             2  3         7  2        2  2  2        5  3
+     - 67 u v  x  y z - 27 u v  y  z - 83 x  z  - 9 u v  y  z  + 8 u x  z
+
+          2    3         2  4       5    2             5           4
+     + u v  y z  + 11 u v  z  + 21 u  v x  y + 72 u v x  - 56 u v x  y
+
+          4    2  2      3  2  5         6  2             4             3  2
+     + 4 u  v x  y  + 7 u  v  x  + 99 u v  x  z + 53 u v x  z - 63 u v x  y
+
+           2  3  3  2           3               3  2       2  3  4
+     + 37 u  v  x  y  - 63 u v x  y z + 94 u v x  z  - 51 u  v  x  z
+
+               2  3           5  2         2    2  2  2           2  2
+     + 89 u v x  y  - 89 u v x  y  z + 93 u  v x  y  z  - 56 u v x  y  z
+
+           2      5           2    2       2    2  3          2  3
+     + 63 u  v y z  + 73 u v x  y z  - 53 u  v x  y  z - u v x  z
+
+           2    2  4       2    2  4             4             2  2
+     - 76 u  v x  z  - 56 u  v x  y  + 80 u v x y  + 76 u v x y  z
+
+             2  2  3  2       2    3  3           4  4         6  2
+     - 70 u v  x  y  z  + 87 u  v x  z  + 77 u v x  z  - 70 u x  y
+
+                   3       2  3  4               4       2    3    2          5
+     - 25 u v x y z  - 23 u  v  x  y - 26 u v x z  + 19 u  v x  y z  - 7 u v y
+
+           5  4           7             3  2      2  3  3           2  3
+     - 92 u  v  z - 55 u x  y - 36 u v y  z  + 6 u  v  z  + 53 u v y  z
+
+           3  6               4           5         6       3  2  4
+     + 56 u  v  x - 78 u v y z  - 67 u v z  + 88 u x  - 92 v  x  y
+
+           3  2  3         3  2  2  2       3  2    3      3  2  4       3    5
+     + 67 v  x  y  z - 88 v  x  y  z  + 94 v  x  y z  - 4 v  x  z  - 58 v  x y
+
+           3    4         3    3  2       3    2  3       3      4       3    5
+     - 49 v  x y  z + 85 v  x y  z  + 70 v  x y  z  - 52 v  x y z  - 22 v  x z
+
+           3  6      3  5         3  4  2       3  3  3       3  2  4
+     - 96 v  y  + 9 v  y  z + 93 v  y  z  + 81 v  y  z  + 16 v  y  z
+
+           3    5       3  6       2  7       2  6         2  6         2  5  2
+     + 86 v  y z  - 77 v  z  + 83 v  x  + 10 v  x  y - 34 v  x  z - 57 v  x  y
+
+           2  5           2  5  2       2  4  3       2  4  2         2  4    2
+     + 47 v  x  y z - 84 v  x  z  + 20 v  x  y  - 29 v  x  y  z + 55 v  x  y z
+
+          6  4       2  3  5       3  5           5            7
+     - 7 x  y  - 90 u  v  x  - 87 u  x  y - 36 u x  z + 2 u v x  y
+
+             3  5          3  3  3         3  2  4         3    5         3  6
+     - 73 v x  y  z - 8 v x  y  z  + 32 v x  y  z  - 18 v x  y z  + 41 v x  z
+
+             2  7         2  6           2  5  2         2  4  3
+     + 27 v x  y  - 26 v x  y  z - 48 v x  y  z  - 86 v x  y  z
+
+             2  3  4         2  2  5         2    6         2  7           8
+     + 72 v x  y  z  - 51 v x  y  z  - 77 v x  y z  + 18 v x  z  - 15 v x y
+
+               7             6  2           5  3           3  5           2  6
+     - 43 v x y  z + 62 v x y  z  + 51 v x y  z  - 95 v x y  z  - 10 v x y  z
+
+                 7           8         3  4  2         4            4  2
+     - 10 v x y z  - 80 v x z  - 70 v x  y  z  + 31 u x  y z + 7 u x  z
+
+           2  3  2  3         3  3         3  2           3    2       8
+     - 71 u  v  x  y  - 42 u x  y  - 73 u x  y  z + 69 u x  y z  + 90 z
+
+             3  3         2  4         2  3         3  2  2
+     + 24 u x  z  + 55 u x  y  - 49 u x  y  z + 59 u  v  x  y z
+
+               2    5       2    2    3       2  3  3  2       3    3  3
+     - 88 u v x  y z  + 68 u  v x  y z  + 32 u  v  x  z  - 15 u  v x  y
+
+             2    3           4             2  4           5         4  2  2
+     - 23 u x  y z  + 57 u v x  y z + 17 u x  z  + 31 u x y  - 63 u v  x  z
+
+               4         4  6           3  2       2  8           2  3
+     + 75 u x y  z - 38 y  z  + 36 u x y  z  - 76 u  y  + 14 u x y  z
+
+                 4       2  3  3            5       3  5       2  6
+     - 55 u x y z  + 28 u  v  x  y z - u x z  + 89 v  z  + 38 v  x
+
+           2  5         2  5        2  4  2      2  4           2  4  2
+     - 25 v  x  y - 76 v  x  z + 8 v  x  y  - 3 v  x  y z + 13 v  x  z
+
+           2  3  3       2  3  2         2  3    2       2  3  3       2  2  4
+     - 46 v  x  y  + 41 v  x  y  z + 98 v  x  y z  - 84 v  x  z  + 34 v  x  y
+
+           2  2  3         2  2  2  2       2  2    3       2  2  4
+     - 46 v  x  y  z - 49 v  x  y  z  - 70 v  x  y z  - 77 v  x  z
+
+           3    4         6       8           5      2         6
+     - 92 v  y z  + 23 u y  + 76 u  v x - 44 u  v x y  - 93 u x  y z
+
+           4    3  2       9           4  2         3  3       2  3  2  3
+     - 77 u  x y  z  - 11 y  z - 26 u y  z  + 35 u y  z  - 17 u  v  x  z
+
+           5    3         2  4       2      5         3  5             5
+     - 87 u  v y  + 34 u y  z  + 87 u  v x z  + 56 u v  x  z - 14 u y z
+
+           3  3    3       2  3  2  2       6  3       2        4         6
+     + 29 u  v  y z  - 84 u  x  y  z  + 11 x  z  + 25 u  v x y z  - 92 u z
+
+           2  7         2  6  2       2  6           2  6  2       2  5  3
+     + 55 v  x  z - 49 v  x  y  - 24 v  x  y z - 41 v  x  z  - 95 v  x  y
+
+           2  5  2         2  5    2       2  5  3       2  4  4
+     + 35 v  x  y  z + 75 v  x  y z  - 12 v  x  z  + 96 v  x  y
+
+           2  4  3         2  4  2  2       2  4    3       2  4  4
+     + 60 v  x  y  z - 25 v  x  y  z  + 24 v  x  y z  - 61 v  x  z
+
+           2  3  5       2  3  4         2  3  3  2       2  3  2  3
+     - 25 v  x  y  - 52 v  x  y  z + 80 v  x  y  z  - 43 v  x  y  z
+
+           2  3    4       2  3  5       2  2  6       7         4  3
+     - 62 v  x  y z  - 36 v  x  z  + 49 v  x  y  - 90 v  - 20 u x  z
+
+             2    4         6    2         4    4       5      2
+     + 75 u v  y z  - 95 u v  x y  - 83 u v  x z  + 79 u  v x z
+
+           3  2  2  2       3  3  2  2       3      4       2  3  2    2
+     + 49 u  v  x  z  - 74 u  v  x  y  + 70 u  v y z  + 67 u  v  x  y z
+
+           2      3  2       5               3  4  2       2  2  4  2
+     - 29 u  v x y  z  + 69 u  v x y z + 27 u  y  z  + 15 u  x  y  z
+
+               2  6         7           3  4         2      5
+     - 56 u v y  z  + 97 u x  z - 10 u v  y  z - 56 u  v x y
+
+           2  3  2  2           2  3  4       6  3         5  4        5  2
+     + 77 u  v  x  y  z + 20 u v  x  z  + 80 u  v  y - 16 u  x  + 6 u x  y  z
+
+           5    3       7  2         2  3    3           5  3       3  3
+     + 42 u  v z  - 95 u  v  z - 81 u  v  x y  z + 84 u x  y  - 31 v  x  z
+
+           3  2  2       3  2           3  2  2       3    3       3    2
+     + 57 v  x  y  + 98 v  x  y z - 80 v  x  z  - 51 v  x y  + 39 v  x y  z
+
+          3      2      3    3       3  4       3  3         3  2  2
+     + 3 v  x y z  + 6 v  x z  + 60 v  y  + 17 v  y  z + 93 v  y  z
+
+           3    3       3  4       2  5       2  4         2  4         2  3  2
+     - 80 v  y z  + 88 v  z  - 40 v  x  - 10 v  x  y + 67 v  x  z - 40 v  x  y
+
+           2  3           2  3  2       2  2  3      2  2  2         2  2    2
+     - 82 v  x  y z - 82 v  x  z  - 69 v  x  y  + 3 v  x  y  z + 69 v  x  y z
+
+           2  2  3       2    4       2    3         2    2  2       2      3
+     - 37 v  x  z  + 42 v  x y  - 51 v  x y  z - 80 v  x y  z  - 72 v  x y z
+
+           2    4       2  5       2  4         2  3  2       2  2  3
+     + 36 v  x z  + 71 v  y  + 54 v  y  z + 84 v  y  z  - 53 v  y  z
+
+           2    4         2    3        2  5         6         5           5
+     + 65 v  y z  - 24 u v  x y  z - 9 v  z  + 50 v x  - 19 v x  y - 18 v x  z
+
+             4  2         4             4  2         3  3         3  2
+     - 45 v x  y  - 30 v x  y z + 73 v x  z  - 37 v x  y  + 83 v x  y  z
+
+             3    2         3  3         2  4         2  3           2  2  2
+     - 15 v x  y z  - 80 v x  z  - 40 v x  y  + 18 v x  y  z + 64 v x  y  z
+
+             2    3         2  4           5           4             3  2
+     + 60 v x  y z  + 80 v x  z  - 33 v x y  + 67 v x y  z - 14 v x y  z
+
+             6  3           6           3  2  2         2    5        4  4  2
+     - 75 u y  z  - 15 u v y  z - 15 u v  x  y  z - 29 u  v y  z + 6 u  v  z
+
+             3  6       5      2         6  2             7      5    2
+     - 59 u v  y  - 71 u  v y z  + 85 u x  z  + 27 u v y z  + 4 u  v y  z
+
+           2  3    4      3  2    3      6  2           4    5       4  2    2
+     + 64 u  v  x y  + 4 u  v  x y  + 3 u  x  y z + 52 u  y z  - 81 u  x  y z
+
+           4    3  2           6       4        2       2  3    2  2
+     - 14 u  v y  z  + 25 u x y  - 86 u  v x y z  + 41 u  v  x y  z
+
+           3  2    2        5  3           6             5  3
+     + 11 u  v  x y  z - 8 u  x  z + 81 u v  x y z + 93 u  x  y
+
+               3  2  3       2    3  3         3  4  2         2  3  2  2
+     + 68 u v x  y  z  - 94 u  v y  z  - 73 u v  x  y  - 99 u v  x  y  z
+
+               8       5      3         2    4  2         2    3  2
+     + 46 u v z  - 96 u  v y z  + 40 u v  x y  z  - 23 u v  x y  z
+
+           6      2         2  5         4    4         5    3
+     - 64 u  x y z  - 96 u v  x  z - 93 u  v x  y - 41 u  v y  z
+
+               3  3         5  2  2        3  2  4       2    5       2    4
+     - 31 u v x  y  z - 19 u  v  x  y - 8 u  v  y  + 39 v  x y  + 58 v  x y  z
+
+           2    3  2       2    2  3       2      4       2    5       2  6
+     - 87 v  x y  z  + 66 v  x y  z  + 44 v  x y z  + 88 v  x z  - 20 v  y
+
+           2  5         2  4  2       2  3  3       2  2  4       2    5
+     - 84 v  y  z - 23 v  y  z  + 68 v  y  z  - 98 v  y  z  + 74 v  y z
+
+           2  6        6           6           5  2       3  4
+     - 15 v  z  - 4 v x  y + 34 v x  z + 26 v x  y  - 90 u  v  x y z
+
+             6  3         2  2  4       5  2           2  3    4       2  7
+     + 39 u v  y  - 14 u x  y  z  - 96 u  x  y z - 94 u  v  x z  + 40 u  x
+
+             6    2       2    6           3    4       10       5  2  2
+     + 27 u v  x z  + 48 u  v z  - 46 u v x  y z  - 33 z   - 37 u  x  y  z
+
+           2  3    4       7  2         6  2  2       4  2      2       5  2  2
+     - 36 u  x  y z  - 42 u  x  z - 43 u  v  x  + 54 u  v  x y z  + 85 u  x  y
+
+                 4           5         6         5           4  2         3  3
+     + 83 v x y z  + 94 v x z  + 77 v y  + 97 v y  z - 76 v y  z  + 19 v y  z
+
+           4  3  3         2  4           5        6       3      5
+     + 21 u  x  z  - 32 v y  z  + 79 v y z  - 4 v z  + 35 u  v y z
+
+          3  2      2       4      3         4    3         4  2  2
+     + 5 u  v  x y z  + 94 u  x y z  - 18 u v  x y  + 97 u x  y  z
+
+           3    4  2       2  5  2       2  3  3  2         6    2
+     + 96 u  v x  z  - 96 u  x  y  + 37 u  v  y  z  + 45 u v  y z
+
+               3    2       7       5    2           4  3           5  3
+     + 64 u v x  y z  - 37 x  - 63 u  x y  z - 25 u x  y  z - 34 u v  x
+
+           2  6         2  3  4           6  2         5    3         9
+     - 44 u  x  z + 63 u  v  y  z - 86 u v  y  z - 55 u  x y  - 14 u x
+
+             4  4       7  2         4  5       2  3  5      3  6       3  5
+     + 87 u x  y  - 69 x  y  - 41 u v  y  + 57 u  v  y  + 3 u  v  - 41 u  v  x
+
+           5  4       2  3  5         8           4    3         4  3  2
+     - 82 u  y  - 53 u  v  z  + 90 u x  y - 62 u x  y z  + 47 u v  y  z
+
+             2    2  4         4  4        3  2  3             4  4
+     - 82 u v  x y  z  - 10 u v  y  z - 9 u  v  y  z - 48 u x y  z
+
+          2  4  3       2  3    4       5    3         3    4         7  2
+     + 9 u  x  y  + 99 u  v  y z  + 56 u  x y  z + 73 u  v x  z - 99 u  y  z
+
+           3  4  2       5    3       3  2  2  3    5      2       2  5  2
+     - 40 u  x  y  + 88 u  x z  - 74 u  v  x  y  - u  x y z  + 13 u  x  z
+
+           7  2       6         7       3    2  3       8         5  2
+     + 89 u  y  + 78 y  z - 27 y  + 56 u  v x  y  - 52 u  z + 25 y  z
+
+           4  3         6           2  6         2  3  2  3         5  4
+     + 30 y  z  + 65 u v  x y - 42 u  v  y + 27 u  v  y  z  + 77 u y  z
+
+           3  4       3    3  2         2  5       3    2  4         6
+     + 17 y  z  + 80 u  v x  y  z - 65 y  z  - 75 u  v x  y  + 13 y z
+
+           2  2  5         2  3  3         5    2  2       5    2           7
+     - 68 u  v  x  z + 43 u  x  y  z + 84 u  v x  y  - 94 u  v x  y z + 88 z
+
+           3  2  3  2       8       3  2  4       7         7         7
+     + 90 u  v  x  z  - 96 u  + 74 u  x  z  - 67 u  v - 85 u  x - 55 u  z
+
+           2  3  4       6  2       6  2  2       2  4  3       2  2  5
+     - 12 u  x  y  - 64 u  v  - 85 u  v  y  + 86 u  x  z  - 67 u  v  x  y
+
+             3  5       2  4  4       6           6           2  4    2
+     + 42 u x  y  + 66 u  x  z  + 90 u  v y - 80 u  v z + 41 u  x  y z
+
+           3  3  3           6  3       6             8         6
+     + 98 u  v  x  z - 53 u v  z  + 36 u  x y + 77 u x  z - 86 u  x z
+
+           2  2  6       2  4  2         6  2       4  2    2           2  4  2
+     + 11 u  v  x  + 24 u  x  y  z + 97 u  y  - 71 u  v  x z  + 87 u v x  y  z
+
+           5  2         5  2         5  3             3  5       5  2
+     - 12 u  v  x - 88 u  v  y + 71 u  y  z + 85 u v x  z  - 57 u  v  z
+
+           5    2       3    2    2         5  2       5             2  7
+     - 75 u  v x  + 72 u  v x  y z  + 16 u x  y  - 71 u  v x y - 10 u  y  z
+
+           5               3  5           7  2       5    2         2  2  5
+     + 21 u  v x z - 15 u v  y  z - 85 u x  y  - 84 u  v y  + 99 u v  x  y
+
+           5             2  2  3  3       2  2  5       2    5         5  3
+     - 47 u  v y z - 51 u  v  x  y  + 73 u  x  y  - 95 u  v x  y - 97 x  y  z
+
+             2  3  4      5  4      3  5           5  2        5    3
+     + 97 u x  y  z  - 3 u  z  + 7 u  v  x y - 66 u  x  y + 7 u  y z
+
+           5             5    2       5  3       3  3  4       5  2
+     - 17 u  x y z - 32 u  x z  - 39 u  y  - 38 u  x  y  - 75 u  y  z
+
+           5    2       5  3       4  4       2  2  4          4  3
+     + 82 u  y z  - 93 u  z  - 19 u  v  - 62 u  v  x  y z + 3 u  v  x
+
+             3  6         3  4         4  3         8  2       4  3
+     - 16 u x  z  - 36 u x  y  z + 65 u  v  y - 74 y  z  - 96 u  v  z
+
+           2  2  4  2       5  2  2    4  2           3  6         2  2  2  4
+     + 99 u  v  x  y  - 36 u  y  z  + u  v  x y - 90 u  x  z + 35 u  v  x  y
+
+           2  2    4       9           7           4      2       4
+     + 21 u  x  y z  + 12 u  y + 60 u x  y z + 49 u  v x y  + 76 u  v x y z
+
+          2  2  2  3       4      2       4  4             2  6         5  4
+     + 2 u  x  y  z  - 98 u  v x z  + 77 u  v  x + 39 u v x  y  + 31 u v  x
+
+           2  2  3  3       4    3       4  2  3         8      3  2    3
+     + 55 u  v  x  z  - 19 u  v z  - 90 u  v  y  + 14 x z  + 7 u  v  y z
+
+           4  3         2  2  3    2       4  2  2       2  2  3  2
+     - 25 u  x  z - 42 u  v  x  y z  + 58 u  x  y  + 30 u  x  y  z
+
+           4  2           4  2  2           5  3       2  2  3  2
+     + 34 u  x  y z + 56 u  x  z  - 87 u v x  z  - 80 u  v  x  y  z
+
+             2  6           7           6             5  2           4  3
+     + 60 v x  z  + 68 v x y  + 25 v x y  z - 14 v x y  z  - 87 v x y  z
+
+               3  4           2  5             6         8         6  2
+     - 88 v x y  z  + 11 v x y  z  - 58 v x y z  + 10 v y  + 19 v y  z
+
+             5  3         4  4         3  5         2  6           7         8
+     + 88 v y  z  + 97 v y  z  + 42 v y  z  - 44 v y  z  - 37 v y z  - 82 v z
+
+             5             4  3         4  2           4    2         4  3
+     - 90 v x  y z + 27 v x  y  + 39 v x  y  z - 36 v x  y z  + 63 v x  z
+
+             3  4         3  3           3  2  2         3    3        3  4
+     + 35 v x  y  + 16 v x  y  z + 56 v x  y  z  - 73 v x  y z  - 2 v x  z
+
+             2  5         2  4           2  3  2         2  2  3         2    4
+     + 72 v x  y  - 76 v x  y  z + 84 v x  y  z  + 23 v x  y  z  - 87 v x  y z
+
+             2  5           6           5           5  2       4  5
+     + 25 v x  z  + 18 v x y  + 30 v x y  z + 11 v x  z  - 86 u  v
+
+           4      2       4    2        4    2  2       4    3       2  2  2  4
+     - 54 u  x y z  + 94 u  v x  y z - u  v x  z  + 40 u  x z  + 22 u  v  x  z
+
+           2    2  4          3  5       2  2  2    3      4    3
+     - 39 u  x y  z  - 7 u v x  y  + 97 u  v  x  y z  + 9 u  y z
+
+             5  3         4  4         3    4         3  5         7  2
+     - 71 u v  y  z + 17 u  z  + 83 u x  y z  + 69 u x  z  + 66 u x  z
+
+          3  4         4  4         3  4           5    2         3  3  2
+     + 3 u  v  x - 85 u  v  y + 13 u  v  y + 94 u x  y z  - 23 u v  x  z
+
+           3  3  2      3    5         3  3           2  2  2  2  2
+     + 70 u  v  y  - 5 u  v x  z + 46 u  v  y z - 75 u  v  x  y  z
+
+           3  3  2         4  2  3       2    3  3       3  2  3
+     - 97 u  v  z  - 78 u v  y  z  + 94 u  x y  z  + 23 u  v  x
+
+           2    4  2       3  2  2         2      2  3       6  4
+     - 92 u  x y  z  - 94 u  v  x  y - 80 u  v x y  z  - 66 u  v
+
+           4  2    3       3  2    2      3  2    2       2  2  2  3
+     + 82 u  v  x y  - 64 u  v  x y  - 4 u  v  x z  - 35 u  v  x  y  z
+
+           3  2  4         5  3           5  4       3  2  3         4    4
+     - 46 u  v  z  + 87 u v  x  z - 60 u v  z  - 53 u  v  z  - 10 u v  y z
+
+           4  3           3    4           6  2       4    3
+     - 79 u  v  x y + 93 u  v x  - 37 u v x  y  + 46 u  v x  y
+
+           2  2    2  3       3    2  2         2  4  2       3    2  2
+     + 45 u  v  x y  z  - 72 u  v x  y  + 16 u x  y  z  + 47 u  v x  z
+
+           2  7       3      3         9       3      2         3        2
+     + 15 u  y  - 41 u  v x y  + 88 y z  + 90 u  v x y  z + 60 u  v x y z
+
+           2  2    3  2       3    4         3    4       3    3
+     - 30 u  v  x y  z  + 94 u  v x  y - 31 u  v y  + 52 u  v y  z
+
+           2  2    4         3    4      2    6       3  5        5  3
+     + 12 u  v  x y  z - 58 u  v z  - 2 u  x z  + 47 u  x  - 8 u v  x  y
+
+           2  2    5       2      5           7       3        4         5    2
+     - 18 u  v  x y  + 55 u  x y z  + 88 u y z  + 70 u  v x y z  + 52 u v  x z
+
+           3    5         3  3            7         3  3  2       4  2    2
+     - 33 u  v y  z - 27 u  x  y z + 3 v y  z - 99 u  x  z  - 62 u  v  y z
+
+           6             6    2       2  2  5         4  3  2           7
+     - 65 v  x y z - 62 v  x z  + 33 u  v  y  z - 54 u  v  y  - 47 v x z
+
+           3  2    2         3    4       4  3  3       3    4       3    3
+     + 48 u  x  y z  + 63 u v  x y  - 15 v  y  z  + 59 u  x y  + 92 u  x y  z
+
+             5  2  2       4      3       3    2  2       3      3
+     + 27 u v  x  y  + 22 u  v x y  - 43 u  x y  z  + 96 u  x y z
+
+           2  2  5       4    3           2    5  2       2  2  6       3  5
+     + 52 u  y  z  + 53 u  v x  y z + 26 u  x y  z  + 34 u  v  y  + 85 u  y
+
+           3      3           6  2         3    2  4       3  4         3  3  2
+     + 79 u  v x y  z - 46 u x  y  z + 22 u  v y  z  + 63 u  y  z + 78 u  y  z
+
+           3  2  3       2  2    5       2  6       4  3          2  2    5
+     - 50 u  y  z  - 98 u  x  y z  - 59 u  v  + 10 u  v  x z + 9 u  v  x z
+
+             6  3       2  2      4       2  4  2       4  3           2  4
+     + 92 u x  y  - 23 u  v  x y z  + 34 u  v  x  - 75 u  v  y z + 23 u  v  x z
+
+             7         5  2    2       2  2    5       2  4  2         7
+     + 15 u v  z + 44 u  v  y z  - 25 u  v  y z  - 68 u  v  z  + 30 u v  y
+
+           2  3  3        7         2  3    2       2  2  2  4         2    5
+     - 54 u  v  x  - 3 u v  x + 24 u  v  x y  - 71 u  v  y  z  - 76 u x  y z
+
+             6    2       4  6       3    2  4       2  3    2       2  2  3  3
+     + 73 u x  y z  - 21 u  z  - 60 u  v x  z  - 58 u  v  y z  - 37 u  v  y  z
+
+           6                 5  2  2       2  2  3         2    6
+     + 91 u  v x y z - 67 u v  x  z  + 62 u  v  x  y - 14 u  y z
+
+           2  2  4  2       2  2    3       2    6           6
+     + 15 u  v  y  z  - 25 u  v  x y  - 58 u  v x  z - 65 u v  y z
+
+           2  2      2       2  2  4         4    2         2    6
+     - 32 u  v  x y z  - 92 u  v  y  - 61 u v  x y  z - 22 u  v x  y
+
+             2  6         6  3           4  2           2  4             5
+     + 61 u x  z  - 33 u x  z  + 51 v x y  z  + 78 v x y  z  - 70 v x y z
+
+               6         7        6           5  2         4  3         3  4
+     + 18 v x z  - 98 v y  + 2 v y  z - 97 v y  z  + 26 v y  z  + 11 v y  z
+
+             2  5           6        7           3  3       2  2    3
+     + 84 v y  z  + 91 v y z  - 9 v z  - 41 v x y  z  - 55 u  v  y z
+
+           2  2  4         6             6  2      2    4         2    7
+     - 63 u  v  z  - 40 u v  x z - 58 u v  y  - 3 u  v x  y + 83 u  v x
+
+           2    3  2       6  2  2       2  2  6      2    2  2
+     - 93 u  v x  y  - 49 u  x  z  - 79 u  v  z  + 4 u  v x  y  z
+
+           4      2         7  3       2  2  6         6  2       2        3
+     + 47 u  v x y  z - 84 y  z  + 14 u  x  z  + 16 u v  x  + 93 u  v x y z
+
+           3  5           2    5       2    3  2         5  2         2    2  3
+     - 31 u  x  y z - 57 u  v y  - 86 u  v y  z  + 11 u v  x  y + 44 u  v y  z
+
+           2  6       2    5           2  4  3       2  3  4       2  3  3
+     + 96 u  x  - 17 u  v x  y z - 89 v  x  z  - 90 v  x  y  - 27 v  x  y  z
+
+           2  3  2  2       2  3    3       2  3  4       2  2  5
+     - 62 v  x  y  z  - 74 v  x  y z  + 30 v  x  z  - 30 v  x  y
+
+           2  2  4         2  2  3  2       2  2  2  3      2  2    4
+     + 44 v  x  y  z - 86 v  x  y  z  - 49 v  x  y  z  - 3 v  x  y z
+
+           2  2  5       2    6       4  2  4       2    5         2    4  2
+     - 87 v  x  z  + 99 v  x y  - 48 u  x  y  - 51 v  x y  z - 84 v  x y  z
+
+           2    3  3       2    2  4       2      5       2    6       2  7
+     + 18 v  x y  z  + 42 v  x y  z  + 98 v  x y z  - 71 v  x z  - 77 v  y
+
+           2  6         2  5  2       2  4  3       2  3  4       2  2  5
+     - 24 v  y  z - 97 v  y  z  + 40 v  y  z  + 82 v  y  z  + 65 v  y  z
+
+           2    6       2  7         8         7           7           6  2
+     - 37 v  y z  - 64 v  z  - 68 v x  + 20 v x  y + 18 v x  z + 26 v x  y
+
+             6             6  2         5  3         5  2           5    2
+     - 65 v x  y z + 53 v x  z  + 60 v x  y  - 77 v x  y  z - 42 v x  y z
+
+             5  3         4  4        4  3           4  2  2         4    3
+     + 51 v x  z  - 65 v x  y  - 3 v x  y  z - 57 v x  y  z  + 71 v x  y z
+
+             4  4         3  5         3  4           3  3  2         3  2  3
+     - 84 v x  z  - 25 v x  y  - 74 v x  y  z - 76 v x  y  z  + 69 v x  y  z
+
+             3    4         3  5         2  6         2  5           2  4  2
+     + 38 v x  y z  + 73 v x  z  - 46 v x  y  + 31 v x  y  z - 53 v x  y  z
+
+             2  3  3         2  2  4       8         2  5         2  4
+     + 84 v x  y  z  + 37 v x  y  z  + 35 x  y + 85 u  x  y - 99 u  x  y z
+
+           4  5         6  2           4  2  3      2  3  3       2  3  2
+     - 12 u  v  y - 85 u  v  x y + 33 u  v  x  + 5 u  x  y  - 52 u  x  y  z
+
+           2  3    2       10         6  2       2  3  3       4    2  3
+     - 38 u  x  y z  - 38 v   - 18 u v  z  + 48 u  x  z  + 52 u  v x  z
+
+           3  4    2       2    5  2      4  3  2         4  5       2  2  2  2
+     - 91 u  x  y z  - 61 u  v x  y  + 2 u  v  z  + 96 u v  z  - 46 u  x  y  z
+
+           4    3             6         5  2  2        5  2  3       5    4
+     + 73 u  v x  z + 52 u x y  z - 79 v  x  y  z + 6 v  x  z  - 31 v  x y
+
+           5    3         5    2  2       5      3       5    4       5  4
+     + 32 v  x y  z - 14 v  x y  z  + 63 v  x y z  - 63 v  x z  - 90 v  y  z
+
+           5  3  2       5  2  3       5    4       5  5       4  6
+     + 67 v  y  z  + 18 v  y  z  - 26 v  y z  - 76 v  z  + 14 v  x
+
+           4  5         4  5         4  4  2       4  4           4  4  2
+     - 39 v  x  y - 69 v  x  z - 26 v  x  y  + 98 v  x  y z - 92 v  x  z
+
+           4  3  3       4  3  2         4  3    2       4  3  3       4  2  4
+     - 64 v  x  y  - 14 v  x  y  z + 31 v  x  y z  + 67 v  x  z  - 58 v  x  y
+
+           4  2  3         4  2  2  2       4  2    3       4  2  4
+     + 86 v  x  y  z - 95 v  x  y  z  + 33 v  x  y z  + 80 v  x  z
+
+           5  2    2       2  2  4      2  4  4      5  3          5
+     + 10 v  x  y z  + 84 u  x  z  + 4 u  x  y  - u x  y  z + 2 u v  x y z
+
+           2    5       2    4    2      2    3  2         5    2
+     + 90 u  x y  - 90 u  v x  y z  - 6 u  x y  z  - 10 u v  x y
+
+           2    4  2         2  5          2  7       2  4  2         5  4
+     - 45 u  v x  y  z + 93 u  y  z - 9 u x  y  + 89 u  y  z  + 50 u x  y
+
+           2    4  3      2  2  4         4      2      2    5         7
+     - 81 u  v x  y  - 8 u  y  z  - 19 u v  x y z  + 8 u  y z  - 49 u v
+
+           4  2  3      3    3             5  2           6         6    3
+     + 54 u  v  z  - 3 u  v x  y z + 29 u v  x  z + 45 u v  z - 38 u  y z
+
+           2    5  2         5  2         5               6  2        5
+     + 42 u  v x  z  - 45 u v  x  - 40 u v  x y - 63 u x y  z  - 8 u v  y z
+
+             5  2       2    3  3           5  2           3  4
+     + 84 u v  z  - 89 u  v x  y  z - 35 u v  y  z - 55 u v  x  y z
+
+           4    2    2       2    3  4         4  2         2    4  3
+     + 63 u  v x  y z  + 93 u  v x  y  + 14 u v  y  z - 77 u  v x  z
+
+           4  2  2         3  4  3         4    2         3  4         2      5
+     - 79 u  v  x  y + 13 u  v  z  + 16 u v  y z  - 49 u v  x  - 22 u v  x y z
+
+            3  3           3  2  2       3  7         3  2             3  2  2
+     - 2 u v  x  y + 41 u v  x  y  + 38 v  z  + 43 u v  x  y z - 84 u v  x  z
+
+           5  2  3         3    2           3      2           5  2
+     + 99 u  v  z  - 30 u v  x y  z + 82 u v  x y z  - 82 u x y  z
+
+             3    3       2    3  4      4  3           3  4       5  5
+     + 70 u v  x z  + 51 u  v x  z  - u v  x  z + 66 u v  y  - 51 u  v
+
+             4  4         3  3  2  2       3    4           2    3    3
+     + 50 u v  x  y + 11 u  v  x  z  - 96 u  v x  y z + 79 u  v x  y z
+
+             4  4         3    3       3    3  2         2  5         2  4
+     + 93 u v  x  - 76 u v  y z  - 27 u  v x  z  - 84 u v  x  + 26 u v  x  y
+
+            5  2  2         5  3         2  3             2  2  3
+     - 2 u x  y  z  + 53 u v  z  - 81 u v  x  y z - 80 u v  x  y
+
+               3  5       2    3  2  2       3  3  2  2         3  4
+     + 48 u x y  z  + 52 u  v x  y  z  - 91 u  x  y  z  + 52 u x  y
+
+           6    2         8           7  2         6  3         5  4
+     - 50 v  x y  - 34 v y  z + 38 v y  z  + 63 v y  z  + 18 v y  z
+
+             4  5         3  6         2  7           8         9
+     + 98 v y  z  + 50 v y  z  + 84 v y  z  - 89 v y z  + 50 v y
+
+           2    2  3  2       2    2  4         2    2  5         5    3
+     + 90 u  v x  y  z  - 79 u  v x  y  z + 55 u  v x  y  + 73 u x  y z
+
+           9       8         3  2    4       2      6       7  2       6  3
+     + 35 y  + 79 y  z - 49 u  v  x z  + 57 u  v x y  + 57 y  z  + 55 y  z
+
+           5  4       4  5         3  6         5  4       2    2  5
+     - 27 y  z  + 43 y  z  - 62 u y  z  + 58 u x  z  - 12 u  v x  z
+
+             2  3  4       3  6       2  7         8         2  2  5       10
+     + 25 u v  y  z  + 61 y  z  - 18 y  z  + 74 y z  + 40 u x  y  z  + 11 u
+
+          9         2    2    4       9         2    2  2  3       9
+     - 3 u  v + 49 u  v x  y z  + 37 u  x + 37 u  v x  y  z  + 44 u  z
+
+           8           8           8           8           8
+     - 79 u  v y - 52 u  v z - 87 u  x y - 12 u  x z + 44 u  y z
+
+           2      4  2       8  2         4  4        7  3       2  3  5
+     + 86 u  v x y  z  - 82 u  z  + 22 u x  y  z + 5 u  v  - 21 u  x  y
+
+           7  2      7    2         4  5       7             7    2
+     - 20 u  v  y + u  v x  + 84 u x  y  - 68 u  v x z + 97 u  v y
+
+           7             7  3       2      5         7  2         7    2
+     - 16 u  v y z + 13 u  x  - 27 u  v x y  z - 39 u  x  y + 31 u  x y
+
+           7             7    2       7  3         4  2  3       2        5
+     - 38 u  x y z - 15 u  y z  + 94 u  z  + 82 u x  y  z  + 50 u  v x y z
+
+           6  3           4  3  2       6  2           6  2  2
+     - 99 u  v  z + 51 u x  y  z  + 93 u  v  y z + 43 u  v  z
+
+           2      2  4       2      3  3       10       6      2       6    3
+     + 10 u  v x y  z  + 28 u  v x y  z  - 27 x   - 11 u  v x z  - 49 u  v y
+
+           6    2         2    7      6    3         2  6         6  4
+     - 57 u  v y  z + 34 u  x y  + 6 u  v z  - 18 u x  y  z + 41 u  x
+
+             9       6  3         2    7       6    2         6  4
+     - 96 v z  - 26 u  x  z + 24 u  v y  - 33 u  x y  z + 76 u  y
+
+          2      6       5  4         5  4         5  3  2       5  3
+     - 8 u  v x z  + 56 u  v  x + 68 u  v  y - 93 u  v  x  - 59 u  v  x y
+
+               2  6       5  3           5  3           5  2    2
+     + 92 u x y  z  - 62 u  v  x z + 12 u  v  y z + 61 u  v  x y
+
+           2    4  3       5  2  3       2    5  2       5    4       6  3
+     - 38 u  v y  z  + 22 u  v  y  + 28 u  v y  z  + 32 u  v x  + 31 x  y  z
+
+           6  2  2      6    3       6  4       5  5       5  4         5  3  2
+     - 45 x  y  z  - 9 x  y z  + 67 x  z  - 43 x  y  - 41 x  y  z + 82 x  y  z
+
+           5  2  3       5    4       5  5       4  6       4  5
+     - 86 x  y  z  - 69 x  y z  + 83 x  z  - 59 x  y  - 82 x  y  z
+
+           4  4  2       4  3  3       4  2  4       4    5       4  6    3  7
+     + 53 x  y  z  - 66 x  y  z  + 40 x  y  z  - 60 x  y z  - 83 x  z  - x  y
+
+           3  6         3  5  2       3  4  3       3  3  4       3  2  5
+     - 61 x  y  z - 26 x  y  z  - 62 x  y  z  - 62 x  y  z  - 91 x  y  z
+
+           3    6      3  7      2  8       2  7         2  6  2       2  5  3
+     + 40 x  y z  + 6 x  z  + 8 x  y  + 74 x  y  z + 90 x  y  z  - 86 x  y  z
+
+           2  4  4       2  3  5       2  2  6      2    7       2  8         9
+     - 83 x  y  z  - 31 x  y  z  - 59 x  y  z  - 3 x  y z  + 17 x  z  + 19 x y
+
+             8           7  2         6  3         5  4         4  5
+     - 58 x y  z + 60 x y  z  - 39 x y  z  - 27 x y  z  - 39 x y  z
+
+             2  7           8         9       5    3         5    3
+     - 79 x y  z  - 57 x y z  - 72 x z  - 34 u  v x  y + 99 u  v x  z
+
+             4    4       2  6  2       2    6         5    4       5  5
+     - 53 u x  y z  - 99 u  y  z  - 51 u  v y  z + 89 u  v y  + 39 u  x
+
+           5  3  2       2    2  5       5  3           5  2    2       5  2  3
+     - 99 u  x  y  + 49 u  v y  z  - 89 u  x  y z + 61 u  x  y z  + 82 u  x  z
+
+           5    4       5      3       2    3  4       5    4         4  5
+     - 86 u  x y  + 19 u  x y z  + 96 u  v y  z  - 46 u  x z  + 14 u x  z
+
+          5  5       2  8         3  6       5    4       5  5       2    7
+     - 3 u  y  - 21 u  x  + 85 u x  y  + 27 u  y z  + 38 u  z  - 70 u  v z
+
+           4  6       4  4  2      4  4           4  4  2       4  4
+     + 71 u  v  + 46 u  v  x  + 7 u  v  x y - 22 u  v  y  - 61 u  v  y z
+
+           4  3  3       2      6       4  3    2       4  3
+     - 28 u  v  x  - 37 u  v y z  + 40 u  v  x y  + 77 u  v  x y z
+
+           4  3    2       2  5  3       4  3  2         4  3    2
+     - 81 u  v  x z  + 87 u  y  z  - 28 u  v  y  z + 98 u  v  y z
+
+           4  2  3         4  2  3         2  7         4  2  2
+     + 65 u  v  x  y + 23 u  v  x  z - 21 u  x  y - 82 u  v  x  y z
+
+           4  2  4       4  2  3         4    5       4    4         4    3  2
+     + 59 u  v  y  + 25 u  v  y  z + 77 u  v x  + 47 u  v x  z - 98 u  v x  y
+
+           4    2  2        2  6  2       4      3          3  5
+     - 54 u  v x  y  z - 5 u  x  y  - 57 u  v x y  z + 6 u x  y  z
+
+           4      4       4    5       2  4  3         4    4         4    2  3
+     + 46 u  v x z  + 10 u  v y  - 54 u  x  y  z - 68 u  v y  z - 23 u  v y  z
+
+           4      4       2  7         4  6         2  7       9         9
+     + 51 u  v y z  - 33 u  x  z + 18 u  x  - 53 u y  z  + 74 v  x + 45 v  y
+
+          9         8  2       8           4  5        3    5         4  4  2
+     + 7 v  z - 43 v  x  + 25 v  x y + 58 u  x  y + 4 u  v x  y + 99 u  x  y
+
+           4  4
+     + 92 u  x  y z
+
+         4  2  2         2    2  2       4    4       4         2  5  2
+47 + 37 x  y  z  - 10 u v  x y  z  - 51 x  y z  + 85 x  y - 82 x  y  z
+
+             2  2  3      3    3    2           4  2
+     + 16 u x  y  z  + 2 u  v x  y z  - 96 u v x  y  + 10 v x - 62 v y + 82 v z
+
+           2         2         2          2                               2
+     + 23 v  x - 10 v  y + 61 v  z + 8 v x  + 29 v x y - 95 v x z - 11 v y
+
+                        2       3    2  2  2       3         3         3
+     + 49 v y z + 47 v z  - 10 u  v x  y  z  - 96 v  x + 17 v  y - 25 v  z
+
+           2  2       4  3  3       2             2  2  3       2  2
+     - 91 v  x  + 80 u  x  y  - 98 v  x z + 66 u v  x  z  + 64 v  y
+
+           2           4    3           7         3  4       4  3
+     - 64 v  y z + 12 x  y z  - 15 x y z  + 41 x y  z  - 21 x  y  z
+
+             4  3         5  2         3  5         6                  5
+     + 54 x y  z  + 23 x y  z  + 91 x y  z  - 86 x y  z + 55 v - 41 u x  y z
+
+           3  3  3         4  2  2  2       4  3  2         3
+     + 24 u  v  y  z + 74 u  x  y  z  + 12 x  y  z  + 97 x y  z + 94 x - 87 y
+
+               5                2  3  3       3  2           3  2
+     + 22 u v x  y + 56 z + 75 x  y  z  - 49 x  z  + 20 u v x  y  z
+
+           2  2  5       3  2  5       2  4  2       3  2  2  2         2  5
+     - 51 x  y  z  + 14 u  v  z  + 20 x  y  z  - 27 u  v  x  y  z - 95 x  y  z
+
+           2  2  3        5       2           3  2    4       3  2
+     + 42 x  y  z  - 4 x z  + 89 x  y z + 81 u  v  x y  + 38 x  y  z
+
+           3      3  2           4  2               4       3  3      2
+     + 94 u  v x y  z  + 69 u v y  z  + 62 u v x y z  + 20 u  v  x y z
+
+                 3  2       4  4         3    2       3  2  4        4  5
+     + 84 u v x y  z  - 63 x  y  z - 45 x  y z  - 18 u  v  x  z - 4 u  y  z
+
+           5           2    4       3  3             2  3         2  4  3
+     - 63 x  y z - 30 x  y z  + 98 x  y  z + 73 u v x  y  z + 65 x  y  z
+
+           3    3        3  3           3  3       3  2      3       6
+     - 14 x  y z  + 9 x y  z  - 73 u v x  z  - 22 u  v  x y z  + 41 x  y z
+
+             2  5       2  6       4      4       3  2  3       3  4
+     + 36 u v  y  - 20 x  y  - 71 u  x y z  - 62 x  y  z  + 23 x  y  z
+
+           5  2  2         2    4    3  2  4         3  4             2      3
+     - 85 x  y  z  + 55 u v  x z  + u  v  y  z + 11 u  v  y z - 27 u v  x y z
+
+                 5       3  3  3      3  3  4       4  2  3           3  3
+     - 44 u v x z  + 58 u  x  y  - 9 u  x  z  + 22 u  x  y  z - 49 u x  y  z
+
+                      2    3       2  4  4       5  2       2    6        3  2
+     - 22 u - 97 u v x  y z  - 69 u  y  z  - 16 x  z  - 91 x  y z  - 5 x y  z
+
+           3  3  3        8  2       4  2  4       3  3    3       3  5
+     - 97 u  v  x  y + 5 x  z  + 56 u  x  z  - 90 u  v  x y  + 53 x  z
+
+             2  5       6  2       8           4  2    3         3       2  2
+     - 84 u v  z  - 43 x  z  - 68 x  y z - 36 u  x  y z  - 50 x z  - 49 x  y  z
+
+           3  4  2           2       6  2         2    4         4  2
+     + 12 u  v  y  z - 68 x y  + 77 x  y  + 62 u x  y z  + 35 u x  y  z
+
+           3    5       3    2  3           2  3  2       8  2         4  4
+     - 71 x  y z  + 25 u  v x  y  z + 38 u v  x  z  - 37 x  y  + 76 x y  z
+
+           9         9            6         2  5       4  4           6
+     - 12 x  z - 22 x  y - 9 x y z  - 39 x y  z  - 33 x  y  - 47 u v y
+
+           2  4       2  8         9         8           8           7  2
+     + 80 x  y  + 11 v  z  - 85 v x  + 49 v x  y + 82 v x  z + 43 v x  y
+
+             7             7  2         6  3        6  2           6    2
+     - 99 v x  y z - 87 v x  z  + 61 v x  y  - 5 v x  y  z + 37 v x  y z
+
+             5  4         5  3           5  2  2         5    3         5  4
+     - 56 v x  y  + 82 v x  y  z + 54 v x  y  z  + 55 v x  y z  - 55 v x  z
+
+             4  5         4  4           4  3  2         4  2  3         4    4
+     - 33 v x  y  + 51 v x  y  z + 29 v x  y  z  + 53 v x  y  z  + 72 v x  y z
+
+             4  5         3  6       2    7       3  2  5           2  6
+     + 65 v x  z  + 11 v x  y  - 38 v  y z  + 21 u  x  y  + 87 u v x  z
+
+           4  2  3       4    2  3         3  2  2       3    2    3
+     + 39 u  y  z  - 90 u  x y  z  - 67 u x  y  z  + 69 u  v x  y z
+
+           3  2  3  2       3  5         3  2  3             2  4       6    2
+     + 16 u  x  y  z  + 76 u  v  z + 32 u  v  x  y z + 77 x y  z  + 88 x  y z
+
+             7       4  2  3          5  2      8         8         8
+     + 18 x y  + 47 x  y  z  + 3 u v x  z  + 4 v  x - 10 v  y - 95 v  z
+
+           7  2       7           3  3           9               3  5
+     - 25 v  x  + 75 v  x y - 26 u  v  x y - 16 v  + 62 u v + 6 u  x  z
+
+                    2  7       6           2  3       7  2               4
+     - 97 u x + 51 x  z  + 34 x  y + 40 x y  z  - 92 x  y  z - 38 u v x y  z
+
+           2  3  2       5    2       3  5        2    3       2  4
+     + 81 x  y  z  - 33 x  y z  + 93 x  y  z - 7 x  y z  + 11 x  z  + 73 u y
+
+                   2         2  3    3         4  2  3       6    2       6  3
+     + 4 u z + 83 v  - 12 u v  x  y z  - 39 u v  x  z  + 95 v  y z  - 82 v  z
+
+           5  4       5  3         5  3         5  2  2      5  2
+     - 25 v  x  - 46 v  x  y + 98 v  x  z + 11 v  x  y  + 4 v  x  y z
+
+           5  2  2       5    3       5    2         5      2       5    3
+     + 74 v  x  z  - 68 v  x y  - 66 v  x y  z + 83 v  x y z  + 19 v  x z
+
+           7  3         9       4         4  2         5  3       2  3
+     - 78 x  y  - 33 u z  + 44 x  z + 43 x  y  z + 62 x  z  + 58 x  y  + 44 x y
+
+             4  2                2  2  4       2  5    2    2       2  3
+     - 14 x y  z  - 71 x z - 48 x  y  z  + 21 x  z  - x  y z  - 42 x  y  z
+
+             4       4    2       2       3  2  2  2       2    4  3
+     + 96 x z  + 34 x  y z  - 80 x  - 70 u  x  y  z  + 19 u  x y  z
+
+           3      4         2         8       3  2       8           8  2
+     + 59 u  v x y  z + 17 y  - 12 x y  + 31 x  y  + 75 v  x z + 38 v  y
+
+                    3      5       3  4  2           8       2      3
+     + 75 y z + 95 u  v x y  + 88 u  x  z  - 34 u y z  + 10 z  + 7 u
+
+           3    5         3  3  3       2           4    3       3  2  4
+     + 69 u  x z  + 12 u v  x  y  + 40 u  v + 37 u v  x z  + 90 u  x  y  z
+
+             4  4       2         2         3  2  4       3  6       3    4
+     - 63 u v  y  - 42 u  x + 50 u  y + 47 x  y  z  + 79 x  y  + 80 x  y z
+
+           8        4  3          2  3  2           5  3       2
+     - 26 x  z - 7 x  y  - 4 u v x  y  z  + 63 u x y  z  - 23 u  z
+
+                 6         5  3  2         2       6  2                    6  2
+     - 47 u v x y  z - 14 u  v  z  - 75 u v  + 40 u  z  + 92 u v x - 48 x y  z
+
+           2  5       5         5  4                              2
+     + 27 x  y  + 45 x  z - 95 x  z  - 6 u v y - 74 u v z - 72 u x
+
+                 7                  3  3  3                  6  2             2
+     + 72 u v x y  - 37 u x y - 62 u  y  z  + 23 u x z + 38 u  v  x z - 87 u y
+
+                        2       7             6       3  2  2      3  6       3
+     - 44 u y z - 29 u z  - 22 x  y z + 27 x y  + 86 x  y  z  + 6 u  x  - 98 v
+
+               4  2       3  2  2  3          7       3  3       5  4
+     - 41 u x y  z  + 48 u  x  y  z  - 8 u x y  - 95 x  y  - 50 x  y
+
+           6  2       2  5         3       5    3      7    2       2
+     + 92 y  z  + 65 u  v  z - 40 x  + 45 x  y z  + 7 x  y z  + 81 x  y
+
+           3  3  4       2            5           5  3
+     + 82 u  v  z  - 91 x  z + 9 u v y  z + 73 x y  z  + 10 x y z
+
+             2  5             3  3      3  4  2         3  5  2       2
+     - 57 u v  y  z - 89 u x y  z  + 6 u  x  y  z - 72 u  v  y  - 77 y  z
+
+           2  6       5  3         2       5  2           2  3  2          4
+     + 17 x  z  - 54 x  y  - 31 x z  + 38 x  y  z - 68 u x  y  z  - 5 x y z
+
+           7  3       5         3       6             3    3         2
+     + 19 x  z  + 77 x  y + 51 y  + 75 u  v x + 14 u x  y z  - 95 y z
+
+              5    3            2  3       2  2  4      4         2  4
+     + u v x y  - z  - 8 u v x y  z  - 66 u  x  y  z - u  + 15 u x  y  z
+
+           6  2           4  2  2         2  3    3       3         3
+     - 18 x  y  z - 20 u v  x  y  z + 53 u  v  y z  - 55 u  v + 28 u  x
+
+           3            2  4       3         3  4           2  2       3  2  4
+     - 16 u  y + 6 u x y  z  - 30 u  z + 93 u  v  x y + 27 u  v  - 85 u  y  z
+
+           2             5    2         6  4       2           4  2  3
+     + 15 u  v x + 23 u v  x y  z - 96 u  z  + 59 u  v y - 25 u  x  z
+
+               2  2  3       2           2  2         3  4        4           6
+     - 50 u v x  y  z  + 96 u  v z - 72 u  x  - 62 u x  z  + 4 x y  z - 29 x z
+
+           7         3  2    4       2           2  7       2           2  2
+     - 20 x  y + 68 u  v  y z  + 87 u  x y + 41 u  z  - 47 u  x z + 90 u  y
+
+           2           2  2       4  2  2           3  3  3         3
+     - 43 u  y z - 92 u  z  - 38 u  v  y  z + 57 u v  y  z  + 91 u v
+
+          2  5           6  3         2        2  5  3         2
+     + 7 u  v  x y - 27 u  v  + 88 u v  x - 5 u  x  y  + 48 u v  y
+
+           4    2         3  2    4         2         3    5           2
+     + 23 u  v y  z - 42 u  x  y z  - 53 u v  z + 45 u  y z  + 28 u v x
+
+           3  3  2       2  2  2       3  5      5  2       3  3       4  3
+     - 67 x  y  z  - 86 x  y  z  - 29 x  y  - 9 x  y  + 99 x  z  + 20 x  z
+
+             5    3       3  4  2       3  2    2  2
+     - 75 u v  y z  - 18 u  v  x  + 19 u  v  x y  z  - 5 u v x y
+
+             3  2    2         2  5  2         3  2  3         2  2    2
+     - 30 u v  x  y z  + 72 u v  x  z  - 44 u v  x  z  - 43 u v  x  y z
+
+                            2       2  2  2  2       3  5  2             5
+     - 13 u v x z + 10 u v y  - 28 u  v  x  y  - 47 u  v  z  + 96 u x y z
+
+                            2         3         2          2           3  2  2
+     + 82 u v y z - 71 u v z  - 16 u x  - 83 u x  y - 9 u x  z - 92 u v  y  z
+
+           2    4         3  5           2        5  3       3    6
+     + 14 u  y z  + 82 u v  x  + 60 u x y  - 7 u y  z  + 51 u  x y
+
+             3    2  2                        2       3  5  2         3
+     + 22 u v  x y  z  + 83 u x y z - 98 u x z  + 48 u  x  z  + 48 u y
+
+             4  3           2         2  3       3  3  3        5         4
+     - 40 u v  y  z + 19 u y  z + 95 x  z  - 22 x  y  z  - 2 x y  - 86 x y
+
+             2  2       2    5       4  4             2       5      3
+     + 14 x y  z  - 60 x  y z  - 33 u  y  z - 62 u y z  - 85 u  v x z
+
+           3    4           3       2    4         4    3        4       3    5
+     - 23 u  x y  z - 37 u z  - 59 u  v y  z - 94 u  x y  z - 5 v  + 11 u  x y
+
+           2      4       2  3  3         3           4  2       2  4
+     - 27 u  v x y  + 19 u  v  y  z - 45 x  y z - 67 x  z  + 99 x  y  z
+
+            2  5  2       4  5             5       2  2         3         2
+     - 2 u x  y  z  - 97 x  z  + 16 u v y z  + 90 v  z  + 60 v x  + 34 v x  y
+
+             2             2                       2         3         2
+     + 13 v x  z - 44 v x y  + 2 v x y z - 71 v x z  + 47 v y  + 39 v y  z
+
+               2         3       4         4         4        3  2       3
+     + 53 v y z  + 72 v z  - 58 v  x - 29 v  y - 37 v  z - 5 v  x  + 36 v  x y
+
+           3           3  2       3           3  2       2  3       2  2
+     + 57 v  x z - 85 v  y  - 80 v  y z - 90 v  z  - 74 v  x  - 27 v  x  y
+
+          2  2         2    2       2             2    2       2  3
+     - 9 v  x  z + 91 v  x y  - 81 v  x y z - 65 v  x z  + 12 v  y
+
+           2  2           2  4  2        5         4    4       3    2
+     - 78 v  y  z + 40 u v  y  z  + 5 u x  y + 69 u  x z  + 10 u  v x  y z
+
+           3    3  3       8       2  2  6           3       6         7
+     + 86 u  v x  z  + 99 y  - 58 u  y  z  - 83 x y z  + 12 x  z - 15 x  z
+
+           3         3        2  2       2  3  4       4  2            5  2
+     - 33 x  y - 10 x  z - 7 x  y  - 35 x  y  z  + 34 x  y  + 7 u v x y  z
+
+           3    5       4  2    3       3      4       4       2    6
+     - 87 u  v x  - 16 u  v  x z  + 20 u  v x y  + 97 x  + 50 u  v y
+
+           7    2       3  4  2         5        2       4  6       4    2  2
+     + 78 u  v z  - 75 u  v  x  y + 30 u  v x y z  - 84 u  y  + 18 u  x y  z
+
+           2  3  4             3  4       3    4  2         3  2  3
+     - 53 u  x  y  z + 36 u v x  y  - 91 u  x y  z  - 41 u v  x  y  z
+
+             4             2  4       4             5             5       2  2
+     - 14 u v  x z - 21 u v  y  - 94 x  y z - 13 x y  z + 35 x y z  - 65 x  z
+
+           6  3         3           3  3         2             2  4           2
+     - 57 x  y  - 12 x y  - 74 u v y  z  + 25 x y  z + 95 u v y  z  + 96 x y z
+
+               2  4       2  2  4           3    4       3    5           4  3
+     - 55 u v x  z  - 77 u  v  x  y - 62 u v  x z  + 22 u  x y  z + 35 u x  y
+
+          5  4       5  3         5  2  2      5    3       5  4      4  5
+     + 9 v  y  + 50 v  y  z + 13 v  y  z  + 5 v  y z  - 41 v  z  - 9 v  x
+
+          4  4        4  4      4  3  2       4  3           4  3  2
+     - 3 v  x  y - 2 v  x  z + v  x  y  + 51 v  x  y z - 93 v  x  z
+
+           4  2  3       4  2  2         4         2  2  2  2       2  2  2  2
+     + 87 v  x  y  - 51 v  x  y  z + 60 y  + 91 u v  x  y  z  + 75 u  v  x  z
+
+           3  4  2       3  2  3  2       3        2  2         7         3
+     - 70 u  v  y  - 54 u  v  y  z  + 42 y  z - 7 y  z  - 95 u x  + 89 y z
+
+               2  4       3  6       3    4             2  3         3      3
+     - 57 u v x  y  - 78 x  z  - 47 u  v y  z - 82 v x y  z  - 36 u v  x y z
+
+           4       3  3  4           6  2       5       3  2  3         2    4
+     + 70 z  + 92 u  v  y  - 58 u v x  z  - 34 u  - 97 u  x  y  z + 65 u  v x
+
+           4           2      2       2  4  3       4         2  3  2
+     + 68 u  v - 70 u v  x y z  + 58 u  v  z  + 60 u  x + 21 u  v  x  y
+
+           6    2       4           5  2        2  4    2       4
+     - 57 u  v x  - 16 u  y + 81 u v  y  + 3 u v  x  y z  - 52 u  z
+
+           3    3  3       2  2    2       3  2      3          6  4       5  5
+     - 45 u  x y  z  - 44 u  v  y z  + 20 u  v  + 4 u  v x + 2 y  z  - 91 y  z
+
+           3           5  2    2      3  5       3             2  6
+     + 89 u  v y - 10 u  v  x z  + 8 y  z  + 77 u  v z - 17 u v  x  z
+
+           3  2       2  2    3      6    3       6  2             6
+     - 69 u  x  - 34 u  x  y z  + 9 u  v x  + 56 u  v  z - 59 u x z
+
+           4  2  2       3           3           3  2  2       3  2         9
+     + 58 u  v  z  - 80 u  x y - 28 u  x z + 28 u  v  z  + 42 u  y  - 59 u y
+
+           3           6  2         2  2  5       3  2       2  3       6  2
+     + 33 u  y z - 91 u  x  + 58 u v  x  z  - 21 u  z  + 35 u  v  - 33 u  v  x
+
+          6  2         2  2         4  4         7       2  6         3  4
+     + 4 u  v  y - 97 u  v  x + 55 x  z  - 11 x z  + 61 x  y  z - 78 x  y
+
+           2  2         2  2         2  6         2    2       2
+     - 30 u  v  y + 64 u  v  z - 46 u  v  x - 89 u  v x  + 16 u  v x y
+
+           2               2  6       3  7       2  8       2    2
+     - 59 u  v x z + 89 u v  y  + 13 y  z  + 70 y  z  + 69 u  v y
+
+           3  4  2       2            4  2       4    4         6
+     - 53 u  v  z  + 46 u  v y z + u x  y  - 99 u  y z  + 48 u y  z
+
+           2    2       2  3           2  2  2           8       2  2
+     + 33 u  v z  - 87 u  x  + 97 u v x  y  z  - 63 u v x  + 34 u  x  y
+
+                 4  3       4                 2  5        4    4             6
+     + 81 u v x y  z  - 88 u  v x z + 99 u v x  z  - 3 u v  x y  + 21 u v x y
+
+            3  6       2  2         2    2    2               7       3  3  3
+     - 3 u v  x  - 40 u  x  z - 77 u  x y  - u  x y z - 45 u y  + 99 u  x  y  z
+
+           2    2       2  3        3  3  2       2    3  4       3    3  2
+     + 10 u  x z  + 65 u  y  + 6 u v  y  z  + 32 u  x y  z  - 93 u  v x  y
+
+           2  2             4  3         2    2       4  3           2  3  3
+     + 85 u  y  z + 55 u v x  y  z - 54 u  y z  + 31 u  y  z - 40 u v  y  z
+
+           2  8       2  7         3  7         4         3         6
+     + 18 v  x  + 82 v  x  y - 58 u  x  - 18 u v  - 52 u v  x - 28 u  v x y
+
+             4  2        7           2  5  2         7           3  5
+     - 33 u v  x  z + 4 u  x y - 51 u  x  y  z - 37 u  x z - 96 u  v  y z
+
+             3         3  6         3  4  2       2  7         3         9
+     - 36 u v  y - 51 u  z  - 30 u v  y  z  + 26 u  v  - 91 u v  z + 64 z
+
+             2  2         2             2           5  3       4  4
+     + 22 u v  x  - 51 u v  x y + 27 u v  x z + 17 y  z  + 62 y  z
+
+             2  2           2  3  3       3    6         2           2  3    3
+     - 50 u v  y  - 68 u v x  y  z  - 24 u  v x  - 60 u v  y z - 38 u  x  y z
+
+           4      3         2  2         2  2  4      3      5           3
+     - 78 u  v x z  + 91 u v  z  - 62 u v  y  z  + 6 u  x y z  + 47 u v x
+
+               2         3  6            2           5           2  2  2
+     + 97 u v x  y + 65 u  x  y + 2 u v x  z + 83 u y  z + 66 u v  x  y  z
+
+           2  2    4       4  2  2  2             2         2  2  2
+     - 61 u  v  x y  - 76 u  v  y  z  + 31 u v x y  - 86 u x  y  z
+
+             2  4  3                        2  6               2           3
+     + 81 u v  y  z  - 25 u v x y z + 83 u v  y  z - 31 u v x z  + 27 u v y
+
+           3  5             5  2       3  4  3           2         3  4
+     + 33 u  v  x z + 68 u y  z  + 55 u  x  z  - 65 u v y  z + 27 x  z
+
+           3    4  2       2  7         7           2  6         3  3    2
+     - 15 u  v y  z  - 40 x  y  - 62 x y  z - 36 x y  z  + 99 u v  x  y z
+
+        4  2                 2       5  3  2           3        4
+     - u  v  x z - 88 u v y z  + 72 u  y  z  - 10 u v z  + 6 u x
+
+               4  3        2  4  3         3         2  6           3
+     - 95 u v x  y  - 5 u v  x  y  - 80 u x  y + 60 u  v  z + 84 u x  z
+
+           2  4             2  6         2  2       4    4               5
+     - 63 u  v  y z - 66 u y  z  - 57 u x  y  + 50 u  x y  - 72 u v x y z
+
+             2          2  2    3         2  2       5  3       5      2
+     + 49 u x  y z - 2 u  v  x z  - 31 u x  z  - 21 u  x  - 92 u  v x y  z
+
+             2  2  2  3         2  4             3           8       3    2  4
+     + 85 u v  x  y  z  + 76 u v  y  z - 73 u x y  - 86 u x y  - 33 u  x y  z
+
+               2         3  7       6    3         3  2  3             2
+     - 95 u x y  z + 71 u  v  - 83 u  x y  + 83 u v  y  z  - 68 u x y z
+
+            4  2             3       4    2          4         2  5  2
+     - 5 u v  x  y + 29 u x z  - 56 u  v x  y - 5 u y  - 81 u v  x  y
+
+             3           2  2         3    5           3       2  3  2
+     + 26 u y  z + 51 u y  z  - 62 u v  y z  - 88 u y z  + 84 u  v  x  z
+
+           3  3    2       5         4       3  5       3    3       2  4  3
+     - 67 u  x  y z  + 67 v  - 97 u z  + 61 u  v  + 15 u  v y  + 82 u  v  x
+
+               3  4      2  5  2       2  2  2  2       4  3         6  2
+     + 46 u v x  y  z + u  v  z  - 76 u  v  y  z  - 71 u  x  y + 50 v  y  z
+
+           2  5          2  2    2       2  5  2      2  2  6       2  6
+     + 46 u  v  y z - 7 u  v  x y  - 23 u  y  z  + 6 u  x  y  - 34 u  y
+
+           2  5  2       2  2  3       3      2  2       7           3  4
+     - 42 u  v  y  + 38 u  y  z  + 78 u  v x y  z  - 22 u  v x + 84 u  x  z
+
+             4  3       6    2       2  4               3    2       2  5
+     + 19 u y  z  - 25 u  v y  - 39 u  v  x y z + 84 u v  x y  - 96 u  v  x z
+
+            2  2  4         3  4       2  3               2    5       2  6
+     + 6 u v  x  y  z + 45 u  v  - 61 u  v  x y z - 78 u v  y z  + 64 u  y  z
+
+           2  6  2      2    2       2  3        4         3          3
+     + 36 u  x  z  - 5 v  y z  + 63 v  z  + 5 v x  - 36 v x  y + 8 v x  z
+
+             2  2        2             2  2           3           2
+     - 30 v x  y  + 3 v x  y z + 56 v x  z  + 91 v x y  + 70 v x y  z
+
+                 2          3         4         3           2  2           3
+     - 42 v x y z  - 9 v x z  + 21 v y  + 27 v y  z + 79 v y  z  + 22 v y z
+
+             4         3  4  2       3  3  2           4  5           6
+     + 51 v z  + 16 u x  y  z  - 97 u  v  x  y - 70 u y  z  + 75 u y z
+
+           2  3  4       4    5       4  4           2  6       3  7
+     + 49 u  x  z  - 19 u  v z  - 84 u  v  x z + 81 y  z  - 41 u  y
+
+             3    4         3  5           2  5       4      3       2  4  2
+     - 47 u v  y z  + 67 u v  x  y + 84 u y  z  + 23 u  v y z  - 12 u  v  x  y
+
+           2  4  2           2  7       4  3  3           4           6
+     + 51 u  v  x  z + 16 u x  z  - 33 u  v  z  + 93 u v y  z + 70 u v  y
+
+           3    6             3  4       3  4    2         3  4
+     - 19 u  x z  - 39 u v x y  z  + 63 u  v  x z  - 47 u y  z
+
+             4  3           5  2  3         2  4  3       3  2  2         7
+     + 64 u v  x  y z + 89 u  y  z  - 75 u v  x  z  + 23 u  v  y  z + 76 y  z
+
+             2  6       5       4    2  2       2    7       2    2  3
+     - 67 u x  y  - 16 x  - 44 u  v y  z  + 96 u  y z  - 54 u  x y  z
+
+             3  3  3       3    4       2  2  3         4    3           7
+     - 25 u x  y  z  + 74 u  y z  + 91 u  v  x  z - 62 u  v y  z + 11 u z
+
+           8       3    4  2       3  5      3  3  2         2      4
+     + 59 v  - 54 u  v x  y  - 51 u  z  - 2 u  v  x  z + 97 u  x y z
+
+           6  3           2  5       3  3  2         7  2      5  2  2
+     - 13 u  v  x + 31 u x  y  - 69 u  v  y  z + 74 u  x  + 8 u  v  y  z
+
+          3  3  2           7           7          2  4  2       2    5
+     + 4 u  v  x  y z + 79 u  v y - 34 u  v z - 3 u  v  y  - 20 u  v x
+
+           3  6           2  6       3  2  2               6         6        5
+     - 42 u  y  z - 12 u v  x  - 34 u  x  y  z - 97 u v y z  - 76 u x  y + 8 y
+
+               6       4           5  2       3  2  5       3  2       2  3
+     - 56 u v z  + 54 y  z - 63 u x  z  + 33 u  v  y  - 62 y  z  - 96 y  z
+
+           3  4         4    5         2  6         4         2  7
+     + 28 u  v  z - 60 u  x y  + 63 u v  z  + 51 y z  - 30 u v  x
+
+             2  6         2  2  5       6    2       3  2    3
+     + 95 u v  x  y + 61 u  x  z  - 13 u  v z  + 63 u  v  x y  z
+
+           3  2  2  3       5       3  3  2  2       3  6           3    3
+     - 94 u  v  y  z  - 89 z  - 21 u  v  y  z  - 48 u  v  y + 84 u v  x y
+
+           6                 4  2  2       6       5         5         5
+     - 76 u  v y z + 40 u v x  y  z  - 14 u  + 79 u  v + 58 u  x + 95 u  y
+
+           3  3  2       4  5       5         8         3  2  5      4    4
+     - 95 u  v  x  + 23 u  y  - 61 u  z - 26 u  x - 22 u  y  z  - 2 u  v z
+
+          4    2        4  2      3  3  4       3  3    2       4
+     - 3 u  v x  z + 2 u  v  + 9 u  y  z  + 94 u  v  x y  - 86 u  v x
+
+           2  4  3       4           2  4    2       3  3           4
+     + 24 u  v  y  - 57 u  v y + 36 u  v  x z  - 42 u  v  x z + 35 u  v z
+
+           4  2       4           4           4  3           4  4       4  2
+     - 57 u  x  - 28 u  x y - 63 u  x z - 11 u  x  y z - 31 u  x  - 21 u  y
+
+           6  3         3  3  2       4           7           4  2       7
+     + 73 u  x  - 63 u x  y  z  + 71 u  y z + 66 u  y z + 66 u  z  + 44 v  x
+
+           7         6  2       6           6           6  2       6
+     + 81 v  z - 63 v  x  + 67 v  x y - 42 v  x z + 80 v  y  - 19 v  y z
+
+           6  2       5  3       5  2         5  2         5    2       5
+     - 46 v  z  - 27 v  x  - 35 v  x  y - 33 v  x  z - 36 v  x y  - 59 v  x y z
+
+           5    2       5  3       5  2         4  3  2         5    2
+     + 58 v  x z  - 82 v  y  - 96 v  y  z - 55 u  x  y  z + 34 v  y z
+
+           7         3  3       6    3       6  4       5  5       5  4
+     - 76 v  y + 34 u  v  + 95 v  y z  + 96 v  z  + 49 v  x  - 34 v  x  y
+
+           5  4         5  3  2       5  3           5  3  2       5  2  3
+     - 84 v  x  z - 75 v  x  y  - 73 v  x  y z + 47 v  x  z  - 45 v  x  y
+
+          3  4  3       3  2         3  2         3  3    2         4    3
+     - 5 u  y  z  - 72 u  v  x + 40 u  v  y - 77 u  v  x y  z + 66 u  v x
+
+           3  2           8       3    2       3                   4  2
+     + 68 u  v  z + 56 u z  + 15 u  v x  + 32 u  v x y - 35 u v x y  z
+
+           3  3    3       3             3    2       9       3  5  2
+     - 47 u  x  y z  - 17 u  v x z - 87 u  v y  + 56 x  - 48 u  y  z
+
+           3             4    4       2  4    2      3    2       2  3  3
+     + 60 u  v y z - 43 u  v y  - 48 u  v  x y  - 7 u  v z  - 43 u  v  y
+
+           3  3         4    3         3  2         3  2         9       3    2
+     + 61 u  x  + 75 u v  x y  z - 45 u  x  y + 50 u  x  z + 47 u  + 22 u  x y
+
+           6  2           5  3       3             5    2       5  2
+     - 11 u  x  z + 57 u v  y  - 48 u  x y z - 63 u  v z  + 24 u  x  z
+
+          2  4    2         2  4  2         2  6           3    2       4    3
+     - 3 u  v  y z  + 15 u v  x  y  z - 88 u  x  y z + 82 u  x z  - 48 u  v y
+
+           3  3       3  7       3  2         2    2  3         6  3
+     - 46 u  y  - 13 u  z  + 49 u  y  z - 56 u  v x  z  + 85 v x  z
+
+             2  4  2       3    2       3  3       6  2         2  4
+     - 82 u v  x  z  + 66 u  y z  - 18 u  z  - 34 u  x  y - 16 u  v
+
+           3  2  4         8  2           2    4       2  3         3    3
+     - 24 u  v  x  y - 46 u  x  - 61 u v x  y z  + 22 u  v  x - 74 u  v x  z
+
+           2      4       2    4         2  3             7         7
+     + 46 u  v x z  + 45 u  x y  z - 38 u  v  y + 16 u x y  z + 23 u  v x y
+
+           2  3           4             2  4  2           2  4
+     + 48 u  v  z + 37 u v  x y z + 11 u  v  y  z - 72 u v  x  z
+
+           4  2  2  2         4  4         2  2  3  3       2  2
+     + 14 u  v  x  y  - 65 u v  x  z + 78 u  x  y  z  + 87 u  v  x y
+
+             3  2  4       2  2             2  3  2               6       10
+     - 46 u v  x  y  + 13 u  v  x z + 28 u v  y  z  - 26 u v x y z  + 78 y
+
+           3    6       3      2  3       2  2  2           7       2  8
+     - 99 u  y z  - 37 u  v x y  z  + 87 u  v  y  + 54 u v x  - 90 u  z
+
+           2  2          6  2  2       2  2  2           2  2  4
+     + 63 u  v  y z - 5 u  x  y  + 31 u  v  z  + 88 u v x  y  z
+
+             4  3  2       3  2    3       2  3  3  2       2    3
+     - 79 u v  x  z  - 23 u  x  y z  + 65 u  x  y  z  - 90 u  v x
+
+           2    2         2    2           8       2      2       7  3
+     - 66 u  v x  y - 88 u  v x  z + 35 u y  - 74 u  v x y  - 98 u  y
+
+                 2  5       2               2      2       3  6         2  4  3
+     - 58 u v x y  z  + 39 u  v x y z + 20 u  v x z  + 86 u  y  - 37 u x  y  z
+
+           2    3         2  3    2      2  7       2    2         2      2
+     - 31 u  v y  + 17 u v  x  y z  + u v  z  + 52 u  v y  z - 37 u  v y z
+
+           2  2  2    2       2    3         2  3  2        2  7         2  4
+     - 81 u  v  x  y z  + 59 u  v z  + 90 u v  x  y  z - 4 u  v  x + 54 u  x
+
+             3  3           3  4             6           2  2    4       2  3
+     + 20 u v  x  z - 27 u v  x  z + 81 u v x  y - 22 u v  x  y z  + 22 u  x  y
+
+           3  2  2         5  3       2  8       2  3           2  3  3
+     + 71 u  v  x  z - 48 u  v  - 14 u  v  - 17 u  x  z + 93 u x  y  z
+
+           2  2  2       2  2           2    5              6       2  2  2
+     - 63 u  x  y  - 21 u  x  y z + 20 u  v x  z + 7 u x y z  + 12 u  x  z
+
+           2  2  2           2    3         5      2       5  3  2
+     + 51 u  v  x  y z + 21 u  x y  + 72 u v  x y z  - 80 u  v  y
+
+           6    2         2    2         8  2       2      2       4    4
+     + 27 u  v x  z + 74 u  x y  z + 55 u  y  - 55 u  x y z  + 28 u  v x
+
+           5  4         2    3           4  2         2  4       3    3  2
+     - 97 u  x  y + 17 u  x z  - 29 u v x  y  z - 83 u  y  - 49 u  v y  z
+
+           4  2    2       4    4       4    3         4    2  2       4      3
+     - 57 v  x  y z  + 81 v  x y  - 20 v  x y  z + 25 v  x y  z  - 88 v  x y z
+
+           4    4       4  5       4  4        4  3  2       4  2  3
+     - 70 v  x z  + 47 v  y  - 86 v  y  z - 2 v  y  z  + 66 v  y  z
+
+           4    4       4  5       3  6       3  5         3  5         3  4  2
+     + 68 v  y z  - 77 v  z  + 99 v  x  - 63 v  x  y - 13 v  x  z + 10 v  x  y
+
+           3  4           3  4  2       3  3  3       3  3  2         3  3    2
+     + 64 v  x  y z - 60 v  x  z  - 81 v  x  y  + 81 v  x  y  z + 44 v  x  y z
+
+           3  3  3      4  2  3       2  3         2    4  2       2  2  2
+     - 22 v  x  z  - 8 v  x  z  + 65 u  y  z - 69 u  v x  z  + 28 u  y  z
+
+            2  3  3      2    3           5         5         5         5
+     - 7 u v  x  y  + 5 u  y z  - 20 u x y  z + 63 v  x - 61 v  y - 46 v  z
+
+           4  2       4           4           4  2       4           4  2
+     + 36 v  x  + 76 v  x y + 22 v  x z + 55 v  y  + 34 v  y z - 52 v  z
+
+        3  3       3  2         3  2         3    2       3             3    2
+     - v  x  - 87 v  x  y - 11 v  x  z + 11 v  x y  - 88 v  x y z - 94 v  x z
+
+          3  3       3  2         3    2       3  3       2  4       2  3
+     - 6 v  y  - 21 v  y  z - 18 v  y z  - 75 v  z  - 10 v  x  - 18 v  x  y
+
+           2  3         2  2  2       2  2           2  2  2         2    4
+     - 60 v  x  z + 90 v  x  y  - 11 v  x  y z + 91 v  x  z  + 35 u v  x y
+
+           2    3       2    2         2      2       2    3       2  4
+     + 53 v  x y  - 37 v  x y  z - 76 v  x y z  + 44 v  x z  - 67 v  y
+
+           2  3        2  2  2      2    3       2  4         5         4
+     + 72 v  y  z - 2 v  y  z  - 4 v  y z  + 84 v  z  + 60 v x  + 83 v x  y
+
+        3    4       2  4       5    2       4  5         4         3  6
+     - u  x z  - 27 u  z  + 88 u  x y  + 90 u  x  - 26 u v  x - 94 u  v  z
+
+             4           5             4         7           3  2         3  5
+     - 13 u v  y + 41 u v  x z - 83 u v  z - 50 u  y + 19 u v  x  - 89 u y  z
+
+             3             3             3  4       2  7         2  5
+     + 62 u v  x y + 12 u v  x z + 73 u v  z  + 65 u  v  z + 91 u  x  z
+
+             3  2         3           4  2  2       4  3  3         3  2
+     - 48 u v  y  + 84 u v  y z - 13 u  y  z  + 92 u  y  z  + 83 u v  z
+
+             3  2  2  2         2  3         2  3  3        2  2
+     - 95 u v  x  y  z  - 96 u v  x  + 21 u v  x  z  - 6 u v  x  y
+
+           2  4             2  2           8           2    2         2
+     + 98 u  v  x y - 76 u v  x  z + 39 u v  x - 95 u v  x y  + 14 u v  x y z
+
+             4  3         2    2         2  3         5    3         9
+     + 63 u v  x  - 61 u v  x z  - 83 u v  y  - 23 u v  x z  + 32 u v
+
+           6    2       3    2  2         2  2           2    2        2  3
+     + 48 u  x y  + 11 u  v y  z  + 83 u v  y  z - 53 u v  y z  + 6 u v  z
+
+             6             4      2  7         2  3  4           3
+     + 35 u v  x - 52 u v x  + 3 u  v  y + 19 u  v  x  + 40 u v x  y
+
+          2  2  4  2            2  4         5  2  2           3         3  4
+     + 7 u  v  x  z  - 2 u v x y  z  - 51 u v  y  z  - 45 u v x  z - 96 u  x  y
+
+               2  2           2             4    2       2  6
+     + 86 u v x  y  + 88 u v x  y z + 58 u v  x y  - 99 u  v  x z
+
+               2  2       3  2  2  2             3       3  3  2
+     + 21 u v x  z  - 95 u  v  y  z  - 28 u v x y  + 49 u  x  y  z
+
+                 2         5  2  3         4  4               2             3
+     - 92 u v x y  z + 74 u  v  x  + 61 u x  z  - 35 u v x y z  + 31 u v x z
+
+           4  3  2           4           3         5  2  2       6
+     - 84 u  v  x  + 17 u v y  - 17 u v y  z - 23 u  x  z  + 12 u  x y z
+
+               2  2             3         6  3           4         2  2  3
+     - 31 u v y  z  + 52 u v y z  - 57 u v  x  - 44 u v z  - 40 u v  x  y  z
+
+             5       3  4  3         4         2  3  3         2    2  5
+     + 16 u x  - 92 u  x  y  + 37 u x  y + 16 u  v  x  z - 23 u  x y  z
+
+          2  3  2  2         4               3           2  2  4         3  2
+     + 7 u  v  x  y  + 59 u x  z - 69 u v x y  z + 95 u v  x  y  + 47 u x  y
+
+           2  6             3             3  2       6  2  2         2  3
+     - 23 u  v  x y - 58 u x  y z + 56 u x  z  + 28 u  y  z  + 45 u x  y
+
+             2  2           2    2       3    2  2           3  5
+     + 15 u x  y  z + 67 u x  y z  - 70 u  v x  y  z + 60 u v  z
+
+             4  2  2         4    3       3    6         2  3       3  3  2
+     + 10 u v  y  z  - 61 u v  y z  + 13 u  v y  + 62 u x  z  - 63 u  x  y
+
+               4       2  3    2       2  6  2         4  4         4    2
+     - 70 u x y  - 38 u  v  x z  - 81 u  v  x  - 94 u v  z  + 74 u x  y z
+
+               3         2  3    3       4      2  2           2  2
+     - 93 u x y  z - 46 u  v  x y  + 13 u  v x y  z  - 74 u x y  z
+
+           2  5               3           7             4         5
+     - 82 u  v  x - 95 u x y z  + 54 u v x  z - 65 u x z  + 10 u y
+
+           2  6         2  3  2  2         4         3  3  3             7
+     - 60 u  x  y - 67 u  v  x  z  - 11 u y  z - 73 u  v  x  - 83 u x y z
+
+             3  2      2  3       2    2  3           4       3  2  3
+     + 56 u y  z  + u y  z  - 42 u  v x  y  - 49 u y z  - 80 u  x  z
+
+           2    4           8             5           5       3      3
+     + 99 u  v x  z - 41 u v  y - 49 u v x  z + 27 u z  + 94 u  v y z
+
+           4  3  3       6       2  4  2  2       2  3  2           3    3  3
+     - 37 u  v  y  - 88 v  - 86 u  x  y  z  - 54 u  v  x  y z + 39 u  v y  z
+
+          3  5         3  4    2         2    5       2  6  2             7
+     - 7 u  v  y + 30 u  v  y z  - 22 v x  y z  + 80 u  v  y  - 59 u v x z
+
+           3  2  2    2           4  2         3  3  2         4  4
+     + 54 u  v  x  y z  - 99 u v x  z  - 94 u v  x  y  z - 83 u  x  z
+
+             2  5         4    5       4    4         4    3  2      4    2  3
+     - 75 u x  y  z + 57 v  x y  - 88 v  x y  z - 75 v  x y  z  - 7 v  x y  z
+
+           4      4       4    5       4  6       4  5         4  4  2
+     - 61 v  x y z  - 14 v  x z  - 78 v  y  + 43 v  y  z + 39 v  y  z
+
+          4  2  4       4    5       4  6       3  7       3  6        3  6
+     - 7 v  y  z  - 18 v  y z  - 28 v  z  - 58 v  x  - 69 v  x  y - 8 v  x  z
+
+          3  5  2       3  5        3  5  2       3  4  3       3  4  2
+     - 4 v  x  y  + 57 v  x  y z - v  x  z  - 33 v  x  y  - 45 v  x  y  z
+
+           3  4    2       3  4  3       3  3  4       3  3  3
+     - 15 v  x  y z  + 94 v  x  z  + 59 v  x  y  - 16 v  x  y  z
+
+           3  3  2  2       3  3    3    3  3  4       3  2  5       3  2  4
+     + 82 v  x  y  z  - 69 v  x  y z  + v  x  z  - 68 v  x  y  - 44 v  x  y  z
+
+             2  5  2      5  4             6        4  2  2           8
+     + 84 u v  y  z  - 9 u  x  z + 53 u v x  z + 6 u  v  x  - 43 u x z
+
+           4  4             7       2  5  3       4  4  2         3  5
+     - 41 u  x  y - 10 u x z  + 34 u  v  x  - 91 u  x  z  - 48 u v  y
+
+           5    4       2  5  2         3  3  2       2  3  2         4  3  2
+     + 99 u  v z  - 99 u  v  x  + 21 u v  x  y  + 14 u  v  y  z - 36 u  x  y
+
+           3  3  4             6         4  4       6  3           2  5
+     + 32 u  v  x  + 49 u v x z  - 93 u y  z  + 44 u  y  + 74 u v x  y  z
+
+           5  2  2             8         4  3        2  2  5       5    2  2
+     + 79 u  v  x  z - 35 u v y  - 18 u v  y  - 3 u v  y  z  + 24 u  x y  z
+
+             8           8       3    3         3  5  2       3  3  3
+     - 16 u y  z + 91 u v  + 32 u  v x  y + 55 u  x  y  + 61 u  v  y
+
+           4    3  2       5    2  2       2  2  4       2  2    2
+     - 46 u  v x  z  + 30 u  v x  z  - 27 u  v  x  + 38 u  v  x y  z
+
+           2    5         2  3  4         3    3             4    2
+     + 10 u  x z  - 53 u v  x  y  + 36 u v  x y  z - 63 u v x  y z
+
+           3  3    2       2  3      2         4  2    2       3      3
+     - 28 u  v  x z  + 94 u  v  x y z  + 94 u v  x  y z  - 29 u  v x z
+
+             2    6       6    2      8         2  6  2           5    2
+     + 74 u v  x y  - 40 u  x z  + 2 u  y - 95 u  v  z  - 55 u v x  y z
+
+             5    2         4  3  2       2  3    2         3      5
+     + 26 u v  y z  - 79 u v  x  y  + 63 u  v  x y  z - 53 u  v x z
+
+           7    2         3  2    3         2  5         2  6          6    2
+     + 57 u  x z  + 57 u v  x  y z  + 10 u v  x  y - 20 u  v  y z + 7 u  y z
+
+           2    5         3  2         3             3  2         2  3
+     + 36 u  v z  - 84 v x  y  - 77 v x  y z + 46 v x  z  - 63 v x  y
+
+             2  2           2    2         2  3           4          3
+     - 27 v x  y  z + 43 v x  y z  - 72 v x  z  + 64 v x y  - 8 v x y  z
+
+               2  2             3           4         5         4          3  2
+     - 43 v x y  z  - 58 v x y z  + 84 v x z  - 78 v y  + 12 v y  z + 2 v y  z
+
+             2  3           4         5       2  5    2       4      2
+     + 45 v y  z  + 85 v y z  - 58 v z  - 69 u  v  x y  - 90 u  v y z
+
+           3  3  3       3  4  2       3    2  3       3  2  4       2  2  3
+     - 89 u  x  z  - 82 x  y  z  - 80 u  x y  z  - 19 u  x  y  - 98 u  v  y  z
+
+               5  2       2    6      4  2  4         2  4  2       3      4
+     - 85 u v x  y  + 98 u  x y  - 2 u  v  x  - 38 u v  x  y  + 67 u  x y z
+
+           2  5  2         4  4       2    4  2        7         2  2
+     + 14 u  v  x  z - 94 u  y  - 46 u  v y  z  + u v y  z - 24 u  v  x y z
+
+           2  3    3       2  5  2         2  5             8         6  2
+     + 43 u  v  x z  - 99 u  v  x  y + 96 u  x  y z + 65 u v  z + 64 u  y  z
+
+           5  3      4  3         4  3         4  2  2       4  2
+     + 27 v  z  - 5 v  x  y - 84 v  x  z + 31 v  x  y  - 86 v  x  y z
+
+           4  2  2       4    3       4    2         4      2       4    3
+     + 46 v  x  z  + 56 v  x y  - 60 v  x y  z + 51 v  x y z  - 65 v  x z
+
+           4  4       4  3         4  2  2       4  4       3  5       3  4
+     - 46 v  y  + 26 v  y  z + 62 v  y  z  - 10 v  z  + 71 v  x  + 51 v  x  y
+
+           4  4         2  2  3           7       4  2           4    4
+     - 25 v  x  + 96 u v  y  z  - 13 u v y  + 25 u  v  y z + 72 u  x y  z
+
+           2  5    2           3  3       5  3         2    3           6  2
+     - 25 u  v  x z  - 85 u v x  y  + 60 u  v  x + 61 u  v x  y z - 54 v  x  z
+
+             7    4  3  2    3  4             4  2  3         6         6
+     + 32 y z  - u  y  z  + u  x  y z - 34 u v  x  y  + 77 u x  z + 62 x
+
+           7  2         4    2       4  4        2  3  4       2  2  5
+     - 14 u  z  + 97 u v  x z  - 17 u  v  z + 5 u  y  z  - 49 u  x  y  z
+
+           5  4       3  4  3    5  4         2  5        4  3       3  2  3
+     + 48 u  v  + 47 u  v  y  + u  y  z + 13 u  v  y - u v  z  - 29 u  x  y
+
+           6  3           4  3         3    5       3  4             7  2
+     + 16 u  z  - 37 u v x  z  + 50 u v  x y  - 29 u  v  x z + 14 u v  x
+
+             2  2  4       4      4         5  2            3  2  4
+     + 83 u v  x  z  + 36 u  v x y  - 94 u v  x  y z - 6 u v  x  z
+
+             4  2  2       3    2  3      4  4  2         3  2  4       8  2
+     + 54 u v  x  y  + 37 u  v x  z  - 8 u  y  z  - 25 u x  y  z  - 87 u  v
+
+             3  2  3      2  4  2      3        3    2      6      2  3  4
+     + 76 u v  x  y  + 2 u  x  z  + 3 u  v x y z  + u  x y z  - 7 u  v  y
+
+           2  5               2  2    3         3  2            5  3
+     - 84 u  v  x y z + 92 u v  x  y z  - 13 u v  x  y - 2 u v x  y
+
+           2  3  3         3  3    2       6  3         3  2    2
+     + 34 u  v  x  y + 53 u  v  y z  + 15 u  x  y + 33 u  v  y z
+
+               2  4           3  2  3         7             4    2  2
+     - 46 u v x  y  z - 95 u x  y  z  + 75 u v  x z + 39 u v  x y  z
+
+           5  3         3    6       6       3  5         2  2  4       5
+     - 83 u  v  y - 97 u  v z  + 89 y  - 16 u  y  z + 41 u  x  y  + 54 y  z
+
+           4  2       3  3       2  5  2         3    5       2  4         5
+     + 81 y  z  - 22 y  z  - 80 u  v  y  z - 31 u  v z  + 38 y  z  + 50 y z
+
+           4    3       2  2  3         3  4  3       2  5  3       4  2  3
+     + 84 u  x y  - 42 u  x  y  z - 71 u  v  x  + 84 u  v  y  + 47 u  x  y
+
+           4  5         6       7       6      2       6         6         6
+     - 38 u  v  z + 75 z  - 11 u  + 19 u  v y z  - 80 u  v - 14 u  x + 56 u  y
+
+           4  3  2      6         2  2  5       5  2       2  4    3
+     - 29 u  x  z  - 8 u  z - 21 u  v  y  - 80 u  v  - 21 u  x  y z
+
+           2  2  4         5             7           2  3  2  2         2    6
+     - 55 u  v  y  z + 91 u  v x + 21 u v  x y + 85 u  v  y  z  - 41 u x  y z
+
+           5               3  4       5             5  4       4  2  2
+     + 48 u  v y - 83 u x y  z  - 53 u  v z + 87 u v  y  + 78 u  x  y  z
+
+           5  2       2  2  3  2       2  2  3           5          5
+     + 68 u  x  + 87 u  v  x  y  + 61 u  v  x  y z - 27 u  x y + 5 u  x z
+
+           4  2  2             6  2       3  2  4       3  3    3
+     + 77 u  v  x  z - 68 u v y  z  - 28 u  v  x  - 25 u  v  x z
+
+           4  3  2         2  3  2  3       5  2       5             2    6
+     - 15 u  v  x  y + 94 u  x  y  z  - 33 u  y  + 87 u  y z + 60 u v  x z
+
+            2  7         3  3         5  2       4  3       4  5        4  2
+     - 3 u v  y  - 18 u v  y  z - 24 u  z  + 18 u  v  - 65 u  v  x + 8 u  v  x
+
+           2  2  4         4  2         4    5         4  3         2  5    2
+     + 52 u  v  x  z - 37 u  v  y + 20 u  x z  + 93 u v  x  y + 28 u  v  y z
+
+           4  2           2    4         4    2       4             4    2
+     + 96 u  v  z + 42 u v  x y  z + 82 u  v x  - 50 u  v x y + 73 u  v y
+
+           4               7         2  5    2       4    2      2  2  5
+     + 88 u  v y z - 59 u y  z - 22 u  x  y z  + 52 u  v z  + 3 u  v  x
+
+           2  2  5         2  2  4  2       2  2  3  3       2  2  2  4
+     + 65 v  x  y  z - 20 v  x  y  z  + 48 v  x  y  z  - 79 v  x  y  z
+
+           2  2    5       2  2  6       2    7       2    6         2    5  2
+     - 94 v  x  y z  - 68 v  x  z  + 59 v  x y  - 75 v  x y  z + 64 v  x y  z
+
+           2    4  3       2    3  4       2    2  5       2      6
+     - 63 v  x y  z  + 26 v  x y  z  + 35 v  x y  z  - 39 v  x y z
+
+           2    7       2  8       2  7         2  6  2       2  5  3
+     + 55 v  x z  + 23 v  y  + 73 v  y  z + 55 v  y  z  - 29 v  y  z
+
+           2  4  4       2  3  5       2  2  6       4  5      4  3
+     - 91 v  y  z  + 85 v  y  z  + 95 v  y  z  + 89 x  y  - 3 u  x
+
+           4  2           3    4         4  2         3  3  3      2  3  4
+     + 86 u  x  y - 49 u v  x y  z + 80 u  x  z + 59 u  v  z  + 7 u  v  z
+
+               3  3  2             5         4    2       5  3  2
+     + 46 u v x  y  z  + 54 u v x y  z + 96 u  x y  + 49 u  x  z
+
+             2    5       4             4    2       5    2  2       4  3
+     + 59 u v  x y  + 72 u  x y z + 16 u  x z  + 67 u  v y  z  + 11 u  y
+
+           2      2  2       4  2        4    2       2  2  2  3         2    5
+     + 92 u  v x y  z  - 94 u  y  z - 5 u  y z  + 58 u  v  x  y  + 48 u v  x z
+
+           4  3       2  4  3             2  5       5  2           3  2  3  2
+     - 65 u  z  + 73 u  v  x  y - 73 u x y  z  + 48 u  v  x z - 75 u  v  x  y
+
+             3    3  2       3  3          4  2             2    6       3  3
+     + 31 u v  x y  z  + 59 u  v  x + 3 u v  x  y z - 59 u v  y z  - 83 u  v  y
+
+           5  2               4    3      3  3             4  3       3  2  2
+     - 58 u  v  x y + 36 u v x  y z  + 3 u  v  z + 84 u x y  z  + 21 u  v  x
+
+           3  2           3  2            2  4  3       3  2           2  4  4
+     + 80 u  v  x y + 73 u  v  x y z - 9 u  y  z  - 98 u  v  x z - 93 u  v  x
+
+           3  2  2       3  2           2  2  3  2       3    3
+     - 77 u  v  y  + 60 u  v  y z - 31 u  v  x  z  + 47 u  v x
+
+             2    5             4  3       3    2        3    2
+     + 85 u v  x y  z - 23 u v y  z  - 34 u  v x  y + 4 u  v x  z
+
+           3  2  3  2       3  2  2  3       3  2    4       3  2  5
+     - 14 v  x  y  z  + 11 v  x  y  z  - 87 v  x  y z  + 12 v  x  z
+
+           3    6       3    5         3    4  2       3    3  3      3    2  4
+     - 62 v  x y  - 59 v  x y  z - 42 v  x y  z  + 13 v  x y  z  - 5 v  x y  z
+
+           3      5      3    6       3  7       3  6         3  5  2
+     - 61 v  x y z  - 8 v  x z  - 71 v  y  + 16 v  y  z - 37 v  y  z
+
+           3  4  3       3  3  4       3  2  5       3    6       3      2
+     - 45 v  y  z  - 96 v  y  z  + 56 v  y  z  + 55 v  y z  - 31 u  v x y
+
+           3               5  2  3       3      2           5
+     + 81 u  v x y z + 65 u  x  y  - 98 u  v x z  - 94 u v x  y z
+
+           3    2          2  3  3         5  3        5  2  2       3    2  3
+     - 42 u  v y  z + 9 u v  x  y  z + 84 u  v  z - 9 u  v  x  + 92 u  v y  z
+
+               4  4       3  3             2  5  3       3      2
+     + 81 u v x  y  - 64 u  v  x y z + 32 u  v  z  + 37 u  v y z
+
+          3  2  2  3      7  2       3    3       3  4           2  5
+     + 3 u  v  x  z  - 2 u  v  - 67 u  v z  - 39 u  x  - 94 u v y  z
+
+           3  3         2  2    2  2       3  3          2    2  3
+     + 27 u  x  y - 18 u  v  x y  z  - 11 u  x  z + 6 u v  x y  z
+
+           3  2  2           6       3  2           3  4    2         3    2  3
+     - 72 u  x  y  - 87 u v x  + 51 u  x  y z - 10 u  v  x y  + 89 u v  x y  z
+
+           2  2    3        2  3  5       4  2  2       3  2  2         3  6
+     + 73 u  v  x y  z + 3 u  y  z  - 62 u  v  y  + 33 u  x  z  - 72 u v  z
+
+           3    3       2  4  2  2       8         3  3  2       3  3
+     - 81 u  x y  - 48 u  v  x  y  - 11 u  v + 70 v  x  y  - 64 v  x  y z
+
+           3  3  2       3  2  3       4  3    2       3  2  2
+     - 93 v  x  z  - 13 v  x  y  - 32 u  x  y z  + 78 v  x  y  z
+
+           3  2    2       3  2  3       3    4       3    3         3    2  2
+     - 73 v  x  y z  - 79 v  x  z  + 17 v  x y  - 18 v  x y  z - 99 v  x y  z
+
+           3      3       3    4       3  5       3  4         3  3  2
+     + 94 v  x y z  - 73 v  x z  + 20 v  y  + 34 v  y  z + 77 v  y  z
+
+           3  2  3       3  4         3    2         3      4       2  6
+     + 84 v  y  z  + 71 v  x  z - 39 u  x y  z - 94 u  v x z  + 53 u  z
+
+               5  3       3      2       2  2  3  2       3    3      2  4  3
+     + 74 u v y  z  - 76 u  x y z  - 54 u  v  y  z  - 57 u  x z  + 9 u  v  x  z
+
+           3  4       7           7  2       7           7  2       6  3
+     - 78 u  y  - 75 v  x z - 90 v  y  - 12 v  y z + 84 v  z  - 96 v  x
+
+           6  2         3  3         3  2  2       3    3           3  4
+     - 22 v  x  y - 49 u  y  z + 10 u  y  z  - 61 u  y z  + 66 u v y  z
+
+           2    7         7  2       3  4       2    2  4       2  2  2  3
+     + 94 u  x z  + 66 u v  y  + 57 u  z  - 13 u  v y  z  - 32 u  v  x  z
+
+           2  5      2  4           3    5       3  2  3        2  4
+     - 26 u  v  + 8 u  v  x - 95 u x  y z  + 15 u  v  x  y + 4 u  v  y
+
+           2  4        6    3       2  3  2       3  2    3      2  3
+     + 76 u  v  z - 6 u  x z  - 92 u  v  x  + 81 u  v  x z  + 2 u  v  x y
+
+           2  2  2  2         2  3           4  5       2  3  2       6
+     - 31 u  v  x  y  z - 64 u  v  x z + 34 u  z  + 21 u  v  y  + 81 u  v x z
+
+           2  3           2  3  2       6         6         6         5  2
+     + 81 u  v  y z - 86 u  v  z  + 32 v  x - 15 v  y + 57 v  z - 93 v  x
+
+           5           5           5  2       5           5  2       4  3
+     - 82 v  x y + 85 v  x z + 28 v  y  + 90 v  y z + 27 v  z  + 45 v  x
+
+           4  2         4  2         4    2       4             4    2
+     - 20 v  x  y + 49 v  x  z + 48 v  x y  - 51 v  x y z + 56 v  x z
+
+           4  3       4  2        4    2      4  3       3  4       3  3
+     + 20 v  y  + 77 v  y  z + 5 v  y z  - 7 v  z  + 15 v  x  - 62 v  x  y
+
+           2  2  3       2  2  2         2  4  2  2         3  6       5  2
+     - 71 u  v  x  + 80 u  v  x  y + 74 u  v  x  z  - 85 x y  z  - 81 u  v  y z
+
+          2  2  2            7       4  2    2           3  3             7  2
+     - 2 u  v  x  z + 3 u v z  - 10 u  v  x y  z + 67 u v  x  y z - 39 u v  z
+
+           2  2    2         6  2       2  2  3       2  2  2           3  2  4
+     + 91 u  v  x z  + 55 u y  z  + 16 u  v  y  + 98 u  v  y  z - 50 u v  y  z
+
+             3  4         3  2  3       2  2  3       5  2  2       2    3
+     - 55 u v  x  y + 80 u  v  y  - 41 u  v  z  - 46 u  v  y  + 20 u  v x  y
+
+           2  4  2           2    3           7           2    2  2
+     + 10 u  v  x  y z + 55 u  v x  z + 75 u v  y z + 64 u  v x  y
+
+           2    2           2    2  2       2      3       2  2      3
+     + 62 u  v x  y z + 86 u  v x  z  - 67 u  v x y  + 13 u  v  x y z
+
+           2  2    4      2    3  2       2      2         4  2    3
+     - 80 u  v  x z  + 6 u  v x  z  - 11 u  v x y  z + 53 u  v  y z
+
+           2    5         3    3  2             3  3       2        2
+     - 27 u  x y  z + 18 u  x y  z  - 85 u v x y  z  - 78 u  v x y z
+
+           2      3       4  2  4       2    4         4      3       2    3
+     - 38 u  v x z  + 95 u  y  z  + 63 u  v y  + 40 u v  x y z  - 89 u  v y  z
+
+              2  5       6  3         2    2  2           3  5       3    5
+     + 2 u v x  y  + 92 u  y  z - 30 u  v y  z  - 24 u v y  z  - 30 u  v y
+
+          6      2       2      3      2  3  3       2    4       2  5
+     + 2 u  v x y  + 42 u  v y z  + 8 u  y  z  + 97 u  v z  + 78 u  x
+
+               6           5  2  2           3    3       2  4         2    6
+     - 76 u v x  y z + 16 u  v  z  + 44 u v x  y z  - 17 u  x  y - 90 u  v x
+
+           2  4         2  4  2       2  3  2       2  4    2        2  3
+     + 43 u  x  z + 70 u  x  y  - 89 u  x  y  + 66 u  v  x y  z + 3 u  x  y z
+
+           4  2  2  2       2  2  5       2  3  2       2  5  3      8
+     - 67 u  v  x  z  + 66 u  v  z  - 80 u  x  z  + 17 u  x  z  + 9 v  y z
+
+          8  2       7  3       7  2         7  2         7    2       7
+     - 2 v  z  - 78 v  x  - 97 v  x  y - 46 v  x  z + 87 v  x y  - 46 v  x y z
+
+           7    2       7  3       7  2         7    2       7  3       6  4
+     - 65 v  x z  - 93 v  y  + 37 v  y  z + 19 v  y z  - 35 v  z  + 73 v  x
+
+           6  3         6  3         6  2  2       6  2           6  2  2
+     - 62 v  x  y - 97 v  x  z - 23 v  x  y  - 76 v  x  y z - 42 v  x  z
+
+           6    3       6    2         6      2       6    3      6  4
+     + 17 v  x y  - 68 v  x y  z + 27 v  x y z  + 75 v  x z  - 7 v  y
+
+           6  3         6  2  2       2  2  3       3  2  3        4    2  3
+     + 43 v  y  z + 68 v  y  z  + 37 u  x  y  + 83 u  v  x  z - 7 u  v x  y
+
+           2  2  2         5  2             2  2  2  3       2  2    4
+     + 89 u  x  y  z - 87 u  v  x y z - 91 u  v  y  z  - 34 u  v  y z
+
+           2  2    2       2      4         2  2  3       2    4       2    3
+     - 58 u  x  y z  - 22 u  v x y  z - 32 u  x  z  + 61 u  x y  - 83 u  x y  z
+
+             3  4  2       4  2  4       4        3      2    2  2
+     - 26 u v  x  z  + 53 u  v  z  - 43 u  v x y z  + 9 u  x y  z
+
+           2      3       2    4       2  5       2  4  2  2       2  4
+     + 52 u  x y z  - 51 u  x z  + 75 u  y  + 20 u  v  y  z  - 23 u  y  z
+
+             6  2         2  3  2         2  4          3  2  2  2
+     - 66 u v  x  y + 27 u  y  z  + 37 u v  x  y z + 3 u  v  x  y
+
+           5      3         2      4      6    2           8       7  2
+     - 64 u  v x y  + 20 u v  x y z  - 3 u  v x  y + 21 u x  - 37 u  v  x
+
+           2  5       2  4  3         2    4           4  3  2           5    3
+     + 77 u  z  - 89 u  v  y  z + 74 u  v x  y z + 40 u  v  x  z + 37 u v  x y
+
+             6        5           5           5         2  3      3
+     - 24 u v  - 4 u v  x + 39 u v  y - 44 u v  z - 77 u  v  x y z
+
+             4  2       4  2    2       3  5  2           3  2  2       2  4  4
+     + 49 u v  x  + 28 u  v  x y  + 98 u  v  x  - 45 u v x  y  z  + 41 u  v  y
+
+          4    2           4           2    4  2         2  3  2
+     + 6 u  x y  z - 75 u v  x y + 51 u  v x  y  + 51 u v  x  y
+
+           2    2    2         4  2         4           5    3         4  2
+     + 15 u  v x  y z  - 61 u v  y  + 80 u v  y z + 16 u  v x  + 17 u v  z
+
+           8         3  3        3      4       2    6           3  2
+     + 50 x  + 90 u v  x  - 4 u v  x y z  + 58 u  x y  z - 68 u v  x  z
+
+           2  4    3       2  4      2         3               4  5
+     + 15 u  v  x z  - 28 u  v  x y z  + 81 u v  x y z - 77 u v  x
+
+             3    2         3  3       2  4  4         3  2         5    2
+     + 60 u v  x z  - 68 u v  y  - 62 u  v  z  - 11 u v  y  z + 67 u  v x  z
+
+             3    2         3  3         3    5         2  4       4  2
+     + 29 u v  y z  + 25 u v  z  - 19 u v  x z  + 95 u v  x  - 44 u  v  x y z
+
+           4  5         6  3         2  3           2  3           2  2  2
+     - 45 u  x  z + 37 v  y  + 22 u v  x  y - 57 u v  x  z - 18 u v  x  y
+
+             2  2           2  3  5         2  2  2       3  4  2
+     - 51 u v  x  y z - 29 u  x  z  - 49 u v  x  z  + 82 u  v  x  z
+
+           2    3  3       2    3  2           2    3       2  4    3
+     - 57 u  v x  y  - 41 u  v x  y  z - 34 u v  x y  + 37 u  v  y z
+
+             2    2           2    3       2  2  2  4           5  2
+     + 64 u v  x y  z - 97 u v  x z  - 98 u  x  y  z  + 12 u v y  z
+
+             2  5             2  3         7  2        2  2  2        5  3
+     + 67 u v  x  y z + 27 u v  y  z + 83 x  z  + 9 u v  y  z  - 8 u x  z
+
+          2    3         2  4       5    2             5           4
+     - u v  y z  - 11 u v  z  - 21 u  v x  y - 72 u v x  + 56 u v x  y
+
+          4    2  2      3  2  5         6  2             4             3  2
+     - 4 u  v x  y  - 7 u  v  x  - 99 u v  x  z - 53 u v x  z + 63 u v x  y
+
+           2  3  3  2           3               3  2       2  3  4
+     - 37 u  v  x  y  + 63 u v x  y z - 94 u v x  z  + 51 u  v  x  z
+
+               2  3           5  2         2    2  2  2           2  2
+     - 89 u v x  y  + 89 u v x  y  z - 93 u  v x  y  z  + 56 u v x  y  z
+
+           2      5           2    2       2    2  3          2  3
+     - 63 u  v y z  - 73 u v x  y z  + 53 u  v x  y  z + u v x  z
+
+           2    2  4       2    2  4             4             2  2
+     + 76 u  v x  z  + 56 u  v x  y  - 80 u v x y  - 76 u v x y  z
+
+             2  2  3  2       2    3  3           4  4         6  2
+     + 70 u v  x  y  z  - 87 u  v x  z  - 77 u v x  z  + 70 u x  y
+
+                   3       2  3  4               4       2    3    2          5
+     + 25 u v x y z  + 23 u  v  x  y + 26 u v x z  - 19 u  v x  y z  + 7 u v y
+
+           5  4           7             3  2      2  3  3           2  3
+     + 92 u  v  z + 55 u x  y + 36 u v y  z  - 6 u  v  z  - 53 u v y  z
+
+           3  6               4           5         6       3  2  4
+     - 56 u  v  x + 78 u v y z  + 67 u v z  - 88 u x  + 92 v  x  y
+
+           3  2  3         3  2  2  2       3  2    3      3  2  4       3    5
+     - 67 v  x  y  z + 88 v  x  y  z  - 94 v  x  y z  + 4 v  x  z  + 58 v  x y
+
+           3    4         3    3  2       3    2  3       3      4       3    5
+     + 49 v  x y  z - 85 v  x y  z  - 70 v  x y  z  + 52 v  x y z  + 22 v  x z
+
+           3  6      3  5         3  4  2       3  3  3       3  2  4
+     + 96 v  y  - 9 v  y  z - 93 v  y  z  - 81 v  y  z  - 16 v  y  z
+
+           3    5       3  6       2  7       2  6         2  6         2  5  2
+     - 86 v  y z  + 77 v  z  - 83 v  x  - 10 v  x  y + 34 v  x  z + 57 v  x  y
+
+           2  5           2  5  2       2  4  3       2  4  2         2  4    2
+     - 47 v  x  y z + 84 v  x  z  - 20 v  x  y  + 29 v  x  y  z - 55 v  x  y z
+
+          6  4       2  3  5       3  5           5            7
+     + 7 x  y  + 90 u  v  x  + 87 u  x  y + 36 u x  z - 2 u v x  y
+
+             3  5          3  3  3         3  2  4         3    5         3  6
+     + 73 v x  y  z + 8 v x  y  z  - 32 v x  y  z  + 18 v x  y z  - 41 v x  z
+
+             2  7         2  6           2  5  2         2  4  3
+     - 27 v x  y  + 26 v x  y  z + 48 v x  y  z  + 86 v x  y  z
+
+             2  3  4         2  2  5         2    6         2  7           8
+     - 72 v x  y  z  + 51 v x  y  z  + 77 v x  y z  - 18 v x  z  + 15 v x y
+
+               7             6  2           5  3           3  5           2  6
+     + 43 v x y  z - 62 v x y  z  - 51 v x y  z  + 95 v x y  z  + 10 v x y  z
+
+                 7           8         3  4  2         4            4  2
+     + 10 v x y z  + 80 v x z  + 70 v x  y  z  - 31 u x  y z - 7 u x  z
+
+           2  3  2  3         3  3         3  2           3    2       8
+     + 71 u  v  x  y  + 42 u x  y  + 73 u x  y  z - 69 u x  y z  - 90 z
+
+             3  3         2  4         2  3         3  2  2
+     - 24 u x  z  - 55 u x  y  + 49 u x  y  z - 59 u  v  x  y z
+
+               2    5       2    2    3       2  3  3  2       3    3  3
+     + 88 u v x  y z  - 68 u  v x  y z  - 32 u  v  x  z  + 15 u  v x  y
+
+             2    3           4             2  4           5         4  2  2
+     + 23 u x  y z  - 57 u v x  y z - 17 u x  z  - 31 u x y  + 63 u v  x  z
+
+               4         4  6           3  2       2  8           2  3
+     - 75 u x y  z + 38 y  z  - 36 u x y  z  + 76 u  y  - 14 u x y  z
+
+                 4       2  3  3            5       3  5       2  6
+     + 55 u x y z  - 28 u  v  x  y z + u x z  - 89 v  z  - 38 v  x
+
+           2  5         2  5        2  4  2      2  4           2  4  2
+     + 25 v  x  y + 76 v  x  z - 8 v  x  y  + 3 v  x  y z - 13 v  x  z
+
+           2  3  3       2  3  2         2  3    2       2  3  3       2  2  4
+     + 46 v  x  y  - 41 v  x  y  z - 98 v  x  y z  + 84 v  x  z  - 34 v  x  y
+
+           2  2  3         2  2  2  2       2  2    3       2  2  4
+     + 46 v  x  y  z + 49 v  x  y  z  + 70 v  x  y z  + 77 v  x  z
+
+           3    4         6       8           5      2         6
+     + 92 v  y z  - 23 u y  - 76 u  v x + 44 u  v x y  + 93 u x  y z
+
+           4    3  2       9           4  2         3  3       2  3  2  3
+     + 77 u  x y  z  + 11 y  z + 26 u y  z  - 35 u y  z  + 17 u  v  x  z
+
+           5    3         2  4       2      5         3  5             5
+     + 87 u  v y  - 34 u y  z  - 87 u  v x z  - 56 u v  x  z + 14 u y z
+
+           3  3    3       2  3  2  2       6  3       2        4         6
+     - 29 u  v  y z  + 84 u  x  y  z  - 11 x  z  - 25 u  v x y z  + 92 u z
+
+           2  7         2  6  2       2  6           2  6  2       2  5  3
+     - 55 v  x  z + 49 v  x  y  + 24 v  x  y z + 41 v  x  z  + 95 v  x  y
+
+           2  5  2         2  5    2       2  5  3       2  4  4
+     - 35 v  x  y  z - 75 v  x  y z  + 12 v  x  z  - 96 v  x  y
+
+           2  4  3         2  4  2  2       2  4    3       2  4  4
+     - 60 v  x  y  z + 25 v  x  y  z  - 24 v  x  y z  + 61 v  x  z
+
+           2  3  5       2  3  4         2  3  3  2       2  3  2  3
+     + 25 v  x  y  + 52 v  x  y  z - 80 v  x  y  z  + 43 v  x  y  z
+
+           2  3    4       2  3  5       2  2  6       7         4  3
+     + 62 v  x  y z  + 36 v  x  z  - 49 v  x  y  + 90 v  + 20 u x  z
+
+             2    4         6    2         4    4       5      2
+     - 75 u v  y z  + 95 u v  x y  + 83 u v  x z  - 79 u  v x z
+
+           3  2  2  2       3  3  2  2       3      4       2  3  2    2
+     - 49 u  v  x  z  + 74 u  v  x  y  - 70 u  v y z  - 67 u  v  x  y z
+
+           2      3  2       5               3  4  2       2  2  4  2
+     + 29 u  v x y  z  - 69 u  v x y z - 27 u  y  z  - 15 u  x  y  z
+
+               2  6         7           3  4         2      5
+     + 56 u v y  z  - 97 u x  z + 10 u v  y  z + 56 u  v x y
+
+           2  3  2  2           2  3  4       6  3         5  4        5  2
+     - 77 u  v  x  y  z - 20 u v  x  z  - 80 u  v  y + 16 u  x  - 6 u x  y  z
+
+           5    3       7  2         2  3    3           5  3       3  3
+     - 42 u  v z  + 95 u  v  z + 81 u  v  x y  z - 84 u x  y  + 31 v  x  z
+
+           3  2  2       3  2           3  2  2       3    3       3    2
+     - 57 v  x  y  - 98 v  x  y z + 80 v  x  z  + 51 v  x y  - 39 v  x y  z
+
+          3      2      3    3       3  4       3  3         3  2  2
+     - 3 v  x y z  - 6 v  x z  - 60 v  y  - 17 v  y  z - 93 v  y  z
+
+           3    3       3  4       2  5       2  4         2  4         2  3  2
+     + 80 v  y z  - 88 v  z  + 40 v  x  + 10 v  x  y - 67 v  x  z + 40 v  x  y
+
+           2  3           2  3  2       2  2  3      2  2  2         2  2    2
+     + 82 v  x  y z + 82 v  x  z  + 69 v  x  y  - 3 v  x  y  z - 69 v  x  y z
+
+           2  2  3       2    4       2    3         2    2  2       2      3
+     + 37 v  x  z  - 42 v  x y  + 51 v  x y  z + 80 v  x y  z  + 72 v  x y z
+
+           2    4       2  5       2  4         2  3  2       2  2  3
+     - 36 v  x z  - 71 v  y  - 54 v  y  z - 84 v  y  z  + 53 v  y  z
+
+           2    4         2    3        2  5         6         5           5
+     - 65 v  y z  + 24 u v  x y  z + 9 v  z  - 50 v x  + 19 v x  y + 18 v x  z
+
+             4  2         4             4  2         3  3         3  2
+     + 45 v x  y  + 30 v x  y z - 73 v x  z  + 37 v x  y  - 83 v x  y  z
+
+             3    2         3  3         2  4         2  3           2  2  2
+     + 15 v x  y z  + 80 v x  z  + 40 v x  y  - 18 v x  y  z - 64 v x  y  z
+
+             2    3         2  4           5           4             3  2
+     - 60 v x  y z  - 80 v x  z  + 33 v x y  - 67 v x y  z + 14 v x y  z
+
+             6  3           6           3  2  2         2    5        4  4  2
+     + 75 u y  z  + 15 u v y  z + 15 u v  x  y  z + 29 u  v y  z - 6 u  v  z
+
+             3  6       5      2         6  2             7      5    2
+     + 59 u v  y  + 71 u  v y z  - 85 u x  z  - 27 u v y z  - 4 u  v y  z
+
+           2  3    4      3  2    3      6  2           4    5       4  2    2
+     - 64 u  v  x y  - 4 u  v  x y  - 3 u  x  y z - 52 u  y z  + 81 u  x  y z
+
+           4    3  2           6       4        2       2  3    2  2
+     + 14 u  v y  z  - 25 u x y  + 86 u  v x y z  - 41 u  v  x y  z
+
+           3  2    2        5  3           6             5  3
+     - 11 u  v  x y  z + 8 u  x  z - 81 u v  x y z - 93 u  x  y
+
+               3  2  3       2    3  3         3  4  2         2  3  2  2
+     - 68 u v x  y  z  + 94 u  v y  z  + 73 u v  x  y  + 99 u v  x  y  z
+
+               8       5      3         2    4  2         2    3  2
+     - 46 u v z  + 96 u  v y z  - 40 u v  x y  z  + 23 u v  x y  z
+
+           6      2         2  5         4    4         5    3
+     + 64 u  x y z  + 96 u v  x  z + 93 u  v x  y + 41 u  v y  z
+
+               3  3         5  2  2        3  2  4       2    5       2    4
+     + 31 u v x  y  z + 19 u  v  x  y + 8 u  v  y  - 39 v  x y  - 58 v  x y  z
+
+           2    3  2       2    2  3       2      4       2    5       2  6
+     + 87 v  x y  z  - 66 v  x y  z  - 44 v  x y z  - 88 v  x z  + 20 v  y
+
+           2  5         2  4  2       2  3  3       2  2  4       2    5
+     + 84 v  y  z + 23 v  y  z  - 68 v  y  z  + 98 v  y  z  - 74 v  y z
+
+           2  6        6           6           5  2       3  4
+     + 15 v  z  + 4 v x  y - 34 v x  z - 26 v x  y  + 90 u  v  x y z
+
+             6  3         2  2  4       5  2           2  3    4       2  7
+     - 39 u v  y  + 14 u x  y  z  + 96 u  x  y z + 94 u  v  x z  - 40 u  x
+
+             6    2       2    6           3    4       10       5  2  2
+     - 27 u v  x z  - 48 u  v z  + 46 u v x  y z  + 33 z   + 37 u  x  y  z
+
+           2  3    4       7  2         6  2  2       4  2      2       5  2  2
+     + 36 u  x  y z  + 42 u  x  z + 43 u  v  x  - 54 u  v  x y z  - 85 u  x  y
+
+                 4           5         6         5           4  2         3  3
+     - 83 v x y z  - 94 v x z  - 77 v y  - 97 v y  z + 76 v y  z  - 19 v y  z
+
+           4  3  3         2  4           5        6       3      5
+     - 21 u  x  z  + 32 v y  z  - 79 v y z  + 4 v z  - 35 u  v y z
+
+          3  2      2       4      3         4    3         4  2  2
+     - 5 u  v  x y z  - 94 u  x y z  + 18 u v  x y  - 97 u x  y  z
+
+           3    4  2       2  5  2       2  3  3  2         6    2
+     - 96 u  v x  z  + 96 u  x  y  - 37 u  v  y  z  - 45 u v  y z
+
+               3    2       7       5    2           4  3           5  3
+     - 64 u v x  y z  + 37 x  + 63 u  x y  z + 25 u x  y  z + 34 u v  x
+
+           2  6         2  3  4           6  2         5    3         9
+     + 44 u  x  z - 63 u  v  y  z + 86 u v  y  z + 55 u  x y  + 14 u x
+
+             4  4       7  2         4  5       2  3  5      3  6       3  5
+     - 87 u x  y  + 69 x  y  + 41 u v  y  - 57 u  v  y  - 3 u  v  + 41 u  v  x
+
+           5  4       2  3  5         8           4    3         4  3  2
+     + 82 u  y  + 53 u  v  z  - 90 u x  y + 62 u x  y z  - 47 u v  y  z
+
+             2    2  4         4  4        3  2  3             4  4
+     + 82 u v  x y  z  + 10 u v  y  z + 9 u  v  y  z + 48 u x y  z
+
+          2  4  3       2  3    4       5    3         3    4         7  2
+     - 9 u  x  y  - 99 u  v  y z  - 56 u  x y  z - 73 u  v x  z + 99 u  y  z
+
+           3  4  2       5    3       3  2  2  3    5      2       2  5  2
+     + 40 u  x  y  - 88 u  x z  + 74 u  v  x  y  + u  x y z  - 13 u  x  z
+
+           7  2       6         7       3    2  3       8         5  2
+     - 89 u  y  - 78 y  z + 27 y  - 56 u  v x  y  + 52 u  z - 25 y  z
+
+           4  3         6           2  6         2  3  2  3         5  4
+     - 30 y  z  - 65 u v  x y + 42 u  v  y - 27 u  v  y  z  - 77 u y  z
+
+           3  4       3    3  2         2  5       3    2  4         6
+     - 17 y  z  - 80 u  v x  y  z + 65 y  z  + 75 u  v x  y  - 13 y z
+
+           2  2  5         2  3  3         5    2  2       5    2           7
+     + 68 u  v  x  z - 43 u  x  y  z - 84 u  v x  y  + 94 u  v x  y z - 88 z
+
+           3  2  3  2       8       3  2  4       7         7         7
+     - 90 u  v  x  z  + 96 u  - 74 u  x  z  + 67 u  v + 85 u  x + 55 u  z
+
+           2  3  4       6  2       6  2  2       2  4  3       2  2  5
+     + 12 u  x  y  + 64 u  v  + 85 u  v  y  - 86 u  x  z  + 67 u  v  x  y
+
+             3  5       2  4  4       6           6           2  4    2
+     - 42 u x  y  - 66 u  x  z  - 90 u  v y + 80 u  v z - 41 u  x  y z
+
+           3  3  3           6  3       6             8         6
+     - 98 u  v  x  z + 53 u v  z  - 36 u  x y - 77 u x  z + 86 u  x z
+
+           2  2  6       2  4  2         6  2       4  2    2           2  4  2
+     - 11 u  v  x  - 24 u  x  y  z - 97 u  y  + 71 u  v  x z  - 87 u v x  y  z
+
+           5  2         5  2         5  3             3  5       5  2
+     + 12 u  v  x + 88 u  v  y - 71 u  y  z - 85 u v x  z  + 57 u  v  z
+
+           5    2       3    2    2         5  2       5             2  7
+     + 75 u  v x  - 72 u  v x  y z  - 16 u x  y  + 71 u  v x y + 10 u  y  z
+
+           5               3  5           7  2       5    2         2  2  5
+     - 21 u  v x z + 15 u v  y  z + 85 u x  y  + 84 u  v y  - 99 u v  x  y
+
+           5             2  2  3  3       2  2  5       2    5         5  3
+     + 47 u  v y z + 51 u  v  x  y  - 73 u  x  y  + 95 u  v x  y + 97 x  y  z
+
+             2  3  4      5  4      3  5           5  2        5    3
+     - 97 u x  y  z  + 3 u  z  - 7 u  v  x y + 66 u  x  y - 7 u  y z
+
+           5             5    2       5  3       3  3  4       5  2
+     + 17 u  x y z + 32 u  x z  + 39 u  y  + 38 u  x  y  + 75 u  y  z
+
+           5    2       5  3       4  4       2  2  4          4  3
+     - 82 u  y z  + 93 u  z  + 19 u  v  + 62 u  v  x  y z - 3 u  v  x
+
+             3  6         3  4         4  3         8  2       4  3
+     + 16 u x  z  + 36 u x  y  z - 65 u  v  y + 74 y  z  + 96 u  v  z
+
+           2  2  4  2       5  2  2    4  2           3  6         2  2  2  4
+     - 99 u  v  x  y  + 36 u  y  z  - u  v  x y + 90 u  x  z - 35 u  v  x  y
+
+           2  2    4       9           7           4      2       4
+     - 21 u  x  y z  - 12 u  y - 60 u x  y z - 49 u  v x y  - 76 u  v x y z
+
+          2  2  2  3       4      2       4  4             2  6         5  4
+     - 2 u  x  y  z  + 98 u  v x z  - 77 u  v  x - 39 u v x  y  - 31 u v  x
+
+           2  2  3  3       4    3       4  2  3         8      3  2    3
+     - 55 u  v  x  z  + 19 u  v z  + 90 u  v  y  - 14 x z  - 7 u  v  y z
+
+           4  3         2  2  3    2       4  2  2       2  2  3  2
+     + 25 u  x  z + 42 u  v  x  y z  - 58 u  x  y  - 30 u  x  y  z
+
+           4  2           4  2  2           5  3       2  2  3  2
+     - 34 u  x  y z - 56 u  x  z  + 87 u v x  z  + 80 u  v  x  y  z
+
+             2  6           7           6             5  2           4  3
+     - 60 v x  z  - 68 v x y  - 25 v x y  z + 14 v x y  z  + 87 v x y  z
+
+               3  4           2  5             6         8         6  2
+     + 88 v x y  z  - 11 v x y  z  + 58 v x y z  - 10 v y  - 19 v y  z
+
+             5  3         4  4         3  5         2  6           7         8
+     - 88 v y  z  - 97 v y  z  - 42 v y  z  + 44 v y  z  + 37 v y z  + 82 v z
+
+             5             4  3         4  2           4    2         4  3
+     + 90 v x  y z - 27 v x  y  - 39 v x  y  z + 36 v x  y z  - 63 v x  z
+
+             3  4         3  3           3  2  2         3    3        3  4
+     - 35 v x  y  - 16 v x  y  z - 56 v x  y  z  + 73 v x  y z  + 2 v x  z
+
+             2  5         2  4           2  3  2         2  2  3         2    4
+     - 72 v x  y  + 76 v x  y  z - 84 v x  y  z  - 23 v x  y  z  + 87 v x  y z
+
+             2  5           6           5           5  2       4  5
+     - 25 v x  z  - 18 v x y  - 30 v x y  z - 11 v x  z  + 86 u  v
+
+           4      2       4    2        4    2  2       4    3       2  2  2  4
+     + 54 u  x y z  - 94 u  v x  y z + u  v x  z  - 40 u  x z  - 22 u  v  x  z
+
+           2    2  4          3  5       2  2  2    3      4    3
+     + 39 u  x y  z  + 7 u v x  y  - 97 u  v  x  y z  - 9 u  y z
+
+             5  3         4  4         3    4         3  5         7  2
+     + 71 u v  y  z - 17 u  z  - 83 u x  y z  - 69 u x  z  - 66 u x  z
+
+          3  4         4  4         3  4           5    2         3  3  2
+     - 3 u  v  x + 85 u  v  y - 13 u  v  y - 94 u x  y z  + 23 u v  x  z
+
+           3  3  2      3    5         3  3           2  2  2  2  2
+     - 70 u  v  y  + 5 u  v x  z - 46 u  v  y z + 75 u  v  x  y  z
+
+           3  3  2         4  2  3       2    3  3       3  2  3
+     + 97 u  v  z  + 78 u v  y  z  - 94 u  x y  z  - 23 u  v  x
+
+           2    4  2       3  2  2         2      2  3       6  4
+     + 92 u  x y  z  + 94 u  v  x  y + 80 u  v x y  z  + 66 u  v
+
+           4  2    3       3  2    2      3  2    2       2  2  2  3
+     - 82 u  v  x y  + 64 u  v  x y  + 4 u  v  x z  + 35 u  v  x  y  z
+
+           3  2  4         5  3           5  4       3  2  3         4    4
+     + 46 u  v  z  - 87 u v  x  z + 60 u v  z  + 53 u  v  z  + 10 u v  y z
+
+           4  3           3    4           6  2       4    3
+     + 79 u  v  x y - 93 u  v x  + 37 u v x  y  - 46 u  v x  y
+
+           2  2    2  3       3    2  2         2  4  2       3    2  2
+     - 45 u  v  x y  z  + 72 u  v x  y  - 16 u x  y  z  - 47 u  v x  z
+
+           2  7       3      3         9       3      2         3        2
+     - 15 u  y  + 41 u  v x y  - 88 y z  - 90 u  v x y  z - 60 u  v x y z
+
+           2  2    3  2       3    4         3    4       3    3
+     + 30 u  v  x y  z  - 94 u  v x  y + 31 u  v y  - 52 u  v y  z
+
+           2  2    4         3    4      2    6       3  5        5  3
+     - 12 u  v  x y  z + 58 u  v z  + 2 u  x z  - 47 u  x  + 8 u v  x  y
+
+           2  2    5       2      5           7       3        4         5    2
+     + 18 u  v  x y  - 55 u  x y z  - 88 u y z  - 70 u  v x y z  - 52 u v  x z
+
+           3    5         3  3            7         3  3  2       4  2    2
+     + 33 u  v y  z + 27 u  x  y z - 3 v y  z + 99 u  x  z  + 62 u  v  y z
+
+           6             6    2       2  2  5         4  3  2           7
+     + 65 v  x y z + 62 v  x z  - 33 u  v  y  z + 54 u  v  y  + 47 v x z
+
+           3  2    2         3    4       4  3  3       3    4       3    3
+     - 48 u  x  y z  - 63 u v  x y  + 15 v  y  z  - 59 u  x y  - 92 u  x y  z
+
+             5  2  2       4      3       3    2  2       3      3
+     - 27 u v  x  y  - 22 u  v x y  + 43 u  x y  z  - 96 u  x y z
+
+           2  2  5       4    3           2    5  2       2  2  6       3  5
+     - 52 u  y  z  - 53 u  v x  y z - 26 u  x y  z  - 34 u  v  y  - 85 u  y
+
+           3      3           6  2         3    2  4       3  4         3  3  2
+     - 79 u  v x y  z + 46 u x  y  z - 22 u  v y  z  - 63 u  y  z - 78 u  y  z
+
+           3  2  3       2  2    5       2  6       4  3          2  2    5
+     + 50 u  y  z  + 98 u  x  y z  + 59 u  v  - 10 u  v  x z - 9 u  v  x z
+
+             6  3       2  2      4       2  4  2       4  3           2  4
+     - 92 u x  y  + 23 u  v  x y z  - 34 u  v  x  + 75 u  v  y z - 23 u  v  x z
+
+             7         5  2    2       2  2    5       2  4  2         7
+     - 15 u v  z - 44 u  v  y z  + 25 u  v  y z  + 68 u  v  z  - 30 u v  y
+
+           2  3  3        7         2  3    2       2  2  2  4         2    5
+     + 54 u  v  x  + 3 u v  x - 24 u  v  x y  + 71 u  v  y  z  + 76 u x  y z
+
+             6    2       4  6       3    2  4       2  3    2       2  2  3  3
+     - 73 u x  y z  + 21 u  z  + 60 u  v x  z  + 58 u  v  y z  + 37 u  v  y  z
+
+           6                 5  2  2       2  2  3         2    6
+     - 91 u  v x y z + 67 u v  x  z  - 62 u  v  x  y + 14 u  y z
+
+           2  2  4  2       2  2    3       2    6           6
+     - 15 u  v  y  z  + 25 u  v  x y  + 58 u  v x  z + 65 u v  y z
+
+           2  2      2       2  2  4         4    2         2    6
+     + 32 u  v  x y z  + 92 u  v  y  + 61 u v  x y  z + 22 u  v x  y
+
+             2  6         6  3           4  2           2  4             5
+     - 61 u x  z  + 33 u x  z  - 51 v x y  z  - 78 v x y  z  + 70 v x y z
+
+               6         7        6           5  2         4  3         3  4
+     - 18 v x z  + 98 v y  - 2 v y  z + 97 v y  z  - 26 v y  z  - 11 v y  z
+
+             2  5           6        7           3  3       2  2    3
+     - 84 v y  z  - 91 v y z  + 9 v z  + 41 v x y  z  + 55 u  v  y z
+
+           2  2  4         6             6  2      2    4         2    7
+     + 63 u  v  z  + 40 u v  x z + 58 u v  y  + 3 u  v x  y - 83 u  v x
+
+           2    3  2       6  2  2       2  2  6      2    2  2
+     + 93 u  v x  y  + 49 u  x  z  + 79 u  v  z  - 4 u  v x  y  z
+
+           4      2         7  3       2  2  6         6  2       2        3
+     - 47 u  v x y  z + 84 y  z  - 14 u  x  z  - 16 u v  x  - 93 u  v x y z
+
+           3  5           2    5       2    3  2         5  2         2    2  3
+     + 31 u  x  y z + 57 u  v y  + 86 u  v y  z  - 11 u v  x  y - 44 u  v y  z
+
+           2  6       2    5           2  4  3       2  3  4       2  3  3
+     - 96 u  x  + 17 u  v x  y z + 89 v  x  z  + 90 v  x  y  + 27 v  x  y  z
+
+           2  3  2  2       2  3    3       2  3  4       2  2  5
+     + 62 v  x  y  z  + 74 v  x  y z  - 30 v  x  z  + 30 v  x  y
+
+           2  2  4         2  2  3  2       2  2  2  3      2  2    4
+     - 44 v  x  y  z + 86 v  x  y  z  + 49 v  x  y  z  + 3 v  x  y z
+
+           2  2  5       2    6       4  2  4       2    5         2    4  2
+     + 87 v  x  z  - 99 v  x y  + 48 u  x  y  + 51 v  x y  z + 84 v  x y  z
+
+           2    3  3       2    2  4       2      5       2    6       2  7
+     - 18 v  x y  z  - 42 v  x y  z  - 98 v  x y z  + 71 v  x z  + 77 v  y
+
+           2  6         2  5  2       2  4  3       2  3  4       2  2  5
+     + 24 v  y  z + 97 v  y  z  - 40 v  y  z  - 82 v  y  z  - 65 v  y  z
+
+           2    6       2  7         8         7           7           6  2
+     + 37 v  y z  + 64 v  z  + 68 v x  - 20 v x  y - 18 v x  z - 26 v x  y
+
+             6             6  2         5  3         5  2           5    2
+     + 65 v x  y z - 53 v x  z  - 60 v x  y  + 77 v x  y  z + 42 v x  y z
+
+             5  3         4  4        4  3           4  2  2         4    3
+     - 51 v x  z  + 65 v x  y  + 3 v x  y  z + 57 v x  y  z  - 71 v x  y z
+
+             4  4         3  5         3  4           3  3  2         3  2  3
+     + 84 v x  z  + 25 v x  y  + 74 v x  y  z + 76 v x  y  z  - 69 v x  y  z
+
+             3    4         3  5         2  6         2  5           2  4  2
+     - 38 v x  y z  - 73 v x  z  + 46 v x  y  - 31 v x  y  z + 53 v x  y  z
+
+             2  3  3         2  2  4       8         2  5         2  4
+     - 84 v x  y  z  - 37 v x  y  z  - 35 x  y - 85 u  x  y + 99 u  x  y z
+
+           4  5         6  2           4  2  3      2  3  3       2  3  2
+     + 12 u  v  y + 85 u  v  x y - 33 u  v  x  - 5 u  x  y  + 52 u  x  y  z
+
+           2  3    2       10         6  2       2  3  3       4    2  3
+     + 38 u  x  y z  + 38 v   + 18 u v  z  - 48 u  x  z  - 52 u  v x  z
+
+           3  4    2       2    5  2      4  3  2         4  5       2  2  2  2
+     + 91 u  x  y z  + 61 u  v x  y  - 2 u  v  z  - 96 u v  z  + 46 u  x  y  z
+
+           4    3             6         5  2  2        5  2  3       5    4
+     - 73 u  v x  z - 52 u x y  z + 79 v  x  y  z - 6 v  x  z  + 31 v  x y
+
+           5    3         5    2  2       5      3       5    4       5  4
+     - 32 v  x y  z + 14 v  x y  z  - 63 v  x y z  + 63 v  x z  + 90 v  y  z
+
+           5  3  2       5  2  3       5    4       5  5       4  6
+     - 67 v  y  z  - 18 v  y  z  + 26 v  y z  + 76 v  z  - 14 v  x
+
+           4  5         4  5         4  4  2       4  4           4  4  2
+     + 39 v  x  y + 69 v  x  z + 26 v  x  y  - 98 v  x  y z + 92 v  x  z
+
+           4  3  3       4  3  2         4  3    2       4  3  3       4  2  4
+     + 64 v  x  y  + 14 v  x  y  z - 31 v  x  y z  - 67 v  x  z  + 58 v  x  y
+
+           4  2  3         4  2  2  2       4  2    3       4  2  4
+     - 86 v  x  y  z + 95 v  x  y  z  - 33 v  x  y z  - 80 v  x  z
+
+           5  2    2       2  2  4      2  4  4      5  3          5
+     - 10 v  x  y z  - 84 u  x  z  - 4 u  x  y  + u x  y  z - 2 u v  x y z
+
+           2    5       2    4    2      2    3  2         5    2
+     - 90 u  x y  + 90 u  v x  y z  + 6 u  x y  z  + 10 u v  x y
+
+           2    4  2         2  5          2  7       2  4  2         5  4
+     + 45 u  v x  y  z - 93 u  y  z + 9 u x  y  - 89 u  y  z  - 50 u x  y
+
+           2    4  3      2  2  4         4      2      2    5         7
+     + 81 u  v x  y  + 8 u  y  z  + 19 u v  x y z  - 8 u  y z  + 49 u v
+
+           4  2  3      3    3             5  2           6         6    3
+     - 54 u  v  z  + 3 u  v x  y z - 29 u v  x  z - 45 u v  z + 38 u  y z
+
+           2    5  2         5  2         5               6  2        5
+     - 42 u  v x  z  + 45 u v  x  + 40 u v  x y + 63 u x y  z  + 8 u v  y z
+
+             5  2       2    3  3           5  2           3  4
+     - 84 u v  z  + 89 u  v x  y  z + 35 u v  y  z + 55 u v  x  y z
+
+           4    2    2       2    3  4         4  2         2    4  3
+     - 63 u  v x  y z  - 93 u  v x  y  - 14 u v  y  z + 77 u  v x  z
+
+           4  2  2         3  4  3         4    2         3  4         2      5
+     + 79 u  v  x  y - 13 u  v  z  - 16 u v  y z  + 49 u v  x  + 22 u v  x y z
+
+            3  3           3  2  2       3  7         3  2             3  2  2
+     + 2 u v  x  y - 41 u v  x  y  - 38 v  z  - 43 u v  x  y z + 84 u v  x  z
+
+           5  2  3         3    2           3      2           5  2
+     - 99 u  v  z  + 30 u v  x y  z - 82 u v  x y z  + 82 u x y  z
+
+             3    3       2    3  4      4  3           3  4       5  5
+     - 70 u v  x z  - 51 u  v x  z  + u v  x  z - 66 u v  y  + 51 u  v
+
+             4  4         3  3  2  2       3    4           2    3    3
+     - 50 u v  x  y - 11 u  v  x  z  + 96 u  v x  y z - 79 u  v x  y z
+
+             4  4         3    3       3    3  2         2  5         2  4
+     - 93 u v  x  + 76 u v  y z  + 27 u  v x  z  + 84 u v  x  - 26 u v  x  y
+
+            5  2  2         5  3         2  3             2  2  3
+     + 2 u x  y  z  - 53 u v  z  + 81 u v  x  y z + 80 u v  x  y
+
+               3  5       2    3  2  2       3  3  2  2         3  4
+     - 48 u x y  z  - 52 u  v x  y  z  + 91 u  x  y  z  - 52 u x  y
+
+           6    2         8           7  2         6  3         5  4
+     + 50 v  x y  + 34 v y  z - 38 v y  z  - 63 v y  z  - 18 v y  z
+
+             4  5         3  6         2  7           8         9
+     - 98 v y  z  - 50 v y  z  - 84 v y  z  + 89 v y z  - 50 v y
+
+           2    2  3  2       2    2  4         2    2  5         5    3
+     - 90 u  v x  y  z  + 79 u  v x  y  z - 55 u  v x  y  - 73 u x  y z
+
+           9       8         3  2    4       2      6       7  2       6  3
+     - 35 y  - 79 y  z + 49 u  v  x z  - 57 u  v x y  - 57 y  z  - 55 y  z
+
+           5  4       4  5         3  6         5  4       2    2  5
+     + 27 y  z  - 43 y  z  + 62 u y  z  - 58 u x  z  + 12 u  v x  z
+
+             2  3  4       3  6       2  7         8         2  2  5       10
+     - 25 u v  y  z  - 61 y  z  + 18 y  z  - 74 y z  - 40 u x  y  z  - 11 u
+
+          9         2    2    4       9         2    2  2  3       9
+     + 3 u  v - 49 u  v x  y z  - 37 u  x - 37 u  v x  y  z  - 44 u  z
+
+           8           8           8           8           8
+     + 79 u  v y + 52 u  v z + 87 u  x y + 12 u  x z - 44 u  y z
+
+           2      4  2       8  2         4  4        7  3       2  3  5
+     - 86 u  v x y  z  + 82 u  z  - 22 u x  y  z - 5 u  v  + 21 u  x  y
+
+           7  2      7    2         4  5       7             7    2
+     + 20 u  v  y - u  v x  - 84 u x  y  + 68 u  v x z - 97 u  v y
+
+           7             7  3       2      5         7  2         7    2
+     + 16 u  v y z - 13 u  x  + 27 u  v x y  z + 39 u  x  y - 31 u  x y
+
+           7             7    2       7  3         4  2  3       2        5
+     + 38 u  x y z + 15 u  y z  - 94 u  z  - 82 u x  y  z  - 50 u  v x y z
+
+           6  3           4  3  2       6  2           6  2  2
+     + 99 u  v  z - 51 u x  y  z  - 93 u  v  y z - 43 u  v  z
+
+           2      2  4       2      3  3       10       6      2       6    3
+     - 10 u  v x y  z  - 28 u  v x y  z  + 27 x   + 11 u  v x z  + 49 u  v y
+
+           6    2         2    7      6    3         2  6         6  4
+     + 57 u  v y  z - 34 u  x y  - 6 u  v z  + 18 u x  y  z - 41 u  x
+
+             9       6  3         2    7       6    2         6  4
+     + 96 v z  + 26 u  x  z - 24 u  v y  + 33 u  x y  z - 76 u  y
+
+          2      6       5  4         5  4         5  3  2       5  3
+     + 8 u  v x z  - 56 u  v  x - 68 u  v  y + 93 u  v  x  + 59 u  v  x y
+
+               2  6       5  3           5  3           5  2    2
+     - 92 u x y  z  + 62 u  v  x z - 12 u  v  y z - 61 u  v  x y
+
+           2    4  3       5  2  3       2    5  2       5    4       6  3
+     + 38 u  v y  z  - 22 u  v  y  - 28 u  v y  z  - 32 u  v x  - 31 x  y  z
+
+           6  2  2      6    3       6  4       5  5       5  4         5  3  2
+     + 45 x  y  z  + 9 x  y z  - 67 x  z  + 43 x  y  + 41 x  y  z - 82 x  y  z
+
+           5  2  3       5    4       5  5       4  6       4  5
+     + 86 x  y  z  + 69 x  y z  - 83 x  z  + 59 x  y  + 82 x  y  z
+
+           4  4  2       4  3  3       4  2  4       4    5       4  6    3  7
+     - 53 x  y  z  + 66 x  y  z  - 40 x  y  z  + 60 x  y z  + 83 x  z  + x  y
+
+           3  6         3  5  2       3  4  3       3  3  4       3  2  5
+     + 61 x  y  z + 26 x  y  z  + 62 x  y  z  + 62 x  y  z  + 91 x  y  z
+
+           3    6      3  7      2  8       2  7         2  6  2       2  5  3
+     - 40 x  y z  - 6 x  z  - 8 x  y  - 74 x  y  z - 90 x  y  z  + 86 x  y  z
+
+           2  4  4       2  3  5       2  2  6      2    7       2  8         9
+     + 83 x  y  z  + 31 x  y  z  + 59 x  y  z  + 3 x  y z  - 17 x  z  - 19 x y
+
+             8           7  2         6  3         5  4         4  5
+     + 58 x y  z - 60 x y  z  + 39 x y  z  + 27 x y  z  + 39 x y  z
+
+             2  7           8         9       5    3         5    3
+     + 79 x y  z  + 57 x y z  + 72 x z  + 34 u  v x  y - 99 u  v x  z
+
+             4    4       2  6  2       2    6         5    4       5  5
+     + 53 u x  y z  + 99 u  y  z  + 51 u  v y  z - 89 u  v y  - 39 u  x
+
+           5  3  2       2    2  5       5  3           5  2    2       5  2  3
+     + 99 u  x  y  - 49 u  v y  z  + 89 u  x  y z - 61 u  x  y z  - 82 u  x  z
+
+           5    4       5      3       2    3  4       5    4         4  5
+     + 86 u  x y  - 19 u  x y z  - 96 u  v y  z  + 46 u  x z  - 14 u x  z
+
+          5  5       2  8         3  6       5    4       5  5       2    7
+     + 3 u  y  + 21 u  x  - 85 u x  y  - 27 u  y z  - 38 u  z  + 70 u  v z
+
+           4  6       4  4  2      4  4           4  4  2       4  4
+     - 71 u  v  - 46 u  v  x  - 7 u  v  x y + 22 u  v  y  + 61 u  v  y z
+
+           4  3  3       2      6       4  3    2       4  3
+     + 28 u  v  x  + 37 u  v y z  - 40 u  v  x y  - 77 u  v  x y z
+
+           4  3    2       2  5  3       4  3  2         4  3    2
+     + 81 u  v  x z  - 87 u  y  z  + 28 u  v  y  z - 98 u  v  y z
+
+           4  2  3         4  2  3         2  7         4  2  2
+     - 65 u  v  x  y - 23 u  v  x  z + 21 u  x  y + 82 u  v  x  y z
+
+           4  2  4       4  2  3         4    5       4    4         4    3  2
+     - 59 u  v  y  - 25 u  v  y  z - 77 u  v x  - 47 u  v x  z + 98 u  v x  y
+
+           4    2  2        2  6  2       4      3          3  5
+     + 54 u  v x  y  z + 5 u  x  y  + 57 u  v x y  z - 6 u x  y  z
+
+           4      4       4    5       2  4  3         4    4         4    2  3
+     - 46 u  v x z  - 10 u  v y  + 54 u  x  y  z + 68 u  v y  z + 23 u  v y  z
+
+           4      4       2  7         4  6         2  7       9         9
+     - 51 u  v y z  + 33 u  x  z - 18 u  x  + 53 u y  z  - 74 v  x - 45 v  y
+
+          9         8  2       8           4  5        3    5         4  4  2
+     - 7 v  z + 43 v  x  - 25 v  x y - 58 u  x  y - 4 u  v x  y - 99 u  x  y
+
+           4  4
+     - 92 u  x  y z
+
+
+                                     "H/F"
+
+Error, (in foldr) too many levels of recursion
+                                   t := 0.649
+
+                                     false
+
+                                    t := 0.
+
+                                     Q[-1]
+
+                                       1
+
+                                       5
+
+Error, (in zip) invalid input: zip expects its 3rd argument, b, to be of type
+{Matrix, Vector, Array, array, list}, but received Q[2]
+Error, (in zip) invalid input: zip expects its 3rd argument, b, to be of type
+{Matrix, Vector, Array, array, list}, but received R[2]
+                3                      2  2           3       5
+           -86 x  - 32 u v y z - 20 x y  z  + 18 x y z  - 39 y  + 20
+
+                     3                      2  2           3       5
+           -20 + 86 x  + 32 u v y z + 20 x y  z  - 18 x y z  + 39 y
+

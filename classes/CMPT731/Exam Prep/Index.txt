@@ -1,0 +1,41 @@
+>>=
+
+Arrow
+
+Cat
+Catamorphisms
+Category
+CoCone
+Colimit
+Cone
+Constant Functor
+
+Diagram
+Dual
+
+Endofunctor
+
+F-Algebra
+Final Object
+Functors
+Functors - HASK
+
+HASK
+
+Identity Functor
+Initial Object
+Isomorphoic
+
+Limit
+
+Monads
+Monads - HASK
+
+Natural Transformation
+
+Object
+
+Product
+
+Small Category
+Strict

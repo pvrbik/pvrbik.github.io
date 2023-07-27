@@ -1,0 +1,22 @@
+    |\^/|     Maple 11 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> interface(quiet=true):
+                                   4      2  4
+                             g := x  + 7 x  y  + 1
+
+                      5    4        3  4      2  5
+                     x  - x  y + 7 x  y  - 7 x  y  + x - y
+
+                      5    4        3  4      2  5
+                     x  + x  y + 7 x  y  + 7 x  y  + x + y
+
+ n=5 
+ p=7     m=4      n=5
+ p=11     m=4      n=4
+ p=13     m=4      n=4
+                                 4      2  4
+                                x  + 7 x  y  + 1
+

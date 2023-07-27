@@ -1,0 +1,49 @@
+ \documentclass[12pt]{article}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb,amsmath,color}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\newcommand{\imp}{\textbf}
+\newcommand{\dom}[1]{\textsf{dom} (#1)}
+\newcommand{\cod}[1]{\textsf{cod}(#1)}
+\newcommand{\arr}[1]{\mathcal{#1}\mathrm{-arrows}}
+\newcommand{\obj}[1]{\mathcal{#1}\mathrm{-objects}}
+\newcommand{\state}[1]{\item[#1] \textcolor{white}{.} \\ \textcolor{white}{.} \ }
+\newcommand{\Lstate}[1]{\item[#1] \nl}
+\newcommand{\id}[1]{id_{#1}}
+\newcommand{\nl}{\textcolor{white}{.}\ }
+\newcommand{\func}[3]{#1 : #2 \rightarrow #3}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\sse}{\sqsubseteq}
+\newcommand{\point}[1]{\begin{itemize} \item[$\cdot$] #1 \end{itemize}}
+\newcommand{\blank}{\textcolor{white}{-}}
+
+
+
+\begin{document} 
+\section*{Proof Techniques}
+\subsection*{Proofs on Infinite Lists}
+For proofs on infinite list the approx function is very helpful.
+\begin{verbatim}
+approx              :: Integer -> [a] -> [a]
+approx (n+1) []     = []
+approx (n+1) (x:xs) = x:approx n xs
+\end{verbatim}
+
+\point{ $\lim_{n \to \infty} \texttt{approx n xs} = \texttt{xs}$ }
+\point{$\forall \texttt{n} (\texttt{approx n xs} = \texttt{approx n ys}) \implies (\texttt{xs}=\texttt{ys})$. That is, induction can be used with \texttt{approx} in order to make assertions about infinite lists.}
+
+\subsection*{Fixpoint}
+To find the fixpoint of a function $f$ we do $f^n (\bot)$ for increasingly larger $n$ until the returned value repeats or starts cycling. In the first case the repeated value is the fixpoint, in the later we have that there is no fixpoint (the fact it cycles also serves as the non-existence proof).
+
+\subsection*{Bottom $\bot$}
+Some useful tips about $\bot$:
+\point{$\bot$ is always $\bot_?$ for some type $?$ which you determine from the context in which $\bot$ is used.}
+\point{$\bot_{?} \sse \bot_{[?]} \sse \bot_{[[?]]} ...$}
+
+\end{document}

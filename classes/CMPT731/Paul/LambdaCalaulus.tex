@@ -1,0 +1,345 @@
+\documentclass[fleqn]{seminar}
+\nonstopmode
+
+\input{lectures}
+
+\newpagestyle{lectures}{\makebox[1in][l]{CMPT 481/731} \hfill Functional Programming
+\hfill \makebox[1in][r]{\semester}}{\makebox[2in][l]{The Lambda Calculus} \hfill F. Warren
+Burton \hfill \makebox[2in][r]{\thepage}}
+
+% \newpagestyle{lectures}{CMPT 481/731 \hfill Functional Programming
+% \hfill \semester}{The Lambda Calculus \hfill
+% F. Warren Burton \hfill \thepage}
+
+\pagestyle{lectures}
+
+\begin{document}
+\begin{slide}
+
+\begin{center}
+\begin{LARGE}
+\textbf{The Lambda Calculus}
+\end{LARGE}\\[3ex]
+\end{center}
+
+The theoretical foundations of funuctional programming include:
+\begin{itemize}
+\item The lambda calculus,
+\item Domain theory,
+\item Category theory, and
+\item Type theory.
+\end{itemize}
+
+We will briefly consider aspects of these theoretical foundations as well as
+more practical aspects of functional programming.  Our aim is to study the
+theory to the extent that it helps us with the practical aspects of functional programming.
+
+The lambda calculus is a notation and associated Turing complete model of computation.
+
+\newslide
+
+\section*{Syntax}
+
+The abstract syntax of the lambda calculus is:
+
+%\color{MathColor}
+%\[\begin{array}{lrll}
+\begin{mcode}
+<\mathit{exp}> & ::= & <\mathit{var}>\\
+&  | & <\mathit{exp}> <\mathit{exp}> &
+\unmath{\color{DefinitionColor}{Application}}\\
+&  | & \lam ~ <\mathit{var}>\tc{.}<\mathit{exp}> &
+\unmath{\color{DefinitionColor}{Abstraction}}\\
+<\mathit{var}> & ::= & \unmath{Some~countably~infinite~set}
+\end{mcode}
+%\end{array}\]
+%\color{black}
+
+In the concrete syntax we allow parentheses.  In addition, to reduce
+the number of parentheses, we use the following conventions:
+\begin{itemize}
+\item Application is left associative, and
+\item Abstractions extend as far to the right as possible. 
+\end{itemize}
+
+\newslide
+
+Sometimes the lambda calculus it defined to include constants as well as variables,
+with the addition of the productions:
+%\color{MathColor}
+%\[\begin{array}{lrll}
+\begin{mcode}
+<\mathit{exp}> & ::= & <\mathit{const}> \ldots\\
+<\mathit{const}> & ::= & \ldots
+\end{mcode}
+%\end{array}\]
+%\color{black}
+
+For example, the constants might include integers and basic integer operations.
+
+We will see, in section 3.7 of \textit{Bird}, that natural numbers can be represented by functions,
+so the addition of constants is not necessary.  With just the basic lambda calculus we
+can express any Turing computable function from natural numbers to natural numbers.
+
+\newslide
+
+The lambda notation lets us define functions without giving them names.
+
+For example,
+\tm{f ~ \mathrm{where} ~ f(x) = g (h (x))}
+can be written as
+\tc{\lam x.g (h x)}.
+
+We can still name things when we want to.
+
+For example,
+\tm{\mathrm{let} ~ x = y ~ \mathrm{in} ~ f(x)}
+can be written as
+\tc{(\lam x.f x) y}.
+
+Later on, we will informally mix our notation at times.
+
+\newpage
+
+\subsection*{Examples}
+
+\begin{code}
+(\lam a.\lam b.a) c\\
+(\lam a.\lam b.a) c d\\
+(\lam a.\lam b.b) c\\
+(\lam a.\lam b.b) c d\\
+(\lam a.\lam b.a) b\\
+(\lam a.\lam b.a) b d\\
+(\lam x.x x)(\lam x.x x)\\
+(\lam x.x x x)(\lam x.x x x)\\
+\lam h.(\lam x.h (x x))(\lam x.h (x x))\\
+(\lam h.(\lam x.h (x x))(\lam x.h (x x))) f
+\end{code}
+
+\newslide
+
+\section*{Reduction}
+
+The process of ``evaluating'' a lambda expression is called \definition{reduction}.
+
+In the following, we will use \tm{v}, \tm{w} and \tm{x} to denote arbitrary variables and
+\tm{E}, \tm{E'}, \tm{E_{1}}, and \tm{E_{2}} to denote arbitrary expressions.
+\newslide
+
+\subsection*{Free Variables}
+
+Informally, a variable is \definition{free} if it is not within the scope of a variable appearing after a
+\lam ~ (that is, it is ``undefined'').
+
+Formally, we define \tm{\mathit{FV}(E)}, the set of free variables in a lambda expression \tm{E}, by
+%\color{MathColor}
+%\[\begin{array}{l}
+\begin{mcode}
+\mathit{FV}(\tm{v}) = \{\tm{v}\}\\
+\mathit{FV}(E_{1}E_{2}) = \mathit{FV}(E_{1}) \cup \mathit{FV}(E_{2})\\
+\mathit{FV}(\lam v \tc{.}E) = \mathit{FV}(E) - \{\tm{v}\}
+\end{mcode}
+%\end{array}\]
+%\color{black}
+
+%\color{MathColor}
+%\[\begin{array}{l}
+%\mathit{FV}(\tc{v}) = \{\tc{v}\}\\
+%\mathit{FV}(E_{1}E_{2}) = \mathit{FV}(E_{1}) \cup \mathit{FV}(E_{2})\\
+%\mathit{FV}(\lam \tc{v.}E) = \mathit{FV}(E) - \{\tc{v}\}
+%\end{array}\]
+%\color{black}
+
+\newslide
+
+
+\subsection*{Substitution}
+
+\begin{tabular}{l|l|l|l}
+\tm{E} & \tm{E[E' / \tm{v}]} & Restriction & Comment \\
+\hline
+\tm{v} & \tm{E'} & & \\
+\tm{w} & \tm{w} & \tm{w} \tm{\not=} \tm{v} \\
+\tm{E_1 E_2} & (\tm{E_1 [E' / \tm{v}]}) (\tm{E_2 [E' / \tm{v}]}) & \\
+\lam \tm{v} \tc{.}\tm{E_{1}} & \lam \tm{v} \tc{.}\tm{E_{1}} & \\
+\lam \tm{w} \tc{.}\tm{E_{1}} & \lam \tm{w} \tc{.}(\tm{E_{1} [E' / \tm{v}]}) &
+   \tm{w} \tm{\not=} \tm{v} \tm{\wedge} \\
+& & (\tm{v} \tm{ \not\in \mathit{FV}(E_1)} \tm{\vee} & No Substitution\\
+& &  \tm{w} \tm{ \not\in \mathit{FV}(E')}) & No Name Conflict\\
+\lam \tm{w} \tc{.}\tm{E_{1}} & \lam \tm{x} \tc{.}((\tm{E_{1}[\tm{x}/\tm{w}]})
+\tm{[E'  / \tm{v}]}) &
+   \tm{w} \tm{\not=} \tm{v} \tm{\wedge}\\
+& & \tm{v} \tm{ \in \mathit{FV}(E_1)} \tm{\wedge} & Substitution\\
+& &  \tm{w} \tm{ \in \mathit{FV}(E')} \tm{\wedge} & Name Conflict\\
+& & \tm{x} \tm{ \not\in \mathit{FV}(E_{1}E')} & \tm{x} is new
+\end{tabular}
+
+%\begin{tabular}{l|l|l|l}
+%\tm{E} & \tm{E[E' / \tc{v}]} & Restriction & Comment \\
+%\hline
+%\tc{v} & \tm{E'} & & \\
+%\tc{w} & \tc{w} & \tc{w} \tm{\not=} \tc{v} \\
+%\tm{E_1 E_2} & (\tm{E_1 [E' / \tc{v}]}) (\tm{E_2 [E' / \tc{v}]}) & \\
+%\lam \tc{v.}\tm{E_{1}} & \lam \tc{v.}\tm{E_{1}} & \\
+%\lam \tc{w.}\tm{E_{1}} & \lam \tc{w.}(\tm{E_{1} [E' / \tc{v}]}) &
+%   \tc{w} \tm{\not=} \tc{v} \tm{\wedge} \\
+%& & (\tc{v} \tm{ \not\in \mathit{FV}(E_1)} \tm{\vee} & No Substitution\\
+%& &  \tc{w} \tm{ \not\in \mathit{FV}(E')}) & No Name Conflict\\
+%\lam \tc{w.}\tm{E_{1}} & \lam \tc{x.}(\tm{E_{1}[\tc{x}/\tc{w}]})
+%\tm{[E'  / \tc{v}]} &
+%   \tc{w} \tm{\not=} \tc{v} \tm{\wedge}\\
+%& & \tc{v} \tm{ \in \mathit{FV}(E_1)} \tm{\wedge} & Substitution\\
+%& &  \tc{w} \tm{ \in \mathit{FV}(E')} \tm{\wedge} & Name Conflict\\
+%& & \tc{x} \tm{ \not\in \mathit{FV}(E_{1}E')} & \tc{x} is new
+%\end{tabular}
+
+\newpage
+
+\subsection*{Reduction Rules}
+
+\subsubsection*{$\alpha$-conversion}
+
+\[\lam \tm{v} \tc{.} \tm{E \underset{\alpha}{\longleftrightarrow} 
+\lam \tm{x} \tc{.} E[\tm{x}/\tm{v}]\textcolor{black}{\mathrm{, \hspace{0.25in} if }}~\tm{x}\not\in
+\mathit{FV}(E)}\]
+
+\subsubsection*{$\beta$-reduction}
+\[\tm{(}\lam \tm{v} \tc{.} \tm{E_{1})E_{2} \underset{\beta}{\longrightarrow} E_{1}[E_{2}/\tm{v}]}\]
+
+\subsubsection*{$\eta$-reduction}
+\[\lam \tm{v} \tc{.} \tm{(E\tm{v}) \underset{\eta}{\longrightarrow} E
+\textcolor{black}{\mathrm{, \hspace{0.25in} if }}~\tm{v}\not\in \mathit{FV}(E)}\]
+
+\newslide
+
+\subsubsection*{Reduction of subexpressions}
+
+\[\tm{\frac{E_{1} \underset{\beta}{\longrightarrow} E_{2}}
+{EE_{1} \underset{\beta}{\longrightarrow} EE_{2}}}\]
+
+\[\tm{\frac{E_{1} \underset{\beta}{\longrightarrow} E_{2}}
+{E_{1}E \underset{\beta}{\longrightarrow} E_{2}E}}\]
+
+\[\tm{\frac{E_{1} \underset{\beta}{\longrightarrow} E_{2}}
+{\tc{\lam \tm{v}.}E_{1} \underset{\beta}{\longrightarrow} {\tc{\lam \tm{v}.}E_{2}}}}\]
+
+Similar rules apply to $\alpha$-conversion and $\eta$-reduction.
+
+\newslide
+
+An expression, \tm{E}, is called a \definition{redex} if it is of the form
+\tm{(\lam v\tc{.}E_{1})E_{2}} or \tm{\lam v\tc{.}(E_{3}v)}, with \tm{v \not\in \mathit{FV}(E_{3})}.
+
+Hence, it is possible to apply at least one of the reduction rules to an
+expression iff the expression contains a redex.
+
+An expression, \tm{E}, is said to be in \definition{normal form} if it does not contain a redux.
+
+\newpage
+
+
+We note that if \tm{\lam v.E_{1} \underset{\alpha}{\longleftrightarrow}
+\lam x.E_{2}} then, by definition of $\alpha$-conversion,
+\tm{x} cannot be free in \tm{E_{1}} and \tm{v} cannot be free in
+\tm{E_{2}}.  It follows that
+\tm{(E_{1}[x/v])[v/x]} is exactly the same as \tm{E_{1}}and hence
+\tm{\lam v.E_{1} \underset{\alpha}{\longleftrightarrow}
+\lam x.E_{2}}
+iff
+\tm{\lam x.E_{2}
+\underset{\alpha}{\longleftrightarrow}
+\lam v.E_{1}}.
+That is, \tm{\underset{\alpha}{\longleftrightarrow}} is symmetric,
+so the reflexive, transitive closure of
+\tm{\underset{\alpha}{\longleftrightarrow}}, which we will call
+\tm{\Leftrightarrow}, is an equivalence relation.
+
+\vspace{2ex}
+
+Clearly, \tm{E_{1} \Leftrightarrow E_{2}} means that the two expressions
+are identical except for the renaming of bound variables.
+
+\newslide
+
+We will define
+\color{MathColor}
+\[\longrightarrow ~ =  ~ \underset{\alpha}{\longleftrightarrow} ~ \cup
+ ~ \underset{\beta}{\longrightarrow} ~ \cup ~ \underset{\eta}{\longrightarrow}\]
+\color{black}
+and let \tm{\overset{*}{\longrightarrow}} be the reflexive, transitive
+closure of \tm{\longrightarrow}, and \tm{\overset{*}{\longleftrightarrow}}
+be the symmetric, reflexive, transitive closure of \tm{\longrightarrow}.
+
+\vspace{2ex}
+
+The relation \tm{\overset{*}{\longleftrightarrow}} is an equivalence relation,
+but with larger equivalence classes than
+\tm{\Leftrightarrow}.
+That is, whenever \tm{E_{1} \Leftrightarrow E_{2}} then
+\tm{E_{1} \overset{*}{\longleftrightarrow} E_{2}}, but not conversely.
+
+\newslide
+
+If \tm{n \geq 0} and \tm{E_{0} \overset{*}{\longrightarrow} E_{n}},
+then a sequence of reduction steps
+\tm{E_{0} \redu E_{1} \redu E_{2} \redu \cdots \redu E_{n}}
+is called a \definition{reduction}.  \tm{E_{n}} may or may not be
+in normal form.
+
+% Note 2:  It doesn't particularly matter whether we
+% allow $\alpha$-conversions to count as reduction
+% steps.  
+
+\vspace{2ex}
+
+In general, an expression may contain a number of redexes, so there may be
+a number of different ways to go about reducing an expression.
+
+\vspace{2ex}
+
+If at each step during a reduction the leftmost outermost redex is chosen for reduction,
+then the reduction is called a \definition{normal order reduction}.
+
+\vspace{2ex}
+
+If at each step during a reduction the leftmost innermost redex is chosen for reduction,
+then the reduction is called a \definition{applicative order reduction}.
+
+\newslide
+
+\begin{theorem}[Church-Rosser Theorem I]
+If \tm{E \overset{*}{\longrightarrow} E_{1}} and \tm{E \overset{*}{\longrightarrow} E_{2}}
+then there exists an \tm{E'} such that \tm{E_{1} \overset{*}{\longrightarrow} E'} and
+\tm{E_{2} \overset{*}{\longrightarrow} E'}.
+\end{theorem}
+
+\paragraph{Proof}  This is an Area II course, so you'll just have to take my word for this.
+
+\vspace{2ex}
+
+\begin{corollary}
+If \tm{E \overset{*}{\longrightarrow} E_{1}} and \tm{E \overset{*}{\longrightarrow} E_{2}}
+and \tm{E_{1}} and \tm{E_{2}} are both in normal form, then \tm{E_{1} \Leftrightarrow E_{2}}.
+\end{corollary}
+
+\newslide
+
+\begin{theorem}[Church-Rosser Theorem II]
+If \tm{E \overset{*}{\longrightarrow} E_{1}} and \tm{E_{1}} is in normal form, then
+there exists a normal order reduction of \tm{E} to \tm{E_{1}},
+\end{theorem}
+
+A \definition{lazy functional programming language} uses normal order reduction, but with an
+optimization that avoids reevaluation of
+subexpressions that are duplicated during the reduction.
+
+Normal order reduction with this optimization is called \definition{lazy evaluation}.
+
+Normal order reduction without this optimization
+yields call-by-name parameter passing,
+and applicative order reduction is somewhat similar
+to call-by-value parameter passing.
+
+\end{slide}
+
+\end{document}

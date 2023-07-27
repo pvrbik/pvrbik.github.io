@@ -1,0 +1,25 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> a:=2*x^3-(y+1)*x^2-x+y:
+> b:=(y+2)*x^2-2*x+y:
+> delta:=degree(a,x)-degree(b,x)+1:
+> m:=lcoeff(b,x)^delta:
+> pr:=rem(m*a,b,x,'pq'):
+> 
+#pseudo remainder
+> pr;
+                                  2               3      2
+                      (-14 y - 5 y ) x + 2 y + 2 y  + 7 y
+
+> 
+#pseudo quotient
+> pq;
+                                          2
+                           (2 y + 4) x - y  - 3 y + 2
+
+> 
+> quit
+bytes used=368872, alloc=393144, time=0.02

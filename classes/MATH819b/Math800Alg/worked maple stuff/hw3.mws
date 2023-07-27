@@ -1,0 +1,1732 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 256 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+257 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 258 "" 0 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 259 "" 0 1 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 260 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 261 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 
+262 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 263 "" 0 1 0 0 
+0 0 0 1 0 0 0 0 0 0 0 0 }{CSTYLE "" -1 264 "" 0 1 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 }{CSTYLE "" -1 265 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 
+4 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 13 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 0 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "Normal" -1 256 1 {CSTYLE "" -1 -1 "Times" 1 
+12 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "
+" 0 257 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 258 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 259 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 260 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 261 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 262 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 263 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 264 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 265 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 266 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 267 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 268 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 269 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 270 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 271 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 272 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 273 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 274 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 275 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 0 276 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE 
+"" 0 277 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 257 "" 0 
+"" {TEXT -1 11 "Section 2.7" }}}{EXCHG {PARA 258 "" 0 "" {TEXT -1 5 "2
+.7.2" }}}{EXCHG {PARA 259 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 39 "with(PolynomialIdeals): with(Groebner):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "g1:=x^2*y-1: g2:=x*y^2-x: G:=[g1,g2
+]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "First we will use lex order
+ing." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 89 "We will now compute the S
+-polynomial and it's remainder when divided by the basis so far." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "s12:=sort(SPolynomial(g1, g2
+, plex(x,y)), [x,y], plex);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s12G
+,&*$)%\"xG\"\"#\"\"\"F*%\"yG!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "g3:=NormalForm(s12, G, plex(x,y));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%#g3G,&*$)%\"xG\"\"#\"\"\"F*%\"yG!\"\"" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 84 "The remainder is non-zero and therefore w
+e will attach this polynomial to our basis." }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 14 "G:=[op(G),g3]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 111 "s13:=sort(SPolynomial(g1, g3, plex(x,y)), [x,y], ple
+x); s23:=sort(SPolynomial(g2, g3, plex(x,y)), [x,y], plex);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%$s13G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,&*$)%\"xG\"\"#\"\"\"!\"\"*$)%
+\"yG\"\"$F*F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "g4:=Normal
+Form(s13, G, plex(x,y)); g5:=NormalForm(s23, G, plex(x,y));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%#g4G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g5G,&*$)%\"yG\"\"$\"\"\"F*F(!\"\"" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "G:=[op(G),g4,g5]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 392 "s14:=sort(SPolynomial(g1, g
+4, plex(x,y)), [x,y], plex); s15:=sort(SPolynomial(g1, g5, plex(x,y)),
+ [x,y], plex); s24:=sort(SPolynomial(g2, g4, plex(x,y)), [x,y], plex);
+ s25:=sort(SPolynomial(g2, g5, plex(x,y)), [x,y], plex); s34:=sort(SPo
+lynomial(g3, g4, plex(x,y)), [x,y], plex); s35:=sort(SPolynomial(g3, g
+5, plex(x,y)), [x,y], plex); s45:=sort(SPolynomial(g1, g3, plex(x,y)),
+ [x,y], plex); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s14G,&*$)%\"xG\"
+\"#\"\"\"F*%\"yG!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s15G,&*&)%
+\"xG\"\"#\"\"\"%\"yGF*F**$)F+F)F*!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%$s24G\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s25G\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s34G,&*$)%\"xG\"\"#\"\"\"F**$)%\"yG
+\"\"$F*!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s35G,&*&)%\"xG\"\"#
+\"\"\"%\"yGF*F**$)F+\"\"%F*!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%
+$s45G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 99 "So some of the polymonials are already 0, we just need to compu
+te the remainders of the non-zero 5." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 150 "NormalForm(s14, G, plex(x,y));NormalForm(s15, G, ple
+x(x,y));NormalForm(s34, G, plex(x,y));NormalForm(s35, G, plex(x,y));No
+rmalForm(s45, G, plex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 63 "All the remainders are zero, therefore G is the Groebner \+
+basis." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "G1:=G;" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%#G1G7',&*&)%\"xG\"\"#\"\"\"%\"yGF+F+F+!\"
+\",&*&F)F+)F,F*F+F+F)F-,&*$F(F+F+F,F-,&*$F0F+F+F+F-,&*$)F,\"\"$F+F+F,F
+-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "Now we will repeat the proce
+ss but with grlex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+12 "G:=[g1, g2]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "s12:=so
+rt(SPolynomial(g1, g2, grlex(x,y)), [x,y], tdeg);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s12G,&*$)%\"xG\"\"#\"\"\"F*%\"yG!\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "g3:=NormalForm(s12, G, tdeg(x,y));
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g3G,&*$)%\"xG\"\"#\"\"\"F*%\"yG
+!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 72 "The remainder is non-zer
+o,  we will attach this polynomial to our basis." }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 14 "G:=[op(G),g3]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 113 "s13:=sort(SPolynomial(g1, g3, grlex(x,y)), [x,y], td
+eg); s23:=sort(SPolynomial(g2, g3, grlex(x,y)), [x,y], tdeg);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s13G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,&*$)%\"yG\"\"$\"\"\"F**$)%
+\"xG\"\"#F*!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "g4:=Nor
+malForm(s13, G, grlex(x,y)); g5:=NormalForm(s23, G, grlex(x,y));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g5G,&*$)%\"yG\"\"$\"\"\"F*F(!\"\"
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "G:=[op(G),g4,g5]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 399 "s14:=sort(SPolynomial(g1, g
+4, grlex(x,y)), [x,y], tdeg); s15:=sort(SPolynomial(g1, g5, grlex(x,y)
+), [x,y], tdeg); s24:=sort(SPolynomial(g2, g4, grlex(x,y)), [x,y], tde
+g); s25:=sort(SPolynomial(g2, g5, grlex(x,y)), [x,y], tdeg); s34:=sort
+(SPolynomial(g3, g4, grlex(x,y)), [x,y], tdeg); s35:=sort(SPolynomial(
+g3, g5, grlex(x,y)), [x,y], tdeg); s45:=sort(SPolynomial(g1, g3, grlex
+(x,y)), [x,y], tdeg); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s14G,&*$)
+%\"xG\"\"#\"\"\"F*%\"yG!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s15
+G,&*&)%\"xG\"\"#\"\"\"%\"yGF*F**$)F+F)F*!\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s24G\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s25G
+\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s34G,&*$)%\"yG\"\"$\"\"\"!
+\"\"*$)%\"xG\"\"#F*F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s35G,&*$)%
+\"yG\"\"%\"\"\"!\"\"*&)%\"xG\"\"#F*F(F*F*" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s45G,&*$)%\"yG\"\"#\"\"\"F*F*!\"\"" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 102 "So some of the polymonials are already 0, we j
+ust need to compute the remainders of the non-zero ones." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 155 "NormalForm(s14, G, grlex(x,y));Nor
+malForm(s15, G, grlex(x,y));NormalForm(s34, G, grlex(x,y));NormalForm(
+s35, G, grlex(x,y));NormalForm(s45, G, grlex(x,y));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 77 "Therefore G is the Groebner basis and it's the sam
+e one as with lex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+6 "G2:=G;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2G7',&*&)%\"xG\"\"#\"
+\"\"%\"yGF+F+F+!\"\",&*&F)F+)F,F*F+F+F)F-,&*$F(F+F+F,F-,&*$F0F+F+F+F-,
+&*$)F,\"\"$F+F+F,F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "eval
+b(G1=G2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 54 "Basis([g1,g2], plex(x,y)); Basis([g1,g2],
+ grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,&*$)%\"yG\"\"#\"\"
+\"F)F)!\"\",&*$)%\"xGF(F)F)F'F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,
+&*$)%\"yG\"\"#\"\"\"F)F)!\"\",&*$)%\"xGF(F)F)F'F*" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "g1:=x^2+y: g2:=x^4+2*x^2*y+y^2+3: G:=[g1,g2]:" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 31 "First we will use lex ordering." }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 89 "We will now compute the S-polynomial and it's r
+emainder when divided by the basis so far." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 55 "s12:=sort(SPolynomial(g1, g2, plex(x,y)), [x,y], pl
+ex);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s12G,(*&)%\"xG\"\"#\"\"\"%
+\"yGF*!\"\"*$)F+F)F*F,\"\"$F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 34 "g3:=NormalForm(s12, G, plex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%#g3G!\"$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 68 "The remainder
+ is non-zero and therefore we will add it to our basis." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "G:=[op(G),g3]:" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 111 "s13:=sort(SPolynomial(g1, g3, plex(x,y)), [
+x,y], plex); s23:=sort(SPolynomial(g2, g3, plex(x,y)), [x,y], plex);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s13G,$*&\"\"$\"\"\"%\"yGF(!\"\"" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,(*(\"\"'\"\"\")%\"xG\"\"#F(%
+\"yGF(!\"\"*&\"\"$F()F,F+F(F-\"\"*F-" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 69 "g4:=NormalForm(s13, G, plex(x,y)); g5:=NormalForm(s23
+, G, plex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g5G\"\"!" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 34 "Therefore G is the Groebner basis." }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 6 "G1:=G;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#
+G1G7%,&*$)%\"xG\"\"#\"\"\"F+%\"yGF+,**$)F)\"\"%F+F+*(F*F+F(F+F,F+F+*$)
+F,F*F+F+\"\"$F+!\"$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "Now we wil
+l repeat the process but with grlex ordering." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 12 "G:=[g1, g2]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 56 "s12:=sort(SPolynomial(g1, g2, grlex(x,y)), [x,y], tde
+g);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s12G,(*&)%\"xG\"\"#\"\"\"%\"
+yGF*!\"\"*$)F+F)F*F,\"\"$F," }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+34 "g3:=NormalForm(s12, G, tdeg(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%#g3G!\"$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 72 "The remainder
+ is non-zero,  we will attach this polynomial to our basis." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "G:=[op(G),g3]:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 113 "s13:=sort(SPolynomial(g1, g3, grle
+x(x,y)), [x,y], tdeg); s23:=sort(SPolynomial(g2, g3, grlex(x,y)), [x,y
+], tdeg);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s13G,$*&\"\"$\"\"\"%\"
+yGF(!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,(*(\"\"'\"\"\")%
+\"xG\"\"#F(%\"yGF(!\"\"*&\"\"$F()F,F+F(F-\"\"*F-" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 71 "g4:=NormalForm(s13, G, grlex(x,y)); g5:=Norma
+lForm(s23, G, grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G\"
+\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g5G\"\"!" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 77 "Therefore G is the Groebner basis and it's the sa
+me one as with lex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 6 "G2:=G;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2G7%,&*$)%\"xG\"\"#
+\"\"\"F+%\"yGF+,**$)F)\"\"%F+F+*(F*F+F(F+F,F+F+*$)F,F*F+F+\"\"$F+!\"$
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "evalb(G1=G2);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#%%trueG" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "Basis([g1,g2], plex(x,y)); Basis([g1,g2], grlex(x,y))
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7#\"\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7#\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 171 "Here \+
+notice that -3 is in the Groebner basis and therefore the ideal genera
+ted by g1 and g2 is the entire polynomial ring, which means that the v
+ariety of g1, g2 is empty." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part
+ c." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "g1:=x-z^4: g2:=y-z^5
+: G:=[g1,g2]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "First we will us
+e lex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "s12:=sor
+t(SPolynomial(g1, g2, plex(x,y,z)), [x,y,z], plex);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%$s12G,&*&%\"xG\"\"\")%\"zG\"\"&F(F(*&%\"yGF()F*\"\"
+%F(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "g3:=NormalForm(
+s12, G, plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g3G\"\"!" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 61 "The remainder is zero and so G \+
+is already the Groebner basis." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 6 "G1:=G;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G1G7$,&%\"xG\"\"\"
+*$)%\"zG\"\"%F(!\"\",&%\"yGF(*$)F+\"\"&F(F-" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 55 "Now we will repeat the process but with grlex ordering.
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "G:=[g1, g2]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "s12:=sort(SPolynomial(g1, g2
+, grlex(x,y,z)), [x,y,z], tdeg);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%
+$s12G,&*&%\"xG\"\"\"%\"zGF(!\"\"%\"yGF(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "g3:=NormalForm(s12, G, tdeg(x,y,z));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#g3G,&*&%\"xG\"\"\"%\"zGF(!\"\"%\"yGF(" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 72 "The remainder is non-zero,  we wil
+l attach this polynomial to our basis." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "G:=[op(G),g3]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 121 "s13:=sort(SPolynomial(g1, g3, grlex(x,y,z)), [x,y,z], tdeg); \+
+s23:=sort(SPolynomial(g2, g3, grlex(x,y,z)), [x,y,z], tdeg);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%$s13G,&*&%\"yG\"\"\")%\"zG\"\"$F(F(*$)%\"x
+G\"\"#F(!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,&*&%\"yG\"\"
+\")%\"zG\"\"%F(F(*&%\"xGF(F'F(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 71 "g4:=NormalForm(s13, G, grlex(x,y,z)); NormalForm(s23,
+ G, grlex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G,&*&%\"yG
+\"\"\")%\"zG\"\"$F(F(*$)%\"xG\"\"#F(!\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "G:=
+[op(G),g4]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 182 "s14:=sort(S
+Polynomial(g1, g4, grlex(x,y,z)), [x,y,z], tdeg); s24:=sort(SPolynomia
+l(g2, g4, grlex(x,y,z)), [x,y,z], tdeg); s34:=sort(SPolynomial(g3, g4,
+ grlex(x,y,z)), [x,y,z], tdeg);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$
+s14G,&*&)%\"xG\"\"#\"\"\"%\"zGF*!\"\"*&F(F*%\"yGF*F*" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%$s24G,&*&)%\"xG\"\"#\"\"\")%\"zGF)F*!\"\"*$)%\"yGF
+)F*F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s34G,&*&)%\"yG\"\"#\"\"\")
+%\"zGF)F*F**$)%\"xG\"\"$F*!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 105 "NormalForm(s14, G, grlex(x,y,z)); NormalForm(s24, G, grlex(x,
+y,z)); g5:=NormalForm(s34, G, grlex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g5G,&*&)%\"yG\"\"#\"\"\")%\"zGF)F*F
+**$)%\"xG\"\"$F*!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "G:
+=[op(G),g5]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 243 "s15:=sort(SPolynom
+ial(g1, g5, grlex(x,y,z)), [x,y,z], tdeg); s25:=sort(SPolynomial(g2, g
+5, grlex(x,y,z)), [x,y,z], tdeg); s35:=sort(SPolynomial(g3, g5, grlex(
+x,y,z)), [x,y,z], tdeg); s45:=sort(SPolynomial(g4, g5, grlex(x,y,z)), \+
+[x,y,z], tdeg);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s15G,&*&)%\"xG\"
+\"$\"\"\")%\"zG\"\"#F*!\"\"*&F(F*)%\"yGF-F*F*" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s25G,&*&)%\"xG\"\"$\"\"\")%\"zGF)F*!\"\"*$)%\"yGF)F*
+F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s35G,&*$)%\"xG\"\"%\"\"\"!\"
+\"*&)%\"yG\"\"$F*%\"zGF*F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s45G,
+&*&)%\"xG\"\"$\"\"\"%\"zGF*F**&)F(\"\"#F*%\"yGF*!\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 139 "NormalForm(s15, G, grlex(x,y,z)); \+
+NormalForm(s25, G, grlex(x,y,z)); g6:=NormalForm(s35, G, grlex(x,y,z))
+; NormalForm(s45, G, grlex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#g6G,&*$)%\"xG\"\"%\"\"\"!\"\"*&)%\"yG\"\"$F*%\"zGF*F
+*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 14 "G:=[op(G),g6]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+304 "s16:=sort(SPolynomial(g1, g6, grlex(x,y,z)), [x,y,z], tdeg); s26:
+=sort(SPolynomial(g2, g6, grlex(x,y,z)), [x,y,z], tdeg); s36:=sort(SPo
+lynomial(g3, g6, grlex(x,y,z)), [x,y,z], tdeg); s46:=sort(SPolynomial(
+g4, g6, grlex(x,y,z)), [x,y,z], tdeg); s56:=sort(SPolynomial(g5, g6, g
+rlex(x,y,z)), [x,y,z], tdeg);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s1
+6G,&*&)%\"yG\"\"$\"\"\")%\"zG\"\"&F*F**$)%\"xGF-F*!\"\"" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%$s26G,&*&)%\"yG\"\"$\"\"\")%\"zG\"\"'F*F**&)%
+\"xG\"\"%F*F(F*!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s36G,&*&)%
+\"yG\"\"$\"\"\")%\"zG\"\"#F*F**&)%\"xGF)F*F(F*!\"\"" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%$s46G,&*&)%\"yG\"\"%\"\"\")%\"zGF)F*!\"\"*$)%\"xG\"
+\"'F*F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s56G,&*&)%\"yG\"\"&\"\"
+\")%\"zG\"\"$F*!\"\"*$)%\"xG\"\"(F*F*" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 169 "NormalForm(s16, G, grlex(x,y,z)); NormalForm(s26, G,
+ grlex(x,y,z)); NormalForm(s36, G, grlex(x,y,z)); NormalForm(s46, G, g
+rlex(x,y,z)); NormalForm(s56, G, grlex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 65 "Finally all the remainders are zero and we have a \+
+Groebner basis." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "G2:=G;" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2G7(,&%\"xG\"\"\"*$)%\"zG\"\"%F(!
+\"\",&%\"yGF(*$)F+\"\"&F(F-,&*&F'F(F+F(F-F/F(,&*&F/F()F+\"\"$F(F(*$)F'
+\"\"#F(F-,&*&)F/F;F()F+F;F(F(*$)F'F8F(F-,&*$)F'F,F(F-*&)F/F8F(F+F(F(" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 76 "However here the different mono
+mial orderings gave different Groebner basis." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 13 "evalb(G1=G2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#%&falseG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "Basis([g1,g2],
+ plex(x,y)); Basis([g1,g2], grlex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#7$,&%\"yG\"\"\"*$)%\"zG\"\"&F&!\"\",&%\"xGF&*$)F)\"\"%F&F+" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,&%\"yG\"\"\"*$)%\"zG\"\"&F&!\"\",&%
+\"xGF&*$)F)\"\"%F&F+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 256 "" 0 "" 
+{TEXT -1 11 "Section 2.7" }}}{EXCHG {PARA 256 "" 0 "" {TEXT -1 6 "2.7.
+3 " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "with(Groebner):with(P
+olynomialIdeals):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "X:=[x,
+y,z]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "LTlex:= proc(f) lo
+cal c,m; c:=lcoeff(f,X,'m'); c*m; end:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 156 "LTgrlex:= proc(f) local d,g,t;\n if not type(f,`+`) \+
+then return f; fi;\n d:= max(seq(degree(t), t=f));\n g:= add(`if`(degr
+ee(t)=d, t, 0), t=f);\n LTlex(g);\nend:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 73 "From quest
+ion 2 we got the following Groebner basis (they were the same):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "G := [x^2*y-1, x*y^2-x, x^2-
+y, y^2-1, y^3-y];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7',&*&)%\"x
+G\"\"#\"\"\"%\"yGF+F+F+!\"\",&*&F)F+)F,F*F+F+F)F-,&*$F(F+F+F,F-,&*$F0F
++F+F+F-,&*$)F,\"\"$F+F+F,F-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 162 "T
+o get a reduced Groebner basis, we have to make sure that for all p in
+ G no term of p lies in the ideal generated by leading terms of all ot
+her polynomials of G." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "K:
+=<seq(LTlex(t),t=op(G))>;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"KG-%$
+<,>G6'*&)%\"xG\"\"#\"\"\"%\"yGF,*&F*F,)F-F+F,*$F/F,*$F)F,*$)F-\"\"$F,
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 244 "Here we can easily see that \+
+the leading terms of first, second and fifth polynomials all lie in th
+e ideal generated by the other two. Therefore the reduced Groebner bas
+is consists ofthe other two polynomials. Now let's consider the grlex \+
+order." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "K:=<seq(LTgrlex(t
+),t=op(G))>;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"KG-%$<,>G6'*&)%\"x
+G\"\"#\"\"\"%\"yGF,*&F*F,)F-F+F,*$F/F,*$F)F,*$)F-\"\"$F," }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 87 "Here it's the same as the lex ordering. S
+o the reduced Groebner basis for this case is:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 18 "J:=[x^2-y, y^2-1];" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"JG7$,&*$)%\"xG\"\"#\"\"\"F+%\"yG!\"\",&*$)F,F*F+F+F
++F-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 95 "Since the Groebner basis was the entire polynomia
+l ring, it is also the reduced Groebner basis." }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 7 "Part c." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 35 "First
+ we'll deal with lex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 20 "G := [x-z^4, y-z^5];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG
+7$,&%\"xG\"\"\"*$)%\"zG\"\"%F(!\"\",&%\"yGF(*$)F+\"\"&F(F-" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "seq(LTlex(t),t=op(G));" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6$%\"xG%\"yG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+51 "Clearly this already is the reduced Groebner basis." }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 23 "Now the grlex ordering." }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 64 "G := [x-z^4, y-z^5, -x*z+y, y*z^3-x^2, y^
+2*z^2-x^3, -x^4+y^3*z];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7(,&%
+\"xG\"\"\"*$)%\"zG\"\"%F(!\"\",&%\"yGF(*$)F+\"\"&F(F-,&*&F'F(F+F(F-F/F
+(,&*&F/F()F+\"\"$F(F(*$)F'\"\"#F(F-,&*&)F/F;F()F+F;F(F(*$)F'F8F(F-,&*$
+)F'F,F(F-*&)F/F8F(F+F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 65 "It's \+
+harder to see everything here. Let's create a certain table." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 456 "G[1],LTgrlex(G[2]),LTgrlex(
+G[3]),LTgrlex(G[4]),LTgrlex(G[5]),LTgrlex(G[6]); G[2],LTgrlex(G[1]),LT
+grlex(G[3]),LTgrlex(G[4]),LTgrlex(G[5]),LTgrlex(G[6]);\nG[3],LTgrlex(G
+[2]),LTgrlex(G[1]),LTgrlex(G[4]),LTgrlex(G[5]),LTgrlex(G[6]); \nG[4],L
+Tgrlex(G[2]),LTgrlex(G[3]),LTgrlex(G[1]),LTgrlex(G[5]),LTgrlex(G[6]);
+\nG[5],LTgrlex(G[2]),LTgrlex(G[3]),LTgrlex(G[4]),LTgrlex(G[1]),LTgrlex
+(G[6]);\nG[6],LTgrlex(G[2]),LTgrlex(G[3]),LTgrlex(G[4]),LTgrlex(G[5]),
+LTgrlex(G[1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6(,&%\"xG\"\"\"*$)%\"z
+G\"\"%F%!\"\",$*$)F(\"\"&F%F*,$*&F$F%F(F%F**&%\"yGF%)F(\"\"$F%*&)F2\"
+\"#F%)F(F7F%,$*$)F$F)F%F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6(,&%\"yG\"
+\"\"*$)%\"zG\"\"&F%!\"\",$*$)F(\"\"%F%F*,$*&%\"xGF%F(F%F**&F$F%)F(\"\"
+$F%*&)F$\"\"#F%)F(F7F%,$*$)F1F.F%F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+(,&*&%\"xG\"\"\"%\"zGF&!\"\"%\"yGF&,$*$)F'\"\"&F&F(,$*$)F'\"\"%F&F(*&F
+)F&)F'\"\"$F&*&)F)\"\"#F&)F'F7F&,$*$)F%F1F&F(" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6(,&*&%\"yG\"\"\")%\"zG\"\"$F&F&*$)%\"xG\"\"#F&!\"\",$*$)
+F(\"\"&F&F.,$*&F,F&F(F&F.,$*$)F(\"\"%F&F.*&)F%F-F&)F(F-F&,$*$)F,F8F&F.
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6(,&*&)%\"yG\"\"#\"\"\")%\"zGF'F(F(*
+$)%\"xG\"\"$F(!\"\",$*$)F*\"\"&F(F/,$*&F-F(F*F(F/*&F&F()F*F.F(,$*$)F*
+\"\"%F(F/,$*$)F-F;F(F/" }}{PARA 11 "" 1 "" {XPPMATH 20 "6(,&*$)%\"xG\"
+\"%\"\"\"!\"\"*&)%\"yG\"\"$F(%\"zGF(F(,$*$)F.\"\"&F(F),$*&F&F(F.F(F)*&
+F,F()F.F-F(*&)F,\"\"#F()F.F9F(,$*$)F.F'F(F)" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 414 "Now, if a certain monomial lies in a monomial ideal ge
+nerated by leading terms of G, then one of those leading terms must di
+vide that monomial. Carefully inspecting the table above we can see th
+at the only time this is the case is for G[2] and LT(G[1]) since z^4 d
+ivides z^5. By Lemma 3 of the section 2.7 of the book, we can just sim
+ply throw this  polynomial away to obtain the following reduced Groebn
+er basis: " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "G:=[G[1],op(G
+[3..6])];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7',&%\"xG\"\"\"*$)%
+\"zG\"\"%F(!\"\",&*&F'F(F+F(F-%\"yGF(,&*&F0F()F+\"\"$F(F(*$)F'\"\"#F(F
+-,&*&)F0F7F()F+F7F(F(*$)F'F4F(F-,&*$)F'F,F(F-*&)F0F4F(F+F(F(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 260 "" 0 "" {TEXT -1 11 "Section 2.8" }
+}}{EXCHG {PARA 261 "" 0 "" {TEXT -1 6 "2.8.5a" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "f:
+=(x,y)->(x^2+y^2-4)*(x^2+y^2-1)+(x-3/2)^2+(y-3/2)^2:" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 39 "dx:=diff(f(x,y),x); dy:=diff(f(x,y),y);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#dxG,**(\"\"#\"\"\"%\"xGF(,(*$)F)F
+'F(F(*$)%\"yGF'F(F(F(!\"\"F(F(*(F'F(,(F+F(F-F(\"\"%F0F(F)F(F(*&F'F(F)F
+(F(\"\"$F0" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#dyG,**(\"\"#\"\"\"%\"
+yGF(,(*$)%\"xGF'F(F(*$)F)F'F(F(F(!\"\"F(F(*(F'F(,(F+F(F.F(\"\"%F0F(F)F
+(F(*&F'F(F)F(F(\"\"$F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "G
+:=Basis([dx,dy], plex(x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG
+7$,(*&\"\")\"\"\")%\"yG\"\"$F)F)*&F(F)F+F)!\"\"F,F.,&F+F.%\"xGF)" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 132 "It's easy to see that the second \+
+equation implies that x=y and the first equation depends on y alone, s
+o we can solve it separately." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 14 "solve(G[1],y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6%#!\"\"\"\"#,&#
+\"\"\"\"\"%F(*&F)F$\"#8#F(F%F(,&F'F(*&F)F$F+F,F$" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 95 "Therefore we have 3 critical points and they are o
+f the form (y,y), where y is specified above." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 256 6 "2.8.11" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT 257 7 "Part a." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "re
+start;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "g1:=a+b+c-3: g2:=a^2+b^2+
+c^2-5: g3:=a^3+b^3+c^3-7: " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+34 "G:=Basis([g1,g2,g3], plex(a,b,c));" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%\"GG7%,**&\"\"$\"\"\")%\"cGF(F)F)*&\"\"*F))F+\"\"#F)!\"\"*&\"
+\"'F)F+F)F)F/F),.*$)%\"bGF/F)F)*&F6F)F+F)F)*$F.F)F)*&F(F)F+F)F0*&F(F)F
+6F)F0F/F),*%\"aGF)F6F)F+F)F(F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 42 "NormalForm(a^4+b^4+c^4-9, G, plex(a,b,c));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 10 "Therefo
+re " }{XPPEDIT 18 0 "a^4+b^4+c^4;" "6#,(*$%\"aG\"\"%\"\"\"*$%\"bGF&F'*
+$%\"cGF&F'" }{TEXT -1 56 "- 9 indeed lies in the ideal generated by g1
+, g2 and g3." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 258 7 "Part b." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "NormalForm(a^5+b^5+c^5-11, G
+, plex(a,b,c));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##!\"%\"\"$" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "Therefore  " }{XPPEDIT 18 0 "a^5+b
+^5+c^5;" "6#,(*$%\"aG\"\"&\"\"\"*$%\"bGF&F'*$%\"cGF&F'" }{TEXT -1 20 "
+ is not equal to 11." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 259 7 "Part c." 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "NormalForm(a^5+b^5+c^5, G
+, plex(a,b,c));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##\"#H\"\"$" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "NormalForm(a^6+b^6+c^6, G, p
+lex(a,b,c));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##\"#>\"\"$" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 5 "Thus " }{XPPEDIT 18 0 "a^5+b^5+c^5;" "6#,(
+*$%\"aG\"\"&\"\"\"*$%\"bGF&F'*$%\"cGF&F'" }{TEXT -1 10 "=29/3 and " }
+{XPPEDIT 18 0 "a^6+b^6+c^6;" "6#,(*$%\"aG\"\"'\"\"\"*$%\"bGF&F'*$%\"cG
+F&F'" }{TEXT -1 6 "=19/3." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }{TEXT -1 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 262 "" 0 "" {TEXT -1 11 "Section 3.1" }}}{EXCHG {PARA 263 "" 0 "
+" {TEXT -1 5 "3.1.2" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "resta
+rt;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):" }}}
+{EXCHG {PARA 264 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 35 "f1:=x^2+2*y^2-3: f2:=x^2+x*y+y^2-3:" }{TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 90 "Let's compute Groebner bas
+es for these two poplymonials with different monomial orderings." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "G1:=Basis([f1, f2], plex(x,y
+)); G2:=Basis([f1, f2], plex(y,x));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#>%#G1G7%,&*$)%\"yG\"\"$\"\"\"F+F)!\"\",&*&%\"xGF+F)F+F+*$)F)\"\"#F+F,
+,(*$)F/F2F+F+*&F2F+F1F+F+F*F," }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2
+G7$,(*$)%\"xG\"\"%\"\"\"F+*&F*F+)F)\"\"#F+!\"\"\"\"$F+,(*&F.F+%\"yGF+F
++*$)F)F0F+F+*&F0F+F)F+F/" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "\n\n\n
+\n\n\n\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "factor(G1[1]);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*(%\"yG\"\"\",&F$F%F%!\"\"F%,&F$F%
+F%F%F%" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 58 "Clearly here we have 3 \+
+solution for y, let's plug them in." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "Gy0:=eval(G1, y=0);" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#>%$Gy0G7%\"\"!F&,&*$)%\"xG\"\"#\"\"\"F,\"\"$!\"\"" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 35 "Hence we get two soltions for x, x=" }{XPPEDIT 
+18 0 "3^(1/2);" "6#)\"\"$*&\"\"\"F&\"\"#!\"\"" }{TEXT -1 8 " and x=-" 
+}{XPPEDIT 18 0 "3^(1/2);" "6#)\"\"$*&\"\"\"F&\"\"#!\"\"" }{TEXT -1 1 "
+." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "Gy1:=eval(G1, y=1);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$Gy1G7%\"\"!,&%\"xG\"\"\"F)!\"\",&*
+$)F(\"\"#F)F)F)F*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 19 "So we get GC
+D(x-1, " }{XPPEDIT 18 0 "x^2-1;" "6#,&*$%\"xG\"\"#\"\"\"F'!\"\"" }
+{TEXT -1 19 ")=x-1=0 and so x=1." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "Gy11:=eval(G1, y=-1);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%%Gy11G7%\"\"!,&%\"xG!\"\"\"\"\"F),&*$)F(\"\"#F*F*F*F)" }}}
+{EXCHG {PARA 11 "" 1 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 10 "GCD(-x-1, " }{XPPEDIT 18 0 "x^2-1;" "6#,&*$%\"xG\"\"#\"\"\"F'!
+\"\"" }{TEXT -1 22 ")=x+1=0 and thus x=-1." }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 37 "So alltogether we have 4 solutions: (" }{XPPEDIT 18 0 "3^
+(1/2);" "6#)\"\"$*&\"\"\"F&\"\"#!\"\"" }{TEXT -1 8 ",0 ), (-" }
+{XPPEDIT 18 0 "3^(1/2);" "6#)\"\"$*&\"\"\"F&\"\"#!\"\"" }{TEXT -1 20 "
+,0), (1,1), (-1, -1)" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 260 11 "Part b, \+
+c.\n" }{TEXT -1 97 "Clearly the last two solutions are rational and th
+e smallest field containing all solutions is Q(" }{XPPEDIT 18 0 "3^(1/
+2);" "6#)\"\"$*&\"\"\"F&\"\"#!\"\"" }{TEXT -1 2 ")." }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 261 5 "3.1.4" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "f1:=x^2+y^2+z^2-4: f2:=x^2+2*y^2-5: f3:=x*z-1:" }
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 51 "Let's compute Gro
+ebner basis for these polynomials." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 35 "G:=Basis([f1,f2,f3], plex(x,y,z)); " }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%\"GG7%,(*&\"\"#\"\"\")%\"zG\"\"%F)F)*&\"\"$F))F+F(
+F)!\"\"F)F),(*$)%\"yGF(F)F)*$F/F)F0F)F0,(%\"xGF)*&F(F))F+F.F)F)*&F.F)F
++F)F0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,%);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7%<#%\"zG<$F%%\"yG<$%\"xGF%" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "Therefore the basis for " }
+{XPPEDIT 18 0 "I[1];" "6#&%\"IG6#\"\"\"" }{TEXT -1 4 "is \{" }
+{XPPEDIT 18 0 "4*z^6-6*z^2+9*z^4+12*y-4*z^4-9*z^2+1;" "6#,0*&\"\"%\"\"
+\"*$%\"zG\"\"'F&F&*&F)F&*$F(\"\"#F&!\"\"*&\"\"*F&*$F(F%F&F&*&\"#7F&%\"
+yGF&F&*&F%F&*$F(F%F&F-*&F/F&*$F(F,F&F-F&F&" }{TEXT -1 11 "\} and for  \+
+" }{XPPEDIT 18 0 "I[2];" "6#&%\"IG6#\"\"#" }{TEXT -1 7 " it's \{" }
+{XPPEDIT 18 0 "4*z^6-6*z^2+9*z^4+1;" "6#,**&\"\"%\"\"\"*$%\"zG\"\"'F&F
+&*&F)F&*$F(\"\"#F&!\"\"*&\"\"*F&*$F(F%F&F&F&F&" }{TEXT -1 2 "\}." }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 28 "Let's now solve this system." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "factor(G[1]);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#*(,&%\"zG\"\"\"F&!\"\"F&,&F%F&F&F&F&,&*&\"\"#F&)
+F%F+F&F&F&F'F&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 65 "So there are 3 \+
+solutions for z, let plug them back in one by one." }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 18 "Gz1:=eval(G, z=1);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$Gz1G7%\"\"!,&*$)%\"yG\"\"#\"\"\"F,F+!\"\",&%\"xGF,F,
+F-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 29 "We get 2 solutions then: (1
+, " }{XPPEDIT 18 0 "2^(1/2);" "6#)\"\"#*&\"\"\"F&F$!\"\"" }{TEXT -1 
+11 ", 1), (1, -" }{XPPEDIT 18 0 "2^(1/2);" "6#)\"\"#*&\"\"\"F&F$!\"\"
+" }{TEXT -1 33 ",1), none of which are rational. " }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 20 "Gz11:=eval(G, z=-1);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%%Gz11G7%\"\"!,&*$)%\"yG\"\"#\"\"\"F,F+!\"\",&%\"xGF,F
+,F," }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 38 "Here we get another two so
+lutions (-1," }{XPPEDIT 18 0 "2^(1/2);" "6#)\"\"#*&\"\"\"F&F$!\"\"" }
+{TEXT -1 13 " ,-1), (-1, -" }{XPPEDIT 18 0 "2^(1/2);" "6#)\"\"#*&\"\"
+\"F&F$!\"\"" }{TEXT -1 36 ", -1) and again neither is rational." }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 148 "The last solution for z is irrati
+onal itself, so we can conclude even without calculating all the roots
+  implicitely that none of them are rational." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 266 "" 0 "" {TEXT -1 11 "Section 3.1" }}}{EXCHG {PARA 
+267 "" 0 "" {TEXT -1 5 "3.1.7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groeb
+ner):" }}}{EXCHG {PARA 265 "" 0 "" {TEXT -1 7 "Part a." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "f1:=t^2+x^2+y^2+z^2: f2:=t^2+2*x-x*
+y-z^2: f3:=t+y^3-z^3:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "G:
+=Basis([f1, f2, f3], plex(t,x,y,z)); " }}{PARA 12 "" 1 "" {XPPMATH 20 
+"6#>%\"GG7',R*$)%\"yG\"#7\"\"\"F+*(\"\"%F+)F)\"\"*F+)%\"zG\"\"$F+!\"\"
+*(\"\"'F+)F1F5F+)F)F5F+F+*(F-F+)F1F/F+)F)F2F+F3*$)F1F*F+F+*$)F)\"\")F+
+F+*(\"\"#F+F7F+)F1FAF+F3*(FAF+)F)\"\"&F+F0F+F3*(F-F+)F1FEF+F:F+F+*&)F)
+FAF+F6F+F+*&FAF+)F1F?F+F3*&F-F+)F)\"\"(F+F3*(F?F+)F)F-F+F0F+F+*(F-F+F)
+F+F6F+F3*&F-F+F7F+F+*(F?F+F:F+F0F+F3*&F-F+F6F+F+*$FPF+F+*&FIF+FBF+F+*$
+)F1F-F+F+*&F-F+F:F+F3*(F-F+F)F+FBF+F3*&F-F+FIF+F+*&F-F+FBF+F+,do*&\"#k
+F+%\"xGF+F+*&FAF+FIF+F3*&\"#MF+FBF+F3*$F:F+F+*&\"#IF+F7F+F+*(\"#gF+F:F
++F0F+F3*&F`oF+F6F+F+*$)F)\"#6F+F+*&FAF+)F)\"#5F+F+*(\"#:F+F)F+FBF+F3*(
+F-F+F>F+F0F+F3*(FEF+FDF+F6F+F+*&FDF+FBF+F3*&FjnF+F6F+F+*&FjnF+FBF+F3*(
+FAF+F9F+FIF+F3*(FAF+FGF+FIF+F+*(F?F+FMF+F0F+F3*(FioF+FPF+F6F+F+*(FAF+F
+PF+FBF+F3*(F-F+F9F+F)F+F3*(F-F+FGF+F)F+F+*(\"#;F+F7F+F0F+F3*(\"#?F+F:F
++F6F+F+*(F-F+F:F+FBF+F3*&F-F+F.F+F+*(FipF+F0F+FjnF+F3*&F?F+F9F+F3*&F?F
++FGF+F+*(FipF+FDF+F0F+F3*(F?F+FIF+F6F+F+*(F?F+FIF+FBF+F3*&F?F+F>F+F+*(
+F]oF+FPF+F0F+F3*(\"#<F+F)F+F6F+F+*&FgqF+FMF+F+,.*$F7F+F3*(FAF+F:F+F0F+
+F+*$F6F+F3*&FjnF+F)F+F+*$FBF+F+*&FAF+FjnF+F3,.*$)FjnFAF+F+FjqF+*(FAF+F
+:F+F0F+F3F\\rF+*$FIF+F+F^rF+,(%\"tGF+F^oF+*$F0F+F3" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 15 "map(indets, %);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7'<$%\"zG%\"yG<%%\"xGF%F&F'F'<%%\"tGF%F&" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 150 "So the basis for I with t eliminated con
+sists of the first four polynomials above. There are indeed 4 generato
+rs and one of them has total degree 12. " }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 262 7 "Part b." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "G1:
+=Basis([G[1], G[2], G[3], G[4]], tdeg(t,x,y,z)); " }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#G1G7$,,*$)%\"xG\"\"#\"\"\"F+*&F)F+%\"yGF+F+*$)F-F*F+
+F+*&F*F+)%\"zGF*F+F+*&F*F+F)F+!\"\",.*$)F-\"\"'F+F+*(F*F+)F-\"\"$F+)F2
+F;F+F4*$)F2F8F+F+F,F4*$F1F+F4*&F*F+F)F+F+" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 15 "map(indets, %);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+7$<%%\"xG%\"zG%\"yGF$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 37 "So this \+
+is the set of two generators." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 263 7 "
+Part c." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G2:=[op(G1), t+y
+^3-z^3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2G7%,,*$)%\"xG\"\"#\"
+\"\"F+*&F)F+%\"yGF+F+*$)F-F*F+F+*&F*F+)%\"zGF*F+F+*&F*F+F)F+!\"\",.*$)
+F-\"\"'F+F+*(F*F+)F-\"\"$F+)F2F;F+F4*$)F2F8F+F+F,F4*$F1F+F4*&F*F+F)F+F
++,(%\"tGF+*$F:F+F+*$F<F+F4" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "G3:=Basis([f1, f2, f3], lexdeg([t],[x,y,z]));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#G3G7%,,*$)%\"xG\"\"#\"\"\"F+*&F)F+%\"yGF+F+*$)F-F*F+
+F+*&F*F+)%\"zGF*F+F+*&F*F+F)F+!\"\",.*$)F-\"\"'F+F+*(F*F+)F-\"\"$F+)F2
+F;F+F4*$)F2F8F+F+F,F4*$F1F+F4*&F*F+F)F+F+,(%\"tGF+*$F:F+F+*$F<F+F4" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 28 "So they are indeed the same." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 268 "" 0 "" {TEXT -1 11 "Section 3.3" }
+}}{EXCHG {PARA 269 "" 0 "" {TEXT -1 6 "3.3.6 " }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT 264 7 "Part a." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "r
+estart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "S:=[x-u*v, y-u^2, z-v^2
+]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "G:=Basis(S, plex(u,v,
+x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7(,&*$)%\"xG\"\"#\"
+\"\"F+*&%\"yGF+%\"zGF+!\"\",&F.F/*$)%\"vGF*F+F+,&*&%\"uGF+F.F+F+*&F3F+
+F)F+F/,&*&F6F+F)F+F+*&F3F+F-F+F/,&F)F/*&F6F+F3F+F+,&F-F/*$)F6F*F+F+" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "map(indets, G);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#7(<%%\"xG%\"zG%\"yG<$%\"vGF&<&F)%\"uGF%F&<&F
+)F+F%F'<%F)F+F%<$F+F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 13 "Therefor
+e V( " }{XPPEDIT 18 0 "x^2-y*z;" "6#,&*$%\"xG\"\"#\"\"\"*&%\"yGF'%\"zG
+F'!\"\"" }{TEXT -1 55 ")  is the smallest variety containing S. Let's \+
+plot it." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "plots[implicitp
+lot3d](x^2-y*z, x=-5..5, y=-5..5, z=-5..5, axes=boxed);" }}{PARA 13 "
+" 1 "" {GLPLOT3D 262 233 233 {PLOTDATA 3 "6%-%+ISOSURFACEG6#X0%)anythi
+ngG6\"6\"[gl'!%\"!!%[ez\"+\"+\"+\"%C014000000000000C014000000000000C01
+40000000000000000000000000000C014000000000000C014000000000000C00F1C71C
+71C71C7401638E38E38E390C014000000000000C014000000000000C00638E38E38E38
+E402638E38E38E38EC014000000000000C014000000000000BFFAAAAAAAAAAAAA4030A
+AAAAAAAAAABC014000000000000C014000000000000BFE1C71C71C71C70403638E38E3
+8E38EC014000000000000C0140000000000003FE1C71C71C71C74403BC71C71C71C72C
+014000000000000C0140000000000003FFAAAAAAAAAAAAC4040AAAAAAAAAAABC014000
+000000000C014000000000000400638E38E38E38F404371C71C71C71DC014000000000
+000C014000000000000400F1C71C71C71C8404638E38E38E38EC014000000000000C01
+400000000000040140000000000004049000000000000C014000000000000C00F1C71C
+71C71C7C014000000000000401638E38E38E390C014000000000000C00F1C71C71C71C
+7C00F1C71C71C71C74023C0CA4587E6B8C014000000000000C00F1C71C71C71C7C0063
+8E38E38E38E402C6522C3F35BA8C014000000000000C00F1C71C71C71C7BFFAAAAAAAA
+AAAAA403284BDA12F684CC014000000000000C00F1C71C71C71C7BFE1C71C71C71C704
+036D6E9E06522C4C014000000000000C00F1C71C71C71C73FE1C71C71C71C74403B291
+61F9ADD3CC014000000000000C00F1C71C71C71C73FFAAAAAAAAAAAAC403F7B425ED09
+7B4C014000000000000C00F1C71C71C71C7400638E38E38E38F4041E6B74F032916C01
+4000000000000C00F1C71C71C71C7400F1C71C71C71C840440FCD6E9E0652C01400000
+0000000C00F1C71C71C71C74014000000000000404638E38E38E38EC01400000000000
+0C00638E38E38E38EC014000000000000402638E38E38E38EC014000000000000C0063
+8E38E38E38EC00F1C71C71C71C7402C6522C3F35BA8C014000000000000C00638E38E3
+8E38EC00638E38E38E38E403148B0FCD6E9E0C014000000000000C00638E38E38E38EB
+FFAAAAAAAAAAAAA40345ED097B425EDC014000000000000C00638E38E38E38EBFE1C71
+C71C71C70403774F0329161FAC014000000000000C00638E38E38E38E3FE1C71C71C71
+C74403A8B0FCD6E9E06C014000000000000C00638E38E38E38E3FFAAAAAAAAAAAAC403
+DA12F684BDA13C014000000000000C00638E38E38E38E400638E38E38E38F40405BA78
+1948B10C014000000000000C00638E38E38E38E400F1C71C71C71C84041E6B74F03291
+6C014000000000000C00638E38E38E38E4014000000000000404371C71C71C71CC0140
+00000000000BFFAAAAAAAAAAAAAC0140000000000004030AAAAAAAAAAABC0140000000
+00000BFFAAAAAAAAAAAAAC00F1C71C71C71C7403284BDA12F684CC014000000000000B
+FFAAAAAAAAAAAAAC00638E38E38E38E40345ED097B425EDC014000000000000BFFAAAA
+AAAAAAAAABFFAAAAAAAAAAAAA403638E38E38E38EC014000000000000BFFAAAAAAAAAA
+AAABFE1C71C71C71C70403812F684BDA130C014000000000000BFFAAAAAAAAAAAAA3FE
+1C71C71C71C744039ED097B425ED1C014000000000000BFFAAAAAAAAAAAAA3FFAAAAAA
+AAAAAAC403BC71C71C71C72C014000000000000BFFAAAAAAAAAAAAA400638E38E38E38
+F403DA12F684BDA13C014000000000000BFFAAAAAAAAAAAAA400F1C71C71C71C8403F7
+B425ED097B4C014000000000000BFFAAAAAAAAAAAAA40140000000000004040AAAAAAA
+AAAAAC014000000000000BFE1C71C71C71C70C014000000000000403638E38E38E38EC
+014000000000000BFE1C71C71C71C70C00F1C71C71C71C74036D6E9E06522C4C014000
+000000000BFE1C71C71C71C70C00638E38E38E38E403774F0329161FAC014000000000
+000BFE1C71C71C71C70BFFAAAAAAAAAAAAA403812F684BDA130C014000000000000BFE
+1C71C71C71C70BFE1C71C71C71C704038B0FCD6E9E065C014000000000000BFE1C71C7
+1C71C703FE1C71C71C71C7440394F0329161F9BC014000000000000BFE1C71C71C71C7
+03FFAAAAAAAAAAAAC4039ED097B425ED1C014000000000000BFE1C71C71C71C7040063
+8E38E38E38F403A8B0FCD6E9E06C014000000000000BFE1C71C71C71C70400F1C71C71
+C71C8403B29161F9ADD3CC014000000000000BFE1C71C71C71C7040140000000000004
+03BC71C71C71C72C0140000000000003FE1C71C71C71C74C014000000000000403BC71
+C71C71C72C0140000000000003FE1C71C71C71C74C00F1C71C71C71C7403B29161F9AD
+D3CC0140000000000003FE1C71C71C71C74C00638E38E38E38E403A8B0FCD6E9E06C01
+40000000000003FE1C71C71C71C74BFFAAAAAAAAAAAAA4039ED097B425ED1C01400000
+00000003FE1C71C71C71C74BFE1C71C71C71C7040394F0329161F9BC01400000000000
+03FE1C71C71C71C743FE1C71C71C71C744038B0FCD6E9E065C0140000000000003FE1C
+71C71C71C743FFAAAAAAAAAAAAC403812F684BDA12FC0140000000000003FE1C71C71C
+71C74400638E38E38E38F403774F0329161F9C0140000000000003FE1C71C71C71C744
+00F1C71C71C71C84036D6E9E06522C4C0140000000000003FE1C71C71C71C744014000
+000000000403638E38E38E38EC0140000000000003FFAAAAAAAAAAAACC014000000000
+0004040AAAAAAAAAAABC0140000000000003FFAAAAAAAAAAAACC00F1C71C71C71C7403
+F7B425ED097B4C0140000000000003FFAAAAAAAAAAAACC00638E38E38E38E403DA12F6
+84BDA13C0140000000000003FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA403BC71C71C71C7
+2C0140000000000003FFAAAAAAAAAAAACBFE1C71C71C71C704039ED097B425ED1C0140
+000000000003FFAAAAAAAAAAAAC3FE1C71C71C71C74403812F684BDA12FC0140000000
+000003FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC403638E38E38E38EC0140000000000003
+FFAAAAAAAAAAAAC400638E38E38E38F40345ED097B425EDC0140000000000003FFAAAA
+AAAAAAAAC400F1C71C71C71C8403284BDA12F684BC0140000000000003FFAAAAAAAAAA
+AAC40140000000000004030AAAAAAAAAAAAC014000000000000400638E38E38E38FC01
+4000000000000404371C71C71C71DC014000000000000400638E38E38E38FC00F1C71C
+71C71C74041E6B74F032916C014000000000000400638E38E38E38FC00638E38E38E38
+E40405BA781948B10C014000000000000400638E38E38E38FBFFAAAAAAAAAAAAA403DA
+12F684BDA13C014000000000000400638E38E38E38FBFE1C71C71C71C70403A8B0FCD6
+E9E06C014000000000000400638E38E38E38F3FE1C71C71C71C74403774F0329161F9C
+014000000000000400638E38E38E38F3FFAAAAAAAAAAAAC40345ED097B425EDC014000
+000000000400638E38E38E38F400638E38E38E38F403148B0FCD6E9E0C014000000000
+000400638E38E38E38F400F1C71C71C71C8402C6522C3F35BA6C014000000000000400
+638E38E38E38F4014000000000000402638E38E38E38DC014000000000000400F1C71C
+71C71C8C014000000000000404638E38E38E38EC014000000000000400F1C71C71C71C
+8C00F1C71C71C71C740440FCD6E9E0652C014000000000000400F1C71C71C71C8C0063
+8E38E38E38E4041E6B74F032916C014000000000000400F1C71C71C71C8BFFAAAAAAAA
+AAAAA403F7B425ED097B4C014000000000000400F1C71C71C71C8BFE1C71C71C71C704
+03B29161F9ADD3CC014000000000000400F1C71C71C71C83FE1C71C71C71C744036D6E
+9E06522C4C014000000000000400F1C71C71C71C83FFAAAAAAAAAAAAC403284BDA12F6
+84BC014000000000000400F1C71C71C71C8400638E38E38E38F402C6522C3F35BA6C01
+4000000000000400F1C71C71C71C8400F1C71C71C71C84023C0CA4587E6B6C01400000
+0000000400F1C71C71C71C84014000000000000401638E38E38E38CC01400000000000
+04014000000000000C0140000000000004049000000000000C01400000000000040140
+00000000000C00F1C71C71C71C7404638E38E38E38EC01400000000000040140000000
+00000C00638E38E38E38E404371C71C71C71CC0140000000000004014000000000000B
+FFAAAAAAAAAAAAA4040AAAAAAAAAAAAC0140000000000004014000000000000BFE1C71
+C71C71C70403BC71C71C71C72C01400000000000040140000000000003FE1C71C71C71
+C74403638E38E38E38EC01400000000000040140000000000003FFAAAAAAAAAAAAC403
+0AAAAAAAAAAAAC0140000000000004014000000000000400638E38E38E38F402638E38
+E38E38DC0140000000000004014000000000000400F1C71C71C71C8401638E38E38E38
+CC014000000000000401400000000000040140000000000000000000000000000C00F1
+C71C71C71C7C014000000000000C014000000000000C023C0CA4587E6B8C00F1C71C71
+C71C7C014000000000000C00F1C71C71C71C7C01148B0FCD6E9E0C00F1C71C71C71C7C
+014000000000000C00638E38E38E38E3FF3C0CA4587E6B0C00F1C71C71C71C7C014000
+000000000BFFAAAAAAAAAAAAA401B29161F9ADD3CC00F1C71C71C71C7C014000000000
+000BFE1C71C71C71C704028B0FCD6E9E065C00F1C71C71C71C7C0140000000000003FE
+1C71C71C71C744031E6B74F032916C00F1C71C71C71C7C0140000000000003FFAAAAAA
+AAAAAAC403774F0329161FAC00F1C71C71C71C7C014000000000000400638E38E38E38
+F403D0329161F9ADEC00F1C71C71C71C7C014000000000000400F1C71C71C71C840414
+8B0FCD6E9E0C00F1C71C71C71C7C014000000000000401400000000000040440FCD6E9
+E0652C00F1C71C71C71C7C00F1C71C71C71C7C014000000000000C01148B0FCD6E9E0C
+00F1C71C71C71C7C00F1C71C71C71C7C00F1C71C71C71C70000000000000000C00F1C7
+1C71C71C7C00F1C71C71C71C7C00638E38E38E38E401148B0FCD6E9E0C00F1C71C71C7
+1C7C00F1C71C71C71C7BFFAAAAAAAAAAAAA402148B0FCD6E9E0C00F1C71C71C71C7C00
+F1C71C71C71C7BFE1C71C71C71C704029ED097B425ED0C00F1C71C71C71C7C00F1C71C
+71C71C73FE1C71C71C71C74403148B0FCD6E9E0C00F1C71C71C71C7C00F1C71C71C71C
+73FFAAAAAAAAAAAAC40359ADD3C0CA458C00F1C71C71C71C7C00F1C71C71C71C740063
+8E38E38E38F4039ED097B425ED0C00F1C71C71C71C7C00F1C71C71C71C7400F1C71C71
+C71C8403E3F35BA781948C00F1C71C71C71C7C00F1C71C71C71C740140000000000004
+04148B0FCD6E9E0C00F1C71C71C71C7C00638E38E38E38EC0140000000000003FF3C0C
+A4587E6B0C00F1C71C71C71C7C00638E38E38E38EC00F1C71C71C71C7401148B0FCD6E
+9E0C00F1C71C71C71C7C00638E38E38E38EC00638E38E38E38E401DA12F684BDA12C00
+F1C71C71C71C7C00638E38E38E38EBFFAAAAAAAAAAAAA4024FCD6E9E06522C00F1C71C
+71C71C7C00638E38E38E38EBFE1C71C71C71C70402B29161F9ADD3CC00F1C71C71C71C
+7C00638E38E38E38E3FE1C71C71C71C744030AAAAAAAAAAAAC00F1C71C71C71C7C0063
+8E38E38E38E3FFAAAAAAAAAAAAC4033C0CA4587E6B7C00F1C71C71C71C7C00638E38E3
+8E38E400638E38E38E38F4036D6E9E06522C4C00F1C71C71C71C7C00638E38E38E38E4
+00F1C71C71C71C84039ED097B425ED0C00F1C71C71C71C7C00638E38E38E38E4014000
+000000000403D0329161F9ADDC00F1C71C71C71C7BFFAAAAAAAAAAAAAC014000000000
+000401B29161F9ADD3CC00F1C71C71C71C7BFFAAAAAAAAAAAAAC00F1C71C71C71C7402
+148B0FCD6E9E0C00F1C71C71C71C7BFFAAAAAAAAAAAAAC00638E38E38E38E4024FCD6E
+9E06522C00F1C71C71C71C7BFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA4028B0FCD6E9E06
+5C00F1C71C71C71C7BFFAAAAAAAAAAAAABFE1C71C71C71C70402C6522C3F35BA7C00F1
+C71C71C71C7BFFAAAAAAAAAAAAA3FE1C71C71C71C7440300CA4587E6B75C00F1C71C71
+C71C7BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC4031E6B74F032916C00F1C71C71C71C7B
+FFAAAAAAAAAAAAA400638E38E38E38F4033C0CA4587E6B7C00F1C71C71C71C7BFFAAAA
+AAAAAAAAA400F1C71C71C71C840359ADD3C0CA458C00F1C71C71C71C7BFFAAAAAAAAAA
+AAA4014000000000000403774F0329161F9C00F1C71C71C71C7BFE1C71C71C71C70C01
+40000000000004028B0FCD6E9E065C00F1C71C71C71C7BFE1C71C71C71C70C00F1C71C
+71C71C74029ED097B425ED0C00F1C71C71C71C7BFE1C71C71C71C70C00638E38E38E38
+E402B29161F9ADD3CC00F1C71C71C71C7BFE1C71C71C71C70BFFAAAAAAAAAAAAA402C6
+522C3F35BA7C00F1C71C71C71C7BFE1C71C71C71C70BFE1C71C71C71C70402DA12F684
+BDA12C00F1C71C71C71C7BFE1C71C71C71C703FE1C71C71C71C74402EDD3C0CA4587EC
+00F1C71C71C71C7BFE1C71C71C71C703FFAAAAAAAAAAAAC40300CA4587E6B75C00F1C7
+1C71C71C7BFE1C71C71C71C70400638E38E38E38F4030AAAAAAAAAAAAC00F1C71C71C7
+1C7BFE1C71C71C71C70400F1C71C71C71C8403148B0FCD6E9E0C00F1C71C71C71C7BFE
+1C71C71C71C7040140000000000004031E6B74F032916C00F1C71C71C71C73FE1C71C7
+1C71C74C0140000000000004031E6B74F032916C00F1C71C71C71C73FE1C71C71C71C7
+4C00F1C71C71C71C7403148B0FCD6E9E0C00F1C71C71C71C73FE1C71C71C71C74C0063
+8E38E38E38E4030AAAAAAAAAAAAC00F1C71C71C71C73FE1C71C71C71C74BFFAAAAAAAA
+AAAAA40300CA4587E6B75C00F1C71C71C71C73FE1C71C71C71C74BFE1C71C71C71C704
+02EDD3C0CA4587EC00F1C71C71C71C73FE1C71C71C71C743FE1C71C71C71C74402DA12
+F684BDA12C00F1C71C71C71C73FE1C71C71C71C743FFAAAAAAAAAAAAC402C6522C3F35
+BA6C00F1C71C71C71C73FE1C71C71C71C74400638E38E38E38F402B29161F9ADD3BC00
+F1C71C71C71C73FE1C71C71C71C74400F1C71C71C71C84029ED097B425ECFC00F1C71C
+71C71C73FE1C71C71C71C7440140000000000004028B0FCD6E9E064C00F1C71C71C71C
+73FFAAAAAAAAAAAACC014000000000000403774F0329161FAC00F1C71C71C71C73FFAA
+AAAAAAAAAACC00F1C71C71C71C740359ADD3C0CA458C00F1C71C71C71C73FFAAAAAAAA
+AAAACC00638E38E38E38E4033C0CA4587E6B7C00F1C71C71C71C73FFAAAAAAAAAAAACB
+FFAAAAAAAAAAAAA4031E6B74F032916C00F1C71C71C71C73FFAAAAAAAAAAAACBFE1C71
+C71C71C7040300CA4587E6B75C00F1C71C71C71C73FFAAAAAAAAAAAAC3FE1C71C71C71
+C74402C6522C3F35BA6C00F1C71C71C71C73FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC402
+8B0FCD6E9E064C00F1C71C71C71C73FFAAAAAAAAAAAAC400638E38E38E38F4024FCD6E
+9E06522C00F1C71C71C71C73FFAAAAAAAAAAAAC400F1C71C71C71C8402148B0FCD6E9D
+EC00F1C71C71C71C73FFAAAAAAAAAAAAC4014000000000000401B29161F9ADD38C00F1
+C71C71C71C7400638E38E38E38FC014000000000000403D0329161F9ADEC00F1C71C71
+C71C7400638E38E38E38FC00F1C71C71C71C74039ED097B425ED0C00F1C71C71C71C74
+00638E38E38E38FC00638E38E38E38E4036D6E9E06522C4C00F1C71C71C71C7400638E
+38E38E38FBFFAAAAAAAAAAAAA4033C0CA4587E6B7C00F1C71C71C71C7400638E38E38E
+38FBFE1C71C71C71C704030AAAAAAAAAAAAC00F1C71C71C71C7400638E38E38E38F3FE
+1C71C71C71C74402B29161F9ADD3BC00F1C71C71C71C7400638E38E38E38F3FFAAAAAA
+AAAAAAC4024FCD6E9E06522C00F1C71C71C71C7400638E38E38E38F400638E38E38E38
+F401DA12F684BDA0FC00F1C71C71C71C7400638E38E38E38F400F1C71C71C71C840114
+8B0FCD6E9DCC00F1C71C71C71C7400638E38E38E38F40140000000000003FF3C0CA458
+7E6A8C00F1C71C71C71C7400F1C71C71C71C8C014000000000000404148B0FCD6E9E0C
+00F1C71C71C71C7400F1C71C71C71C8C00F1C71C71C71C7403E3F35BA781948C00F1C7
+1C71C71C7400F1C71C71C71C8C00638E38E38E38E4039ED097B425ED0C00F1C71C71C7
+1C7400F1C71C71C71C8BFFAAAAAAAAAAAAA40359ADD3C0CA458C00F1C71C71C71C7400
+F1C71C71C71C8BFE1C71C71C71C70403148B0FCD6E9E0C00F1C71C71C71C7400F1C71C
+71C71C83FE1C71C71C71C744029ED097B425ECFC00F1C71C71C71C7400F1C71C71C71C
+83FFAAAAAAAAAAAAC402148B0FCD6E9DEC00F1C71C71C71C7400F1C71C71C71C840063
+8E38E38E38F401148B0FCD6E9DCC00F1C71C71C71C7400F1C71C71C71C8400F1C71C71
+C71C8BCF0000000000000C00F1C71C71C71C7400F1C71C71C71C84014000000000000C
+01148B0FCD6E9E4C00F1C71C71C71C74014000000000000C01400000000000040440FC
+D6E9E0652C00F1C71C71C71C74014000000000000C00F1C71C71C71C7404148B0FCD6E
+9E0C00F1C71C71C71C74014000000000000C00638E38E38E38E403D0329161F9ADDC00
+F1C71C71C71C74014000000000000BFFAAAAAAAAAAAAA403774F0329161F9C00F1C71C
+71C71C74014000000000000BFE1C71C71C71C704031E6B74F032916C00F1C71C71C71C
+740140000000000003FE1C71C71C71C744028B0FCD6E9E064C00F1C71C71C71C740140
+000000000003FFAAAAAAAAAAAAC401B29161F9ADD38C00F1C71C71C71C740140000000
+00000400638E38E38E38F3FF3C0CA4587E6A8C00F1C71C71C71C740140000000000004
+00F1C71C71C71C8C01148B0FCD6E9E4C00F1C71C71C71C740140000000000004014000
+000000000C023C0CA4587E6B8C00638E38E38E38EC014000000000000C014000000000
+000C03148B0FCD6E9E0C00638E38E38E38EC014000000000000C00F1C71C71C71C7C02
+774F0329161F9C00638E38E38E38EC014000000000000C00638E38E38E38EC018B0FCD
+6E9E066C00638E38E38E38EC014000000000000BFFAAAAAAAAAAAAABFE3C0CA4587E6B
+0C00638E38E38E38EC014000000000000BFE1C71C71C71C704013C0CA4587E6B8C0063
+8E38E38E38EC0140000000000003FE1C71C71C71C744024FCD6E9E06523C00638E38E3
+8E38EC0140000000000003FFAAAAAAAAAAAAC40300CA4587E6B76C00638E38E38E38EC
+014000000000000400638E38E38E38F40359ADD3C0CA459C00638E38E38E38EC014000
+000000000400F1C71C71C71C8403B29161F9ADD3CC00638E38E38E38EC014000000000
+000401400000000000040405BA781948B10C00638E38E38E38EC00F1C71C71C71C7C01
+4000000000000C02774F0329161F9C00638E38E38E38EC00F1C71C71C71C7C00F1C71C
+71C71C7C01DA12F684BDA12C00638E38E38E38EC00F1C71C71C71C7C00638E38E38E38
+EC008B0FCD6E9E064C00638E38E38E38EC00F1C71C71C71C7BFFAAAAAAAAAAAAA3FF3C
+0CA4587E6B8C00638E38E38E38EC00F1C71C71C71C7BFE1C71C71C71C70401638E38E3
+8E38EC00638E38E38E38EC00F1C71C71C71C73FE1C71C71C71C744023C0CA4587E6B8C
+00638E38E38E38EC00F1C71C71C71C73FFAAAAAAAAAAAAC402C6522C3F35BA8C00638E
+38E38E38EC00F1C71C71C71C7400638E38E38E38F403284BDA12F684CC00638E38E38E
+38EC00F1C71C71C71C7400F1C71C71C71C84036D6E9E06522C4C00638E38E38E38EC00
+F1C71C71C71C74014000000000000403B29161F9ADD3CC00638E38E38E38EC00638E38
+E38E38EC014000000000000C018B0FCD6E9E066C00638E38E38E38EC00638E38E38E38
+EC00F1C71C71C71C7C008B0FCD6E9E064C00638E38E38E38EC00638E38E38E38EC0063
+8E38E38E38E0000000000000000C00638E38E38E38EC00638E38E38E38EBFFAAAAAAAA
+AAAAA4008B0FCD6E9E066C00638E38E38E38EC00638E38E38E38EBFE1C71C71C71C704
+018B0FCD6E9E066C00638E38E38E38EC00638E38E38E38E3FE1C71C71C71C74402284B
+DA12F684CC00638E38E38E38EC00638E38E38E38E3FFAAAAAAAAAAAAC4028B0FCD6E9E
+066C00638E38E38E38EC00638E38E38E38E400638E38E38E38F402EDD3C0CA4587EC00
+638E38E38E38EC00638E38E38E38E400F1C71C71C71C8403284BDA12F684CC00638E38
+E38E38EC00638E38E38E38E401400000000000040359ADD3C0CA458C00638E38E38E38
+EBFFAAAAAAAAAAAAAC014000000000000BFE3C0CA4587E6B0C00638E38E38E38EBFFAA
+AAAAAAAAAAAC00F1C71C71C71C73FF3C0CA4587E6B8C00638E38E38E38EBFFAAAAAAAA
+AAAAAC00638E38E38E38E4008B0FCD6E9E066C00638E38E38E38EBFFAAAAAAAAAAAAAB
+FFAAAAAAAAAAAAA4013C0CA4587E6B8C00638E38E38E38EBFFAAAAAAAAAAAAABFE1C71
+C71C71C70401B29161F9ADD3CC00638E38E38E38EBFFAAAAAAAAAAAAA3FE1C71C71C71
+C74402148B0FCD6E9E0C00638E38E38E38EBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC402
+4FCD6E9E06523C00638E38E38E38EBFFAAAAAAAAAAAAA400638E38E38E38F4028B0FCD
+6E9E065C00638E38E38E38EBFFAAAAAAAAAAAAA400F1C71C71C71C8402C6522C3F35BA
+8C00638E38E38E38EBFFAAAAAAAAAAAAA401400000000000040300CA4587E6B74C0063
+8E38E38E38EBFE1C71C71C71C70C0140000000000004013C0CA4587E6B8C00638E38E3
+8E38EBFE1C71C71C71C70C00F1C71C71C71C7401638E38E38E38EC00638E38E38E38EB
+FE1C71C71C71C70C00638E38E38E38E4018B0FCD6E9E066C00638E38E38E38EBFE1C71
+C71C71C70BFFAAAAAAAAAAAAA401B29161F9ADD3CC00638E38E38E38EBFE1C71C71C71
+C70BFE1C71C71C71C70401DA12F684BDA13C00638E38E38E38EBFE1C71C71C71C703FE
+1C71C71C71C7440200CA4587E6B75C00638E38E38E38EBFE1C71C71C71C703FFAAAAAA
+AAAAAAC402148B0FCD6E9E0C00638E38E38E38EBFE1C71C71C71C70400638E38E38E38
+F402284BDA12F684CC00638E38E38E38EBFE1C71C71C71C70400F1C71C71C71C84023C
+0CA4587E6B7C00638E38E38E38EBFE1C71C71C71C7040140000000000004024FCD6E9E
+06522C00638E38E38E38E3FE1C71C71C71C74C0140000000000004024FCD6E9E06523C
+00638E38E38E38E3FE1C71C71C71C74C00F1C71C71C71C74023C0CA4587E6B8C00638E
+38E38E38E3FE1C71C71C71C74C00638E38E38E38E402284BDA12F684CC00638E38E38E
+38E3FE1C71C71C71C74BFFAAAAAAAAAAAAA402148B0FCD6E9E0C00638E38E38E38E3FE
+1C71C71C71C74BFE1C71C71C71C7040200CA4587E6B75C00638E38E38E38E3FE1C71C7
+1C71C743FE1C71C71C71C74401DA12F684BDA12C00638E38E38E38E3FE1C71C71C71C7
+43FFAAAAAAAAAAAAC401B29161F9ADD3BC00638E38E38E38E3FE1C71C71C71C7440063
+8E38E38E38F4018B0FCD6E9E064C00638E38E38E38E3FE1C71C71C71C74400F1C71C71
+C71C8401638E38E38E38CC00638E38E38E38E3FE1C71C71C71C7440140000000000004
+013C0CA4587E6B6C00638E38E38E38E3FFAAAAAAAAAAAACC01400000000000040300CA
+4587E6B76C00638E38E38E38E3FFAAAAAAAAAAAACC00F1C71C71C71C7402C6522C3F35
+BA8C00638E38E38E38E3FFAAAAAAAAAAAACC00638E38E38E38E4028B0FCD6E9E066C00
+638E38E38E38E3FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA4024FCD6E9E06523C00638E38
+E38E38E3FFAAAAAAAAAAAACBFE1C71C71C71C70402148B0FCD6E9E0C00638E38E38E38
+E3FFAAAAAAAAAAAAC3FE1C71C71C71C74401B29161F9ADD3BC00638E38E38E38E3FFAA
+AAAAAAAAAAC3FFAAAAAAAAAAAAC4013C0CA4587E6B6C00638E38E38E38E3FFAAAAAAAA
+AAAAC400638E38E38E38F4008B0FCD6E9E062C00638E38E38E38E3FFAAAAAAAAAAAAC4
+00F1C71C71C71C83FF3C0CA4587E6ACC00638E38E38E38E3FFAAAAAAAAAAAAC4014000
+000000000BFE3C0CA4587E6D0C00638E38E38E38E400638E38E38E38FC014000000000
+00040359ADD3C0CA459C00638E38E38E38E400638E38E38E38FC00F1C71C71C71C7403
+284BDA12F684CC00638E38E38E38E400638E38E38E38FC00638E38E38E38E402EDD3C0
+CA4587EC00638E38E38E38E400638E38E38E38FBFFAAAAAAAAAAAAA4028B0FCD6E9E06
+5C00638E38E38E38E400638E38E38E38FBFE1C71C71C71C70402284BDA12F684CC0063
+8E38E38E38E400638E38E38E38F3FE1C71C71C71C744018B0FCD6E9E064C00638E38E3
+8E38E400638E38E38E38F3FFAAAAAAAAAAAAC4008B0FCD6E9E062C00638E38E38E38E4
+00638E38E38E38F400638E38E38E38FBCE8000000000000C00638E38E38E38E400638E
+38E38E38F400F1C71C71C71C8C008B0FCD6E9E06CC00638E38E38E38E400638E38E38E
+38F4014000000000000C018B0FCD6E9E068C00638E38E38E38E400F1C71C71C71C8C01
+4000000000000403B29161F9ADD3CC00638E38E38E38E400F1C71C71C71C8C00F1C71C
+71C71C74036D6E9E06522C4C00638E38E38E38E400F1C71C71C71C8C00638E38E38E38
+E403284BDA12F684CC00638E38E38E38E400F1C71C71C71C8BFFAAAAAAAAAAAAA402C6
+522C3F35BA8C00638E38E38E38E400F1C71C71C71C8BFE1C71C71C71C704023C0CA458
+7E6B7C00638E38E38E38E400F1C71C71C71C83FE1C71C71C71C74401638E38E38E38CC
+00638E38E38E38E400F1C71C71C71C83FFAAAAAAAAAAAAC3FF3C0CA4587E6ACC00638E
+38E38E38E400F1C71C71C71C8400638E38E38E38FC008B0FCD6E9E06CC00638E38E38E
+38E400F1C71C71C71C8400F1C71C71C71C8C01DA12F684BDA16C00638E38E38E38E400
+F1C71C71C71C84014000000000000C02774F0329161FBC00638E38E38E38E401400000
+0000000C01400000000000040405BA781948B10C00638E38E38E38E401400000000000
+0C00F1C71C71C71C7403B29161F9ADD3CC00638E38E38E38E4014000000000000C0063
+8E38E38E38E40359ADD3C0CA458C00638E38E38E38E4014000000000000BFFAAAAAAAA
+AAAAA40300CA4587E6B74C00638E38E38E38E4014000000000000BFE1C71C71C71C704
+024FCD6E9E06522C00638E38E38E38E40140000000000003FE1C71C71C71C744013C0C
+A4587E6B6C00638E38E38E38E40140000000000003FFAAAAAAAAAAAACBFE3C0CA4587E
+6D0C00638E38E38E38E4014000000000000400638E38E38E38FC018B0FCD6E9E068C00
+638E38E38E38E4014000000000000400F1C71C71C71C8C02774F0329161FBC00638E38
+E38E38E40140000000000004014000000000000C03148B0FCD6E9E0BFFAAAAAAAAAAAA
+AC014000000000000C014000000000000C03638E38E38E38EBFFAAAAAAAAAAAAAC0140
+00000000000C00F1C71C71C71C7C030AAAAAAAAAAAABFFAAAAAAAAAAAAAC0140000000
+00000C00638E38E38E38EC02638E38E38E38FBFFAAAAAAAAAAAAAC014000000000000B
+FFAAAAAAAAAAAAAC01638E38E38E38EBFFAAAAAAAAAAAAAC014000000000000BFE1C71
+C71C71C703CC0000000000000BFFAAAAAAAAAAAAAC0140000000000003FE1C71C71C71
+C74401638E38E38E38FBFFAAAAAAAAAAAAAC0140000000000003FFAAAAAAAAAAAAC402
+638E38E38E38FBFFAAAAAAAAAAAAAC014000000000000400638E38E38E38F4030AAAAA
+AAAAAABBFFAAAAAAAAAAAAAC014000000000000400F1C71C71C71C8403638E38E38E38
+FBFFAAAAAAAAAAAAAC0140000000000004014000000000000403BC71C71C71C72BFFAA
+AAAAAAAAAAAC00F1C71C71C71C7C014000000000000C030AAAAAAAAAAAABFFAAAAAAAA
+AAAAAC00F1C71C71C71C7C00F1C71C71C71C7C028B0FCD6E9E065BFFAAAAAAAAAAAAAC
+00F1C71C71C71C7C00638E38E38E38EC0200CA4587E6B75BFFAAAAAAAAAAAAAC00F1C7
+1C71C71C7BFFAAAAAAAAAAAAAC00DA12F684BDA13BFFAAAAAAAAAAAAAC00F1C71C71C7
+1C7BFE1C71C71C71C703FE3C0CA4587E6B8BFFAAAAAAAAAAAAAC00F1C71C71C71C73FE
+1C71C71C71C744013C0CA4587E6B8BFFAAAAAAAAAAAAAC00F1C71C71C71C73FFAAAAAA
+AAAAAAC402284BDA12F684CBFFAAAAAAAAAAAAAC00F1C71C71C71C7400638E38E38E38
+F402B29161F9ADD3CBFFAAAAAAAAAAAAAC00F1C71C71C71C7400F1C71C71C71C84031E
+6B74F032916BFFAAAAAAAAAAAAAC00F1C71C71C71C74014000000000000403638E38E3
+8E38EBFFAAAAAAAAAAAAAC00638E38E38E38EC014000000000000C02638E38E38E38FB
+FFAAAAAAAAAAAAAC00638E38E38E38EC00F1C71C71C71C7C0200CA4587E6B75BFFAAAA
+AAAAAAAAAC00638E38E38E38EC00638E38E38E38EC013C0CA4587E6B8BFFAAAAAAAAAA
+AAAC00638E38E38E38EBFFAAAAAAAAAAAAABFFDA12F684BDA12BFFAAAAAAAAAAAAAC00
+638E38E38E38EBFE1C71C71C71C703FF3C0CA4587E6B8BFFAAAAAAAAAAAAAC00638E38
+E38E38E3FE1C71C71C71C74401148B0FCD6E9E0BFFAAAAAAAAAAAAAC00638E38E38E38
+E3FFAAAAAAAAAAAAC401DA12F684BDA14BFFAAAAAAAAAAAAAC00638E38E38E38E40063
+8E38E38E38F4024FCD6E9E06523BFFAAAAAAAAAAAAAC00638E38E38E38E400F1C71C71
+C71C8402B29161F9ADD3CBFFAAAAAAAAAAAAAC00638E38E38E38E40140000000000004
+030AAAAAAAAAAABBFFAAAAAAAAAAAAABFFAAAAAAAAAAAAAC014000000000000C01638E
+38E38E38EBFFAAAAAAAAAAAAABFFAAAAAAAAAAAAAC00F1C71C71C71C7C00DA12F684BD
+A13BFFAAAAAAAAAAAAABFFAAAAAAAAAAAAAC00638E38E38E38EBFFDA12F684BDA12BFF
+AAAAAAAAAAAAABFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA0000000000000000BFFAAAAAA
+AAAAAAABFFAAAAAAAAAAAAABFE1C71C71C71C703FFDA12F684BDA12BFFAAAAAAAAAAAA
+ABFFAAAAAAAAAAAAA3FE1C71C71C71C74400DA12F684BDA12BFFAAAAAAAAAAAAABFFAA
+AAAAAAAAAAA3FFAAAAAAAAAAAAC401638E38E38E38EBFFAAAAAAAAAAAAABFFAAAAAAAA
+AAAAA400638E38E38E38F401DA12F684BDA12BFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA4
+00F1C71C71C71C8402284BDA12F684CBFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA4014000
+000000000402638E38E38E38DBFFAAAAAAAAAAAAABFE1C71C71C71C70C014000000000
+0003CC0000000000000BFFAAAAAAAAAAAAABFE1C71C71C71C70C00F1C71C71C71C73FE
+3C0CA4587E6B8BFFAAAAAAAAAAAAABFE1C71C71C71C70C00638E38E38E38E3FF3C0CA4
+587E6B8BFFAAAAAAAAAAAAABFE1C71C71C71C70BFFAAAAAAAAAAAAA3FFDA12F684BDA1
+2BFFAAAAAAAAAAAAABFE1C71C71C71C70BFE1C71C71C71C704003C0CA4587E6B7BFFAA
+AAAAAAAAAAABFE1C71C71C71C703FE1C71C71C71C744008B0FCD6E9E064BFFAAAAAAAA
+AAAAABFE1C71C71C71C703FFAAAAAAAAAAAAC400DA12F684BDA11BFFAAAAAAAAAAAAAB
+FE1C71C71C71C70400638E38E38E38F401148B0FCD6E9E0BFFAAAAAAAAAAAAABFE1C71
+C71C71C70400F1C71C71C71C84013C0CA4587E6B6BFFAAAAAAAAAAAAABFE1C71C71C71
+C704014000000000000401638E38E38E38CBFFAAAAAAAAAAAAA3FE1C71C71C71C74C01
+4000000000000401638E38E38E38FBFFAAAAAAAAAAAAA3FE1C71C71C71C74C00F1C71C
+71C71C74013C0CA4587E6B8BFFAAAAAAAAAAAAA3FE1C71C71C71C74C00638E38E38E38
+E401148B0FCD6E9E0BFFAAAAAAAAAAAAA3FE1C71C71C71C74BFFAAAAAAAAAAAAA400DA
+12F684BDA12BFFAAAAAAAAAAAAA3FE1C71C71C71C74BFE1C71C71C71C704008B0FCD6E
+9E064BFFAAAAAAAAAAAAA3FE1C71C71C71C743FE1C71C71C71C744003C0CA4587E6B6B
+FFAAAAAAAAAAAAA3FE1C71C71C71C743FFAAAAAAAAAAAAC3FFDA12F684BDA0EBFFAAAA
+AAAAAAAAA3FE1C71C71C71C74400638E38E38E38F3FF3C0CA4587E6B1BFFAAAAAAAAAA
+AAA3FE1C71C71C71C74400F1C71C71C71C83FE3C0CA4587E6A8BFFAAAAAAAAAAAAA3FE
+1C71C71C71C744014000000000000BCE0000000000000BFFAAAAAAAAAAAAA3FFAAAAAA
+AAAAAACC014000000000000402638E38E38E38FBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAA
+CC00F1C71C71C71C7402284BDA12F684CBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAACC0063
+8E38E38E38E401DA12F684BDA14BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAACBFFAAAAAAAA
+AAAAA401638E38E38E38EBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAACBFE1C71C71C71C704
+00DA12F684BDA11BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC3FE1C71C71C71C743FFDA12
+F684BDA0EBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC3FFAAAAAAAAAAAACBCD8000000000
+000BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC400638E38E38E38FBFFDA12F684BDA1ABFF
+AAAAAAAAAAAAA3FFAAAAAAAAAAAAC400F1C71C71C71C8C00DA12F684BDA19BFFAAAAAA
+AAAAAAA3FFAAAAAAAAAAAAC4014000000000000C01638E38E38E392BFFAAAAAAAAAAAA
+A400638E38E38E38FC0140000000000004030AAAAAAAAAAABBFFAAAAAAAAAAAAA40063
+8E38E38E38FC00F1C71C71C71C7402B29161F9ADD3CBFFAAAAAAAAAAAAA400638E38E3
+8E38FC00638E38E38E38E4024FCD6E9E06523BFFAAAAAAAAAAAAA400638E38E38E38FB
+FFAAAAAAAAAAAAA401DA12F684BDA12BFFAAAAAAAAAAAAA400638E38E38E38FBFE1C71
+C71C71C70401148B0FCD6E9E0BFFAAAAAAAAAAAAA400638E38E38E38F3FE1C71C71C71
+C743FF3C0CA4587E6B1BFFAAAAAAAAAAAAA400638E38E38E38F3FFAAAAAAAAAAAACBFF
+DA12F684BDA1ABFFAAAAAAAAAAAAA400638E38E38E38F400638E38E38E38FC013C0CA4
+587E6BABFFAAAAAAAAAAAAA400638E38E38E38F400F1C71C71C71C8C0200CA4587E6B7
+7BFFAAAAAAAAAAAAA400638E38E38E38F4014000000000000C02638E38E38E390BFFAA
+AAAAAAAAAAA400F1C71C71C71C8C014000000000000403638E38E38E38FBFFAAAAAAAA
+AAAAA400F1C71C71C71C8C00F1C71C71C71C74031E6B74F032916BFFAAAAAAAAAAAAA4
+00F1C71C71C71C8C00638E38E38E38E402B29161F9ADD3CBFFAAAAAAAAAAAAA400F1C7
+1C71C71C8BFFAAAAAAAAAAAAA402284BDA12F684CBFFAAAAAAAAAAAAA400F1C71C71C7
+1C8BFE1C71C71C71C704013C0CA4587E6B6BFFAAAAAAAAAAAAA400F1C71C71C71C83FE
+1C71C71C71C743FE3C0CA4587E6A8BFFAAAAAAAAAAAAA400F1C71C71C71C83FFAAAAAA
+AAAAAACC00DA12F684BDA19BFFAAAAAAAAAAAAA400F1C71C71C71C8400638E38E38E38
+FC0200CA4587E6B77BFFAAAAAAAAAAAAA400F1C71C71C71C8400F1C71C71C71C8C028B
+0FCD6E9E067BFFAAAAAAAAAAAAA400F1C71C71C71C84014000000000000C030AAAAAAA
+AAAABBFFAAAAAAAAAAAAA4014000000000000C014000000000000403BC71C71C71C72B
+FFAAAAAAAAAAAAA4014000000000000C00F1C71C71C71C7403638E38E38E38EBFFAAAA
+AAAAAAAAA4014000000000000C00638E38E38E38E4030AAAAAAAAAAABBFFAAAAAAAAAA
+AAA4014000000000000BFFAAAAAAAAAAAAA402638E38E38E38DBFFAAAAAAAAAAAAA401
+4000000000000BFE1C71C71C71C70401638E38E38E38CBFFAAAAAAAAAAAAA401400000
+00000003FE1C71C71C71C74BCE0000000000000BFFAAAAAAAAAAAAA401400000000000
+03FFAAAAAAAAAAAACC01638E38E38E392BFFAAAAAAAAAAAAA401400000000000040063
+8E38E38E38FC02638E38E38E390BFFAAAAAAAAAAAAA4014000000000000400F1C71C71
+C71C8C030AAAAAAAAAAABBFFAAAAAAAAAAAAA40140000000000004014000000000000C
+03638E38E38E38EBFE1C71C71C71C70C014000000000000C014000000000000C038B0F
+CD6E9E065BFE1C71C71C71C70C014000000000000C00F1C71C71C71C7C03322C3F35BA
+781BFE1C71C71C71C70C014000000000000C00638E38E38E38EC02B29161F9ADD3CBFE
+1C71C71C71C70C014000000000000BFFAAAAAAAAAAAAAC0200CA4587E6B74BFE1C71C7
+1C71C70C014000000000000BFE1C71C71C71C70C003C0CA4587E6B6BFE1C71C71C71C7
+0C0140000000000003FE1C71C71C71C744008B0FCD6E9E067BFE1C71C71C71C70C0140
+000000000003FFAAAAAAAAAAAAC402148B0FCD6E9E2BFE1C71C71C71C70C0140000000
+00000400638E38E38E38F402C6522C3F35BA9BFE1C71C71C71C70C0140000000000004
+00F1C71C71C71C84033C0CA4587E6B8BFE1C71C71C71C70C0140000000000004014000
+00000000040394F0329161F9BBFE1C71C71C71C70C00F1C71C71C71C7C014000000000
+000C03322C3F35BA781BFE1C71C71C71C70C00F1C71C71C71C7C00F1C71C71C71C7C02
+DA12F684BDA12BFE1C71C71C71C70C00F1C71C71C71C7C00638E38E38E38EC024FCD6E
+9E06522BFE1C71C71C71C70C00F1C71C71C71C7BFFAAAAAAAAAAAAAC018B0FCD6E9E06
+5BFE1C71C71C71C70C00F1C71C71C71C7BFE1C71C71C71C70BFFDA12F684BDA11BFE1C
+71C71C71C70C00F1C71C71C71C73FE1C71C71C71C744003C0CA4587E6B8BFE1C71C71C
+71C70C00F1C71C71C71C73FFAAAAAAAAAAAAC401B29161F9ADD3DBFE1C71C71C71C70C
+00F1C71C71C71C7400638E38E38E38F402638E38E38E38FBFE1C71C71C71C70C00F1C7
+1C71C71C7400F1C71C71C71C8402EDD3C0CA4587FBFE1C71C71C71C70C00F1C71C71C7
+1C740140000000000004033C0CA4587E6B7BFE1C71C71C71C70C00638E38E38E38EC01
+4000000000000C02B29161F9ADD3CBFE1C71C71C71C70C00638E38E38E38EC00F1C71C
+71C71C7C024FCD6E9E06522BFE1C71C71C71C70C00638E38E38E38EC00638E38E38E38
+EC01DA12F684BDA13BFE1C71C71C71C70C00638E38E38E38EBFFAAAAAAAAAAAAAC0114
+8B0FCD6E9E0BFE1C71C71C71C70C00638E38E38E38EBFE1C71C71C71C70BFF3C0CA458
+7E6B5BFE1C71C71C71C70C00638E38E38E38E3FE1C71C71C71C743FFDA12F684BDA15B
+FE1C71C71C71C70C00638E38E38E38E3FFAAAAAAAAAAAAC4013C0CA4587E6B8BFE1C71
+C71C71C70C00638E38E38E38E400638E38E38E38F40200CA4587E6B75BFE1C71C71C71
+C70C00638E38E38E38E400F1C71C71C71C8402638E38E38E38FBFE1C71C71C71C70C00
+638E38E38E38E4014000000000000402C6522C3F35BA8BFE1C71C71C71C70BFFAAAAAA
+AAAAAAAC014000000000000C0200CA4587E6B74BFE1C71C71C71C70BFFAAAAAAAAAAAA
+AC00F1C71C71C71C7C018B0FCD6E9E065BFE1C71C71C71C70BFFAAAAAAAAAAAAAC0063
+8E38E38E38EC01148B0FCD6E9E0BFE1C71C71C71C70BFFAAAAAAAAAAAAABFFAAAAAAAA
+AAAAAC003C0CA4587E6B7BFE1C71C71C71C70BFFAAAAAAAAAAAAABFE1C71C71C71C70B
+FE3C0CA4587E6B6BFE1C71C71C71C70BFFAAAAAAAAAAAAA3FE1C71C71C71C743FF3C0C
+A4587E6B8BFE1C71C71C71C70BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC4008B0FCD6E9E
+065BFE1C71C71C71C70BFFAAAAAAAAAAAAA400638E38E38E38F4013C0CA4587E6B7BFE
+1C71C71C71C70BFFAAAAAAAAAAAAA400F1C71C71C71C8401B29161F9ADD3CBFE1C71C7
+1C71C70BFFAAAAAAAAAAAAA4014000000000000402148B0FCD6E9E0BFE1C71C71C71C7
+0BFE1C71C71C71C70C014000000000000C003C0CA4587E6B6BFE1C71C71C71C70BFE1C
+71C71C71C70C00F1C71C71C71C7BFFDA12F684BDA11BFE1C71C71C71C70BFE1C71C71C
+71C70C00638E38E38E38EBFF3C0CA4587E6B5BFE1C71C71C71C70BFE1C71C71C71C70B
+FFAAAAAAAAAAAAABFE3C0CA4587E6B6BFE1C71C71C71C70BFE1C71C71C71C70BFE1C71
+C71C71C700000000000000000BFE1C71C71C71C70BFE1C71C71C71C703FE1C71C71C71
+C743FE3C0CA4587E6B6BFE1C71C71C71C70BFE1C71C71C71C703FFAAAAAAAAAAAAC3FF
+3C0CA4587E6B5BFE1C71C71C71C70BFE1C71C71C71C70400638E38E38E38F3FFDA12F6
+84BDA11BFE1C71C71C71C70BFE1C71C71C71C70400F1C71C71C71C84003C0CA4587E6B
+5BFE1C71C71C71C70BFE1C71C71C71C7040140000000000004008B0FCD6E9E062BFE1C
+71C71C71C703FE1C71C71C71C74C0140000000000004008B0FCD6E9E067BFE1C71C71C
+71C703FE1C71C71C71C74C00F1C71C71C71C74003C0CA4587E6B8BFE1C71C71C71C703
+FE1C71C71C71C74C00638E38E38E38E3FFDA12F684BDA15BFE1C71C71C71C703FE1C71
+C71C71C74BFFAAAAAAAAAAAAA3FF3C0CA4587E6B8BFE1C71C71C71C703FE1C71C71C71
+C74BFE1C71C71C71C703FE3C0CA4587E6B6BFE1C71C71C71C703FE1C71C71C71C743FE
+1C71C71C71C74BCC2000000000000BFE1C71C71C71C703FE1C71C71C71C743FFAAAAAA
+AAAAAACBFE3C0CA4587E6BEBFE1C71C71C71C703FE1C71C71C71C74400638E38E38E38
+FBFF3C0CA4587E6BCBFE1C71C71C71C703FE1C71C71C71C74400F1C71C71C71C8BFFDA
+12F684BDA19BFE1C71C71C71C703FE1C71C71C71C744014000000000000C003C0CA458
+7E6BBBFE1C71C71C71C703FFAAAAAAAAAAAACC014000000000000402148B0FCD6E9E2B
+FE1C71C71C71C703FFAAAAAAAAAAAACC00F1C71C71C71C7401B29161F9ADD3DBFE1C71
+C71C71C703FFAAAAAAAAAAAACC00638E38E38E38E4013C0CA4587E6B8BFE1C71C71C71
+C703FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA4008B0FCD6E9E065BFE1C71C71C71C703FF
+AAAAAAAAAAAACBFE1C71C71C71C703FF3C0CA4587E6B5BFE1C71C71C71C703FFAAAAAA
+AAAAAAC3FE1C71C71C71C74BFE3C0CA4587E6BEBFE1C71C71C71C703FFAAAAAAAAAAAA
+C3FFAAAAAAAAAAAACC003C0CA4587E6BABFE1C71C71C71C703FFAAAAAAAAAAAAC40063
+8E38E38E38FC01148B0FCD6E9E2BFE1C71C71C71C703FFAAAAAAAAAAAAC400F1C71C71
+C71C8C018B0FCD6E9E068BFE1C71C71C71C703FFAAAAAAAAAAAAC4014000000000000C
+0200CA4587E6B76BFE1C71C71C71C70400638E38E38E38FC014000000000000402C652
+2C3F35BA9BFE1C71C71C71C70400638E38E38E38FC00F1C71C71C71C7402638E38E38E
+38FBFE1C71C71C71C70400638E38E38E38FC00638E38E38E38E40200CA4587E6B75BFE
+1C71C71C71C70400638E38E38E38FBFFAAAAAAAAAAAAA4013C0CA4587E6B7BFE1C71C7
+1C71C70400638E38E38E38FBFE1C71C71C71C703FFDA12F684BDA11BFE1C71C71C71C7
+0400638E38E38E38F3FE1C71C71C71C74BFF3C0CA4587E6BCBFE1C71C71C71C7040063
+8E38E38E38F3FFAAAAAAAAAAAACC01148B0FCD6E9E2BFE1C71C71C71C70400638E38E3
+8E38F400638E38E38E38FC01DA12F684BDA16BFE1C71C71C71C70400638E38E38E38F4
+00F1C71C71C71C8C024FCD6E9E06524BFE1C71C71C71C70400638E38E38E38F4014000
+000000000C02B29161F9ADD3DBFE1C71C71C71C70400F1C71C71C71C8C014000000000
+0004033C0CA4587E6B8BFE1C71C71C71C70400F1C71C71C71C8C00F1C71C71C71C7402
+EDD3C0CA4587FBFE1C71C71C71C70400F1C71C71C71C8C00638E38E38E38E402638E38
+E38E38FBFE1C71C71C71C70400F1C71C71C71C8BFFAAAAAAAAAAAAA401B29161F9ADD3
+CBFE1C71C71C71C70400F1C71C71C71C8BFE1C71C71C71C704003C0CA4587E6B5BFE1C
+71C71C71C70400F1C71C71C71C83FE1C71C71C71C74BFFDA12F684BDA19BFE1C71C71C
+71C70400F1C71C71C71C83FFAAAAAAAAAAAACC018B0FCD6E9E068BFE1C71C71C71C704
+00F1C71C71C71C8400638E38E38E38FC024FCD6E9E06524BFE1C71C71C71C70400F1C7
+1C71C71C8400F1C71C71C71C8C02DA12F684BDA14BFE1C71C71C71C70400F1C71C71C7
+1C84014000000000000C03322C3F35BA782BFE1C71C71C71C704014000000000000C01
+400000000000040394F0329161F9BBFE1C71C71C71C704014000000000000C00F1C71C
+71C71C74033C0CA4587E6B7BFE1C71C71C71C704014000000000000C00638E38E38E38
+E402C6522C3F35BA8BFE1C71C71C71C704014000000000000BFFAAAAAAAAAAAAA40214
+8B0FCD6E9E0BFE1C71C71C71C704014000000000000BFE1C71C71C71C704008B0FCD6E
+9E062BFE1C71C71C71C7040140000000000003FE1C71C71C71C74C003C0CA4587E6BBB
+FE1C71C71C71C7040140000000000003FFAAAAAAAAAAAACC0200CA4587E6B76BFE1C71
+C71C71C704014000000000000400638E38E38E38FC02B29161F9ADD3DBFE1C71C71C71
+C704014000000000000400F1C71C71C71C8C03322C3F35BA782BFE1C71C71C71C70401
+40000000000004014000000000000C038B0FCD6E9E0653FE1C71C71C71C74C01400000
+0000000C014000000000000C038B0FCD6E9E0653FE1C71C71C71C74C01400000000000
+0C00F1C71C71C71C7C03322C3F35BA7813FE1C71C71C71C74C014000000000000C0063
+8E38E38E38EC02B29161F9ADD3C3FE1C71C71C71C74C014000000000000BFFAAAAAAAA
+AAAAAC0200CA4587E6B743FE1C71C71C71C74C014000000000000BFE1C71C71C71C70C
+003C0CA4587E6B43FE1C71C71C71C74C0140000000000003FE1C71C71C71C744008B0F
+CD6E9E0683FE1C71C71C71C74C0140000000000003FFAAAAAAAAAAAAC402148B0FCD6E
+9E23FE1C71C71C71C74C014000000000000400638E38E38E38F402C6522C3F35BA93FE
+1C71C71C71C74C014000000000000400F1C71C71C71C84033C0CA4587E6B83FE1C71C7
+1C71C74C014000000000000401400000000000040394F0329161F9B3FE1C71C71C71C7
+4C00F1C71C71C71C7C014000000000000C03322C3F35BA7813FE1C71C71C71C74C00F1
+C71C71C71C7C00F1C71C71C71C7C02DA12F684BDA123FE1C71C71C71C74C00F1C71C71
+C71C7C00638E38E38E38EC024FCD6E9E065223FE1C71C71C71C74C00F1C71C71C71C7B
+FFAAAAAAAAAAAAAC018B0FCD6E9E0643FE1C71C71C71C74C00F1C71C71C71C7BFE1C71
+C71C71C70BFFDA12F684BDA0F3FE1C71C71C71C74C00F1C71C71C71C73FE1C71C71C71
+C744003C0CA4587E6BA3FE1C71C71C71C74C00F1C71C71C71C73FFAAAAAAAAAAAAC401
+B29161F9ADD3E3FE1C71C71C71C74C00F1C71C71C71C7400638E38E38E38F402638E38
+E38E38F3FE1C71C71C71C74C00F1C71C71C71C7400F1C71C71C71C8402EDD3C0CA4587
+F3FE1C71C71C71C74C00F1C71C71C71C740140000000000004033C0CA4587E6B73FE1C
+71C71C71C74C00638E38E38E38EC014000000000000C02B29161F9ADD3C3FE1C71C71C
+71C74C00638E38E38E38EC00F1C71C71C71C7C024FCD6E9E065223FE1C71C71C71C74C
+00638E38E38E38EC00638E38E38E38EC01DA12F684BDA123FE1C71C71C71C74C00638E
+38E38E38EBFFAAAAAAAAAAAAAC01148B0FCD6E9DF3FE1C71C71C71C74C00638E38E38E
+38EBFE1C71C71C71C70BFF3C0CA4587E6B33FE1C71C71C71C74C00638E38E38E38E3FE
+1C71C71C71C743FFDA12F684BDA173FE1C71C71C71C74C00638E38E38E38E3FFAAAAAA
+AAAAAAC4013C0CA4587E6B93FE1C71C71C71C74C00638E38E38E38E400638E38E38E38
+F40200CA4587E6B753FE1C71C71C71C74C00638E38E38E38E400F1C71C71C71C840263
+8E38E38E38F3FE1C71C71C71C74C00638E38E38E38E4014000000000000402C6522C3F
+35BA83FE1C71C71C71C74BFFAAAAAAAAAAAAAC014000000000000C0200CA4587E6B743
+FE1C71C71C71C74BFFAAAAAAAAAAAAAC00F1C71C71C71C7C018B0FCD6E9E0643FE1C71
+C71C71C74BFFAAAAAAAAAAAAAC00638E38E38E38EC01148B0FCD6E9DF3FE1C71C71C71
+C74BFFAAAAAAAAAAAAABFFAAAAAAAAAAAAAC003C0CA4587E6B63FE1C71C71C71C74BFF
+AAAAAAAAAAAAABFE1C71C71C71C70BFE3C0CA4587E6B13FE1C71C71C71C74BFFAAAAAA
+AAAAAAA3FE1C71C71C71C743FF3C0CA4587E6BA3FE1C71C71C71C74BFFAAAAAAAAAAAA
+A3FFAAAAAAAAAAAAC4008B0FCD6E9E0663FE1C71C71C71C74BFFAAAAAAAAAAAAA40063
+8E38E38E38F4013C0CA4587E6B83FE1C71C71C71C74BFFAAAAAAAAAAAAA400F1C71C71
+C71C8401B29161F9ADD3D3FE1C71C71C71C74BFFAAAAAAAAAAAAA40140000000000004
+02148B0FCD6E9E03FE1C71C71C71C74BFE1C71C71C71C70C014000000000000C003C0C
+A4587E6B43FE1C71C71C71C74BFE1C71C71C71C70C00F1C71C71C71C7BFFDA12F684BD
+A0F3FE1C71C71C71C74BFE1C71C71C71C70C00638E38E38E38EBFF3C0CA4587E6B33FE
+1C71C71C71C74BFE1C71C71C71C70BFFAAAAAAAAAAAAABFE3C0CA4587E6B13FE1C71C7
+1C71C74BFE1C71C71C71C70BFE1C71C71C71C703CC20000000000003FE1C71C71C71C7
+4BFE1C71C71C71C703FE1C71C71C71C743FE3C0CA4587E6BA3FE1C71C71C71C74BFE1C
+71C71C71C703FFAAAAAAAAAAAAC3FF3C0CA4587E6B83FE1C71C71C71C74BFE1C71C71C
+71C70400638E38E38E38F3FFDA12F684BDA133FE1C71C71C71C74BFE1C71C71C71C704
+00F1C71C71C71C84003C0CA4587E6B63FE1C71C71C71C74BFE1C71C71C71C704014000
+0000000004008B0FCD6E9E0643FE1C71C71C71C743FE1C71C71C71C74C014000000000
+0004008B0FCD6E9E0683FE1C71C71C71C743FE1C71C71C71C74C00F1C71C71C71C7400
+3C0CA4587E6BA3FE1C71C71C71C743FE1C71C71C71C74C00638E38E38E38E3FFDA12F6
+84BDA173FE1C71C71C71C743FE1C71C71C71C74BFFAAAAAAAAAAAAA3FF3C0CA4587E6B
+A3FE1C71C71C71C743FE1C71C71C71C74BFE1C71C71C71C703FE3C0CA4587E6BA3FE1C
+71C71C71C743FE1C71C71C71C743FE1C71C71C71C7400000000000000003FE1C71C71C
+71C743FE1C71C71C71C743FFAAAAAAAAAAAACBFE3C0CA4587E6BA3FE1C71C71C71C743
+FE1C71C71C71C74400638E38E38E38FBFF3C0CA4587E6BA3FE1C71C71C71C743FE1C71
+C71C71C74400F1C71C71C71C8BFFDA12F684BDA173FE1C71C71C71C743FE1C71C71C71
+C744014000000000000C003C0CA4587E6BA3FE1C71C71C71C743FFAAAAAAAAAAAACC01
+4000000000000402148B0FCD6E9E23FE1C71C71C71C743FFAAAAAAAAAAAACC00F1C71C
+71C71C7401B29161F9ADD3E3FE1C71C71C71C743FFAAAAAAAAAAAACC00638E38E38E38
+E4013C0CA4587E6B93FE1C71C71C71C743FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA4008B
+0FCD6E9E0663FE1C71C71C71C743FFAAAAAAAAAAAACBFE1C71C71C71C703FF3C0CA458
+7E6B83FE1C71C71C71C743FFAAAAAAAAAAAAC3FE1C71C71C71C74BFE3C0CA4587E6BA3
+FE1C71C71C71C743FFAAAAAAAAAAAAC3FFAAAAAAAAAAAACC003C0CA4587E6B83FE1C71
+C71C71C743FFAAAAAAAAAAAAC400638E38E38E38FC01148B0FCD6E9E13FE1C71C71C71
+C743FFAAAAAAAAAAAAC400F1C71C71C71C8C018B0FCD6E9E0673FE1C71C71C71C743FF
+AAAAAAAAAAAAC4014000000000000C0200CA4587E6B763FE1C71C71C71C74400638E38
+E38E38FC014000000000000402C6522C3F35BA93FE1C71C71C71C74400638E38E38E38
+FC00F1C71C71C71C7402638E38E38E38F3FE1C71C71C71C74400638E38E38E38FC0063
+8E38E38E38E40200CA4587E6B753FE1C71C71C71C74400638E38E38E38FBFFAAAAAAAA
+AAAAA4013C0CA4587E6B83FE1C71C71C71C74400638E38E38E38FBFE1C71C71C71C703
+FFDA12F684BDA133FE1C71C71C71C74400638E38E38E38F3FE1C71C71C71C74BFF3C0C
+A4587E6BA3FE1C71C71C71C74400638E38E38E38F3FFAAAAAAAAAAAACC01148B0FCD6E
+9E13FE1C71C71C71C74400638E38E38E38F400638E38E38E38FC01DA12F684BDA153FE
+1C71C71C71C74400638E38E38E38F400F1C71C71C71C8C024FCD6E9E065243FE1C71C7
+1C71C74400638E38E38E38F4014000000000000C02B29161F9ADD3D3FE1C71C71C71C7
+4400F1C71C71C71C8C0140000000000004033C0CA4587E6B83FE1C71C71C71C74400F1
+C71C71C71C8C00F1C71C71C71C7402EDD3C0CA4587F3FE1C71C71C71C74400F1C71C71
+C71C8C00638E38E38E38E402638E38E38E38F3FE1C71C71C71C74400F1C71C71C71C8B
+FFAAAAAAAAAAAAA401B29161F9ADD3D3FE1C71C71C71C74400F1C71C71C71C8BFE1C71
+C71C71C704003C0CA4587E6B63FE1C71C71C71C74400F1C71C71C71C83FE1C71C71C71
+C74BFFDA12F684BDA173FE1C71C71C71C74400F1C71C71C71C83FFAAAAAAAAAAAACC01
+8B0FCD6E9E0673FE1C71C71C71C74400F1C71C71C71C8400638E38E38E38FC024FCD6E
+9E065243FE1C71C71C71C74400F1C71C71C71C8400F1C71C71C71C8C02DA12F684BDA1
+43FE1C71C71C71C74400F1C71C71C71C84014000000000000C03322C3F35BA7823FE1C
+71C71C71C744014000000000000C01400000000000040394F0329161F9B3FE1C71C71C
+71C744014000000000000C00F1C71C71C71C74033C0CA4587E6B73FE1C71C71C71C744
+014000000000000C00638E38E38E38E402C6522C3F35BA83FE1C71C71C71C744014000
+000000000BFFAAAAAAAAAAAAA402148B0FCD6E9E03FE1C71C71C71C744014000000000
+000BFE1C71C71C71C704008B0FCD6E9E0643FE1C71C71C71C7440140000000000003FE
+1C71C71C71C74C003C0CA4587E6BA3FE1C71C71C71C7440140000000000003FFAAAAAA
+AAAAAACC0200CA4587E6B763FE1C71C71C71C744014000000000000400638E38E38E38
+FC02B29161F9ADD3D3FE1C71C71C71C744014000000000000400F1C71C71C71C8C0332
+2C3F35BA7823FE1C71C71C71C7440140000000000004014000000000000C038B0FCD6E
+9E0653FFAAAAAAAAAAAACC014000000000000C014000000000000C03638E38E38E38E3
+FFAAAAAAAAAAAACC014000000000000C00F1C71C71C71C7C030AAAAAAAAAAAA3FFAAAA
+AAAAAAAACC014000000000000C00638E38E38E38EC02638E38E38E38E3FFAAAAAAAAAA
+AACC014000000000000BFFAAAAAAAAAAAAAC01638E38E38E38C3FFAAAAAAAAAAAACC01
+4000000000000BFE1C71C71C71C703CE00000000000003FFAAAAAAAAAAAACC01400000
+00000003FE1C71C71C71C74401638E38E38E3903FFAAAAAAAAAAAACC01400000000000
+03FFAAAAAAAAAAAAC402638E38E38E3903FFAAAAAAAAAAAACC01400000000000040063
+8E38E38E38F4030AAAAAAAAAAAC3FFAAAAAAAAAAAACC014000000000000400F1C71C71
+C71C8403638E38E38E38F3FFAAAAAAAAAAAACC01400000000000040140000000000004
+03BC71C71C71C723FFAAAAAAAAAAAACC00F1C71C71C71C7C014000000000000C030AAA
+AAAAAAAAA3FFAAAAAAAAAAAACC00F1C71C71C71C7C00F1C71C71C71C7C028B0FCD6E9E
+0643FFAAAAAAAAAAAACC00F1C71C71C71C7C00638E38E38E38EC0200CA4587E6B743FF
+AAAAAAAAAAAACC00F1C71C71C71C7BFFAAAAAAAAAAAAAC00DA12F684BDA103FFAAAAAA
+AAAAAACC00F1C71C71C71C7BFE1C71C71C71C703FE3C0CA4587E6C43FFAAAAAAAAAAAA
+CC00F1C71C71C71C73FE1C71C71C71C744013C0CA4587E6B93FFAAAAAAAAAAAACC00F1
+C71C71C71C73FFAAAAAAAAAAAAC402284BDA12F684D3FFAAAAAAAAAAAACC00F1C71C71
+C71C7400638E38E38E38F402B29161F9ADD3D3FFAAAAAAAAAAAACC00F1C71C71C71C74
+00F1C71C71C71C84031E6B74F0329163FFAAAAAAAAAAAACC00F1C71C71C71C74014000
+000000000403638E38E38E38E3FFAAAAAAAAAAAACC00638E38E38E38EC014000000000
+000C02638E38E38E38E3FFAAAAAAAAAAAACC00638E38E38E38EC00F1C71C71C71C7C02
+00CA4587E6B743FFAAAAAAAAAAAACC00638E38E38E38EC00638E38E38E38EC013C0CA4
+587E6B63FFAAAAAAAAAAAACC00638E38E38E38EBFFAAAAAAAAAAAAABFFDA12F684BDA0
+C3FFAAAAAAAAAAAACC00638E38E38E38EBFE1C71C71C71C703FF3C0CA4587E6BE3FFAA
+AAAAAAAAAACC00638E38E38E38E3FE1C71C71C71C74401148B0FCD6E9E23FFAAAAAAAA
+AAAACC00638E38E38E38E3FFAAAAAAAAAAAAC401DA12F684BDA153FFAAAAAAAAAAAACC
+00638E38E38E38E400638E38E38E38F4024FCD6E9E065243FFAAAAAAAAAAAACC00638E
+38E38E38E400F1C71C71C71C8402B29161F9ADD3D3FFAAAAAAAAAAAACC00638E38E38E
+38E40140000000000004030AAAAAAAAAAAB3FFAAAAAAAAAAAACBFFAAAAAAAAAAAAAC01
+4000000000000C01638E38E38E38C3FFAAAAAAAAAAAACBFFAAAAAAAAAAAAAC00F1C71C
+71C71C7C00DA12F684BDA103FFAAAAAAAAAAAACBFFAAAAAAAAAAAAAC00638E38E38E38
+EBFFDA12F684BDA0C3FFAAAAAAAAAAAACBFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA3CD80
+000000000003FFAAAAAAAAAAAACBFFAAAAAAAAAAAAABFE1C71C71C71C703FFDA12F684
+BDA183FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA3FE1C71C71C71C74400DA12F684BDA163
+FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC401638E38E38E3903FFAAAA
+AAAAAAAACBFFAAAAAAAAAAAAA400638E38E38E38F401DA12F684BDA143FFAAAAAAAAAA
+AACBFFAAAAAAAAAAAAA400F1C71C71C71C8402284BDA12F684C3FFAAAAAAAAAAAACBFF
+AAAAAAAAAAAAA4014000000000000402638E38E38E38E3FFAAAAAAAAAAAACBFE1C71C7
+1C71C70C0140000000000003CE00000000000003FFAAAAAAAAAAAACBFE1C71C71C71C7
+0C00F1C71C71C71C73FE3C0CA4587E6C43FFAAAAAAAAAAAACBFE1C71C71C71C70C0063
+8E38E38E38E3FF3C0CA4587E6BE3FFAAAAAAAAAAAACBFE1C71C71C71C70BFFAAAAAAAA
+AAAAA3FFDA12F684BDA183FFAAAAAAAAAAAACBFE1C71C71C71C70BFE1C71C71C71C704
+003C0CA4587E6BA3FFAAAAAAAAAAAACBFE1C71C71C71C703FE1C71C71C71C744008B0F
+CD6E9E0673FFAAAAAAAAAAAACBFE1C71C71C71C703FFAAAAAAAAAAAAC400DA12F684BD
+A143FFAAAAAAAAAAAACBFE1C71C71C71C70400638E38E38E38F401148B0FCD6E9E13FF
+AAAAAAAAAAAACBFE1C71C71C71C70400F1C71C71C71C84013C0CA4587E6B83FFAAAAAA
+AAAAAACBFE1C71C71C71C704014000000000000401638E38E38E38E3FFAAAAAAAAAAAA
+C3FE1C71C71C71C74C014000000000000401638E38E38E3903FFAAAAAAAAAAAAC3FE1C
+71C71C71C74C00F1C71C71C71C74013C0CA4587E6B93FFAAAAAAAAAAAAC3FE1C71C71C
+71C74C00638E38E38E38E401148B0FCD6E9E23FFAAAAAAAAAAAAC3FE1C71C71C71C74B
+FFAAAAAAAAAAAAA400DA12F684BDA163FFAAAAAAAAAAAAC3FE1C71C71C71C74BFE1C71
+C71C71C704008B0FCD6E9E0673FFAAAAAAAAAAAAC3FE1C71C71C71C743FE1C71C71C71
+C744003C0CA4587E6B83FFAAAAAAAAAAAAC3FE1C71C71C71C743FFAAAAAAAAAAAAC3FF
+DA12F684BDA143FFAAAAAAAAAAAAC3FE1C71C71C71C74400638E38E38E38F3FF3C0CA4
+587E6B73FFAAAAAAAAAAAAC3FE1C71C71C71C74400F1C71C71C71C83FE3C0CA4587E6B
+43FFAAAAAAAAAAAAC3FE1C71C71C71C744014000000000000BCC00000000000003FFAA
+AAAAAAAAAAC3FFAAAAAAAAAAAACC014000000000000402638E38E38E3903FFAAAAAAAA
+AAAAC3FFAAAAAAAAAAAACC00F1C71C71C71C7402284BDA12F684D3FFAAAAAAAAAAAAC3
+FFAAAAAAAAAAAACC00638E38E38E38E401DA12F684BDA153FFAAAAAAAAAAAAC3FFAAAA
+AAAAAAAACBFFAAAAAAAAAAAAA401638E38E38E3903FFAAAAAAAAAAAAC3FFAAAAAAAAAA
+AACBFE1C71C71C71C70400DA12F684BDA143FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC3FE
+1C71C71C71C743FFDA12F684BDA143FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC3FFAAAAAA
+AAAAAAC00000000000000003FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC400638E38E38E38
+FBFFDA12F684BDA143FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC400F1C71C71C71C8C00DA
+12F684BDA163FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC4014000000000000C01638E38E3
+8E3903FFAAAAAAAAAAAAC400638E38E38E38FC0140000000000004030AAAAAAAAAAAC3
+FFAAAAAAAAAAAAC400638E38E38E38FC00F1C71C71C71C7402B29161F9ADD3D3FFAAAA
+AAAAAAAAC400638E38E38E38FC00638E38E38E38E4024FCD6E9E065243FFAAAAAAAAAA
+AAC400638E38E38E38FBFFAAAAAAAAAAAAA401DA12F684BDA143FFAAAAAAAAAAAAC400
+638E38E38E38FBFE1C71C71C71C70401148B0FCD6E9E13FFAAAAAAAAAAAAC400638E38
+E38E38F3FE1C71C71C71C743FF3C0CA4587E6B73FFAAAAAAAAAAAAC400638E38E38E38
+F3FFAAAAAAAAAAAACBFFDA12F684BDA143FFAAAAAAAAAAAAC400638E38E38E38F40063
+8E38E38E38FC013C0CA4587E6B93FFAAAAAAAAAAAAC400638E38E38E38F400F1C71C71
+C71C8C0200CA4587E6B763FFAAAAAAAAAAAAC400638E38E38E38F4014000000000000C
+02638E38E38E38F3FFAAAAAAAAAAAAC400F1C71C71C71C8C014000000000000403638E
+38E38E38F3FFAAAAAAAAAAAAC400F1C71C71C71C8C00F1C71C71C71C74031E6B74F032
+9163FFAAAAAAAAAAAAC400F1C71C71C71C8C00638E38E38E38E402B29161F9ADD3D3FF
+AAAAAAAAAAAAC400F1C71C71C71C8BFFAAAAAAAAAAAAA402284BDA12F684C3FFAAAAAA
+AAAAAAC400F1C71C71C71C8BFE1C71C71C71C704013C0CA4587E6B83FFAAAAAAAAAAAA
+C400F1C71C71C71C83FE1C71C71C71C743FE3C0CA4587E6B43FFAAAAAAAAAAAAC400F1
+C71C71C71C83FFAAAAAAAAAAAACC00DA12F684BDA163FFAAAAAAAAAAAAC400F1C71C71
+C71C8400638E38E38E38FC0200CA4587E6B763FFAAAAAAAAAAAAC400F1C71C71C71C84
+00F1C71C71C71C8C028B0FCD6E9E0663FFAAAAAAAAAAAAC400F1C71C71C71C84014000
+000000000C030AAAAAAAAAAAB3FFAAAAAAAAAAAAC4014000000000000C014000000000
+000403BC71C71C71C723FFAAAAAAAAAAAAC4014000000000000C00F1C71C71C71C7403
+638E38E38E38E3FFAAAAAAAAAAAAC4014000000000000C00638E38E38E38E4030AAAAA
+AAAAAAB3FFAAAAAAAAAAAAC4014000000000000BFFAAAAAAAAAAAAA402638E38E38E38
+E3FFAAAAAAAAAAAAC4014000000000000BFE1C71C71C71C70401638E38E38E38E3FFAA
+AAAAAAAAAAC40140000000000003FE1C71C71C71C74BCC00000000000003FFAAAAAAAA
+AAAAC40140000000000003FFAAAAAAAAAAAACC01638E38E38E3903FFAAAAAAAAAAAAC4
+014000000000000400638E38E38E38FC02638E38E38E38F3FFAAAAAAAAAAAAC4014000
+000000000400F1C71C71C71C8C030AAAAAAAAAAAB3FFAAAAAAAAAAAAC4014000000000
+0004014000000000000C03638E38E38E38E400638E38E38E38FC014000000000000C01
+4000000000000C03148B0FCD6E9E0400638E38E38E38FC014000000000000C00F1C71C
+71C71C7C02774F0329161F8400638E38E38E38FC014000000000000C00638E38E38E38
+EC018B0FCD6E9E063400638E38E38E38FC014000000000000BFFAAAAAAAAAAAAABFE3C
+0CA4587E698400638E38E38E38FC014000000000000BFE1C71C71C71C704013C0CA458
+7E6BB400638E38E38E38FC0140000000000003FE1C71C71C71C744024FCD6E9E065254
+00638E38E38E38FC0140000000000003FFAAAAAAAAAAAAC40300CA4587E6B76400638E
+38E38E38FC014000000000000400638E38E38E38F40359ADD3C0CA45A400638E38E38E
+38FC014000000000000400F1C71C71C71C8403B29161F9ADD3D400638E38E38E38FC01
+4000000000000401400000000000040405BA781948B10400638E38E38E38FC00F1C71C
+71C71C7C014000000000000C02774F0329161F8400638E38E38E38FC00F1C71C71C71C
+7C00F1C71C71C71C7C01DA12F684BDA0F400638E38E38E38FC00F1C71C71C71C7C0063
+8E38E38E38EC008B0FCD6E9E05E400638E38E38E38FC00F1C71C71C71C7BFFAAAAAAAA
+AAAAA3FF3C0CA4587E6C4400638E38E38E38FC00F1C71C71C71C7BFE1C71C71C71C704
+01638E38E38E392400638E38E38E38FC00F1C71C71C71C73FE1C71C71C71C744023C0C
+A4587E6B9400638E38E38E38FC00F1C71C71C71C73FFAAAAAAAAAAAAC402C6522C3F35
+BAA400638E38E38E38FC00F1C71C71C71C7400638E38E38E38F403284BDA12F684D400
+638E38E38E38FC00F1C71C71C71C7400F1C71C71C71C84036D6E9E06522C5400638E38
+E38E38FC00F1C71C71C71C74014000000000000403B29161F9ADD3C400638E38E38E38
+FC00638E38E38E38EC014000000000000C018B0FCD6E9E063400638E38E38E38FC0063
+8E38E38E38EC00F1C71C71C71C7C008B0FCD6E9E05E400638E38E38E38FC00638E38E3
+8E38EC00638E38E38E38E3CE8000000000000400638E38E38E38FC00638E38E38E38EB
+FFAAAAAAAAAAAAA4008B0FCD6E9E06C400638E38E38E38FC00638E38E38E38EBFE1C71
+C71C71C704018B0FCD6E9E068400638E38E38E38FC00638E38E38E38E3FE1C71C71C71
+C74402284BDA12F684E400638E38E38E38FC00638E38E38E38E3FFAAAAAAAAAAAAC402
+8B0FCD6E9E067400638E38E38E38FC00638E38E38E38E400638E38E38E38F402EDD3C0
+CA45880400638E38E38E38FC00638E38E38E38E400F1C71C71C71C8403284BDA12F684
+D400638E38E38E38FC00638E38E38E38E401400000000000040359ADD3C0CA45940063
+8E38E38E38FBFFAAAAAAAAAAAAAC014000000000000BFE3C0CA4587E698400638E38E3
+8E38FBFFAAAAAAAAAAAAAC00F1C71C71C71C73FF3C0CA4587E6C4400638E38E38E38FB
+FFAAAAAAAAAAAAAC00638E38E38E38E4008B0FCD6E9E06C400638E38E38E38FBFFAAAA
+AAAAAAAAABFFAAAAAAAAAAAAA4013C0CA4587E6BA400638E38E38E38FBFFAAAAAAAAAA
+AAABFE1C71C71C71C70401B29161F9ADD3F400638E38E38E38FBFFAAAAAAAAAAAAA3FE
+1C71C71C71C74402148B0FCD6E9E2400638E38E38E38FBFFAAAAAAAAAAAAA3FFAAAAAA
+AAAAAAC4024FCD6E9E06524400638E38E38E38FBFFAAAAAAAAAAAAA400638E38E38E38
+F4028B0FCD6E9E066400638E38E38E38FBFFAAAAAAAAAAAAA400F1C71C71C71C8402C6
+522C3F35BA9400638E38E38E38FBFFAAAAAAAAAAAAA401400000000000040300CA4587
+E6B75400638E38E38E38FBFE1C71C71C71C70C0140000000000004013C0CA4587E6BB4
+00638E38E38E38FBFE1C71C71C71C70C00F1C71C71C71C7401638E38E38E392400638E
+38E38E38FBFE1C71C71C71C70C00638E38E38E38E4018B0FCD6E9E068400638E38E38E
+38FBFE1C71C71C71C70BFFAAAAAAAAAAAAA401B29161F9ADD3F400638E38E38E38FBFE
+1C71C71C71C70BFE1C71C71C71C70401DA12F684BDA16400638E38E38E38FBFE1C71C7
+1C71C703FE1C71C71C71C7440200CA4587E6B76400638E38E38E38FBFE1C71C71C71C7
+03FFAAAAAAAAAAAAC402148B0FCD6E9E2400638E38E38E38FBFE1C71C71C71C7040063
+8E38E38E38F402284BDA12F684D400638E38E38E38FBFE1C71C71C71C70400F1C71C71
+C71C84023C0CA4587E6B8400638E38E38E38FBFE1C71C71C71C7040140000000000004
+024FCD6E9E06524400638E38E38E38F3FE1C71C71C71C74C0140000000000004024FCD
+6E9E06525400638E38E38E38F3FE1C71C71C71C74C00F1C71C71C71C74023C0CA4587E
+6B9400638E38E38E38F3FE1C71C71C71C74C00638E38E38E38E402284BDA12F684E400
+638E38E38E38F3FE1C71C71C71C74BFFAAAAAAAAAAAAA402148B0FCD6E9E2400638E38
+E38E38F3FE1C71C71C71C74BFE1C71C71C71C7040200CA4587E6B76400638E38E38E38
+F3FE1C71C71C71C743FE1C71C71C71C74401DA12F684BDA15400638E38E38E38F3FE1C
+71C71C71C743FFAAAAAAAAAAAAC401B29161F9ADD3E400638E38E38E38F3FE1C71C71C
+71C74400638E38E38E38F4018B0FCD6E9E067400638E38E38E38F3FE1C71C71C71C744
+00F1C71C71C71C8401638E38E38E390400638E38E38E38F3FE1C71C71C71C744014000
+0000000004013C0CA4587E6B8400638E38E38E38F3FFAAAAAAAAAAAACC014000000000
+00040300CA4587E6B76400638E38E38E38F3FFAAAAAAAAAAAACC00F1C71C71C71C7402
+C6522C3F35BAA400638E38E38E38F3FFAAAAAAAAAAAACC00638E38E38E38E4028B0FCD
+6E9E067400638E38E38E38F3FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA4024FCD6E9E0652
+4400638E38E38E38F3FFAAAAAAAAAAAACBFE1C71C71C71C70402148B0FCD6E9E240063
+8E38E38E38F3FFAAAAAAAAAAAAC3FE1C71C71C71C74401B29161F9ADD3E400638E38E3
+8E38F3FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC4013C0CA4587E6B9400638E38E38E38F3
+FFAAAAAAAAAAAAC400638E38E38E38F4008B0FCD6E9E068400638E38E38E38F3FFAAAA
+AAAAAAAAC400F1C71C71C71C83FF3C0CA4587E6B8400638E38E38E38F3FFAAAAAAAAAA
+AAC4014000000000000BFE3C0CA4587E6B8400638E38E38E38F400638E38E38E38FC01
+400000000000040359ADD3C0CA45A400638E38E38E38F400638E38E38E38FC00F1C71C
+71C71C7403284BDA12F684D400638E38E38E38F400638E38E38E38FC00638E38E38E38
+E402EDD3C0CA45880400638E38E38E38F400638E38E38E38FBFFAAAAAAAAAAAAA4028B
+0FCD6E9E066400638E38E38E38F400638E38E38E38FBFE1C71C71C71C70402284BDA12
+F684D400638E38E38E38F400638E38E38E38F3FE1C71C71C71C744018B0FCD6E9E0674
+00638E38E38E38F400638E38E38E38F3FFAAAAAAAAAAAAC4008B0FCD6E9E068400638E
+38E38E38F400638E38E38E38F400638E38E38E38F0000000000000000400638E38E38E
+38F400638E38E38E38F400F1C71C71C71C8C008B0FCD6E9E066400638E38E38E38F400
+638E38E38E38F4014000000000000C018B0FCD6E9E065400638E38E38E38F400F1C71C
+71C71C8C014000000000000403B29161F9ADD3D400638E38E38E38F400F1C71C71C71C
+8C00F1C71C71C71C74036D6E9E06522C5400638E38E38E38F400F1C71C71C71C8C0063
+8E38E38E38E403284BDA12F684D400638E38E38E38F400F1C71C71C71C8BFFAAAAAAAA
+AAAAA402C6522C3F35BA9400638E38E38E38F400F1C71C71C71C8BFE1C71C71C71C704
+023C0CA4587E6B8400638E38E38E38F400F1C71C71C71C83FE1C71C71C71C74401638E
+38E38E390400638E38E38E38F400F1C71C71C71C83FFAAAAAAAAAAAAC3FF3C0CA4587E
+6B8400638E38E38E38F400F1C71C71C71C8400638E38E38E38FC008B0FCD6E9E066400
+638E38E38E38F400F1C71C71C71C8400F1C71C71C71C8C01DA12F684BDA13400638E38
+E38E38F400F1C71C71C71C84014000000000000C02774F0329161FA400638E38E38E38
+F4014000000000000C01400000000000040405BA781948B10400638E38E38E38F40140
+00000000000C00F1C71C71C71C7403B29161F9ADD3C400638E38E38E38F40140000000
+00000C00638E38E38E38E40359ADD3C0CA459400638E38E38E38F4014000000000000B
+FFAAAAAAAAAAAAA40300CA4587E6B75400638E38E38E38F4014000000000000BFE1C71
+C71C71C704024FCD6E9E06524400638E38E38E38F40140000000000003FE1C71C71C71
+C744013C0CA4587E6B8400638E38E38E38F40140000000000003FFAAAAAAAAAAAACBFE
+3C0CA4587E6B8400638E38E38E38F4014000000000000400638E38E38E38FC018B0FCD
+6E9E065400638E38E38E38F4014000000000000400F1C71C71C71C8C02774F0329161F
+A400638E38E38E38F40140000000000004014000000000000C03148B0FCD6E9E0400F1
+C71C71C71C8C014000000000000C014000000000000C023C0CA4587E6B6400F1C71C71
+C71C8C014000000000000C00F1C71C71C71C7C01148B0FCD6E9DC400F1C71C71C71C8C
+014000000000000C00638E38E38E38E3FF3C0CA4587E6C0400F1C71C71C71C8C014000
+000000000BFFAAAAAAAAAAAAA401B29161F9ADD40400F1C71C71C71C8C014000000000
+000BFE1C71C71C71C704028B0FCD6E9E067400F1C71C71C71C8C0140000000000003FE
+1C71C71C71C744031E6B74F032917400F1C71C71C71C8C0140000000000003FFAAAAAA
+AAAAAAC403774F0329161FB400F1C71C71C71C8C014000000000000400638E38E38E38
+F403D0329161F9ADE400F1C71C71C71C8C014000000000000400F1C71C71C71C840414
+8B0FCD6E9E1400F1C71C71C71C8C014000000000000401400000000000040440FCD6E9
+E0652400F1C71C71C71C8C00F1C71C71C71C7C014000000000000C01148B0FCD6E9DC4
+00F1C71C71C71C8C00F1C71C71C71C7C00F1C71C71C71C73CF0000000000000400F1C7
+1C71C71C8C00F1C71C71C71C7C00638E38E38E38E401148B0FCD6E9E4400F1C71C71C7
+1C8C00F1C71C71C71C7BFFAAAAAAAAAAAAA402148B0FCD6E9E2400F1C71C71C71C8C00
+F1C71C71C71C7BFE1C71C71C71C704029ED097B425ED2400F1C71C71C71C8C00F1C71C
+71C71C73FE1C71C71C71C74403148B0FCD6E9E1400F1C71C71C71C8C00F1C71C71C71C
+73FFAAAAAAAAAAAAC40359ADD3C0CA45A400F1C71C71C71C8C00F1C71C71C71C740063
+8E38E38E38F4039ED097B425ED2400F1C71C71C71C8C00F1C71C71C71C7400F1C71C71
+C71C8403E3F35BA78194A400F1C71C71C71C8C00F1C71C71C71C740140000000000004
+04148B0FCD6E9E0400F1C71C71C71C8C00638E38E38E38EC0140000000000003FF3C0C
+A4587E6C0400F1C71C71C71C8C00638E38E38E38EC00F1C71C71C71C7401148B0FCD6E
+9E4400F1C71C71C71C8C00638E38E38E38EC00638E38E38E38E401DA12F684BDA16400
+F1C71C71C71C8C00638E38E38E38EBFFAAAAAAAAAAAAA4024FCD6E9E06524400F1C71C
+71C71C8C00638E38E38E38EBFE1C71C71C71C70402B29161F9ADD3E400F1C71C71C71C
+8C00638E38E38E38E3FE1C71C71C71C744030AAAAAAAAAAAC400F1C71C71C71C8C0063
+8E38E38E38E3FFAAAAAAAAAAAAC4033C0CA4587E6B8400F1C71C71C71C8C00638E38E3
+8E38E400638E38E38E38F4036D6E9E06522C5400F1C71C71C71C8C00638E38E38E38E4
+00F1C71C71C71C84039ED097B425ED2400F1C71C71C71C8C00638E38E38E38E4014000
+000000000403D0329161F9ADE400F1C71C71C71C8BFFAAAAAAAAAAAAAC014000000000
+000401B29161F9ADD40400F1C71C71C71C8BFFAAAAAAAAAAAAAC00F1C71C71C71C7402
+148B0FCD6E9E2400F1C71C71C71C8BFFAAAAAAAAAAAAAC00638E38E38E38E4024FCD6E
+9E06524400F1C71C71C71C8BFFAAAAAAAAAAAAABFFAAAAAAAAAAAAA4028B0FCD6E9E06
+7400F1C71C71C71C8BFFAAAAAAAAAAAAABFE1C71C71C71C70402C6522C3F35BA9400F1
+C71C71C71C8BFFAAAAAAAAAAAAA3FE1C71C71C71C7440300CA4587E6B76400F1C71C71
+C71C8BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC4031E6B74F032917400F1C71C71C71C8B
+FFAAAAAAAAAAAAA400638E38E38E38F4033C0CA4587E6B8400F1C71C71C71C8BFFAAAA
+AAAAAAAAA400F1C71C71C71C840359ADD3C0CA459400F1C71C71C71C8BFFAAAAAAAAAA
+AAA4014000000000000403774F0329161FA400F1C71C71C71C8BFE1C71C71C71C70C01
+40000000000004028B0FCD6E9E067400F1C71C71C71C8BFE1C71C71C71C70C00F1C71C
+71C71C74029ED097B425ED2400F1C71C71C71C8BFE1C71C71C71C70C00638E38E38E38
+E402B29161F9ADD3E400F1C71C71C71C8BFE1C71C71C71C70BFFAAAAAAAAAAAAA402C6
+522C3F35BA9400F1C71C71C71C8BFE1C71C71C71C70BFE1C71C71C71C70402DA12F684
+BDA14400F1C71C71C71C8BFE1C71C71C71C703FE1C71C71C71C74402EDD3C0CA458804
+00F1C71C71C71C8BFE1C71C71C71C703FFAAAAAAAAAAAAC40300CA4587E6B76400F1C7
+1C71C71C8BFE1C71C71C71C70400638E38E38E38F4030AAAAAAAAAAAB400F1C71C71C7
+1C8BFE1C71C71C71C70400F1C71C71C71C8403148B0FCD6E9E1400F1C71C71C71C8BFE
+1C71C71C71C7040140000000000004031E6B74F032916400F1C71C71C71C83FE1C71C7
+1C71C74C0140000000000004031E6B74F032917400F1C71C71C71C83FE1C71C71C71C7
+4C00F1C71C71C71C7403148B0FCD6E9E1400F1C71C71C71C83FE1C71C71C71C74C0063
+8E38E38E38E4030AAAAAAAAAAAC400F1C71C71C71C83FE1C71C71C71C74BFFAAAAAAAA
+AAAAA40300CA4587E6B76400F1C71C71C71C83FE1C71C71C71C74BFE1C71C71C71C704
+02EDD3C0CA45880400F1C71C71C71C83FE1C71C71C71C743FE1C71C71C71C74402DA12
+F684BDA14400F1C71C71C71C83FE1C71C71C71C743FFAAAAAAAAAAAAC402C6522C3F35
+BA8400F1C71C71C71C83FE1C71C71C71C74400638E38E38E38F402B29161F9ADD3D400
+F1C71C71C71C83FE1C71C71C71C74400F1C71C71C71C84029ED097B425ED1400F1C71C
+71C71C83FE1C71C71C71C7440140000000000004028B0FCD6E9E066400F1C71C71C71C
+83FFAAAAAAAAAAAACC014000000000000403774F0329161FB400F1C71C71C71C83FFAA
+AAAAAAAAAACC00F1C71C71C71C740359ADD3C0CA45A400F1C71C71C71C83FFAAAAAAAA
+AAAACC00638E38E38E38E4033C0CA4587E6B8400F1C71C71C71C83FFAAAAAAAAAAAACB
+FFAAAAAAAAAAAAA4031E6B74F032917400F1C71C71C71C83FFAAAAAAAAAAAACBFE1C71
+C71C71C7040300CA4587E6B76400F1C71C71C71C83FFAAAAAAAAAAAAC3FE1C71C71C71
+C74402C6522C3F35BA8400F1C71C71C71C83FFAAAAAAAAAAAAC3FFAAAAAAAAAAAAC402
+8B0FCD6E9E066400F1C71C71C71C83FFAAAAAAAAAAAAC400638E38E38E38F4024FCD6E
+9E06524400F1C71C71C71C83FFAAAAAAAAAAAAC400F1C71C71C71C8402148B0FCD6E9E
+0400F1C71C71C71C83FFAAAAAAAAAAAAC4014000000000000401B29161F9ADD3C400F1
+C71C71C71C8400638E38E38E38FC014000000000000403D0329161F9ADE400F1C71C71
+C71C8400638E38E38E38FC00F1C71C71C71C74039ED097B425ED2400F1C71C71C71C84
+00638E38E38E38FC00638E38E38E38E4036D6E9E06522C5400F1C71C71C71C8400638E
+38E38E38FBFFAAAAAAAAAAAAA4033C0CA4587E6B8400F1C71C71C71C8400638E38E38E
+38FBFE1C71C71C71C704030AAAAAAAAAAAB400F1C71C71C71C8400638E38E38E38F3FE
+1C71C71C71C74402B29161F9ADD3D400F1C71C71C71C8400638E38E38E38F3FFAAAAAA
+AAAAAAC4024FCD6E9E06524400F1C71C71C71C8400638E38E38E38F400638E38E38E38
+F401DA12F684BDA13400F1C71C71C71C8400638E38E38E38F400F1C71C71C71C840114
+8B0FCD6E9E0400F1C71C71C71C8400638E38E38E38F40140000000000003FF3C0CA458
+7E6B8400F1C71C71C71C8400F1C71C71C71C8C014000000000000404148B0FCD6E9E14
+00F1C71C71C71C8400F1C71C71C71C8C00F1C71C71C71C7403E3F35BA78194A400F1C7
+1C71C71C8400F1C71C71C71C8C00638E38E38E38E4039ED097B425ED2400F1C71C71C7
+1C8400F1C71C71C71C8BFFAAAAAAAAAAAAA40359ADD3C0CA459400F1C71C71C71C8400
+F1C71C71C71C8BFE1C71C71C71C70403148B0FCD6E9E1400F1C71C71C71C8400F1C71C
+71C71C83FE1C71C71C71C744029ED097B425ED1400F1C71C71C71C8400F1C71C71C71C
+83FFAAAAAAAAAAAAC402148B0FCD6E9E0400F1C71C71C71C8400F1C71C71C71C840063
+8E38E38E38F401148B0FCD6E9E0400F1C71C71C71C8400F1C71C71C71C8400F1C71C71
+C71C80000000000000000400F1C71C71C71C8400F1C71C71C71C84014000000000000C
+01148B0FCD6E9E0400F1C71C71C71C84014000000000000C01400000000000040440FC
+D6E9E0652400F1C71C71C71C84014000000000000C00F1C71C71C71C7404148B0FCD6E
+9E0400F1C71C71C71C84014000000000000C00638E38E38E38E403D0329161F9ADE400
+F1C71C71C71C84014000000000000BFFAAAAAAAAAAAAA403774F0329161FA400F1C71C
+71C71C84014000000000000BFE1C71C71C71C704031E6B74F032916400F1C71C71C71C
+840140000000000003FE1C71C71C71C744028B0FCD6E9E066400F1C71C71C71C840140
+000000000003FFAAAAAAAAAAAAC401B29161F9ADD3C400F1C71C71C71C840140000000
+00000400638E38E38E38F3FF3C0CA4587E6B8400F1C71C71C71C840140000000000004
+00F1C71C71C71C8C01148B0FCD6E9E0400F1C71C71C71C840140000000000004014000
+000000000C023C0CA4587E6B64014000000000000C014000000000000C014000000000
+00000000000000000004014000000000000C014000000000000C00F1C71C71C71C7401
+638E38E38E3904014000000000000C014000000000000C00638E38E38E38E402638E38
+E38E38E4014000000000000C014000000000000BFFAAAAAAAAAAAAA4030AAAAAAAAAAA
+B4014000000000000C014000000000000BFE1C71C71C71C70403638E38E38E38E40140
+00000000000C0140000000000003FE1C71C71C71C74403BC71C71C71C7240140000000
+00000C0140000000000003FFAAAAAAAAAAAAC4040AAAAAAAAAAAB4014000000000000C
+014000000000000400638E38E38E38F404371C71C71C71D4014000000000000C014000
+000000000400F1C71C71C71C8404638E38E38E38E4014000000000000C014000000000
+000401400000000000040490000000000004014000000000000C00F1C71C71C71C7C01
+4000000000000401638E38E38E3904014000000000000C00F1C71C71C71C7C00F1C71C
+71C71C74023C0CA4587E6B84014000000000000C00F1C71C71C71C7C00638E38E38E38
+E402C6522C3F35BA84014000000000000C00F1C71C71C71C7BFFAAAAAAAAAAAAA40328
+4BDA12F684C4014000000000000C00F1C71C71C71C7BFE1C71C71C71C704036D6E9E06
+522C44014000000000000C00F1C71C71C71C73FE1C71C71C71C74403B29161F9ADD3C4
+014000000000000C00F1C71C71C71C73FFAAAAAAAAAAAAC403F7B425ED097B44014000
+000000000C00F1C71C71C71C7400638E38E38E38F4041E6B74F0329164014000000000
+000C00F1C71C71C71C7400F1C71C71C71C840440FCD6E9E06524014000000000000C00
+F1C71C71C71C74014000000000000404638E38E38E38E4014000000000000C00638E38
+E38E38EC014000000000000402638E38E38E38E4014000000000000C00638E38E38E38
+EC00F1C71C71C71C7402C6522C3F35BA84014000000000000C00638E38E38E38EC0063
+8E38E38E38E403148B0FCD6E9E04014000000000000C00638E38E38E38EBFFAAAAAAAA
+AAAAA40345ED097B425ED4014000000000000C00638E38E38E38EBFE1C71C71C71C704
+03774F0329161FA4014000000000000C00638E38E38E38E3FE1C71C71C71C74403A8B0
+FCD6E9E064014000000000000C00638E38E38E38E3FFAAAAAAAAAAAAC403DA12F684BD
+A134014000000000000C00638E38E38E38E400638E38E38E38F40405BA781948B10401
+4000000000000C00638E38E38E38E400F1C71C71C71C84041E6B74F032916401400000
+0000000C00638E38E38E38E4014000000000000404371C71C71C71C401400000000000
+0BFFAAAAAAAAAAAAAC0140000000000004030AAAAAAAAAAAB4014000000000000BFFAA
+AAAAAAAAAAAC00F1C71C71C71C7403284BDA12F684C4014000000000000BFFAAAAAAAA
+AAAAAC00638E38E38E38E40345ED097B425ED4014000000000000BFFAAAAAAAAAAAAAB
+FFAAAAAAAAAAAAA403638E38E38E38E4014000000000000BFFAAAAAAAAAAAAABFE1C71
+C71C71C70403812F684BDA1304014000000000000BFFAAAAAAAAAAAAA3FE1C71C71C71
+C744039ED097B425ED14014000000000000BFFAAAAAAAAAAAAA3FFAAAAAAAAAAAAC403
+BC71C71C71C724014000000000000BFFAAAAAAAAAAAAA400638E38E38E38F403DA12F6
+84BDA134014000000000000BFFAAAAAAAAAAAAA400F1C71C71C71C8403F7B425ED097B
+44014000000000000BFFAAAAAAAAAAAAA40140000000000004040AAAAAAAAAAAA40140
+00000000000BFE1C71C71C71C70C014000000000000403638E38E38E38E40140000000
+00000BFE1C71C71C71C70C00F1C71C71C71C74036D6E9E06522C44014000000000000B
+FE1C71C71C71C70C00638E38E38E38E403774F0329161FA4014000000000000BFE1C71
+C71C71C70BFFAAAAAAAAAAAAA403812F684BDA1304014000000000000BFE1C71C71C71
+C70BFE1C71C71C71C704038B0FCD6E9E0654014000000000000BFE1C71C71C71C703FE
+1C71C71C71C7440394F0329161F9B4014000000000000BFE1C71C71C71C703FFAAAAAA
+AAAAAAC4039ED097B425ED14014000000000000BFE1C71C71C71C70400638E38E38E38
+F403A8B0FCD6E9E064014000000000000BFE1C71C71C71C70400F1C71C71C71C8403B2
+9161F9ADD3C4014000000000000BFE1C71C71C71C704014000000000000403BC71C71C
+71C7240140000000000003FE1C71C71C71C74C014000000000000403BC71C71C71C724
+0140000000000003FE1C71C71C71C74C00F1C71C71C71C7403B29161F9ADD3C4014000
+0000000003FE1C71C71C71C74C00638E38E38E38E403A8B0FCD6E9E064014000000000
+0003FE1C71C71C71C74BFFAAAAAAAAAAAAA4039ED097B425ED140140000000000003FE
+1C71C71C71C74BFE1C71C71C71C7040394F0329161F9B40140000000000003FE1C71C7
+1C71C743FE1C71C71C71C744038B0FCD6E9E06540140000000000003FE1C71C71C71C7
+43FFAAAAAAAAAAAAC403812F684BDA12F40140000000000003FE1C71C71C71C7440063
+8E38E38E38F403774F0329161F940140000000000003FE1C71C71C71C74400F1C71C71
+C71C84036D6E9E06522C440140000000000003FE1C71C71C71C7440140000000000004
+03638E38E38E38E40140000000000003FFAAAAAAAAAAAACC0140000000000004040AAA
+AAAAAAAAB40140000000000003FFAAAAAAAAAAAACC00F1C71C71C71C7403F7B425ED09
+7B440140000000000003FFAAAAAAAAAAAACC00638E38E38E38E403DA12F684BDA13401
+40000000000003FFAAAAAAAAAAAACBFFAAAAAAAAAAAAA403BC71C71C71C72401400000
+00000003FFAAAAAAAAAAAACBFE1C71C71C71C704039ED097B425ED1401400000000000
+03FFAAAAAAAAAAAAC3FE1C71C71C71C74403812F684BDA12F40140000000000003FFAA
+AAAAAAAAAAC3FFAAAAAAAAAAAAC403638E38E38E38E40140000000000003FFAAAAAAAA
+AAAAC400638E38E38E38F40345ED097B425ED40140000000000003FFAAAAAAAAAAAAC4
+00F1C71C71C71C8403284BDA12F684B40140000000000003FFAAAAAAAAAAAAC4014000
+0000000004030AAAAAAAAAAAA4014000000000000400638E38E38E38FC014000000000
+000404371C71C71C71D4014000000000000400638E38E38E38FC00F1C71C71C71C7404
+1E6B74F0329164014000000000000400638E38E38E38FC00638E38E38E38E40405BA78
+1948B104014000000000000400638E38E38E38FBFFAAAAAAAAAAAAA403DA12F684BDA1
+34014000000000000400638E38E38E38FBFE1C71C71C71C70403A8B0FCD6E9E0640140
+00000000000400638E38E38E38F3FE1C71C71C71C74403774F0329161F940140000000
+00000400638E38E38E38F3FFAAAAAAAAAAAAC40345ED097B425ED40140000000000004
+00638E38E38E38F400638E38E38E38F403148B0FCD6E9E04014000000000000400638E
+38E38E38F400F1C71C71C71C8402C6522C3F35BA64014000000000000400638E38E38E
+38F4014000000000000402638E38E38E38D4014000000000000400F1C71C71C71C8C01
+4000000000000404638E38E38E38E4014000000000000400F1C71C71C71C8C00F1C71C
+71C71C740440FCD6E9E06524014000000000000400F1C71C71C71C8C00638E38E38E38
+E4041E6B74F0329164014000000000000400F1C71C71C71C8BFFAAAAAAAAAAAAA403F7
+B425ED097B44014000000000000400F1C71C71C71C8BFE1C71C71C71C70403B29161F9
+ADD3C4014000000000000400F1C71C71C71C83FE1C71C71C71C744036D6E9E06522C44
+014000000000000400F1C71C71C71C83FFAAAAAAAAAAAAC403284BDA12F684B4014000
+000000000400F1C71C71C71C8400638E38E38E38F402C6522C3F35BA64014000000000
+000400F1C71C71C71C8400F1C71C71C71C84023C0CA4587E6B64014000000000000400
+F1C71C71C71C84014000000000000401638E38E38E38C4014000000000000401400000
+0000000C01400000000000040490000000000004014000000000000401400000000000
+0C00F1C71C71C71C7404638E38E38E38E40140000000000004014000000000000C0063
+8E38E38E38E404371C71C71C71C40140000000000004014000000000000BFFAAAAAAAA
+AAAAA4040AAAAAAAAAAAA40140000000000004014000000000000BFE1C71C71C71C704
+03BC71C71C71C72401400000000000040140000000000003FE1C71C71C71C74403638E
+38E38E38E401400000000000040140000000000003FFAAAAAAAAAAAAC4030AAAAAAAAA
+AAA40140000000000004014000000000000400638E38E38E38F402638E38E38E38D401
+40000000000004014000000000000400F1C71C71C71C8401638E38E38E38C401400000
+0000000401400000000000040140000000000000000000000000000-%+AXESLABELSG6
+%Q\"xF)Q\"yF)Q\"zF)-%*AXESSTYLEG6#%$BOXG" 1 2 0 1 10 0 2 1 1 2 2 
+1.000000 64.000000 -17.000000 0 0 "Curve 1" }}}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 270 "" 0 "" {TEXT -1 7 "Part c." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 25 "S:=[x-u*v, y+u^2, z+v^2]:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 29 "G:=Basis(S, plex(u,v,x,y,z));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"GG7(,&*$)%\"xG\"\"#\"\"\"F+*&%\"yGF+%\"zGF+!\"
+\",&F.F+*$)%\"vGF*F+F+,&*&%\"uGF+F.F+F+*&F3F+F)F+F+,&*&F6F+F)F+F+*&F3F
++F-F+F+,&F)F/*&F6F+F3F+F+,&F-F+*$)F6F*F+F+" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 19 "So here we'll have " }{XPPEDIT 18 0 "v^2 = -z;" "6#/*$%\"
+vG\"\"#,$%\"zG!\"\"" }{TEXT -1 45 " so z need to be negative and simil
+arly from " }{XPPEDIT 18 0 "u^2 = -y;" "6#/*$%\"uG\"\"#,$%\"yG!\"\"" }
+{TEXT -1 15 " y is negative." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 271 "" 0 "" {TEXT -1 11 "Section 3.3" }
+}}{EXCHG {PARA 272 "" 0 "" {TEXT -1 5 "3.3.8" }}}{EXCHG {PARA 273 "" 
+0 "" {TEXT -1 7 "Part a." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "
+restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "S:=[x-3*u-3*u*v^2+u^3, \+
+y-3*v-3*u^2*v+v^3, z-3*u^2+3*v^2]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 "G:=Basis(S, plex(u,v,x,y,z)):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 15 "map(indets, G);" }}{PARA 12 "" 1 "" {XPPMATH 
+20 "6#71<%%\"xG%\"zG%\"yG<&%\"vGF%F&F'F(F(F(F(F(F(<%F)F&F'<'F)%\"uGF%F
+&F'F+F+F+<&F)F,F%F&<%F)F,F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+5 "G[1];" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#,P*&\"#k\"\"\")%\"zG\"\"*F
+&!\"\"*(\"%'H\"F&)F(\"\"'F&)%\"xG\"\"#F&F&*(F,F&F-F&)%\"yGF1F&F**(\"&N
+4\"F&)F(\"\"$F&)F0\"\"%F&F&**\"&io&F&F7F&F/F&F3F&F&*(\"&#*\\$F&)F(\"\"
+&F&F/F&F&*(F6F&)F4F:F&F7F&F&*(F>F&F?F&F3F&F&*&\"&o.\"F&)F(\"\"(F&F&*&
+\"&$o>F&)F0F.F&F&*(\"&\\!fF&F9F&F3F&F**(\"')4=\"F&)F(F1F&F9F&F&*(FLF&F
+BF&F/F&F&*(\"'g\\<F&)F(F:F&F/F&F&*&FIF&)F4F.F&F**(FNF&FOF&FBF&F**(FRF&
+FSF&F3F&F**(FLF&F(F&F9F&F***FNF&F(F&F/F&F3F&F&*(\"'G\\JF&F/F&F7F&F**(F
+LF&F(F&FBF&F**(FenF&F3F&F7F&F**&\"'/*>%F&F?F&F*" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 59 "Therefore V( G[1])  is the smallest variety containi
+ng S. L" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "G[9];" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#,*%\"yG!\"\"*&\"\"$\"\"\"%\"vGF(F(*&\"\"#F()
+F)F'F(F(*&F)F(%\"zGF(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "G
+[14];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,**&\"\"$\"\"\"%\"xGF&!\"\"*&
+\"\"*F&%\"uGF&F&*(\"\"'F&F+F&)%\"vG\"\"#F&F&*&F+F&%\"zGF&F(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 274 "" 0 "" 
+{TEXT -1 6 "3.3.14" }}}{EXCHG {PARA 275 "" 0 "" {TEXT -1 7 "Part a." }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 119 "By Exercise 13, here we can use the \"naive\" ideal ob
+tained by clearing denominators and it will give the right answer. " }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "S:=[x*(1+t^3)-3*t, y*(1+t^
+3)-3*t^2]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "G:=Basis(S, p
+lex(t,x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7&,(*$)%\"yG\"
+\"$\"\"\"F+*$)%\"xGF*F+F+*(F*F+F)F+F.F+!\"\",(*&)F)\"\"#F+%\"tGF+F+*$)
+F.F4F+F+*&F*F+F)F+F0,&F)F0*&F.F+F5F+F+,(F.F+*&F*F+F5F+F0*&F)F+)F5F4F+F
++" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "map(indets, G);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7&<$%\"xG%\"yG<%%\"tGF%F&F'F'" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 33 "So the equation of the folium is \+
+" }{XPPEDIT 18 0 "x^3+y^3-3*x*y = 0;" "6#/,(*$%\"xG\"\"$\"\"\"*$%\"yGF
+'F(*(F'F(F&F(F*F(!\"\"\"\"!" }{TEXT -1 1 "." }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 276 "" 0 "" {TEXT -1 23 "Additional question #1." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "f:=x^3-x^2*y-x^2*z+x: f1:=x^2*y-z: f2:=x*y-1:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 46 "THe two polynomials r and g were x
+-z and yz-1." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "r:=x-z: g:=
+y*z-1:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 93 "Groebner[NormalFo
+rm](r, [f1, f2], grlex(x,y)); Groebner[NormalForm](g, [f1, f2], grlex(
+x,y));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&%\"xG\"\"\"%\"zG!\"\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*&%\"yG\"\"\"%\"zGF&F&F&!\"\"" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 62 "So the remainders of division by \+
+\{f1, f2\} are indeed non-zero." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+89 "Now let's find a Groebner basis using a Buchberger's Algorithm usi
+ng lex ordering x>y>z.." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "
+G:=[f1,f2]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 89 "We will now comput
+e the S-polynomial and it's remainder when divided by the basis so far
+." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "s12:=sort(SPolynomial(
+f1, f2, plex(x,y,z)), [x,y,z], plex);" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#>%$s12G,&%\"xG\"\"\"%\"zG!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "f3:=NormalForm(s12, G, plex(x,y,z));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#f3G,&%\"xG\"\"\"%\"zG!\"\"" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 84 "The remainder is non-zero and therefore we will at
+tach this polynomial to our basis." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "G:=[op(G),f3]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 119 "s13:=sort(SPolynomial(f1, f3, plex(x,y,z)), [x,y,z], plex); s
+23:=sort(SPolynomial(f2, f3, plex(x,y,z)), [x,y,z], plex);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%$s13G,&*(%\"xG\"\"\"%\"yGF(%\"zGF(F(F*!\"
+\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s23G,&*&%\"yG\"\"\"%\"zGF(F(F
+(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "f4:=NormalForm(s1
+3, G, plex(x,y,z)); f5:=NormalForm(s23, G, plex(x,y,z));" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%#f4G\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%#f5G,&*&%\"yG\"\"\"%\"zGF(F(F(!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "G:=[op(G),f5]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 179 "s15:=sort(SPolynomial(f1, f5, plex(x,y,z)), [x,y,z], plex); s
+25:=sort(SPolynomial(f2, f5, plex(x,y,z)), [x,y,z], plex); s35:=sort(S
+Polynomial(f3, f5, plex(x,y,z)), [x,y,z], plex);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s15G,&*$)%\"xG\"\"#\"\"\"F**$)%\"zGF)F*!\"\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s25G,&%\"xG\"\"\"%\"zG!\"\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$s35G,&%\"xG\"\"\"*&%\"yGF')%\"zG\"
+\"#F'!\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 98 "NormalForm(s1
+5, G, plex(x,y,z)); NormalForm(s25, G, plex(x,y,z)); NormalForm(s35, G
+, plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 41 "Hence we already have our Groeb
+ner Basis." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "G;" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#7&,&*&)%\"xG\"\"#\"\"\"%\"yGF)F)%\"zG!\"\",&
+*&F'F)F*F)F)F)F,,&F'F)F+F,,&*&F*F)F+F)F)F)F," }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 118 "Now LT(G[2]) divides LT(G[1]), so by Very Useful Lemma
+ we can replace G[1] by a remainder of division of G[1] by G[2]." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "NormalForm(G[1], [G[2]], ple
+x(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&%\"xG\"\"\"%\"zG!\"\"
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 63 "Since x-z is already in G, we
+ can just throw it out, so we get:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 11 "G:=G[2..4];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG
+7%,&*&%\"xG\"\"\"%\"yGF)F)F)!\"\",&F(F)%\"zGF+,&*&F*F)F-F)F)F)F+" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 93 "However, it's not reduced since LT
+(G[2]) divides LT(G[1]). Again by Very Useful Lemma we get:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "NormalForm(G[1], [G[2]], ple
+x(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*&%\"yG\"\"\"%\"zGF&F&
+F&!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 59 "But it's already in G,
+ so we can get rid of it alltogether." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 11 "G:=G[2..3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG
+7$,&%\"xG\"\"\"%\"zG!\"\",&*&%\"yGF(F)F(F(F(F*" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 171 "Now this is the reduced Groebner basis for I=<f1, f
+2>. Let's it's clear that the remainders of r and g divided by G are z
+ero, since r and g are themselved generators of G." }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 61 "NormalForm(r, G, plex(x,y,z)); NormalForm(g
+, G, plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 277 
+"" 0 "" {TEXT -1 23 "Additional question #2." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "a1
+:=y^3-z^2: a2:=x*z-y^2: a3:=x*y-z: a4:=x^2-y:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 47 "b1:=x*y-z^2: b2:=x*z-y^2: b3:=x*y-z: b4:=x^2-y:
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "c1:=x*z-y^2: c2:=x+y^2-
+z-1: c3:=x*y*z-1: " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "d1:=y
+^2-x^2*y: d2:=z-x*y: d3:=y-x^2:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 41 "Ga:=Basis([a1, a2, a3, a4], plex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#GaG7&,&*$)%\"yG\"\"$\"\"\"F+*$)%\"zG\"\"#F+!\"\",&*&
+%\"xGF+F.F+F+*$)F)F/F+F0,&*&F3F+F)F+F+F.F0,&*$)F3F/F+F+F)F0" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "Gb:=Basis([b1, b2, b3, b4], \+
+plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#GbG7(,&*$)%\"zG\"
+\"#\"\"\"F+F)!\"\",&*&)%\"yGF*F+F)F+F+*$F/F+F,,&*$)F0\"\"$F+F+F)F,,&*&
+%\"xGF+F)F+F+F1F,,&*&F8F+F0F+F+F)F,,&*$)F8F*F+F+F0F," }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 37 "Gc:=Basis([c1, c2, c3], plex(x,y,z));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#GcG7&,**$)%\"zG\"\"%\"\"\"F+*$)F)\"
+\"$F+F+F)!\"\"F+F/,**&%\"yGF+F)F+F+F,F/*$)F)\"\"#F+F/F2F+,&*$)F2F.F+F+
+F+F/,*%\"xGF+*$)F2F5F+F+F)F/F+F/" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "Gd:=Basis([d1, d2, d3], plex(x,y,z));" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#GdG7&,&*$)%\"yG\"\"$\"\"\"F+*$)%\"zG\"\"#F+!\"
+\",&*&%\"xGF+F.F+F+*$)F)F/F+F0,&*&F3F+F)F+F+F.F0,&*$)F3F/F+F+F)F0" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 40 "So ideals in parts a and d are the
+ same." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "NormalForm(b1, Ga
+, plex(x,y,z)); NormalForm(c2, Ga, plex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,&*$)%\"zG\"\"#\"\"\"!\"\"F&F(" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,*%\"xG\"\"\"*$)%\"yG\"\"#F%F%%\"zG!\"\"F%F+" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 135 "Since the above remainders aren't
+ zeros, the ideals in parts b and c aren't equal to the other two, but
+ are they equal to each other?  " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "NormalForm(b1, Gc, plex(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,&\"\"\"!\"\"*$)%\"zG\"\"$F$F$" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 90 "This means that b1 does not lie in the ideal from part
+ c and therefore they are not equal." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 0 "" }}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 265 23 "Additional question #3." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 50 "Let first see what bases Maple will output for us." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "S:=[x+y+z-1, x-2*y-z-2, y+2*z-5]:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "Basis(S, plex(x,y,z)); Ba
+sis(S, tdeg(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%,&\"\"%!\"\"
+%\"zG\"\"\",&%\"yGF(\"\"$F(%\"xG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%
+,&\"\"%!\"\"%\"zG\"\"\",&%\"yGF(\"\"$F(%\"xG" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 41 "Now let's perform algirithm step by step." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "g1:=x+y+z-1: g2:=x-2*y-z-2: g3:=y+2
+*z-5: G:=[g1,g2,g3]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "First we \+
+will use lex ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "G1
+:=G:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 104 "Notice that at the first
+ step thanks to Proposition 4 from 2.9 we only need to compute one S-p
+olynomial." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "s12:=sort(SPo
+lynomial(g1, g2, plex(x,y,z)), [x,y,z], plex); " }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$s12G,(*&\"\"$\"\"\"%\"yGF(F(*&\"\"#F(%\"zGF(F(F(F(" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "g4:=NormalForm(s12, G1, p
+lex(x,y,z)); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G,&*&\"\"%\"\"\"
+%\"zGF(!\"\"\"#;F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "G1:=[
+op(G1),g4];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G1G7&,*%\"xG\"\"\"%
+\"yGF(%\"zGF(F(!\"\",*F'F(*&\"\"#F(F)F(F+F*F+F.F+,(F)F(*&F.F(F*F(F(\"
+\"&F+,&*&\"\"%F(F*F(F+\"#;F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 41 "seq(sort(G1[i], [x,y,z], plex), i=1..4 );" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6&,*%\"xG\"\"\"%\"yGF%%\"zGF%F%!\"\",*F$F%*&\"\"#F%F&F%F(
+F'F(F+F(,(F&F%*&F+F%F'F%F%\"\"&F(,&*&\"\"%F%F'F%F(\"#;F%" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 348 "Notice that except for the first two ply
+nomials the leading terms of all others are relatively prime, so we've
+ got our Groebner Basis but it's not reduced. We will now perform a co
+uple of \"divisions\" (they really are divisions though) to ensure tha
+t no leading tems are divisible by one another. We'll also make the po
+lynomials monic along the way." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 16 "G1[4]:=G1[4]/4; " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%#G1G6#
+\"\"%,&%\"zG!\"\"F'\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+43 "g:=(G1[1]-G1[2]-G1[3])/2; h:=G1[1]-g+G1[4];" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"gG,&%\"yG\"\"\"\"\"$F'" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"hG%\"xG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "So \+
+getting rid of all the redundant polynomials we now have:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "G1:=[G1[4], g, h];" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#G1G7%,&%\"zG!\"\"\"\"%\"\"\",&%\"yGF*\"\"$F*%\"
+xG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 34 "Now we shall use grevlex or
+dering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "G2:=G: seq(sort(
+G2[i], [x,y,z], tdeg), i=1..3 );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6%,*
+%\"xG\"\"\"%\"yGF%%\"zGF%F%!\"\",*F$F%*&\"\"#F%F&F%F(F'F(F+F(,(F&F%*&F
++F%F'F%F%\"\"&F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 104 "Again, here \+
+we only need to compute one S-polynomial, and it'll be the same one as
+ in the case with lex." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "s
+12:=sort(SPolynomial(g1, g2, tdeg(x,y,z)), [x,y,z], tdeg); " }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%$s12G,(*&\"\"$\"\"\"%\"yGF(F(*&\"\"#F(%\"z
+GF(F(F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "g4:=NormalForm
+(s12, G2, tdeg(x,y,z)); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#g4G,&*&
+\"\"%\"\"\"%\"zGF(!\"\"\"#;F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 16 "G2:=[op(G2),g4];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#G2G7&,*%
+\"xG\"\"\"%\"yGF(%\"zGF(F(!\"\",*F'F(*&\"\"#F(F)F(F+F*F+F.F+,(F)F(*&F.
+F(F*F(F(\"\"&F+,&*&\"\"%F(F*F(F+\"#;F(" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 41 "seq(sort(G2[i], [x,y,z], tdeg), i=1..4 );" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6&,*%\"xG\"\"\"%\"yGF%%\"zGF%F%!\"\",*F$F%*&\"
+\"#F%F&F%F(F'F(F+F(,(F&F%*&F+F%F'F%F%\"\"&F(,&*&\"\"%F%F'F%F(\"#;F%" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 245 "Here the polynomials are the sa
+me with the same leading terms, so by the same reasoning we've got our
+ Groebner Basis but it's not reduced. Since all the terms are linear, \+
+we will perform the same divisions and will therefore get the same bas
+is. " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "G2[4]:=G2[4]/4: " }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "g:=(G2[1]-G2[2]-G2[3])/2; \+
+h:=G2[1]-g+G2[4];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"gG,&%\"yG\"\"
+\"\"\"$F'" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"hG%\"xG" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "G2:=[G2[4], g, h];" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#G2G7%,&%\"zG!\"\"\"\"%\"\"\",&%\"yGF*\"\"$F*%\"
+xG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "G1=G2;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#/7%,&%\"zG!\"\"\"\"%\"\"\",&%\"yGF)\"\"$F)%\"xGF$
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 160 "Hence the Groebner basis are
+ indeed the same, and it's because at every step we had linear polynom
+ials and so the leading terms were all decide by lex ordering." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}}{MARK "5" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

@@ -1,0 +1,69 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "with(Groebner): with(PolynomialIdea
+ls):" }}{PARA 7 "" 1 "" {TEXT -1 108 "Warning, these names have been r
+ebound: HilbertDimension, IsProper, IsZeroDimensional, UnivariatePolyn
+omial\n" }}{PARA 7 "" 1 "" {TEXT -1 56 "Warning, the assigned name <,>
+ now has a global binding\n" }}{PARA 7 "" 1 "" {TEXT -1 70 "Warning, t
+he protected name subset has been redefined and unprotected\n" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "interface(imaginaryunit=_i):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "I:=<x^2+y+z-1,x+y^2+z-1
+,x+y+z^2-1>:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "G:=Basis(I,
+plex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG7&,**$)%\"zG\"
+\"'\"\"\"F+*&\"\"%F+)F)\"\"$F+F+*&F-F+)F)F-F+!\"\"*$)F)\"\"#F+F2,(*(F5
+F+F4F+%\"yGF+F+*$F1F+F+F3F2,**$)F8F5F+F+F3F2F)F+F8F2,*%\"xGF+F8F+F3F+F
++F2" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "LeadingMonomial(G,pl
+ex(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&*$)%\"zG\"\"'\"\"\"*&
+)F&\"\"#F(%\"yGF(*$)F,F+F(%\"xG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+96 "Therefore the remainders of the polynomials in the quotien ring wi
+ll be linear combinations of \{" }{XPPEDIT 18 0 "1yzz^2z^3z^4z^5;" "6)
+\"\"\"%\"yG%\"zG*$)F%\"\"#F#*$)F%\"\"$F#*$)F%\"\"%F#*$)F%\"\"&F#" }
+{TEXT -1 225 ",yz\} and so we have a monomial basis for C[x,y,z]/I.Sin
+ce from 3.1 we know that there are 5 points in the variety of I, part \+
+i) of Proposition 8 holds, since the dimension of C[x,y,z]/I is 8. Now
+ for the radical of I we have:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 14 "J:=Radical(I);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"JG-%$<,>
+G6&,**$)%\"xG\"\"#\"\"\"F-%\"yGF-%\"zGF-F-!\"\",*F+F-*$)F.F,F-F-F/F-F-
+F0,*F+F-F.F-*$)F/F,F-F-F-F0,**$)F+\"\"%F-F-*$)F+\"\"$F-F-*&F=F-F*F-F0F
++F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Gr:=Basis(J,plex(x,y
+,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#GrG7&,**$)%\"zG\"\"%\"\"\"
+F+*$)F)\"\"$F+F+*&F.F+)F)\"\"#F+!\"\"F)F+,(*(F1F+F)F+%\"yGF+F+F,F+F)F2
+,**$)F5F1F+F+*$F0F+F2F)F+F5F2,*%\"xGF+F5F+F9F+F+F2" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 32 "LeadingMonomial(Gr,plex(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#7&*$)%\"zG\"\"%\"\"\"*&F&F(%\"yGF(*$)F*\"\"#
+F(%\"xG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 58 "Therefore the monomial
+ basis for C[x,y,z]/J is formed by \{" }{XPPEDIT 18 0 "1,y,z,z^2,z^3" 
+"6'\"\"\"%\"yG%\"zG*$F%\"\"#*$F%\"\"$" }{TEXT -1 181 "\}. Hence part i
+i) of Proposition 8 holds as well, since the dimension of C[x,y,z]/J e
+quals to the number of points on V, which is 5. Now we will redo the p
+roblem usig tdeg ordering." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+24 "G:=Basis(I,tdeg(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG
+7%,*%\"xG\"\"\"%\"yGF(*$)%\"zG\"\"#F(F(F(!\"\",*F'F(*$)F)F-F(F(F,F(F(F
+.,**$)F'F-F(F(F)F(F,F(F(F." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "LeadingMonomial(G,tdeg(x,y,z));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#7%*$)%\"zG\"\"#\"\"\"*$)%\"yGF'F(*$)%\"xGF'F(" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 172 "Therefore the monomial basis for C[x,y,z]/I is \{1,
+x,y,z,xy,xz,y\} and so there are at most 7 points in V and part i) of \+
+Proposotion 8 holds.Now for the radical of I we have:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Gr:=Basis(J,tdeg(x,y,z));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%#GrG7',*%\"xG\"\"\"%\"yGF(*$)%\"zG\"\"#F(F
+(F(!\"\",&*&F'F(F,F(F(*&F)F(F,F(F.,*F'F(*$)F)F-F(F(F,F(F(F.,&*&F'F(F)F
+(F(F1F.,**$)F'F-F(F(F)F(F,F(F(F." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "LeadingMonomial(Gr,tdeg(x,y,z));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7'*$)%\"zG\"\"#\"\"\"*&%\"xGF(F&F(*$)%\"yGF'F(*&F*F(F-F
+(*$)F*F'F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 187 "Therefore the monomial basis for C[x,y,z
+]/J is \{1,x,y,z,yz\} and so as part ii) of Proposition 8 states the d
+imension of C[x,y,z]/J indeed equals to the number of points on V, whi
+ch is 5. " }}}}{MARK "17 0 0" 187 }{VIEWOPTS 1 1 0 3 4 1802 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

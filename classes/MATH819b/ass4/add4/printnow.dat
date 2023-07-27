@@ -1,0 +1,200 @@
+    |\^/|     Maple 11 (APPLE PPC OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#ADDITION QUESTION 2
+#interface(quiet=true):
+> 
+> read "common.mpl":
+> read "BBA.mpl":
+> 
+> SHOW:=proc(inG,LT)
+> local G:
+>     G:=convert(inG,list):
+>     printf("        LT(G)=%a\n",map(LT,G)):
+> end proc:
+> 
+###########
+#Problem 1#
+###########
+> 
+> var:=[x,y]:
+> f1:=x*y-1:
+> f2:=x*z-1:
+> 
+> 
+#LEX ORDER
+> G:=BBA([f1,f2],LTlex);
+                             G := {-z + y, x z - 1}
+
+> SHOW(G,LTlex):
+        LT(G)=[y, x*z]
+> 
+> chk:=Groebner:-Basis([f1,f2],plex(x,y)):
+> SHOW(chk,LTlex):
+        LT(G)=[y, x*z]
+> 
+> 
+#GRLEX ORDER
+> G:=BBA([f1,f2],LTgrlex);
+                             G := {-z + y, x z - 1}
+
+> SHOW(G,LTgrlex):
+        LT(G)=[y, x*z]
+> 
+> chk:=Groebner:-Basis([f1,f2],grlex(op(var))):
+> SHOW(chk,LTgrlex):
+        LT(G)=[y, x*z]
+> 
+###########
+#Problem 2#
+###########
+> 
+> var:=[w,x,y,z]:
+> f1:=3*x-6*y-2*z:
+> f2:=2*x-4*y+4*w:
+> f3:=x-2*y-z-w:
+> 
+#LEX ORDER
+> G:=BBA([f1,f2,f3],LTlex);
+                                         2 z
+                         G := {x - 2 y - ---, w + z/3}
+                                          3
+
+> SHOW(G,LTlex):
+        LT(G)=[x, w]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],plex(op(var))):
+> SHOW(chk,LTlex):
+        LT(G)=[3*x, 3*w]
+> 
+> 
+#GRLEX ORDER
+> G:=BBA([f1,f2,f3],LTgrlex);
+                                         2 z
+                         G := {x - 2 y - ---, w + z/3}
+                                          3
+
+> SHOW(G,LTgrlex):
+        LT(G)=[x, w]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],grlex(op(var))):
+> SHOW(chk,LTgrlex):
+        LT(G)=[3*x, 3*w]
+> 
+###########
+#Problem 3#
+###########
+> 
+> var:=[x,y,z]:
+> f1:=x^2+y+z-1:
+> f2:=x+y^2+z-1:
+> f3:=x+y+z^2-1:
+> 
+#LEX ORDER
+> G:=BBA([f1,f2,f3],LTlex);
+            2      2        4           2       2            2
+G := {-1/2 z  + y z  + 1/2 z , x + y + z  - 1, y  + z - y - z ,
+
+       3      4    6    2
+    4 z  - 4 z  + z  - z }
+
+> SHOW(G,LTlex);
+        LT(G)=[y*z^2, x, y^2, z^6]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],plex(op(var))):
+> SHOW(chk,LTlex);
+        LT(G)=[z^6, 2*y*z^2, y^2, x]
+> 
+#GRLEX ORDER
+> G:=BBA([f1,f2,f3],LTgrlex);
+                    2                   2                   2
+             G := {x  + y + z - 1, x + y  + z - 1, x + y + z  - 1}
+
+> SHOW(G,LTgrlex);
+        LT(G)=[x^2, y^2, z^2]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],grlex(op(var))):
+> SHOW(chk,LTgrlex);
+        LT(G)=[z^2, y^2, x^2]
+> 
+###########
+#Problem 4#
+###########
+> 
+> var:=[x,y,z]:
+> f1:=x-z^4:
+> f2:=y-z^5:
+> 
+#LEX ORDER
+> G:=BBA([f1,f2],LTlex);
+                                        4       5
+                             G := {x - z , y - z }
+
+> SHOW(G,LTlex);
+        LT(G)=[x, y]
+> 
+> chk:=Groebner:-Basis([f1,f2],plex(op(var))):
+> SHOW(chk,LTlex);
+        LT(G)=[y, x]
+> 
+#GRLEX ORDER
+> G:=BBA([f1,f2],LTgrlex);
+                   4    3     4         3    2   2  2    3
+            G := {x  - y  z, z  - x, y z  - x , z  y  - x , x z - y}
+
+> SHOW(G,LTgrlex);
+        LT(G)=[x^4, z^4, y*z^3, z^2*y^2, x*z]
+> 
+> chk:=Groebner:-Basis([f1,f2],grlex(op(var))):
+> SHOW(chk,LTgrlex);
+        LT(G)=[x*z, z^4, y*z^3, z^2*y^2, x^4]
+> 
+###########
+#Problem 5#
+###########
+> 
+> var:=[t,x,y,z]:
+> f1:=t^2+x^2+y^2+z^2:
+> f2:=t^2+2*x^2-x*y-z^2:
+> f3:=t+y^3-z^3:
+> 
+#LEX ORDER
+> G:=BBA([f1,f2,f3],LTlex);
+           3    3           2    6      3  3    6      2        2      3
+G := {t + y  - z , x y + 3 z  + y  - 2 y  z  + z  + 2 y , -7 y z  - 5 y
+
+            2      6      5  2    11      8  3      5  6      7      2  5
+     + 3 x z  + x z  - 3 y  z  - y   + 4 y  z  - 5 y  z  - 5 y  + 6 y  z
+
+          2  9       3  4      6     2    2    2    6      3  3    6     4
+     + 2 y  z  + 10 z  y  - 3 z  y, x  + y  + z  + y  - 2 y  z  + z , 9 z
+
+          8      4      6  2      3  9      6  6    12      8       5  3
+     + 6 z  + 5 y  + 6 y  z  - 4 z  y  + 6 y  z  + y   + 5 y  - 12 z  y
+
+          3  9       5  3       2  2      6  2    12
+     - 4 y  z  - 10 y  z  + 13 z  y  + 5 z  y  + z  }
+
+> SHOW(G,LTlex);
+        LT(G)=[t, x*y, x*z^6, x^2, y^12]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],plex(op(var))):
+> SHOW(chk,LTlex);
+        LT(G)=[y^12, x*z^6, x*y, x^2, t]
+> 
+#GRLEX ORDER
+> G:=BBA([f1,f2,f3],LTgrlex);
+               2            2    2       3    3   2            2      2
+        G := {x  - x y - 2 z  - y , t + y  - z , t  + x y + 2 y  + 3 z }
+
+> SHOW(G,LTgrlex);
+        LT(G)=[x^2, y^3, t^2]
+> 
+> chk:=Groebner:-Basis([f1,f2,f3],grlex(op(var))):
+> SHOW(chk,LTgrlex);
+        LT(G)=[x^2, t^2, y^3]
+> 
+> quit:\
+bytes used=12848484, alloc=4521156, time=2.14

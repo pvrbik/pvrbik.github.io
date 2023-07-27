@@ -1,0 +1,225 @@
+% \usepackage{geometry}
+% \geometry{letterpaper,landscape}
+% \usepackage{pictex}
+%  pictex causes me to run out of dimensions (no room for new #3)
+\usepackage{pictex}
+\usepackage{dcpic}
+\usepackage{semhelv}
+\usepackage{color}
+\usepackage{alltt}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{pifont}
+
+\definecolor{CodeColor}{named}{BlueViolet}
+% \definecolor{SystemColor}{named}{Mulberry}
+% \definecolor{SystemColor}{named}{OliveGreen}
+\definecolor{SystemColor}{named}{RedOrange}
+\definecolor{MathColor}{named}{Magenta}
+\definecolor{QuoteColor}{named}{Salmon}
+\definecolor{LawColor}{named}{Green}
+\definecolor{DefinitionColor}{named}{Red}
+\definecolor{AlgorithmColor}{named}{RawSienna}
+\definecolor{BackgroundColor}{named}{Yellow}
+\definecolor{OtherColor}{named}{PineGreen} % {Maroon}
+\definecolor{Green}{named}{OliveGreen}
+% \definecolor{BackgroundColor}{cmyk}{0,0,0.6,0}
+
+\newcommand{\semester}{Fall 2006}
+
+\newcommand{\bs}{\ensuremath{\backslash}}
+\newcommand{\zero}{\textcolor{MathColor}{\ensuremath{\mathbf{0}}~}}
+\newcommand{\one}{\textcolor{MathColor}{\ensuremath{\mathbf{1}}~}}
+
+\newcommand{\law}[1]{\textcolor{black}{(\textcolor{LawColor}{#1})}}
+
+\newcommand{\sublaw}[1]{\textcolor{black}{(\textcolor{black}{#1})}}
+
+\newcommand{\reason}[1]{\hspace{0.15in}
+    \meq\hspace{0.075in}\law{#1}}
+
+\newcommand{\subreason}[1]{\hspace{0.15in}
+    \meq\hspace{0.075in}\sublaw{#1}}
+
+\newcommand{\definition}[1]{\hspace{0.05in}
+    \textcolor{DefinitionColor}{\textit{#1}\hspace{0.05in}}}
+
+\newcommand{\meq}{\textcolor{MathColor}{\ensuremath{\equiv}}}
+\newcommand{\bottom}{\textcolor{MathColor}{\ensuremath{\bot}}}
+\newcommand{\dom}{\textcolor{MathColor}{\ensuremath{\mathit{dom~}}}}
+\newcommand{\cod}{\textcolor{MathColor}{\ensuremath{\mathit{cod~}}}}
+\newcommand{\rarrow}{\textcolor{MathColor}{\ensuremath{\rightarrow}}}
+
+\newcommand{\textcd}[2][CodeColor]{\textcolor{#1}{\texttt{#2}}}
+\newcommand{\tc}[2][CodeColor]{\textcolor{#1}{\texttt{#2}}}
+\newcommand{\tcx}[2][OtherColor]{\textcolor{#1}{\texttt{#2}}}
+\newcommand{\ts}[2][SystemColor]{\textcolor{#1}{\texttt{#2}}}
+\newcommand{\textcdl}[2][CodeColor]{\textcolor{#1}{\hspace{0.1in}\texttt{#2}}}
+\newcommand{\textcdr}[2][CodeColor]{\textcolor{#1}{\texttt{#2}\hspace{0.1in}}}
+\newcommand{\textcdlr}[2][CodeColor]{\textcolor{#1}
+{\hspace{0.1in}\texttt{#2}\hspace{0.1in}}}
+
+\newcommand{\tmm}[1]{\textcolor{AlgorithmColor}{\ensuremath{#1}}}
+
+
+\newcommand{\textmath}[1]{\textcolor{MathColor}{\ensuremath{#1}}}
+\newcommand{\tm}[1]{\textcolor{MathColor}{\ensuremath{#1}}}
+\newcommand{\tmcc}[1]{\textcolor{CodeColor}{\ensuremath{#1}}}
+\newcommand{\tmtt}[1]{\textcolor{MathColor}{\texttt{#1}}}
+\newcommand{\unmath}[1]{\textcolor{black}{\mathrm{#1}}}
+\newcommand{\tmi}[1]{\textcolor{MathColor}{\ensuremath{\mathit{#1}}}}
+\newcommand{\tmr}[1]{\textcolor{MathColor}{\ensuremath{\mathrm{#1}}}}
+\newcommand{\tmb}[1]{\textcolor{MathColor}{\ensuremath{\mathbf{#1}}}}
+
+
+\newcommand{\tbr}[1]{\textcolor{red}{\textbf{#1}}}
+
+\newcommand{\bla}[1]{\textcolor{black}{#1}}
+\newcommand{\gre}[1]{\textcolor{Green}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blu}[1]{\textcolor{blue}{#1}}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newenvironment{proof}{\textbf{Proof:}}{\hfill $\Box$}
+
+\slideframe{none}
+
+\centerslidesfalse
+
+\newlength{\tempwidth}
+
+\newenvironment{cdiag}
+   {\vspace{0.25in}
+    \begin{center}
+    \setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \begin{minipage}[t]{\tempwidth}
+    \begindc{\commdiag}[10]
+   }
+   {\enddc
+    \end{minipage}
+    \end{center}
+    \vspace{0.25in}
+   }
+
+\newenvironment{cdiag2}
+   {\vspace{0.25in}
+    % \begin{center}
+    \setlength{\tempwidth}{\linewidth/2}
+    \begin{minipage}[t]{\tempwidth}
+    \begindc{\commdiag}[10]
+   }
+   {\enddc
+    \end{minipage}
+    % \end{center}
+    \vspace{0.25in}
+   }
+
+\newenvironment{udg}
+   {\vspace{0.25in}
+    \begin{center}
+    \setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \begin{minipage}[t]{\tempwidth}
+    \begindc{2}[10]
+   }
+   {\enddc
+    \end{minipage}
+    \end{center}
+    \vspace{0.25in}
+   }
+
+\newenvironment{codenott}[1][CodeColor]
+   {\color{#1}
+    % \begin{center}
+    \setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \hspace*{0.25in}
+    \begin{minipage}[t]{\tempwidth}
+    \begin{tabbing}
+    \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \kill
+   }
+   {\end{tabbing}
+    \end{minipage}
+    % \end{center}
+    \color{black}
+   }
+
+\newenvironment{codenott2}[1][CodeColor]
+   {\color{#1}
+    % \begin{center}
+    \setlength{\tempwidth}{\linewidth/3}
+    \hspace*{0.25in}
+    \begin{minipage}[b]{\tempwidth}
+    \begin{tabbing}
+    \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \kill
+   }
+   {\end{tabbing}
+    \end{minipage}
+    % \end{center}
+    \color{black}
+   }
+
+\newenvironment{laws}
+   {\setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \hspace*{0.25in}
+    \begin{minipage}[t]{\tempwidth}
+    \begin{tabular}{lr}
+   }
+   {\end{tabular}
+    \end{minipage}
+   }
+
+\newenvironment{code}[1][CodeColor]
+   {\color{#1}
+    % \begin{center}
+    \setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \hspace*{0.25in}
+    \begin{minipage}[t]{\tempwidth}
+    \begin{alltt}
+    \begin{tabbing}
+    \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \hspace{0.075in} \= \kill
+   }
+   {\end{tabbing}
+    \end{alltt}
+    \end{minipage}
+    % \end{center}
+    \color{black}
+   }
+
+\newenvironment{mcode}[1][MathColor]
+   {\color{#1}
+    % \begin{center}
+    \setlength{\tempwidth}{\linewidth}
+    \addtolength{\tempwidth}{-2\columnsep}
+    \hspace*{0.25in}
+    \begin{minipage}[t]{\tempwidth}
+    \[\begin{array}{lrll}}
+   {\end{array}\]
+    \end{minipage}
+    % \end{center}
+    \color{black}
+   }
+
+\newcommand{\mF}{\textcolor{MathColor}{\ensuremath{\tc{fmap}_{F}~}}}
+\newcommand{\Id}{\textcolor{MathColor}{\ensuremath{\mathit{Id}}}}
+\newcommand{\nt}{\textcolor{MathColor}{\ensuremath{\stackrel{.}{\rightarrow}}}}
+\newcommand{\List}{\textcolor{MathColor}{\ensuremath{\tc{[}?\tc{]}}}}
+\newcommand{\LL}{\textcolor{MathColor}{\ensuremath{\tc{[[}?\tc{]]}}}}
+\newcommand{\LA}{\textcolor{MathColor}{\ensuremath{\tc{[}A\tc{]}}}}
+\newcommand{\LB}{\textcolor{MathColor}{\ensuremath{\tc{[}B\tc{]}}}}
+\newcommand{\LLA}{\textcolor{MathColor}{\ensuremath{\tc{[[}A\tc{]]}}}}
+\newcommand{\LLB}{\textcolor{MathColor}{\ensuremath{\tc{[[}B\tc{]]}}}}
+\newcommand{\lam}{\textcolor{CodeColor}{\ensuremath{\lambda}}}
+\newcommand{\redu}{\textcolor{MathColor}{\ensuremath{\longrightarrow}}}
+\newcommand{\Has}{\textit{Haskell}\,}
+
+\newcommand{\ack}{I would like to thank Tai Meng for many corrections
+and suggestions for improvements to these notes.  Of course, the remaining
+errors are my fault.}

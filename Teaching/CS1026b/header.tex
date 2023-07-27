@@ -1,0 +1,127 @@
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb,amsmath, subfigure, amsxtra, amsthm, color}
+\usepackage{fancyvrb}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+
+\usepackage{listings}
+\lstdefinelanguage{maple}
+	{morekeywords={true, false, try, catch, return, break, error, 
+	               module, export, local, option, in, use,
+                 and, or, not, xor, xnor,
+                 if, then, elif, else, fi,
+                 while, for, from, by, to, do, od,
+                 proc, nargs, local, global, end, NULL}}
+\lstset{language=maple,numbers=left,basicstyle=\footnotesize,numberstyle=\tiny, breakatwhitespace=false,frame=single,morecomment=[l]{\#},stringstyle=\ttfamily}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{MapleRed}{rgb}{1,0,0}
+\definecolor{MapleBlue}{rgb}{0,0,1}
+\definecolor{MaplePink}{rgb}{1,0,1}
+
+%\definecolor{MapleRed}{rgb}{0,0,0}
+%\definecolor{MapleBlue}{rgb}{0,0,0}
+
+\renewcommand{\arraystretch}{1.25}
+
+%\pagestyle{headings}
+
+%\sloppy
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+
+
+\renewcommand{\implies}{\Rightarrow}
+\newcommand{\imp}{\textbf}
+\newcommand{\dom}[1]{\textsf{dom} (#1)}
+\newcommand{\cod}[1]{\textsf{cod}(#1)}
+\newcommand{\arr}[1]{\mathcal{#1}\mathrm{-arrows}}
+\newcommand{\obj}[1]{\mathcal{#1}\mathrm{-objects}}
+\newcommand{\state}[1]{\item[#1] \textcolor{white}{.} \\ \textcolor{white}{.} \\ }
+\newcommand{\Lstate}[1]{\item[#1] \nl}
+\newcommand{\id}[1]{id_{#1}}
+\newcommand{\nl}{\textcolor{white}{.}\ }
+\newcommand{\func}[3]{#1 : #2 \rightarrow #3}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\point}[1]{\begin{itemize} \item[$\cdot$] #1 \end{itemize}}
+\newcommand{\blank}{\textcolor{white}{-}}
+\newcommand{\fieldt}{\mathbb{Z}_q[t]}
+\newcommand{\fieldtx}{\mathbb{Z}_q[t][x]}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\Res}[1]{\textrm{Res}_{#1} }
+
+\newcommand{\x}{\boldsymbol{x}}
+\renewcommand{\H}{\boldsymbol{H}}
+\newcommand{\zero}{\boldsymbol{0}}
+\newcommand{\z}{\boldsymbol{z}}
+\newcommand{\F}{\boldsymbol{F}}
+\newcommand{\p}{\boldsymbol{p}}
+\newcommand{\q}{\boldsymbol{q}}
+\newcommand{\alp}{{\boldsymbol{\alpha}}}
+\newcommand{\bet}{{\boldsymbol{\beta}}}
+
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\W}{\mathbf{W}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\A}{\mathbf{A}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\II}{\mathbf{I}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+
+\newcommand{\eval}[2]{ \left.#1\right |_{#2}}
+\newcommand{\xinit}{x_{\text{init}}}
+\newcommand{\idnty}{\text{Id}}
+
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+
+\newcommand{\FF}{\mathbf{F}}
+\newcommand{\JJ}{\mathbf{J}}
+\newcommand{\XX}{\mathbf{X}}
+
+\newcommand{\Xinit}{\XX_{\text{init}}}
+\newcommand{\Ginit}{G_{\text{init}}}
+
+\renewcommand{\mod}{\text{ mod }}
+\newcommand{\Mod}{\hspace{2mm}\mod}
+
+\newcommand{\rem}{\text{ rem }}
+\newcommand{\quo}{\text{ quo }}
+\renewcommand{\div}{\text{ div }}
+\newcommand{\MM}{\textsf{M}}
+
+\def\MapleInput#1{\noindent{\tt{[}\color{MapleRed}{\tt{>}\tt{#1}}}}
+\def\MapleOutput#1{{\begin{center} \emph{\color{MapleBlue}{#1}} \end{center}}}
+\def\MapleWarning#1{\noindent{{\small {\tt \color{MaplePink}{#1} }}}}
+
+
+\DefineVerbatimEnvironment% 
+{MapleInputs}{Verbatim}{formatcom=\color{MapleRed}}
+
+\renewcommand{\FancyVerbFormatLine}[1]{\makebox[0.43cm][l]{\color{black}{[}\color{MapleRed}{>}}#1}
+
+\newcommand{\PutEnd}{\begin{center}
+\vspace{\fill}\ \newline
+{\tiny \rm $ $Typeset by: Paul Vrbik$ $ }
+{\tiny \rm $ $Compiled on \today$ $ }
+\end{center}
+}

@@ -1,0 +1,253 @@
+\documentclass[12pt]{report}
+
+\include{header}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subfigure}
+\usepackage{tikz}
+
+\usepackage{listings}
+\lstset{language=Java}
+
+\newcommand{\Ans}{\hfill {\Huge\begin{tabular}{|c|} \hline \hspace{2.5cm} \hfill \\ \hline \end{tabular}} }
+
+\newcommand{\AnsBox}[1]{
+\hspace{-1cm}\fbox{
+\begin{minipage}[b][#1][c]{17.6cm}
+\hfill
+\end{minipage}}
+}
+
+\begin{document}
+
+%%%TITLE PAGE%%%
+{\large
+\begin{center}
+{\it UNIVERSITY OF WESTERN ONTARIO}
+\end{center}
+\begin{center}
+\bf{Computer Science 1026b, Spring 2010}\\
+\large{\bf{Computer Science Fundamentals I}}\\
+{\large{\it MIDTERM TEST }}\\
+9:30am - 11:20am, Thursday, March 4, 2010.
+\end{center}
+
+\begin{center}
+\begin{tabular}{ r c}
+Name (last, first): & \rule{2in}{0.01in} \\
+Student Number: & \rule{2in}{0.01in}
+\end{tabular}
+\end{center}
+
+{\normalsize
+\vspace{20pt}
+\begin{center}\textbf{Instructions}\end{center}
+\begin{enumerate}
+\item TURN OFF YOUR CELL PHONE.
+\item Do not turn this page until instructed to do so.
+\item Cheating (e.g. copying someone else's solutions, using prohibited material like your textbook and notes, 
+or using electrical communication devices) will result in a zero grade and possible expulsion from the course.
+\item We reserve the right to orally examine you regarding your solutions and then regrade accordingly.
+\item Provide your solution in the box if a box is provided. All writing outside boxes will be ignored and as this is the case feel free to use the back of pages for rough work.
+\item Only those exams written in pen are eligible for regrading.
+%\item It is your responsibility to ensure that this exam booklet has \emph{six pages}.
+\item Correct java code is preferable but pseudo-code (i.e. something resembling code) is 
+acceptable and if appropriate will be accepted for partial marks.
+\end{enumerate}
+\vspace{30pt}
+}
+
+\begin{center}
+{\Large
+\begin{tabular}{||c|c|r||} \hline 
+ 1 & 10 &\hspace{10mm} \hfill \\ \hline 
+ 2 & 20 &       \\ \hline
+ 3 & 10 &      \\ \hline
+4 &  10 &    \\ \hline
+Total & 50 & \\ \hline 
+\end{tabular}
+}
+\end{center}
+}
+\clearpage
+%%%END TITLE PAGE%%%
+
+\section*{Single Answer}
+Each answer in this section is worth \emph{1 point} for a total of \emph{10 points}.
+\subsection*{Question 1}
+\emph{The following questions contain valid Java code and will provide output (without error) if entered into 
+the DrJava interactions pane.} 
+
+
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\begin{enumerate}
+\item Suppose we have defined
+\begin{verbatim}
+int n = 4;
+double x = 2.5;
+\end{verbatim}
+then the value of the expression \texttt{5 * x - n / 5} is: \Ans
+
+\item Suppose we have defined
+\begin{verbatim}
+int num1 = 50, num2 = 50;
+\end{verbatim}
+then the value of the expression \texttt{(num1 == num2)} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 3;
+x = x + x;
+x = x + x;
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 3, y = 5;
+x = y;
+y = x;
+\end{verbatim}
+the value \texttt{y} is: \Ans
+
+\clearpage
+\item If we declare the array
+\begin{verbatim}
+int [] intArr = {2,4,6,8,10};
+\end{verbatim}
+then the value stored in \texttt{intArr[1]} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int sum = 0;
+int count = 1;
+while (count < 5) {
+    sum = sum + count;
+    count = count + 2;
+}
+\end{verbatim}
+the value of \texttt{count} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+bool x = (true && false) || (true && true) || false
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = (3+3*2) % 6
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int [] xs = { 1, 2, 3, 4, 5, 6, 7 };
+System.out.println(xs[xs.length]);
+\end{verbatim}
+what is printed? (Your solution doesn't have to be exact). \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+int x = (int) 2.3 > 2;
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\end{enumerate}
+
+%%%SHORT ANSWER%%%
+\clearpage
+\section*{Short Answer}
+Each solution in this section is worth \emph{4 points} for a total of \emph{20 points}.
+\subsection*{Question 2}
+\begin{enumerate}
+\item What will be the output of the following code segment?
+\begin{verbatim}
+for (int row = 1; row <=3; row ++) {
+    for (int count = 1; count <= (4 - row); count++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+\end{verbatim}
+\AnsBox{5cm}
+\item What happens when the following code segment is executed? Why?
+\begin{verbatim}
+int sum = 0;
+int count = 5;
+while (count > 1) {
+    sum = sum + count;
+    count = count + 2;
+}
+System.out.println(sum);
+\end{verbatim}
+\AnsBox{5cm}
+\clearpage
+
+\item In the space provided write a \texttt{for} loop that is equivalent to the following \texttt{while} loop.
+\begin{verbatim}
+int sum = 0;
+int i = 3;
+while (i < 100) {
+    sum = sum + i;
+    i = i + 3;
+}
+\end{verbatim}
+\AnsBox{8cm}
+
+
+\item Suppose \texttt{Yertle} and \texttt{Franklin} are two Turtle objects in the same World. Provide a code segment that makes the two turtles face each other.
+
+\AnsBox{8cm}
+
+\item Write a code segment that creates a 400px by 300px (width by height) Picture object with all pixels set to red. Assume that this code will be part of the main program and \emph{not} in the Picture class.
+
+\AnsBox{12cm}
+
+\end{enumerate}
+
+\clearpage
+\section*{Long Answer}
+Each solution in this section is worth \emph{10 points} for a total of \emph{20 points}.
+\subsection*{Question 3}
+\begin{enumerate}
+\item Write an algorithm in pseudo-code (i.e. code mixed with english) which prints the following pattern when given \texttt{n}. Your method should work for any value of $n$ and not only on the examples given below.
+
+\begin{center}
+\begin{tabular}{l  c l c l }
+$n=2$ 		&\hspace{50px}\hfill	& $n=3$ 		&\hspace{50px}\hfill& $n=4$ \\
+\hline
+\texttt{xx}		&&\texttt{xxx}	&& \texttt{xxxx} \\
+\texttt{xo}		&&\texttt{xxo}	&& \texttt{xxxo} \\
+\texttt{oo}		&&\texttt{xoo}	&& \texttt{xxoo} \\
+			&&\texttt{ooo}	&& \texttt{xooo} \\
+			&&			&& \texttt{oooo} \\
+\hline
+\end{tabular}
+\end{center}
+
+\AnsBox{13cm}
+
+\item Write a java class method \texttt{static void PrintPattern (int n) } that prints the same pattern as in Part a.
+
+\AnsBox{14cm}
+
+\end{enumerate}
+
+\clearpage
+\subsection*{Question 4}
+Write a java object method \texttt{void nSidedPolygoon (int n, int s)} for inclusion in the Turtle class that takes as input $n$ and $s$ and draws an $n$-sided polygon with side length $s$. You may assume your turtle never goes out of bounds. The ``exterior angle'' will be ${360^{\circ}}/{n}$ as illustrated for $n=3$ and $n=6$ in the figure below. \\
+\begin{center}
+\input{Polygon}\\
+\end{center}
+
+\AnsBox{14cm}
+
+\clearpage
+\begin{center}
+\textbf{Rough Work}\\
+\emph{Nothing on this page will be marked. If this page is removed your exam will not be graded.}
+\end{center}
+
+\end{document}

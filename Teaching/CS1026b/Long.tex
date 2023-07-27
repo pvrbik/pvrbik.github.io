@@ -1,0 +1,65 @@
+% !TEX root =  OurExam.tex
+\clearpage
+\section*{\S 3 Long Answers}
+Each solution in this section is worth \emph{10 points} for a total of \emph{40 points}.\\
+
+\subsection*{Question 8}
+\begin{enumerate}
+\item Write an algorithm in pseudo-code (i.e. code mixed with English) which prints the following pattern when given \texttt{n}. Your method should work for any value of $n$ and not only on the examples given below.
+Note that for a given \texttt{n}, the printed pattern has \texttt{n} rows
+and \texttt{n} columns.
+
+\begin{center}
+\begin{tabular}{l  c l c l }
+$n=3$ 		&\hspace{50px}\hfill	& $n=4$ 		&\hspace{50px}\hfill& $n=5$ \\
+\hline
+\texttt{..1}		&&\texttt{...1}		&& \texttt{....1} \\
+\texttt{.22}		&&\texttt{..22}		&& \texttt{...22} \\
+\texttt{333}	&&\texttt{.333}		&& \texttt{..333} \\
+			&&\texttt{4444}		&& \texttt{.4444} \\
+			&&				&& \texttt{55555} \\
+\hline
+\end{tabular}
+\end{center}
+
+\hspace{-0.55cm}\AnsBox{10cm} \clearpage
+
+\item Write a java class method \texttt{static void PrintPattern (int n) } that prints the same pattern as in Part a.
+
+\hspace{-0.55cm}\AnsBox{20cm}
+
+\end{enumerate}
+
+\clearpage
+\subsection*{Question 9}
+Write a java object method \texttt{void StairCase (int n, int s)} for inclusion in the \texttt{Turtle} class that takes as input $n$ and $s$ and draws a staircase with $n$ stairs of side length $s$. This illustrated for $n=2$ and $n=3$ below (but remember your code should work for \emph{any} value of $n$).
+
+You may assume that drawing these stairs will never cause  your turtle to go out of its world's boundaries. 
+\begin{center}
+\input{Staircase}\\
+\end{center}
+
+\AnsBox{14cm}
+
+\subsection*{Question 10}
+Write a java class method \texttt{int sum (int n)} that finds the sum of the first $n$ positive integers (i.e. $1+2+3+\cdots+n.$) For example \texttt{sum(3)} returns $6$ because $1+2+3=6$ and \texttt{sum(8)} returns $36$ because $1+2+3+\cdots+8 = 36$. Your code should work for these examples \emph{and} any other positive integer $n$.\\
+
+\AnsBox{18.5cm} \clearpage
+
+\subsection*{Question 11}
+Determining if a \texttt{Pixel} object is white is relatively straightforward: if a \texttt{Pixel} object's \texttt{red}, \texttt{green}, and \texttt{blue} components are all 255, then the \texttt{Pixel} object is white.
+
+\begin{enumerate}
+\item Write a java method: \texttt{boolean isWhitePixel (Pixel P)}, for inclusion in the \texttt{Picture} class that tests if a pixel \texttt{P} is white.\\
+
+\hspace{-0.55cm}\AnsBox{18cm}
+
+\item Using your method from Part a., write a java object method: \texttt{int countWhitePixels()}, for inclusion in the \texttt{Picture} class, that counts the number of white pixels in a picture. This method should take no parameters and return an integer that is the number of white pixels in the picture.\\
+
+\hspace{-0.55cm}\AnsBox{14cm}
+
+\item Suppose \texttt{Picture Sunset = new Picture(...)} has been properly initialized. What would you type in the interactions pane to determine the number of white pixels in \texttt{Sunset} (you may assume all classes have loaded properly).\\
+
+\hspace{-0.55cm}\AnsBox{2cm}
+
+\end{enumerate}

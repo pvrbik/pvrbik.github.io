@@ -1,0 +1,58 @@
+####Question 4A###
+####PAUL VRBIK###
+####301056796 ###
+> 
+> ModDiv:=proc(A,inB, pBound) local p,P,ans,up,B:
+>     
+>     B:=primpart(inB,x,'cntB');
+>     
+>     p:=100:
+>     P:=1:
+>     ans:=1:
+>     while (P<pBound) do
+>         
+>         p:=nextprime(p);
+>         
+>         up:=Quo(A,B,x,'rp') mod p:
+>         
+>         if (rp<>0) then
+>             return "false";
+>         end if:
+>         
+>         ans:=chrem([up,ans],[p,P]);
+>         P:=P*p:
+>         
+>     end do:
+>     
+>     return ans/cntB;
+>     
+> end proc:
+> 
+> 
+###Part (A)###
+> B:=1234*x^2+4321*x+2222;
+                                     2
+                          B := 1234 x  + 4321 x + 2222
+
+> Q:=1357*x^2+7531*x+3333;
+                                     2
+                          Q := 1357 x  + 7531 x + 3333
+
+> A:=expand(B*Q);
+                     4             3             2
+       A := 1674538 x  + 15156851 x  + 39669627 x  + 31135775 x + 7405926
+
+> 
+> divide(A,B,'q'); q;
+                                      true
+
+                                  2
+                            1357 x  + 7531 x + 3333
+
+> 
+> pbnd:=norm(A,infinity);
+                                pbnd := 39669627
+
+> ModDiv(A,B,pbnd);
+                                  2
+                            1357 x  + 7531 x + 3333

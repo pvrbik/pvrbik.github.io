@@ -1,0 +1,112 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part b." }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "y[1],y[6],x[9],x[10]:=0,0,1,1:" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 318 "eqns:=\{x[7]=y[5],y[7]=x[5],(x[4]-x[1])^2+(y[
+4]-y[1])^2=m^2,(x[4]-x[6])^2+(y[4]-y[6])^2=m^2,(x[4]-x[7])^2+(y[4]-y[7
+])^2=m^2,(x[6]-x[7])^2+(y[6]-y[7])^2=m^2,(x[6]-x[9])^2+(y[6]-y[9])^2=m
+^2,(x[9]-x[7])^2+(y[9]-y[7])^2=m^2,(x[7]-x[10])^2+(y[7]-y[10])^2=m^2,(
+x[7]-x[5])^2+(y[7]-y[5])^2=m^2,(x[4]-x[5])^2+(y[4]-y[5])^2=m^2\}:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "F:=[seq(lhs(e)-rhs(e),e=eqns
+)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "G:=Basis(F,lexdeg([x
+[1],x[4],y[4],x[6],x[7],y[7],y[9],y[10]],[m]));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"GG7#\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 14 "map(indets,G);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7#<\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part c." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 76 "y[4],y[8],x[9],y[9],x[10],x[4]:=0,1,1,0,1,m: x[2],y
+[6],y[2],y[5]:=0,1,m,1-m:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+226 "eqns:=\{x[4]=y[2],x[8]=x[6]+m,(x[4]-x[7])^2+(y[4]-y[7])^2=m^2,(x[
+9]-x[7])^2+(y[9]-y[7])^2=m^2,(x[7]-x[10])^2+(y[7]-y[10])^2=m^2,(x[8]-x
+[10])^2+(y[8]-y[10])^2=m^2,(x[2]-x[5])^2+(y[2]-y[5])^2=m^2,(x[5]-x[6])
+^2+(y[5]-y[6])^2=m^2\}:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "
+F:=[seq(lhs(e)-rhs(e),e=eqns)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 71 "G:=Basis([op(F),1-m*z],lexdeg([x[7],y[7],y[10],x[8],x[5],x[6],
+z],[m])):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);
+" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#77<#%\"mG<$F%%\"zG<$F%&%\"xG6#\"\"
+'<%F%F)&F*6#\"\"&<%F%&F*6#\"\")F)<$F%&%\"yG6#\"#5<$F%&F76#\"\"(<$F%&F*
+F<F(F-<%F%F)F6<%F%F)F;<$F%F.<&F%F)F6F.<&F%F)F;F.F@<&F%F)F;F6F:<%F%F?F;
+F-FE" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "M:=G[1]:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "factor(M);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#*(),(*&\"#@\"\"\")%\"mG\"\"#F(F(*&\"#5F(F*F(!\"\"\"\"&F
+(F+F(),**&\"\"*F()F*\"\"$F(F(*&\"#LF(F)F(F.*&\"#))F(F*F(F(\"#KF.F+F(),
+&F*F(F(F.\"\"%F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 77 "Clearly m can
+not be one, so let's solve for the roots of the other 2 factors." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "solve(21*m^2-10*m+5,m);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$,&#\"\"&\"#@\"\"\"*&^##\"\"%F&F'F%#F'
+\"\"#F',&F$F'*&^##!\"%F&F'F%F,F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+57 "These solutions are both complex, so we can discard them." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "fsolve(9*m^3-33*m^2+88*m-32,
+m);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+:!>*HU!#5" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 5 "m:=%;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%\"mG$\"+:!>*HU!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "r:=m/
+(2*m+2):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "r;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#$\"+flF'[\"!#5" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 46 "Now let's check whether circles 5 and 7 touch." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "eval(eqns,m=m);" }}{PARA 12 "" 1 "
+" {XPPMATH 20 "6#<*/,&*$)&%\"xG6#\"\"&\"\"#\"\"\"F-$\"+%*))4sB!#6F-$\"
++([@#*y\"!#5/,&*$),&F(F-&F)6#\"\"'!\"\"F,F-F-F1F-F1/$\"+:!>*HUF3F>/&F)
+6#\"\"),&F9F-F>F-/,&*$),&F>F-&F)6#\"\"(F<F,F-F-*$)&%\"yGFKF,F-F-F1/,&*
+$),&F-F-FJF<F,F-F-FMF-F1/,&*$),&FJF-F-F<F,F-F-*$),&FOF-&FP6#\"#5F<F,F-
+F-F1/,&*$),&FAF-F-F<F,F-F-*$),&F-F-FhnF<F,F-F-F1" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 43 "solve(x[5]^2+.2372098894e-1 = .1789221487);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6$$\"+SybRR!#5$!+SybRRF%" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "x[5]:=.3939557840:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "y[5];" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#$\"+&)43qd!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "solv
+e(\{(.4229919015-x[7])^2+y[7]^2 = .1789221487, (1-x[7])^2+y[7]^2 = .17
+89221487\});" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$<$/&%\"yG6#\"\"($\"+E1
+M$4$!#5/&%\"xGF'$\"+3&f\\6(F+<$/F%$!+E1M$4$F+F," }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 37 "x[7]:=.7114959508: y[7]:=.3093340626:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "evalb((x[5]-x[7])^2+(y[5]-y[
+7])^2=m^2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&falseG" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 37 "Therefore these circles do not touch." }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Part d." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "with(Groebner):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "y[4]
+,y[8],x[9],y[9],x[10],x[4]:=0,1,1,0,1,m: x[2],y[6],y[2],y[5]:=0,1,m,1-
+m:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 226 "eqns:=\{x[4]=y[2],x[
+8]=x[6]+m,(x[4]-x[7])^2+(y[4]-y[7])^2=m^2,(x[9]-x[7])^2+(y[9]-y[7])^2=
+m^2,(x[7]-x[10])^2+(y[7]-y[10])^2=m^2,(x[8]-x[10])^2+(y[8]-y[10])^2=m^
+2,(x[2]-x[5])^2+(y[2]-y[5])^2=m^2,(x[5]-x[6])^2+(y[5]-y[6])^2=m^2\}:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "F:=[seq(lhs(e)-rhs(e),e=e
+qns)]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "G:=Basis([op(F),1
+-m*z],lexdeg([x[7],y[7],y[10],x[8],x[5],x[6],z],[m])):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "map(indets,G);" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#77<#%\"mG<$F%%\"zG<$F%&%\"xG6#\"\"'<%F%F)&F*6#\"\"&<%F%
+&F*6#\"\")F)<$F%&%\"yG6#\"#5<$F%&F76#\"\"(<$F%&F*F<F(F-<%F%F)F6<%F%F)F
+;<$F%F.<&F%F)F6F.<&F%F)F;F.F@<&F%F)F;F6F:<%F%F?F;F-FE" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "M:=G[1]:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 10 "factor(M);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*(),(
+*&\"#@\"\"\")%\"mG\"\"#F(F(*&\"#5F(F*F(!\"\"\"\"&F(F+F(),**&\"\"*F()F*
+\"\"$F(F(*&\"#LF(F)F(F.*&\"#))F(F*F(F(\"#KF.F+F(),&F*F(F(F.\"\"%F(" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 77 "Clearly m cannot be one, so let's
+ solve for the roots of the other 2 factors." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 23 "solve(21*m^2-10*m+5,m);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$,&#\"\"&\"#@\"\"\"*&^##\"\"%F&F'F%#F'\"\"#F',&F$F'*&^##
+!\"%F&F'F%F,F'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "THese solutions
+ are both complex, so we can discard them." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 31 "fsolve(9*m^3-33*m^2+88*m-32,m);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#$\"+:!>*HU!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 5 "m:=%;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG$\"+:!>*HU!#5" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "r:=m/(2*m+2):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "r;" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#$\"+flF'[\"!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "38 0 0" 37 }
+{VIEWOPTS 1 1 0 3 4 1802 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

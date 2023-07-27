@@ -1,0 +1,102 @@
+\documentclass{seminar}
+\nonstopmode
+
+\input{lectures}
+
+\newcommand{\NAT}{\textcolor{MathColor}{\ensuremath{\mathbb{N}}}}
+\newcommand{\ZZ}{\textcolor{MathColor}{\ensuremath{\mathbb{Z}}}}
+\newcommand{\ZP}{\textcolor{MathColor}{\ensuremath{\mathbb{Z}^{+}}}}
+\newcommand{\QQ}{\textcolor{MathColor}{\ensuremath{\mathbb{Q}}}}
+\newcommand{\QP}{\textcolor{MathColor}{\ensuremath{\mathbb{Q}^{+}}}}
+\newcommand{\suc}{\tmi{succ}}
+\newcommand{\Ha}{\tmi{Hask}}
+\newcommand{\vs}{\vspace{0.3in}}
+\newcommand{\CC}{\tm{\cal C}}
+\newcommand{\CCC}{\tm{{\cal C}\,}}
+\newcommand{\COP}{\tm{\cal C^\mathrm{op}}}
+\newcommand{\DD}{\tm{\cal D}}
+\newcommand{\DDD}{\tm{{\cal D}\,}}
+
+\newcommand{\pb}{\textcolor{MathColor}{\ensuremath{+\!\!_{_{_{\bot}}}}}}
+
+%\newpagestyle{lectures}{\makebox[1in][l]{CMPT 481/731} \hfill Functional Programming
+%\hfill \makebox[1in][r]{\semester}}
+%{\makebox[2in][l]{Natural Numbers:  Reference}
+%\hfill F. Warren
+%Burton \hfill \makebox[2in][r]{\thepage}}
+
+%\pagestyle{lectures}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{slide}
+
+\begin{center}
+\begin{LARGE}
+\textbf{Natural Numbers:  Reference}
+\end{LARGE}\\[3ex]
+\end{center}
+
+We will use the following definitions throughout the lemmas and
+the theorem that follows.
+
+\begin{code}
+f1 n     = (n, True)\\
+f2 n     = (n, p n)\\
+g        = Succ\\
+h (n, q) = (Succ n, q || p (Succ n))\\
+a        = Zero\\
+b1       = f1 a = (Zero, True)\\
+b2       = f2 a = (Zero, p Zero)
+\end{code}
+
+
+\newpage
+
+\begin{lemma} \label{lemma-a}
+\tc{foldn Succ Zero = id}
+\end{lemma}
+
+\vspace{0.2in}
+
+\begin{lemma} \label{lemma-b}
+If ~ \tc{p  n \tmcc{\Rightarrow} p (Succ n)}
+\newline
+then ~ \tc{p (Succ n) = (p n || p  (Succ n))}
+\end{lemma}
+
+\vspace{0.2in}
+
+\begin{lemma} \label{lemma-e}
+\tc{f1.g = h.f1}
+\end{lemma}
+
+\vspace{0.2in}
+
+
+\begin{lemma}
+\tc{f1 = foldn h (Zero, True)}
+\end{lemma}
+
+\vspace{0.2in}
+
+\begin{lemma} \label{lemma-f}
+If ~ \tc{p  n \tm{\Rightarrow} p (Succ  n)} ~
+then ~
+\tc{f2.g = h.f2}
+\end{lemma}
+
+\vspace{0.2in}
+
+\begin{lemma} \label{lemma-c}
+If ~  \tc{(p Zero}) \tm{\wedge}
+\tc{(p n \tm{\Rightarrow} p (Succ n))}
+\newline
+then ~ \tc{f2 = foldn h (Zero, True)}
+\end{lemma}
+
+\end{slide}
+
+\end{document}
+

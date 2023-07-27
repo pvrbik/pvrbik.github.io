@@ -1,0 +1,329 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 
+4 1 0 1 0 2 2 0 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier
+" 1 10 0 0 255 1 2 2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 1 2 
+2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output
+" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "
+" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 
+2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 51 "with(Groebner): with(StringTools): with(List
+Tools):" }}{PARA 7 "" 1 "" {TEXT -1 95 "Warning, these names have been
+ rebound: Group, Join, Reverse, Rotate, Search, SearchAll, Split\n" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "LTlex:= proc(f) local c,m; \+
+c:=lcoeff(f,X,'m'); c*m; end:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 156 "LTgrlex:= proc(f) local d,g,t;\n if not type(f,`+`) then return
+ f; fi;\n d:= max(seq(degree(t), t=f));\n g:= add(`if`(degree(t)=d, t,
+ 0), t=f);\n LTlex(g);\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 187 "LTgrevlex:= proc(f) \nlocal d,g,t,c,m;\n if not type(f,`+`) the
+n return f; fi;\n d:= max(seq(degree(t), t=f));\n g:= add(`if`(degree(
+t)=d, t, 0), t=f);\n c:=tcoeff(g,Reverse(X),'m'); c*m;\nend:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 128 "LCM:= proc(f,g)\n local h,i
+;\n h:=1;\n for i from 1 to nops(X) do\n  h:=h*X[i]^(max(degree(f,X[i]
+), degree(g,X[i]))); \n od;\n h;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 211 "LTcomp:= proc(f,g) #f and g are monomials, procedure
+ returns true if f divides g\n local i;\n global X;\n for i from 1 to \+
+nops(X) do\n  if degree(f,X[i])>degree(g,X[i]) then return false; fi;
+\n od;\n return true;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+586 "DIVIDE:=proc(f,FF :: list, MO)\nglobal X;\nlocal F,r,t,p,s,i,a,LT
+;\n s:=nops(FF);\n for i from 1 to s do\n  a[i]:=0;\n od;\n if MO=plex
+(op(X)) then LT:=x->LTlex(x);\n elif MO=grlex(op(X)) then LT:=x->LTgrl
+ex(x); \n elif MO=grevlex(op(X)) then LT:=x->LTgrevlex(x); \n fi;\n fo
+r i from 1 to s do\n  F[i]:=FF[i]/icontent(FF[i]); \n   F[i]:=[LT(FF[i
+]), FF[i]]\n od; \n (p,r):=(f,0);\n while p<>0 do\n  i:=1;\n  while i<
+=s and LTcomp(F[i][1],LT(p))=false do   \n   i:=i+1; \n  od;\n  if i>s
+ then (p,r):=p-LT(p),r+LT(p); \n  else t:=eval(LT(p)/F[i][1]); (p,a[i]
+):=(expand(p-t*F[i][2]), a[i]+t);\n  fi;\n od;\n r;\nend:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 278 "S:=proc(f,g, MO) #constructs S-pol
+ynomial \nglobal X;\nlocal LT,h,s,i;\nh:=1;\nif MO=plex(op(X)) then LT
+:=x->LTlex(x);\nelif MO=grlex(op(X)) then LT:=x->LTgrlex(x); \nelif MO
+=grevlex(op(X)) then LT:=x->LTgrevlex(x); \nfi;\nh:=LCM(LT(f), LT(g));
+\ns:=expand((h/LT(f))*f-(h/LT(g))*g); \nend:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 1170 "BB:=proc(f :: list, MO)\nglobal X;\nlocal s,t,
+G,G0,i,j,LT,temp;\nG:=f;\n\nif MO=plex(op(X)) then LT:=x->LTlex(x);\ne
+lif MO=grlex(op(X)) then LT:=x->LTgrlex(x); \nelif MO=grevlex(op(X)) t
+hen LT:=x->LTgrevlex(x);  \nfi;\n\nfor i from 1 to nops(G) do\n G[i]:=
+G[i]/icontent(G[i])/sign(LT(G[i]));\nod;\n\nwhile G0<>G do\n G0:=G;\n \+
+t:=nops(G0);\n for i from 1 to t do\n  for j from 1 to t do\n   s:=DIV
+IDE(S(G0[i],G0[j],MO),G0,MO);\n   if i<>j and s<>0 and not(member(s, G
+)) then G:=[op(G),s/icontent(s)/sign(LT(s))];             \n    print(
+G);     \n   fi;\n  od;\n od;\nod;\n\n#this is the Groebner basis, not
+ we need to first make it minimal and then reduced \n\nfor i from 1 to
+ nops(G) do\n if i<=nops(G) then \n  for j from 1 to i-1 do\n   if G[i
+]<>garbage and G[j]<>garbage then\n    if LTcomp(LT(G[i]), LT(G[j])) t
+hen G := subsop(j=garbage,G); \n    elif LTcomp(LT(G[j]), LT(G[i])) th
+en G := subsop(i=garbage,G);\n    fi;\n   fi; \n  od;\n fi; \nod;\n\nt
+emp,i:=true,1;\nwhile i<=nops(G) do\n if G[i]=garbage then G:=subsop(i
+=NULL, G); temp:=false; fi;\n if temp=true then i:=i+1; fi;\n temp:=tr
+ue;\nod;\n\ns:=[seq( DIVIDE(G[i],subsop(i=NULL,G), MO), i=1..nops(G) )
+];\nG:=[seq(i/icontent(i)/sign(LT(i)),i=s)];\n\nG;\nend:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 104 "Now that we've implemented the Buchberge
+r's Algorithm, we will run it on linear system from sectiom 2.7." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "X:=[x,y,z,w]:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "f1:=3*x-6*y-2*z: f2:=2*x-4*y+4*w: f
+3:=x-2*y-z-w: MO:=plex(op(X)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 19 "BB([f1,f2,f3], MO);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,(*&
+\"\"$\"\"\"%\"xGF'F'*&\"\"'F'%\"yGF'!\"\"*&\"\"#F'%\"zGF'F,,(F(F'*&F.F
+'F+F'F,*&F.F'%\"wGF'F',*F(F'*&F.F'F+F'F,F/F,F3F,,&F/F'*&F&F'F3F'F'" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7',(*&\"\"$\"\"\"%\"xGF'F'*&\"\"'F'%\"
+yGF'!\"\"*&\"\"#F'%\"zGF'F,,(F(F'*&F.F'F+F'F,*&F.F'%\"wGF'F',*F(F'*&F.
+F'F+F'F,F/F,F3F,,&F/F'*&F&F'F3F'F'F6" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#7(,(*&\"\"$\"\"\"%\"xGF'F'*&\"\"'F'%\"yGF'!\"\"*&\"\"#F'%\"zGF'F,,(F
+(F'*&F.F'F+F'F,*&F.F'%\"wGF'F',*F(F'*&F.F'F+F'F,F/F,F3F,,&F/F'*&F&F'F3
+F'F'F6F6" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7),(*&\"\"$\"\"\"%\"xGF'F'
+*&\"\"'F'%\"yGF'!\"\"*&\"\"#F'%\"zGF'F,,(F(F'*&F.F'F+F'F,*&F.F'%\"wGF'
+F',*F(F'*&F.F'F+F'F,F/F,F3F,,&F/F'*&F&F'F3F'F'F6F6F6" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#7*,(*&\"\"$\"\"\"%\"xGF'F'*&\"\"'F'%\"yGF'!\"\"*&\"
+\"#F'%\"zGF'F,,(F(F'*&F.F'F+F'F,*&F.F'%\"wGF'F',*F(F'*&F.F'F+F'F,F/F,F
+3F,,&F/F'*&F&F'F3F'F'F6F6F6F6" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,(%
+\"xG\"\"\"*&\"\"#F&%\"yGF&!\"\"*&F(F&%\"wGF&F&,&%\"zGF&*&\"\"$F&F,F&F&
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Basis([f1,f2,f3],MO);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,&%\"zG\"\"\"*&\"\"$F&%\"wGF&F&,(%
+\"xGF&*&\"\"#F&%\"yGF&!\"\"*&F-F&F)F&F&" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 222 "This is indeed an equivalent of the reduced row echelon \+
+matrix given in the section. However, since from now on we don't want \+
+to see the basis after each polynomial is added to it, we'll delete th
+at extra line in our code." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 103 "No
+w we will also introduce 2 criteria for determining in advance which S
+-polynomials wiil turn to zero." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 2182 "BBi:=proc(f :: list, MO)\nglobal \+
+X;\nlocal s,t,G,G0,i,j,LT,count1,count2,countS,B,g,ss,temp,C1,C2;\n\ni
+f MO=plex(op(X)) then LT:=x->LTlex(x);\nelif MO=grlex(op(X)) then LT:=
+x->LTgrlex(x);\nelif MO=grevlex(op(X)) then LT:=x->LTgrevlex(x);  \nfi
+;\n \n\nC1:=proc(x,y)\n local i,lx,ly,h;\n lx:=LT(x); ly:=LT(y); h:=LC
+M(LT(x),LT(y)); \n for i from 1 to nops(X) do\n  if degree(h,X[i])<>de
+gree(lx,X[i])+degree(ly,X[i]) then return false; fi;\n od;\n return tr
+ue;\nend:  \n\nC2:=proc(i,j, B :: list)\n local k,y,lk,li,lj;\n li:=LT
+(G[i]); lj:=LT(G[j]);\n for k from 1 to nops(G) do \n if k<>i and k<>j
+ and not member(sort([i,k]),B) and not member(sort([j,k]),B) then \n  \+
+ lk:=LT(G[k]);\n   if divide(LCM(li,lj),lk) then return true fi;\n fi;
+\n od;\n return false;\nend:\n\ncount1,count2,countS:=0,0,0;\nB:=[]; t
+:=nops(f);\nB := [seq( seq( [i,j], j=i+1..t ), i=1..t-1 )];\nG:=f;\n\n
+for i from 1 to nops(G) do\n G[i]:=G[i]/icontent(G[i])/sign(G[i]);\nod
+;\n\nwhile nops(B)>0 do\n if C1(G[B[1][1]],G[B[1][2]])=true then count
+1:=count1+1; fi; \n if C2(B[1][1],B[1][2],B)=true then count2:=count2+
+1; fi;\n if C1(G[B[1][1]],G[B[1][2]])=false and C2(B[1][1],B[1][2],B)=
+false then\n  countS:=countS+1;\n  ss:=DIVIDE(S(G[B[1][1]],G[B[1][2]],
+MO),G,MO);\n  if ss<>0 then t:=t+1; G:=[op(G),ss/icontent(ss)/sign(LT(
+ss))];                  B:=[op(B),seq([i,t],i=1..t-1)];  \n  fi;\n fi;
+\n B:=subsop(1=NULL,B);\nod;\n\nprint(\"The number of S-polynomials co
+nsidered is\", countS);\nprint(\"The number of times criteria 1 was ap
+plicable is\", count1);\nprint(\"The number of times criteria 2 was ap
+plicable is\", count2);\n\n#this is the Groebner basis, not we need to
+ first make it minimal and then reduced \n\nfor i from 1 to nops(G) do
+\n if i<=nops(G) then \n  for j from 1 to i-1 do\n   if G[i]<>garbage \+
+and G[j]<>garbage then\n    if LTcomp(LT(G[i]), LT(G[j])) then G := su
+bsop(j=garbage,G); \n    elif LTcomp(LT(G[j]), LT(G[i])) then G := sub
+sop(i=garbage,G);\n    fi;\n   fi; \n  od;\n fi; \nod;\n\ntemp,i:=true
+,1;\nwhile i<=nops(G) do\n if G[i]=garbage then G:=subsop(i=NULL, G); \+
+temp:=false; fi;\n if temp=true then i:=i+1; fi;\n temp:=true;\nod;\n
+\ns:=[seq( DIVIDE(G[i],subsop(i=NULL,G), MO), i=1..nops(G) )];\nG:=[se
+q(i/icontent(i)/sign(LT(i)),i=s)];\n\nG;                     \nend:" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 215 "LTs:= proc(g::list,MO)\n \+
+local LT,i;\n global X;\n if MO=plex(op(X)) then LT:=x->LTlex(x);\n el
+if MO=grlex(op(X)) then LT:=x->LTgrlex(x);  \n elif MO=grevlex(op(X)) \+
+then LT:=x->LTgrevlex(x); \n fi;\n [seq(LT(i),i=g)];\nend:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 50 "Let's try this new algorithm on the example above." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "X:=[x,y,z]: f1:=3*x-6*y-2*z: f2:=2*
+x-4*y+4*w: f3:=x-2*y-z-w: MO:=plex(op(X)):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 20 "BBi([f1,f2,f3], MO);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"\"#" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~applicable
+~is6\"\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~c
+riteria~2~was~applicable~is6\"\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#7$,(%\"xG\"\"\"*&\"\"#F&%\"yGF&!\"\"*&F(F&%\"wGF&F&,&%\"zGF&*&\"\"$F&
+F,F&F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Basis([f1,f2,f3],
+MO);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$,&%\"zG\"\"\"*&\"\"$F&%\"wGF
+&F&,(%\"xGF&*&\"\"#F&%\"yGF&!\"\"*&F-F&F)F&F&" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 64 "So the results match. Let' now move on to the next two
+ problems." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "X:=[x,y,z]:" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "f1:=4*x^2+x*y^2-z+1/4: f2
+:=2*x+y^2*z+1/2: f3:=x^2*z-(1/2)*x-y^2:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 51 "BBi([f1,f2,f3], plex(op(X))); LTs(%, plex(op(X))); " 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~number~of~S-polynomials~consid
+ered~is6\"\"#>" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~time
+s~criteria~1~was~applicable~is6\"\"#A" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6$QQThe~number~of~times~criteria~2~was~applicable~is6\"\"#?" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#7%,2*&\"%wR\"\"\"%\"xGF'F'*&\"&/r$F')%\"zG\"
+\"'F'F'*&\"$+'F')F,\"\"&F'!\"\"*&\"%6@F')F,\"\"%F'F'*&\"'i?7F')F,\"\"$
+F'F'*&\"'LGBF')F,\"\"#F'F'*&\"'O.oF'F,F'F2\"'9))GF',2*&\"'P=[F'F=F'F2*
+&\"(TxS\"F'F,F'F'*&\"%))>F')%\"yGF>F'F'\"'mcfF2*&\"%s7F'F0F'F'*&\"%(>%
+F'F5F'F2*&\"'b:DF'F9F'F2*&\"&_n(F'F+F'F2,2*&\"$U$F'F=F'F2*&\"$m#F'F,F'
+F'\"#gF2*&\"#_F'F5F'F'*&\"#vF'F9F'F'*$F0F'F'*&\"#;F')F,\"\"(F'F'*&\"\"
+)F'F+F'F2" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7%,$*&\"%wR\"\"\"%\"xGF'F
+',$*&\"%))>F')%\"yG\"\"#F'F',$*&\"#;F')%\"zG\"\"(F'F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "Basis([f1,f2,f3], plex(op(X))); LTs
+(%, plex(op(X)));" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#7%,2*&\"$U$\"\"\"
+)%\"zG\"\"#F'!\"\"*&\"$m#F'F)F'F'\"#gF+*&\"#_F')F)\"\"%F'F'*&\"#vF')F)
+\"\"$F'F'*$)F)\"\"&F'F'*&\"#;F')F)\"\"(F'F'*&\"\")F')F)\"\"'F'F+,2*&\"
+'P=[F'F(F'F+*&\"(TxS\"F'F)F'F'*&\"%))>F')%\"yGF*F'F'\"'mcfF+*&\"%s7F'F
+8F'F'*&\"%(>%F'F1F'F+*&\"'b:DF'F5F'F+*&\"&_n(F'F@F'F+,2*&\"%wRF'%\"xGF
+'F'*&\"&/r$F'F@F'F'*&\"$+'F'F8F'F+*&\"%6@F'F1F'F'*&\"'i?7F'F5F'F'*&\"'
+LGBF'F(F'F'*&\"'O.oF'F)F'F+\"'9))GF'" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#7%,$*&\"#;\"\"\")%\"zG\"\"(F'F',$*&\"%))>F')%\"yG\"\"#F'F',$*&\"%wRF
+'%\"xGF'F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "X:=[y,x,z]: B
+Bi([f1,f2,f3], grlex(op(X))); LTs(%, grlex(op(X)));" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"\")" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was
+~applicable~is6\"\"\"'" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number
+~of~times~criteria~2~was~applicable~is6\"\"\"'" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7&,,*(\"#;\"\"\")%\"xG\"\"#F'%\"zGF'F'*&\"\"%F')F+F*F'!
+\"\"F+F'*&\"\")F'F(F'F/*&F*F'F)F'F/,,*&F-F'F.F'F/F+F'*&F1F'F(F'F/*&\"
+\"'F'F)F'F'*&F&F')%\"yGF*F'F',.*(F-F'F)F'F.F'F'*&F)F'F+F'F/*&F1F')F)\"
+\"$F'F'*&F&F'F+F'F/*&\"#eF'F(F'F'F-F',0*&F1F')F+F@F'F'*&F1F'F(F'F'*(\"
+#7F'F)F'F+F'F/*&F*F'F.F'F'*&\"#mF'F)F'F'F+F/F&F'" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7&,$*(\"#;\"\"\")%\"xG\"\"#F'%\"zGF'F',$*&F&F')%\"yGF*F
+'F',$*&\"\")F')F)\"\"$F'F',$*&F2F')F+F4F'F'" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 54 "Basis([f1,f2,f3], grlex(op(X))): LTs(%, grlex(op(X
+)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&,$*&\"#;\"\"\")%\"yG\"\"#F'F
+',$*&\"\")F')%\"zG\"\"$F'F',$*(F&F')%\"xGF*F'F/F'F',$*&F-F')F4F0F'F'" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "X:=[z,y,x]: BBi([f1,f2,f3
+], grevlex(op(X))); LTs(%, grevlex(op(X)));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"\")" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~a
+pplicable~is6\"\"\"'" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~o
+f~times~criteria~2~was~applicable~is6\"\"\"'" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#7(,**&\"#;\"\"\")%\"xG\"\"#F'F'*(\"\"%F'F)F')%\"yGF*F'F
+'*&F,F'%\"zGF'!\"\"F'F',(*&F,F'F)F'F'*(F*F'F-F'F0F'F'F'F',(*(F*F'F(F'F
+0F'F'F)F1*&F*F'F-F'F1,,*&F,F')F0F*F'F'F0F1*&\"\")F'F(F'F'*&\"\"'F'F)F'
+F1*&F&F'F-F'F1,,*&F<F')F.F,F'F'*&F&F')F)\"\"$F'F'*&\"#7F'F(F'F1*&F,F'F
+0F'F'F'F1,.*&F&F')F)F,F'F'*&\"$;\"F'FDF'F'*&F*F'F-F'F1*(\"#GF'F)F'F0F'
+F1*&\"\"*F'F)F'F1F,F1" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7(,$*(\"\"%\"
+\"\"%\"xGF')%\"yG\"\"#F'F',$*(F+F'F)F'%\"zGF'F',$*(F+F')F(F+F'F.F'F',$
+*&F&F')F.F+F'F',$*&\"\")F')F*F&F'F',$*&\"#;F')F(F&F'F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "Basis([f1,f2,f3], tdeg(op(X))): LTs
+(%, grevlex(op(X)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7(,$*&\"\"%\"
+\"\")%\"zG\"\"#F'F',$*(F*F')%\"xGF*F'F)F'F',$*(F&F'F.F')%\"yGF*F'F',$*
+(F*F'F1F'F)F'F',$*&\"#;F')F.F&F'F',$*&\"\")F')F2F&F'F'" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 69 "Here it's not hard to see that our proced
+ure returns the right basis." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 119 "f1:=u0^2-u0+2*u1^2+2*u2^2+2*u3^2: f2:=2*u0*u1+2*u1*u2+2*u2*u3-u
+1: f3:=2*u0*u2+u1^2+2*u1*u3-u2: f4:=u0+2*u1+2*u2+2*u3-1:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "X:=[u3,u2,u0,u1]: \nBBi([f1,f2,f3,f
+4], plex(op(X))): LTs(%, plex(op(X))); " }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"#\"*" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~applica
+ble~is6\"\"#$*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~time
+s~criteria~2~was~applicable~is6\"\"#n" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#7',$*&\"'5'H$\"\"\"%#u3GF'F',$*&\"'0[;F'%#u2GF'F',$*&\"':W\\F')%#u0
+G\"\"#F'F',$*(F+F'F1F'%#u1GF'F',$*&\"&[\\#F')F5\"\"(F'F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "Basis([f1,f2,f3,f4], plex(op(X))): \+
+LTs(%, plex(op(X)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7',$*&\"&[\\#
+\"\"\")%#u1G\"\"(F'F',$*(\"'0[;F'%#u0GF'F)F'F',$*&\"':W\\F')F.\"\"#F'F
+',$*&F-F'%#u2GF'F',$*&\"'5'H$F'%#u3GF'F'" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 75 "X:=[u3,u2,u0,u1]: \nBBi([f1,f2,f3,f4], grlex(op(X))):
+ LTs(%, grlex(op(X))); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~numbe
+r~of~S-polynomials~considered~is6\"\"#_" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$QQThe~number~of~times~criteria~1~was~applicable~is6\"\"#c" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~2~was~a
+pplicable~is6\"\"#L" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7*,$*&\"\"#\"\"
+\"%#u3GF'F',$*&\"#;F')%#u2GF&F'F',$*(\"\")F'%#u0GF'F-F'F',$*(F0F'%#u1G
+F'F-F'F',$*&\"#7F')F1\"\"$F'F',$*(\"#OF'F4F')F1F&F'F',$*(\"$K%F'F1F')F
+4F&F'F',$*&\"&#z**F')F4\"\"%F'F'" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 57 "Basis([f1,f2,f3,f4], grlex(op(X))): LTs(%, grlex(op(X
+)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7*,$*&\"\"#\"\"\"%#u3GF'F',$*(
+\"\")F'%#u1GF'%#u2GF'F',$*(F+F'%#u0GF'F-F'F',$*&\"#;F')F-F&F'F',$*(\"$
+K%F'F0F')F,F&F'F',$*(\"#OF'F,F')F0F&F'F',$*&\"#7F')F0\"\"$F'F',$*&\"&#
+z**F')F,\"\"%F'F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "X:=[u1
+,u0,u2,u3]: BBi([f1,f2,f3,f4], grevlex(op(X))): LTs(%, grevlex(op(X)))
+; " }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~number~of~S-polynomials~co
+nsidered~is6\"\"#>" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~
+times~criteria~1~was~applicable~is6\"\"#L" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QQThe~number~of~times~criteria~2~was~applicable~is6\"\"
+#:" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7),$*&\"\"#\"\"\"%#u1GF'F',$*&\"
+\"(F')%#u0GF&F'F',$*(\"#9F'F-F'%#u2GF'F',$*&F0F')F1F&F'F',$*(\"$C$F'F-
+F')%#u3GF&F'F',$*(F7F'F1F'F8F'F',$*&\"&_T'F')F9\"\"%F'F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "Basis([f1,f2,f3,f4], tdeg(op(X))): \+
+LTs(%, grevlex(op(X)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7),$*&\"\"#
+\"\"\"%#u1GF'F',$*&\"#9F')%#u2GF&F'F',$*(F+F'%#u0GF'F-F'F',$*&\"\"(F')
+F0F&F'F',$*(\"$C$F'F-F')%#u3GF&F'F',$*(F7F'F0F'F8F'F',$*&\"&_T'F')F9\"
+\"%F'F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 162 "Now that we'
+ve made sure that the algorithm perfoems correctly, let's consider a p
+roblem of Trinks. WE will use different orderings and permitations of \+
+variables." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 176 "f1:=45*p+35*
+s-165*b-36: f2:=35*p+40*z+25*t-27*s: f3:=15*w+25*p*s+30*z-18*t-165*b^2
+: f4:=-9*w+15*p*t+20*z*s: f5:=w*p+2*z*t-11*b^3: f6:=00*w-11*s*b+3*b^2:
+ G:=[f1,f2,f3,f4,f5,f6]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 87 
+"X:=[b,s,w,z,t,p]:\nst:= time(): BBi(G, grlex(op(X))): LTs(%, grlex(op
+(X)));\ntime() - st;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~number~o
+f~S-polynomials~considered~is6\"\"#b" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6$QQThe~number~of~times~criteria~1~was~applicable~is6\"\"$I\"" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~2~was~a
+pplicable~is6\"\"#**" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#70,$*&\"%bW\"
+\"\"%\"bGF'F',$*&\"#FF'%\"sGF'F',$*&\")++kJF')%\"zG\"\"#F'F',$*(\"'+I6
+F'F1F'%\"pGF'F',$*(\")+]x>F'F1F'%\"tGF'F',$*&\".+D\"3h`9F')F6\"\"$F'F'
+,$*(\"1++]LY=S6F'F1F'%\"wGF'F',$*(\"1D1*G%p2Z7F')F6F2F'F:F'F',$*(\"0]i
+:x2$))\\F'F:F'FCF'F',$*(\"6++++o\\w([Y%)F'FGF'FCF'F',$*&\"<++++]b;Y=B
+\"4E`F')F:F?F'F',$*(\"7++++%p)e`8y9F'F6F')F:F2F'F',$*(\"D+++++_&Q\\f/F
+UpRB)>(F')FCF2F'F6F'F',$*&\"S++++++?o#\\$=+wmo$p_`pg&HhL:F')FCF?F'F'" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"%T`!\"$" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 91 "X:=[z,t,p,b,s,w]:\nst:= time(): BBi(G, grevlex(o
+p(X))): LTs(%, grevlex(op(X))); time() - st;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"#[" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~a
+pplicable~is6\"\"$7\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~
+of~times~criteria~2~was~applicable~is6\"\"##)" }}{PARA 12 "" 1 "" 
+{XPPMATH 20 "6#7/,$*&\"#X\"\"\"%\"pGF'F',$*&\"$g$F'%\"zGF'F',$*&\"%S]F
+')%\"bG\"\"#F'F',$*(\".gHc]<x)F'%\"tGF'F1F'F',$*(\"&![=F'%\"sGF'F1F'F'
+,$*&\"-+%oDnZ\"F')F:\"\"$F'F',$*&\".+oMfr)RF')F6F2F'F',$*(\"-?Ji5eEF'F
+6F'F:F'F',$*(\"2++%Q$)zWn8F')F:F2F'%\"wGF'F',$*(\"E+++![G,dm[q]#z)pE5&
+=F'F6F')FKF2F'F',$*(\"=++S1+;+Yz4*f\">nF'F1F'FOF'F',$*(\"@+++C)*HlH@:V
+^Vm*HF'F:F'FOF'F',$*&\"M++++[c9<4xPrnpp(4p\"*o#[OF')FKF?F'F'" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#$\"%AM!\"$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 185 "Indeed, the computations using grlex ordering don't take too l
+ong. Now let's try lex and see whether we can find some permutations o
+f X that take a really long time and some that don't." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "X:=[b,s,w,z,t,p]: st:= time():\ntim
+elimit(150,BBi(G, plex(op(X)))): time() - st;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"#*)" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~a
+pplicable~is6\"\"$$>" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~o
+f~times~criteria~2~was~applicable~is6\"\"$Y\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"%He!\"$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+79 "X:=[s,t,z,w,p,b]: st:= time():\ntimelimit(150,BBi(G, plex(op(X))))
+: time() - st;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~number~of~S-po
+lynomials~considered~is6\"\"#@" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQTh
+e~number~of~times~criteria~1~was~applicable~is6\"\"#\")" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~2~was~applicable~
+is6\"\"#i" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"$1%!\"$" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "X:=[z,t,p,b,s,w]: st:= time():\ntim
+elimit(150,BBi(G, plex(op(X)))): time() - st;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6$QJThe~number~of~S-polynomials~considered~is6\"\"$N\"" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~1~was~
+applicable~is6\"\"$%=" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQThe~number~
+of~times~criteria~2~was~applicable~is6\"\"$.#" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"&`f\"!\"$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+79 "X:=[p,b,s,w,t,z]: st:= time():\ntimelimit(150,BBi(G, plex(op(X))))
+: time() - st;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QJThe~number~of~S-po
+lynomials~considered~is6\"\"$G%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$QQT
+he~number~of~times~criteria~1~was~applicable~is6\"\"$\"R" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6$QQThe~number~of~times~criteria~2~was~applicable~
+is6\"\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"']zP!\"$" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "X:=[t,b,p,z,s,p]: st:= time():\ntim
+elimit(150,BBi(G, plex(op(X)))): time() - st;" }}{PARA 8 "" 1 "" 
+{TEXT -1 28 "Error, (in LT) time expired\n" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"',+]!\"$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}}}{MARK "2 59 0 0" 0 }{VIEWOPTS 1 1 0 3 4 
+1802 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

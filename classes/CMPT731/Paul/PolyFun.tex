@@ -1,0 +1,203 @@
+\section*{Polynomial Functors, etc.}
+ 
+Let \CCC and \DDD be categories and let \tm{A} be an object of \DD\@.
+A \definition{constant functor} \tm{\tmb{K}_{A}} is a functor
+\tm{\tmb{K}_{A}: \CCC \rightarrow \DD} that maps every object of \CCC to the
+object \tm{A} and every arrow of \CCC to \tm{id_{A}}.
+
+\vs
+
+We may write \tmb{1} for \tm{\tmb{K}_{A}} in the special case where \tm{A}
+is a final object and we really don't care which final object \tm{A} is.
+
+\vs
+
+You should confirm that a constant functor is indeed a functor.
+
+\newslide
+
+An \definition{endofunctor} is a functor from some category \CCC
+to the same category, \CC.
+
+\vs
+
+The \definition{identity functor}, \tmb{Id}, is an endfunctor 
+that maps every object to itself and every arrow to itself.  The
+identity functor for a
+category is just the identity arrow for that category viewed as an
+object in the category
+\tmi{Cat}.
+
+\newslide
+
+Assume that all binary products exist in a category \CC.  That is,
+for any objects \tm{A} and \tm{B}, \tm{A \times B} exists.
+
+\vs
+
+Let \tm{F} and \tm{G} be any pair of endofunctors defined on \CC.
+We define the endofunctor \tm{(F \times G)} by
+
+\begin{codenott}
+\tm{(F \times G) \, A = F \, A \times G \, A}\\
+\tm{(F \times G) \, h = \, <F \, h \circ \pi_{1}, G \, h \circ \pi_{2}>}
+\end{codenott}
+
+\vs
+
+Notice that if \tm{h: A \rightarrow B} then
+\tm{(F \times G) \, h : (F A \times G A) \rightarrow (F B \times G B)}.
+
+\newslide
+
+The definition of the product of functors
+generalizes in a straightforward manner to products of any finite degree,
+but we will restrict our attention to binary products in order to simplify the presentation.
+
+Similarly, we will consider only binary coproducts (sums) of functors.
+
+\newslide
+
+Assume that all binary coproducts (sums) exist in a category \CC.  That is,
+for any objects \tm{A} and \tm{B}, \tm{A + B} exists.
+
+\vs
+
+Let \tm{F} and \tm{G} be any pair of endofunctors defined on \CC.
+We define the endofunctor \tm{(F + G)} by
+
+\begin{codenott}
+\tm{(F + G) \, A = F \, A + G \, A}\\
+\tm{(F + G) \, h = \, [i_{1} \circ F \, h, i_{2} \circ G \, h]}
+\end{codenott}
+
+\vs
+
+Notice that if \tm{h: A \rightarrow B} then
+\tm{(F + G) \, h : (F A + G A) \rightarrow (F B + G B)}.
+
+\newslide
+
+Let's see how these ideas carries over to \Ha \, and \textit{Haskell}.
+
+Recall that the objects of \Ha \, are pointed cpos and each
+object correspond to
+a particular ground type (i.e. a type with no
+type variables) in \textit{Haskell}.  The
+arrows in \Ha \, are continuous functions corresponding to
+\textit{Haskell}
+functions that are not polymorphic or overloaded.
+
+Let's ignore the \bottom ~ element that is included in every object
+in \Ha, and further ignore the fact that every \Ha \, object has at least one
+value other than \bottom, so \Ha \, has no initial or final objects.
+
+\newslide
+
+To save room, we will use the symbol $\bowtie$ to mean ``corresponds to''.
+
+With \Ha \, objects and \textit{Haskell} types,\\
+\begin{codenott}
+\tm{<f,g>} ~ \= 
+\bla{$\bowtie$} ~ \= \tc{either f g} ~
+\= \bla{(See page 42 of Bird.)}\kill
+\tm{A \times B} \> \bla{$\bowtie$} \> \tc{(A, B)}\\
+\tm{A + B} \> \bla{$\bowtie$} \> \tc{Either A B}\\
+\end{codenott}
+
+With \Ha \, arrows and \textit{Haskell} functions,
+\begin{codenott}
+\tm{(F \times G) A} ~ \= 
+\bla{$\bowtie$} ~ \= \tc{either f g} ~
+\= \bla{(See page 42 of Bird.)}\kill
+\tm{<f,g>} \>
+\bla{$\bowtie$} \> \tc{pair(f,g)} \> \bla{(See page 42 of Bird.)}\\
+\tm{[f,g]} \> \bla{$\bowtie$} \> \tc{either f g} \>
+\bla{which is the same as}\\
+\> \>\tc{case(f,g)} \> \bla{(See page 46 of Bird.)}
+\end{codenott}
+
+\newslide
+
+With \Ha \, functor operators and \textit{Haskell} functions,
+the arrow part of the functor gives\\
+\begin{codenott}
+\tm{(F \times G) A} ~ \= 
+\bla{$\bowtie$} ~ \= \tc{cross(fmap\tm{^{F}},fmap\tm{^{G}})} ~
+\= \bla{(See page 42 of Bird.)}\kill
+\tm{(F \times G)} \> \bla{$\bowtie$} \>
+\tc{cross(fmap\tm{^{F}},fmap\tm{^{G}})} \> \bla{(See page 42 of Bird.)}\\
+\tm{(F + G)} \> \bla{$\bowtie$} \>
+\tc{plus(fmap\tm{^{F}},fmap\tm{^{G}})} \> \bla{(See page 46 of Bird.)}
+\end{codenott}\\
+while for the object part we have\\
+\begin{codenott}
+\tm{(F \times G) A} ~ \= 
+\bla{$\bowtie$} ~ \= \tc{either f g} ~
+\= \bla{(See page 42 of Bird.)}\kill
+\tm{(F \times G) A} \> \bla{$\bowtie$} \>
+\tc{(F A, G A)}\\
+\tm{(F + G) A} \> \bla{$\bowtie$} \>
+\tc{Either (F A) (G A)}
+\end{codenott}
+
+Recall Bird's comment, in \P 2 of page 47, that 
+``\textcolor{QuoteColor}{The algebraic properties of} \tc{case}
+\textcolor{QuoteColor}{and} \tc{plus}
+\textcolor{QuoteColor}{are dual to those of} \tc{pair}
+\textcolor{QuoteColor}{and} \tc{cross}\textcolor{QuoteColor}{.}''
+
+\newslide
+
+Let's consider a full \textit{Haskell} datatype declaration.
+\begin{code}
+data Perhaps a = Nope | Only a | Both Int a
+\end{code}
+
+We have\\
+\begin{codenott}
+\tc{Perhaps} $\bowtie$
+\tm{(\tmb{1} + \Id +(\tmb{K}_{\tc{Int}} \times \Id))_{\bot}}
+\end{codenott}\\
+and could make \tc{Perhaps} an instance of \tc{Functor} by
+\begin{code}
+instance Functor Perhaps where\\
+   fmap f Nope = Nope\\
+   fmap f (Only a) = Only (f a)\\
+   fmap f (Both n a) = Both n (f a)
+\end{code}
+
+\newslide
+
+Notice:
+\begin{enumerate}
+\item We used ``\tc{|}'' directly rather than \tc{Either}, in part because we
+have a sum of degree three instead of degree two, and in part because
+\tc{Either}
+is just a way to encapsulate ``\tc{|}'' and supply data constructors (tags)
+\tc{Left} and \tc{Right}.
+\item In \textit{Haskell}, \tc{Nope}, \tc{Only} and \tc{Both} are names of
+constructors (instead of \tm{i_1} and \tm{i_1}, or \tc{Left} and \tc{Right})
+as well as tags used in pattern matching.  These names have no role in the
+structure of the functor.
+\item We have added the \bottom, whose existence we now acknowledge.  We will
+add a \bottom \, to the functor corresponding to the right side of each
+\textit{Haskell} \tc{data} statement. 
+\end{enumerate}
+
+\newslide
+
+A \definition{polynomial functor} is any functor formed using constant functors,
+\Id \, and \tm{+} and \tm{\times}.
+
+\vs
+
+In \Has we need to be able to lift functors, using \bottom.  This is done
+in the obvious way and we will skip the details.
+
+\vs
+
+\Has also allows function types to be used in datatype declarations.  While
+category theory supports this, we will skip the details, since lifted
+polynomial functors are sufficient for illustrating the ideas that we will
+be exploring.

@@ -1,0 +1,24 @@
+#QUESTION 17
+> 
+#By a result give in 12b) of this section. I(V(f1,f2)) = <fred> so letting
+> f1:= x^5-2*x^4+2*x^2-x;
+                                  5      4      2
+                           f1 := x  - 2 x  + 2 x  - x
+
+> f2:=x^5-x^4-2*x^3+2*x^2+x-1;
+                             5    4      3      2
+                      f2 := x  - x  - 2 x  + 2 x  + x - 1
+
+> 
+> f:=gcd(f1,f2);
+                                  4      3
+                            f := x  - 2 x  + 2 x - 1
+
+> fred:=quo(f, gcd(f,diff(f,x)), x);
+                                          2
+                                 fred := x  - 1
+
+> 
+#which means I(V(f1,f2)) = <f> = x^2-1
+> quit
+bytes used=500180, alloc=458668, time=0.03

@@ -1,0 +1,168 @@
+#interface(quiet=true):
+> 
+> h_FFT:=proc(N,w,a,p) local i, A, B, C, b, c:
+>     `mod`:=mods:
+>     
+>     if N=1 then 
+>         A[1]:=a[1]:
+>     elif N=2 then
+>         A[2]:=(a[1]+a[2]) mod p;
+>         A[1]:=(a[1]+w*a[2]) mod p;
+>     else
+>         b:=[seq(a[2*i-1],i=1..N/2)]:
+>         c:=[seq(a[2*i],i=1..N/2)]:
+>         
+>         B:=h_FFT(N/2, w^2 mod p, b, p):
+>         C:=h_FFT(N/2, w^2 mod p, c, p):
+>         
+>         for i from 1 to N/2 do 
+>             A[i]:=(B[i] + (w&^i mod p) * C[i]) mod p:
+>             A[N/2+i]:=(B[i] - (w&^i mod p) * C[i]) mod p:
+>         end do
+>         
+>     end if:
+>     
+>     return [seq(A[i],i=1..N)]:
+>     
+> end proc:
+> 
+> `mod`:=mods;
+                                  mod := mods
+
+> 
+> myFFT:=proc(N,w,a,p) local T:
+>         T:=h_FFT(N,w,a,p):
+>         return [T[-1],op(T[1..-2])];
+> end proc:
+> 
+> myInvFFT:=proc(N,w,b,p) local T:
+>     T:=myFFT(N,w,b,p);
+>     map(x-> 1/N*x mod p, T);
+> end proc:
+> 
+> TimeIt:=proc(d) local w,N,p,a,st,t,f:
+>     w:=81:
+>     N:=2^14:
+>     p:=2^16+1:
+>     f:=Randpoly(d,x) mod p:
+>     
+>     a:=[seq(coeff(f,x,i), i=0..d), 0$(N-d)]:
+>     
+>     st:=time();
+>         myFFT(N,w,a,p):
+>         t:=time()-st;
+>     t:=time()-st;
+>     
+>     return t;
+> end proc:
+> 
+### REQUIRED CHECK FOR TWO ###
+> 
+> p:=7*2^20+1:
+> f:=Randpoly(50,x) mod p:
+> a:=[seq(coeff(f,x,i), i=0..50), 0$13]:
+> 
+> isgen:=x->evalb(x&^(2^19*7) mod p <> 1 and x&^(2^20) mod p <> 1):
+> isgen(2);
+                                     false
+
+> isgen(3);
+                                      true
+
+> numtheory[order](3,p);
+                                    7340032
+
+> 
+#Since 3 is a generator we have that
+> w:=3 &^( (p-1)/64 ) mod p;
+                                 w := -2440127
+
+#is a primitive element of order 64.
+> numtheory[order](w,p);
+                                       64
+
+> 
+> b:=myFFT(64,w,a,p);
+b := [3093169, -3040432, 564527, 482222, 1297189, 2548401, -533630, -1419274,
+
+    -1287828, -2905694, -2635831, 2835395, -398068, 899192, -767833, -462458,
+
+    1109848, 2585848, -1754219, 1798327, -2627959, -2886099, 1123622, 1071876,
+
+    -2160541, 1661424, -3110994, 1538475, -2396758, 3624247, -2054995, -704075,
+
+    725706, -1692145, 2337117, -2747528, 1705938, -1917727, -2687860, 767781,
+
+    -517126, 2956148, -1411246, 3307144, 2736245, -258471, -2936156, 2277830,
+
+    2579423, 1237551, 665934, -2583902, -1543463, 3034987, 1484060, -1413333,
+
+    2997470, 1612277, 1327354, -2967634, -3147388, 1294808, 369597, -1006013]
+
+> c:=myInvFFT(64,1/w mod p, b, p);
+c := [-2267597, 913458, -459411, 641262, -3281413, 1773261, 1292870, -3041702,
+
+    -158683, 1715821, -3101621, -1013308, 2385551, -2814791, -1138869, 2182059,
+
+    -994132, -2221720, -2652154, -154451, -2459271, -3572340, -1922597, 663355,
+
+    -1102245, -2053544, -3042281, 2090578, 582826, 2752823, -2058992, -1485664,
+
+    -3482887, 192345, 1578724, 2042599, 2979856, 27999, -3551975, -2381629,
+
+    1484325, -784086, -898119, 1421281, -1900540, 505823, 144684, -2941064,
+
+    -918803, 3055350, 1162076, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+> 
+> a-c mod p;
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+> 
+### TIME CHECKING ###
+> 
+> a:=TimeIt(2^11);
+
+                                   a := 3.217
+
+> b:=TimeIt(2^12);
+
+                                   b := 3.362
+
+> c:=TimeIt(2^13);
+
+                                   c := 3.413
+
+> 
+> evalf(b/a);
+                                  1.045073049
+
+> evalf(c/b);
+                                  1.015169542
+
+#Since doulbling the size of the input did not correspond to four times the run time we can conclude the complexity is not quadratic. 
+> 
+> 
+> a:=a/11;
+                               a := 0.2924545455
+
+> b:=b/12;
+                               b := 0.2801666667
+
+> c:=c/13;
+                               c := 0.2625384615
+
+> 
+> evalf(b/a);
+                                  0.9579836286
+
+> evalf(c/b);
+                                  0.9370795769
+
+#Since these numbers are roughly equal we can conclude that the points a,b and c lie on a line which mean the original data is on n*log(n) as desired.
+> 
+> quit;

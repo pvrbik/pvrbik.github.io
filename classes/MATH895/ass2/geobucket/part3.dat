@@ -1,0 +1,38 @@
+-   -   -   -   -   - PART 3 -   -   -   -   -   -
+
+#interface(quiet=true):
+> read "geoDivision.mpl":
+> read "../DatPart3.mpl":
+> 
+> print("GEO"):
+                                     "GEO"
+
+> 
+> nops(a),nops(A),nops(c),nops(C);
+                                29, 217, 59, 819
+
+> 
+> print("DIVIDE(C,A)"):
+                                 "DIVIDE(C,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=GEOdiv(C,A,var):
+> t:=time()-st;
+                                  t := 10.239
+
+> 
+> print(N,M,evalf(N/M)):
+                           74510, 46872, 1.589648404
+
+> 
+> q:=SMP2Maple(Q,var):
+> r:=SMP2Maple(R,var):
+> expand(c-q*a-r);
+                                       0
+
+> 
+> quit:\
+bytes used=526278864, alloc=10090696, time=11.79

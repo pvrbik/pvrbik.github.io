@@ -1,0 +1,184 @@
+    |\^/|     Maple 10 (IBM INTEL LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2005
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> 
+> hermite:=proc(f) local prod, P, Q, q, k, qk, T, qkp, L:
+>     
+>     read "sqrfree.mpl":
+>     prod:=x->mul(x[i],i=1..nops(x)):
+>     
+>     P:=numer(f):
+>     Q:=denom(f):
+>     
+>     q:=[]:
+>     q:=[square_free(Q)];
+>     
+>     k:=nops(q);
+>     
+>     if (f=0) then
+>         return 0;
+>     elif (k=1) then
+>         return `INT`(f,x);
+>     end if:
+>     
+>     L:=q[-1]:
+>     if op(0,L)=`*` then
+>         qk:=mul( op([i,1],L) , i=1..nops(L)):
+>     elif op(0,L)=`^` then
+>         qk:=op(1,q[-1]);
+>     else
+>         qk:=q[-1];
+>     end if;
+>     
+>     T:=prod(q[1..-2]);
+>     qkp:=diff(qk,x);
+>     
+>     gcdex(T*qkp,qk,P,x, 'sigma', 'tau' );
+>     
+>     return sigma/(1-k)/qk^(k-1)+hermite( (tau-diff(sigma,x)/(1-k)*T)/T/qk^(k-1) );
+>     
+> end proc:
+> 
+> tragRoth:=proc(F) local C, D, Dp, R, alphas, vi, ans, i, v:
+>     alias(D=DD):
+>     
+>     C:=numer(F);
+>     D:=denom(F);
+>     Dp:=diff(D,x);
+>     
+>     R:=z->primpart(resultant(C-z*Dp, D,x));
+>     R(z):=factor(R(z));
+>     
+>     alphas:=[op({solve(R(z)=0, z)})];
+>     
+>     vi:=a->(gcd(C-a*Dp,D));
+>     
+>     ans:=0:
+>     for i from 1 to nops(alphas) do
+>         v:=vi(alphas[i]):
+>         v:=v / lcoeff(v,x):
+>         ans:=ans+alphas[i]*ln(v):
+>     end do:
+>     
+>     return ans:
+>     
+> end proc:
+> 
+#- - - function 1  - - -
+> f1:= (3*x^5-2*x^4-x^3+2*x^2-2*x+2) / (x^6-x^5+x^4-x^3);
+                             5      4    3      2
+                          3 x  - 2 x  - x  + 2 x  - 2 x + 2
+                    f1 := ---------------------------------
+                                   6    5    4    3
+                                  x  - x  + x  - x
+
+> intRat:=hermite(f1);
+                                            3      2
+                             1           3 x  - 2 x  + x
+                  intRat := ---- + INT(-------------------, x)
+                              2          3    2
+                             x         (x  - x  + x - 1) x
+
+> 
+> logpart:=op([2,1],intRat);
+                                         3      2
+                                      3 x  - 2 x  + x
+                         logpart := -------------------
+                                      3    2
+                                    (x  - x  + x - 1) x
+
+> intLogPart:=tragRoth(logpart);
+                                         3    2
+                       intLogPart := ln(x  - x  + x - 1)
+
+> integral:=op(1,intRat)+intLogPart;
+                                  1         3    2
+                     integral := ---- + ln(x  - x  + x - 1)
+                                   2
+                                  x
+
+> check:=simplify(diff(integral,x)-f1);
+                                   check := 0
+
+> 
+#- - - function 2  - - -
+> a:=4*x^7-16*x^6+28*x^5-351*x^3+588*x^2-738;
+                       7       6       5        3        2
+               a := 4 x  - 16 x  + 28 x  - 351 x  + 588 x  - 738
+
+> b:=2*x^7-8*x^6+14*x^5-40*x^4+82*x^3-76*x^2+120*x-144;
+                 7      6       5       4       3       2
+         b := 2 x  - 8 x  + 14 x  - 40 x  + 82 x  - 76 x  + 120 x - 144
+
+> r:=rem(a,b,x,'q'); 
+                                   3        2       4
+                  r := -450 - 515 x  + 740 x  + 80 x  - 240 x
+
+#We will have to remember to add the integral of q=2 which is 2*x
+> q;
+                                       2
+
+> f2:=r/b;
+                                   3        2       4
+                       -450 - 515 x  + 740 x  + 80 x  - 240 x
+        f2 := ---------------------------------------------------------
+                 7      6       5       4       3       2
+              2 x  - 8 x  + 14 x  - 40 x  + 82 x  - 76 x  + 120 x - 144
+
+> H:=hermite(f2);
+                                                  45 x
+                                            -45 + ----
+                              5                    2
+                     H := ---------- - --------------------
+                                   2     2
+                          2 (x - 2)    (x  + x + 3) (x - 2)
+
+> integral:=2*x+H;
+                                                        45 x
+                                                  -45 + ----
+                                    5                    2
+              integral := 2 x + ---------- - --------------------
+                                         2     2
+                                2 (x - 2)    (x  + x + 3) (x - 2)
+
+> check:=simplify(diff(integral,x)-a/b);
+                                   check := 0
+
+> 
+#- - - function 3  - - -
+> f3:=(6*x^5-4*x^4-32*x^3+12*x^2+34*x-24)/(x^6-8*x^4+17*x^2-8);
+                          5      4       3       2
+                       6 x  - 4 x  - 32 x  + 12 x  + 34 x - 24
+                 f3 := ---------------------------------------
+                                 6      4       2
+                                x  - 8 x  + 17 x  - 8
+
+> hermite(f3);
+                       5      4       3       2
+                    6 x  - 4 x  - 32 x  + 12 x  + 34 x - 24
+                INT(---------------------------------------, x)
+                              6      4       2
+                             x  - 8 x  + 17 x  - 8
+
+> IntLogPart:=simplify(tragRoth(f3));
+bytes used=4000812, alloc=3407248, time=0.14
+                  3    1/2  2            1/2
+IntLogPart := ln(x  + 2    x  - 3 x - 2 2   )
+
+           3    1/2  2            1/2   1/2       3    1/2  2            1/2
+     + ln(x  + 2    x  - 3 x - 2 2   ) 2    + ln(x  - 2    x  - 3 x + 2 2   )
+
+           3    1/2  2            1/2   1/2
+     - ln(x  - 2    x  - 3 x + 2 2   ) 2
+
+> H:=diff(IntLogPart,x):
+> H:=simplify(expand(H)):
+> check:=simplify(factor(simplify(numer(H))/expand(denom(H)))-f3);
+                                   check := 0
+
+> 
+> quit;
+bytes used=4783360, alloc=3407248, time=0.17

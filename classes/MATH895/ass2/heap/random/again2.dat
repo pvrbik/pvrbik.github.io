@@ -1,0 +1,94 @@
+    |\^/|     Maple 11 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2007
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#interface(quiet=true):
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> read "../DatPart2.mpl":
+bytes used=57828592, alloc=27389032, time=0.93
+bytes used=100155408, alloc=53205488, time=2.14
+> 
+> print("HEAP"):
+                                     "HEAP"
+
+> macro(D=DD):
+> nops(a),nops(A),nops(b),nops(B),nops(c),nops(C),nops(d),nops(D);
+                   20, 20, 392, 392, 6366, 6366, 67939, 67939
+
+> 
+> print("DIVIDE(D,A)"):
+                                 "DIVIDE(D,A)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,A,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 275.003
+
+> print(N,M,evalf(N/M)):
+                          745753, 129460, 5.760489727
+
+> 
+> restart():
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> read "../DatPart2.mpl":
+bytes used=6310259256, alloc=60806272, time=278.25
+bytes used=6340479264, alloc=67882864, time=279.46
+> macro(D=DD):
+> print("DIVIDE(D,B)"):
+                                 "DIVIDE(D,B)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,B,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 558.335
+
+> print(N,M,evalf(N/M)):
+                          1832778, 146216, 12.53472944
+
+> 
+> restart:
+> read "heapDivision.mpl":
+Warning, `&gt` is implicitly declared local to procedure `checkHeap`
+Warning, `C` is implicitly declared local to procedure `ADD`
+Warning, `R` is implicitly declared local to procedure `HeapDiv`
+> read "../DatPart2.mpl":
+bytes used=17894632000, alloc=27389032, time=838.72
+bytes used=17902647640, alloc=32368856, time=838.94
+bytes used=17935801144, alloc=50322432, time=840.02
+> macro(D=DD):
+> print("DIVIDE(D,C)"):
+                                 "DIVIDE(D,C)"
+
+> st:=time():
+> N:=0;
+                                     N := 0
+
+> (Q,R):=HeapDiv(D,C,var): R;
+                                       []
+
+> t:=time()-st;
+                                  t := 673.517
+
+> print(N,M,evalf(N/M)):
+                          2429383, 127320, 19.08092209
+
+> 
+> quit:\
+bytes used=30930501392, alloc=56088544, time=1513.54

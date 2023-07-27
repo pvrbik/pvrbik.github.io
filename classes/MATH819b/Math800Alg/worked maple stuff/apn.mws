@@ -1,0 +1,37 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Text Output" -1 2 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 "
+" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }
+{PSTYLE "Error" 7 8 1 {CSTYLE "" -1 -1 "" 0 1 255 0 255 1 0 0 0 0 0 0 
+0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 
+1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 
+0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "with(LinearAlgebra): " }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "f:=x->x^9:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 12 "phi:=x->a*x:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 104 "for a from 0 to 2^10-1 do\n for b from 0 to 2^10-1 d
+o \n  sum((-1)^((a*x)+b*f(x)), x=0..2^10-1); \n od;\nod;" }}{PARA 7 "
+" 1 "" {TEXT -1 33 "Warning, computation interrupted\n" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "?linalg" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "
+sum((-1)^(f(x)*4), x=0..2^10-1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"
+%C5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "aa:=convert(convert(
+ \"1100\", 'list' ), Vector):\n\nbb:=convert(convert( \"1000\", 'list'
+ ), Vector):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "DotProduct(
+aa,bb);" }}{PARA 8 "" 1 "" {TEXT -1 147 "Error, (in LinearAlgebra:-LA_
+Main:-DotProduct) invalid input: simpl/conjugate expects its 1st argum
+ent, a, to be of type algebraic, but received 1\n" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 67 "a:=convert(convert(1023,binary),'list' ); b:
+=convert(1000, binary);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"aG7#\"+
+66666" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"bG\"++5566" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "for x from 0 to 1023 do\n " }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "10 0 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

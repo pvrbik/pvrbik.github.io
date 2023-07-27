@@ -1,0 +1,483 @@
+ \documentclass[10pt]{report}
+\usepackage{rotating,graphics,psfrag,epsfig,amssymb,amsmath, subfigure, color}
+\oddsidemargin=-0.25in
+\topmargin= -0.5in
+\textwidth=7.0in
+\textheight=9in
+\pagestyle{empty}
+\sloppy
+
+\newcommand{\imp}{\textbf}
+\newcommand{\dom}[1]{\textsf{dom} (#1)}
+\newcommand{\cod}[1]{\textsf{cod}(#1)}
+\newcommand{\arr}[1]{\mathcal{#1}\mathrm{-arrows}}
+\newcommand{\obj}[1]{\mathcal{#1}\mathrm{-objects}}
+\newcommand{\state}[1]{\item[#1] \textcolor{white}{.} \\ \textcolor{white}{.} \\ }
+\newcommand{\Lstate}[1]{\item[#1] \nl}
+\newcommand{\id}[1]{id_{#1}}
+\newcommand{\nl}{\textcolor{white}{.}\ }
+\newcommand{\func}[3]{#1 : #2 \rightarrow #3} 
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\point}[1]{\begin{itemize} \item[$\cdot$] #1 \end{itemize}}
+\newcommand{\blank}{\textcolor{white}{-}}
+\newcommand{\fieldt}{\mathbb{Z}_q[t]}
+\newcommand{\fieldtx}{\mathbb{Z}_q[t][x]}
+\newcommand{\impl}{\Rightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\Res}[1]{\textrm{Res}_{#1} }
+\renewcommand{\deg}[1]{\texttt{degree}(#1)}
+\renewcommand{\implies}{\Rightarrow}
+\newcommand{\lcm}[1]{\texttt{lcm}\brac{#1}}
+\renewcommand{\gcd}[1]{\texttt{gcd}\brac{#1}}
+
+\title{Assignment 5}
+\author{Paul Vrbik : 301056796 : MATH 895 : Summer 2007}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%QUESTION 1
+\section*{Question 1: Minimal Polynomials}
+
+\subsection*{(i)}
+
+Let $\alpha$ be algebraic over $\mathbb{C}$. Let $m(z) \in \mathbb{Q}[z]$ be a non-zero monic polynomial of minimal degree such that $m(\alpha) = 0$. Prove that $m(z)$ is irreducible over $\mathbb{Q}$ and unique.
+
+\begin{description}
+\state{Uniqueness} 
+Suppose there are two monic polynomials $m(z)$ and $n(z) \in \mathbb{Q}[z]$ of minimal degree ($\deg{m}=\deg{n}$) where $m(\alpha)=n(\alpha)=0$. Consider the polynomial $f(z)=m(z)-n(z)$ where $f(\alpha)=m(\alpha)-n(\alpha)=0$. Since $m(z)$ and $n(z)$ are monic and of the same degree their leading terms will cancel when taking the difference. This implies that $\deg{f} < \deg{m}$ and it follows that $m(z)$ is not minimal ($f$ is), a contradiction. Therefore $m(z)$ is unique.$\hfill \Box$
+
+\state{Irreducibility}
+Suppose $m(z)=f(z) \cdot g(z)$ where $f,g \in \mathbb{Q}[z]$, $\deg{f} \neq 0$ and $\deg{g} \neq 0$. We have $m(\alpha)=0 \implies f(\alpha) \cdot g(\alpha) = 0 \implies f(\alpha)=0 \vee g(\alpha)=0$. Without loss of generality suppose $f(\alpha)=0$. Since $\deg{m}=\deg{f}+\deg{g}$ we have that $\deg{f}<\deg{m}$ which means that $m(z)$ is not minimal ($f$ is), a contradiction. Therefore $m(z)$ is irreducible.$\hfill \Box$
+
+\end{description}
+
+\subsection*{(ii)}
+
+I define the maple functions:
+\begin{verbatim}
+> r:=(ma,mb)->resultant(ma,resultant(mb,z-x-y,y),x):
+> check:=(f,x)->expand(eval(f,z=x)):
+\end{verbatim}
+
+
+\begin{description}
+\item[\underline{$\alpha = 1 + \sqrt{2}$}] \blank 
+\begin{verbatim}
+> c:=1+sqrt(2):
+> 
+> ma:=x-1:
+> mb:=y^2-2:
+> 
+> mc:=sort(r(ma,mb));
+                                        2
+                                 mc := z  - 2 z - 1
+
+> check(mc,c);
+                                         0
+
+> irreduc(mc);
+                                        true
+\end{verbatim}
+
+
+\item[\underline{$\alpha = 1 + \sqrt{2} + \sqrt[4]{2}$}] \blank
+\begin{verbatim}
+> c:=1+2^(1/2)+2^(1/4):
+> 
+> ma:=eval(mc,z=x):
+> mb:=y^4-2:
+> 
+> mc:=sort(r(ma,mb));
+               8      7       6      5       4       3       2
+        mc := z  - 8 z  + 20 z  - 8 z  - 30 z  + 24 z  - 52 z  + 120 z - 63
+
+> check(mc,c);
+                                         0
+
+> 
+> mc1,mc2:=op(factor(mc));
+                     4      3      2              4      3      2
+        mc1, mc2 := z  - 4 z  + 2 z  + 12 z - 9, z  - 4 z  + 2 z  - 4 z + 7
+
+> check(mc1,c); #non-zero so mc2 must be the minimal poly.
+                                    1/2       (1/4)
+                                16 2    + 16 2
+
+> check(mc2,c);
+                                         0
+
+> 
+> mc:=mc2:
+> irreduc(mc);
+                                        true
+\end{verbatim}
+
+\item[\underline{$\alpha = \sqrt 2 + \sqrt 3 + \sqrt 5$}] \blank
+\begin{verbatim}
+> c:=sqrt(2)+sqrt(3)+sqrt(5):
+> 
+#We have that the minimal polynomial for sqrt(2)+sqrt(3) is
+> ma:=x^4-10*x^2+1:
+> mb:=y^2-5:
+> 
+> mc:=r(ma,mb);
+                                6    8        4              2
+                     mc := -40 z  + z  + 352 z  + 576 - 960 z
+
+> check(mc,c);
+                                         0
+
+> irreduc(mc);
+                                        true
+\end{verbatim}
+\end{description}
+
+\newpage
+%QUESTION 2
+\section*{Question 2: Cyclotomic Polynomials}
+
+\subsection*{(i)}
+
+\begin{verbatim}
+> T:=table():
+> T[1]:={x-1}:
+> all:=T[1]:
+> for n from 2 to 12 do
+>     fs:=factor(x^n-1):
+>     T[n]:={op(fs)} minus all:
+>     all:=all union T[n]:
+> end do:
+> for i from 1 to 12 do
+>     printf("%d  %a \n", i, sort(op(T[i]))):
+> end do: 
+
+n  \phi_n(x)
+1  x-1 
+2  x+1 
+3  x^2+x+1 
+4  x^2+1 
+5  x^4+x^3+x^2+x+1 
+6  x^2-x+1 
+7  x^6+x^5+x^4+x^3+x^2+x+1 
+8  x^4+1 
+9  x^6+x^3+1 
+10  x^4-x^3+x^2-x+1 
+11  x^10+x^9+x^8+x^7+x^6+x^5+x^4+x^3+x^2+x+1 
+12  x^4-x^2+1 
+\end{verbatim}
+
+\subsection*{(ii)}
+
+Denoting $\zeta_n$ to be the primitive nth root of unity we define $$\Phi_n(x) = \prod_{\gcd{m,n}=1} (x-\zeta_n^m)$$ and show that
+$$\Phi_n(x) = \frac {x^n-1} {\lcm{x^m-1\Big | m|n,m\neq n}}$$  where $x^n-1 = \prod_{m=1}^n (x-\zeta_n^m) $
+
+\begin{description}
+\state{Claim}
+$$ \lcm{x^m-1 \Big | m|n,m\neq n} = \prod_{\gcd{m,n} \neq 1} (x-\zeta_n^m)$$
+
+\point{Since I am lazy I will write $\lcm{-}$ and $\prod (-)$ instead.}
+
+\state{Proof of claim}
+Consider any $m$ such that $m|n$, $m \neq n  \implies \gcd{m,n} \neq 1$ it follows
+\begin{align*}
+x^m-1 	{}& = (x-\zeta_{n/m}) \cdots (x- \zeta^k_{n/m}) \cdots (x-\zeta_{n/m}^{n/m}) \\
+		{}& = (x-\zeta_n^m) \cdots (x-\zeta_n^{m \cdot k}) \cdots (x-\zeta_n^{n})
+\end{align*}
+
+For any $k$ we have  $\gcd{m\cdot k , n} \neq 1 \implies (x-\zeta_n^{m\cdot k}) \big | \prod (-)$ and it follows that for any $m$ where $m|n$ and $m \neq n$, $$\label{P1} (x^m-1) \big | \prod(-) \implies \lcm{-} \big | \prod(-).$$
+
+For any $m$ such that $\gcd{m,n} = g \neq 1$ we have $\bar m$ such that $g \cdot \bar m = m$. Giving $(x-\zeta_n^m)=(x-\zeta_n^{g\cdot \bar m})=(x-\zeta_{n/g}^{\bar m}) \big | (x^{n/g}-1)$. Since  $\frac n g \big | n \implies (x^{n/g}-1) \big | \lcm{-} \implies (x-\zeta_n^m) \big | \lcm{-}$ it follows that $$\prod (-) \Big |  \lcm{-}. $$
+
+Collectively these two conclusions imply the claim.
+
+\state{Proof of main result}
+$$ \frac {x^n-1} {\lcm{x^m-1\Big | m|n,m\neq n}} = \frac {\prod_{m=1}^n (x-\zeta_n^m)} {\prod_{\gcd{m,n} \neq 1} (x-\zeta_n^m)} = \prod_{\gcd{m,n}=1} (x-\zeta_n^m) = \Phi_n(x)$$
+$\hfill \Box$
+
+\state{Justification of algorithm}
+The algorithm that implements this result uses $\lcm{x^{n/p}-1 \Big | p \text{ is a prime divisor of } n}$ instead. We observe for any $m$ such that $m|n$, $m \neq n$ that
+$$(x^m-1) = \prod_{\bar k=1}^m (x-\zeta_m^{\bar k})=\prod_{\bar k =1}^m (x-\zeta_n^{\frac {\bar k n} {m}})$$ 
+
+where there is some prime divisor $p$ of $n$ such that $1 \leq \frac {\bar k n} {m p} \leq \frac {mn} {mp} = \frac {n} {p}$ and choosing $k= \frac {\bar k n} {m p}$ we have that $(x-\zeta_n^{\frac {\bar k n} {m}})=(x-\zeta_n^{kp})=(x-\zeta_{n/p}^k)$.
+
+This means $\forall m \brac{m|n,m\neq n}$, $\forall \bar k \brac{1 \leq \bar k \leq m}$, $\exists p$, $p$ a prime divisor of $n$ such that 
+$(x-\zeta_n^{\frac {\bar k n} {m}}) \Big | \prod_{k=1}^{n/p} (x-\zeta_n^{k p})$. So it suffices to only use prime divisors of $n$.
+
+\end{description}
+
+\subsection*{Code}
+\begin{verbatim}
+getCyc:=proc(n)
+local ds, ps, L:
+    
+    if n=1 then
+        x-1:
+    elif isprime(n) then
+        add(x^i,i=0..n-1);
+    else
+        ps:=select(`isprime`,numtheory[divisors](n));
+        ds:=seq(n/p, p in ps):
+        L:=lcm(seq(x^d-1,d in ds)):
+        quo(x^n-1,L,x);
+    end if:
+    
+end proc:
+\end{verbatim}
+
+\subsection*{Output}
+\begin{verbatim}
+> f:=0: i:=0:
+> while norm(f,infinity)<3 do
+>     i:=i+1:
+>     f:=getCyc(i):
+> end do:
+
+> i;
+                                        385
+
+> quit:
+\end{verbatim}
+
+\newpage
+%QUESTION 3
+\section*{Question 3: Solving Linear Systems over Number Fields}
+
+\subsection*{Code}
+\begin{verbatim}
+with(LinearAlgebra):
+
+GE:=proc(A,b,m)
+local n,B,L,k,i,j,piv:
+#   cleaning up
+    n:=(Dimensions(A))[1]:
+    B:=<A|b>:
+    B:=map(rem,B,m,e);
+    L:=ilcm(seq(seq(denom(B[i,j]), i=1..n), j=1..n+1)):
+    B:=B*L:
+    
+    for k to n do
+        i:=k:
+        
+        while i<=n and B[i,k]=0 do
+            i:=i+1:
+        end do:
+        
+        if i>n then 
+            error "A is singular":
+        end if:
+        
+#       interchange rows
+        for j from k to n+1 do
+            B[i,j],B[k,j]:=B[k,j],B[i,j]:
+        end do:
+        
+        gcdex(B[k,k],m,e,'piv'):
+        
+        for j from k to n+1 do
+            B[k,j]:=rem(piv*B[k,j],m,e):
+        end do:
+        
+        for i from k+1 to n do
+            for j from k+1 to n+1 do
+                B[i,j]:=rem(B[i,j]-B[i,k]*B[k,j],m,e):
+            end do:
+            B[i,k]:=0:
+        end do:
+    end do:
+    
+    for k from n by -1 to 1 do 
+        for j from k-1 by -1 to 1 do
+            B[j,n+1]:=rem(B[j,n+1]-B[j,k]*B[k,n+1],m,e):
+            B[j,k]:=0;
+        end do:
+    end do:
+        
+    return Vector([seq(B[k,n+1],k=1..n)]):
+end proc:
+\end{verbatim}
+
+\subsection*{Output}
+\begin{verbatim}
+> read "GE.mpl":
+> 
+> read "systems/sys49.txt":
+> Dimensions(A)[1];
+                                         49
+
+> st:=time():
+> x:=GE(A,b,M):
+> time()-st;
+                                       29.932
+
+> convert(map(rem,A.x-b,M,e),set);
+                                        {0}
+
+> 
+> read "systems/sys100.txt":
+> Dimensions(A)[1];
+                                        100
+
+> st:=time():
+> x:=GE(A,b,M):
+> time()-st;
+                                      672.371
+
+> convert(map(rem,A.x-b,M,e),set);
+                                        {0}
+
+> 
+> read "systems/sys196.txt":
+> Dimensions(A)[1];
+                                        196
+
+> st:=time():
+> x:=GE(A,b,M):
+> time()-st;
+                                      1994.514
+
+> convert(map(rem,A.x-b,M,e),set);
+
+                                        {0}
+\end{verbatim}
+
+\newpage
+\section*{Question 4: A Modular Algorithm}
+
+\subsection*{Code}
+\begin{verbatim}
+MGE:=proc(inA,inb,m,k)
+local n,A,L,b,p,P,x,badprime,betas,xpbs,beta,Apb,bpb,xpb,xp,i,xx,pass:
+    
+    n:=LinearAlgebra[Dimension](inb):
+    
+    #	cleaning up
+    A:=map(rem,inA,m,e):
+    L:=ilcm(seq(seq(denom(A[i,j]),i=1..n),j=1..n)):
+    A:=A*L:
+    b:=inb*L:
+    
+    #	p:=2^30:
+    p:=2^60:
+    P:=1:	
+    x:=Vector(1..n,0):
+    
+    while true do
+    
+        p:=nextprime(p):
+        
+        while not(1 = p mod k) do
+            p:=nextprime(p):
+        end do:			
+        
+        printf("p=%d \n", p);
+        
+        badprime:=false:
+        
+        betas:=map(x->x[1],Roots(m) mod p):
+        
+        xpbs:=NULL:	
+        
+        for beta in betas do
+            Apb:=eval(A,e=beta) mod p:
+            bpb:=eval(b,e=beta) mod p:
+            xpb:=Linsolve(Apb,bpb) mod p:
+            
+            #a bad prime/eval point is one that makes A go singluar.
+            if type(xpb,function) then
+                badprime:=true:
+                break:
+            end if:
+            
+            xpbs:=xpbs,xpb:
+        end do:
+        
+        if not(badprime) then
+            xp:=Vector(1..n,0):
+        
+            for i from 1 to n do
+                xp[i]:=Interp(betas,[seq(v[i],v in xpbs)],e) mod p: 
+            end do:
+            
+            x:=chrem([x,xp],[P,p]):
+            P:=P*p:
+            
+            xx:=Vector(1..n,0):
+            pass:=true:
+            
+            for i from 1 to n do
+                xx[i]:=iratrecon(x[i],P):
+                
+                if xx[i]=FAIL then
+                    pass:=false:
+                    break:
+                end if:
+            end do:
+            
+            if pass and convert(map(rem,A.xx-b,m,e),set)={0} then
+                return xx:
+            end if:
+            
+        end if:
+        
+    end do:
+    
+end proc:
+
+\end{verbatim}
+
+\subsection*{Output}
+\begin{verbatim}
+> read "MGE.mpl":
+ 
+> read "systems/sys49.txt":
+> k:=5:
+> st:=time():
+> x:=MGE(A,b,M,k):
+p=1152921504606847081 
+
+> time()-st;
+                                       2.572
+
+> c:=map(rem,(A.x-b),M,e):
+> convert(c,set);
+                                        {0}
+
+> read "systems/sys100.txt":
+> k:=24:
+> st:=time():
+> x:=MGE(A,b,M,k):
+p=1152921504606847009 
+
+> time()-st;
+                                       31.929
+
+> c:=map(rem,(A.x-b),M,e):
+> convert(c,set);
+                                        {0}
+
+> read "systems/sys196.txt":
+> k:=3:
+> st:=time():
+> x:=MGE(A,b,M,k):
+p=1152921504606847009 
+p=1152921504606847081 
+p=1152921504606847123 
+p=1152921504606847189 
+
+> time()-st;
+                                      326.183
+
+> c:=map(rem,(A.x-b),M,e):
+> convert(c,set);
+                                        {0}
+
+> quit:
+\end{verbatim}
+
+
+\end{document}

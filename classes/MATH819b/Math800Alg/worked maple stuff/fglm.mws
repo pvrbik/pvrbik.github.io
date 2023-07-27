@@ -1,0 +1,152 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "with(Groebner): with(StringTools): \+
+with(ListTools): with(LinearAlgebra):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 56 "LTlex:= proc(f) local c,m; c:=lcoeff(f,X,'m'); c*m; e
+nd:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 156 "LTgrlex:= proc(f) l
+ocal d,g,t;\n if not type(f,`+`) then return f; fi;\n d:= max(seq(degr
+ee(t), t=f));\n g:= add(`if`(degree(t)=d, t, 0), t=f);\n LTlex(g);\nen
+d:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 187 "LTgrevlex:= proc(f) \+
+\nlocal d,g,t,c,m;\n if not type(f,`+`) then return f; fi;\n d:= max(s
+eq(degree(t), t=f));\n g:= add(`if`(degree(t)=d, t, 0), t=f);\n c:=tco
+eff(g,Reverse(X),'m'); c*m;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 128 "LCM:= proc(f,g)\n local h,i;\n h:=1;\n for i from 1 \+
+to nops(X) do\n  h:=h*X[i]^(max(degree(f,X[i]), degree(g,X[i]))); \n o
+d;\n h;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 211 "LTcomp:= \+
+proc(f,g) #f and g are monomials, procedure returns true if f divides \+
+g\n local i;\n global X;\n for i from 1 to nops(X) do\n  if degree(f,X
+[i])>degree(g,X[i]) then return false; fi;\n od;\n return true;\nend:
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 586 "DIVIDE:=proc(f,FF :: l
+ist, MO)\nglobal X;\nlocal F,r,t,p,s,i,a,LT;\n s:=nops(FF);\n for i fr
+om 1 to s do\n  a[i]:=0;\n od;\n if MO=plex(op(X)) then LT:=x->LTlex(x
+);\n elif MO=grlex(op(X)) then LT:=x->LTgrlex(x); \n elif MO=grevlex(o
+p(X)) then LT:=x->LTgrevlex(x); \n fi;\n for i from 1 to s do\n  F[i]:
+=FF[i]/icontent(FF[i]); \n   F[i]:=[LT(FF[i]), FF[i]]\n od; \n (p,r):=
+(f,0);\n while p<>0 do\n  i:=1;\n  while i<=s and LTcomp(F[i][1],LT(p)
+)=false do   \n   i:=i+1; \n  od;\n  if i>s then (p,r):=p-LT(p),r+LT(p
+); \n  else t:=eval(LT(p)/F[i][1]); (p,a[i]):=(expand(p-t*F[i][2]), a[
+i]+t);\n  fi;\n od;\n r;\nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 2182 "BBi:=proc(f :: list, MO)\nglobal X;\nlocal s,t,G,G0,i,j,LT,c
+ount1,count2,countS,B,g,ss,temp,C1,C2;\n\nif MO=plex(op(X)) then LT:=x
+->LTlex(x);\nelif MO=grlex(op(X)) then LT:=x->LTgrlex(x);\nelif MO=gre
+vlex(op(X)) then LT:=x->LTgrevlex(x);  \nfi;\n \n\nC1:=proc(x,y)\n loc
+al i,lx,ly,h;\n lx:=LT(x); ly:=LT(y); h:=LCM(LT(x),LT(y)); \n for i fr
+om 1 to nops(X) do\n  if degree(h,X[i])<>degree(lx,X[i])+degree(ly,X[i
+]) then return false; fi;\n od;\n return true;\nend:  \n\nC2:=proc(i,j
+, B :: list)\n local k,y,lk,li,lj;\n li:=LT(G[i]); lj:=LT(G[j]);\n for
+ k from 1 to nops(G) do \n if k<>i and k<>j and not member(sort([i,k])
+,B) and not member(sort([j,k]),B) then \n   lk:=LT(G[k]);\n   if divid
+e(LCM(li,lj),lk) then return true fi;\n fi;\n od;\n return false;\nend
+:\n\ncount1,count2,countS:=0,0,0;\nB:=[]; t:=nops(f);\nB := [seq( seq(
+ [i,j], j=i+1..t ), i=1..t-1 )];\nG:=f;\n\nfor i from 1 to nops(G) do
+\n G[i]:=G[i]/icontent(G[i])/sign(G[i]);\nod;\n\nwhile nops(B)>0 do\n \+
+if C1(G[B[1][1]],G[B[1][2]])=true then count1:=count1+1; fi; \n if C2(
+B[1][1],B[1][2],B)=true then count2:=count2+1; fi;\n if C1(G[B[1][1]],
+G[B[1][2]])=false and C2(B[1][1],B[1][2],B)=false then\n  countS:=coun
+tS+1;\n  ss:=DIVIDE(S(G[B[1][1]],G[B[1][2]],MO),G,MO);\n  if ss<>0 the
+n t:=t+1; G:=[op(G),ss/icontent(ss)/sign(LT(ss))];                  B:
+=[op(B),seq([i,t],i=1..t-1)];  \n  fi;\n fi;\n B:=subsop(1=NULL,B);\no
+d;\n\nprint(\"The number of S-polynomials considered is\", countS);\np
+rint(\"The number of times criteria 1 was applicable is\", count1);\np
+rint(\"The number of times criteria 2 was applicable is\", count2);\n
+\n#this is the Groebner basis, not we need to first make it minimal an
+d then reduced \n\nfor i from 1 to nops(G) do\n if i<=nops(G) then \n \+
+ for j from 1 to i-1 do\n   if G[i]<>garbage and G[j]<>garbage then\n \+
+   if LTcomp(LT(G[i]), LT(G[j])) then G := subsop(j=garbage,G); \n    \+
+elif LTcomp(LT(G[j]), LT(G[i])) then G := subsop(i=garbage,G);\n    fi
+;\n   fi; \n  od;\n fi; \nod;\n\ntemp,i:=true,1;\nwhile i<=nops(G) do
+\n if G[i]=garbage then G:=subsop(i=NULL, G); temp:=false; fi;\n if te
+mp=true then i:=i+1; fi;\n temp:=true;\nod;\n\ns:=[seq( DIVIDE(G[i],su
+bsop(i=NULL,G), MO), i=1..nops(G) )];\nG:=[seq(i/icontent(i)/sign(LT(i
+)),i=s)];\n\nG;                     \nend:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 215 "LTs:= proc(g::list,MO)\n local LT,i;\n global X;\n
+ if MO=plex(op(X)) then LT:=x->LTlex(x);\n elif MO=grlex(op(X)) then L
+T:=x->LTgrlex(x);  \n elif MO=grevlex(op(X)) then LT:=x->LTgrevlex(x);
+ \n fi;\n [seq(LT(i),i=g)];\nend:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 2160 "fglm:=proc(F::list)  \nglobal X; \nlocal MBasis,sta
+irs,m,i,Glex,LT,vec,Next,monom,k,v,j,sol,M,M1,poly,l,Y,a,b,B,d;\n\n#MB
+asis is a list of pairs [a,b] where a is the current monomial and b is
+ the coefficient  #vector when divided by F\n\n#stairs is the list of \+
+leading terms of the polynomials in Glex \n\nGlex:=[];LT:=LTs(F,grevle
+x(op(X))); d:=[]; m:=1;\nfor i from 1 to nops(LT) do\n if nops(indets(
+LT[i]))=1 then m:=m*LT[i];fi; \nod;\nfor i from 1 to nops(X) do\n d:=[
+op(d),degree(m,X[i])-1];\nod;\n\n#calculating B (generating the polyno
+mials this way was Al's idea)\nY:=X;\na:=proc(Y,d::list) local i,j,k;
+\nif Y=[] then return rand(1..1) fi;\nreturn proc() randpoly(Y[-1],deg
+ree = d[-1],coeffs=a(Y[1..-2],d[1..-2]),dense) end;\nend:\n\nb:=[op(ex
+pand(a(Y,d)()))]; B:=[];\nfor i from 1 to nops(b) do\n if b[i]=DIVIDE(
+b[i],F,grevlex(op(X))) then B:=[op(B),b[i]]; fi;\nod; \n\nvec:=proc(mo
+n,B) #outputs a coefficient vector of a monomial with respect to B \n \+
+local i,m,c,v,L,j;\n L:=[seq(0,i=1..nops(B))]; \n if type(mon,`+`) the
+n m:=[op(mon)]; \n  else m:=[mon];\n fi;\n for i from 1 to nops(m) do
+\n  c:=icontent(m[i])*sign(m[i]);\n  v:=m[i]/c;\n  for j from 1 to nop
+s(B) do\n   if v=B[j] then L:=subsop(j=c,L); fi;\n  od; \n od;\n L;\ne
+nd:\n\nstairs:=[]; MBasis:=[]; M; Next:=[1];\nM:=Matrix(nops(B),0);\n \+
+\nwhile nops(Next)>0 do\n monom:=Next[1];\n Next:=subsop(1=NULL,Next);
+ \n k:=true;\n for i from 1 to nops(stairs) do\n  if LTcomp(stairs[i],
+monom) then k:=false; fi;\n od; # determines whether monomials is a mu
+ltiple of some element of stairs\n \n if k then v:=vec(DIVIDE(monom,F,
+grevlex(op(X))),B);\n  M:=Matrix(nops(B),0);\n  DIVIDE(monom,F,grevlex
+(op(X)));\n  for j from 1 to nops(MBasis) do\n   M:=Matrix([M,Vector(M
+Basis[j][2])]);  \n  od; \n \n l:=true;\n try sol:=LinearSolve(M,Vecto
+r(v));\n catch \"inconsistent system\": l:=false:\n end try;\n \n if l
+ then\n  sol:=convert(sol,list);\n  poly:=monom-sum(sol[p]*MBasis[p][1
+],p=1..nops(sol));\n  Glex:=[op(Glex), poly/icontent(poly)]; \n  stair
+s:=[monom, op(stairs)];\n  else MBasis:=[op(MBasis),[monom, v]]; \n   \+
+for j from 1 to nops(X) do\n   Next:=[op(Next),monom*X[j]];\n  od;\n  \+
+Next:=sort(Next, (m1,m2)->TestOrder(m1,m2,'plex'(op(X)))); \n fi;\n\n \+
+fi;\nod;\nGlex; \n  \nend:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+16 "with(Groebner): " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "X:=
+[x,y,z]: G:=[x*y+z-x*z,x^2-z,2*x^3-x^2*y*z-1]: " }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 50 "F:=Basis(G,tdeg(op(X))); G1:=Basis(G,plex(op(X
+)));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"FG7&,(%\"xG\"\"\"%\"yGF(%
+\"zG!\"\",**$)F)\"\"#F(F(*(F/F(F)F(F*F(F+*$)F*F/F(F(F*F+,**&F)F(F2F(F(
+*(F/F(F)F(F*F(F(*&F/F(F2F(F+F(F(,0*$)F*\"\"%F(F(*&\"\"$F()F*F<F(F+*(F:
+F(F)F(F*F(F+*&F/F(F2F(F(F)F+*&F/F(F*F(F(F/F+" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#G1G7%,,*$)%\"zG\"\"'\"\"\"F+*&\"\"#F+)F)\"\"$F+!\"\"
+F+F+*&\"\"%F+)F)F2F+F0*$)F)\"\"&F+F0,0*&\"\"(F+%\"yGF+F+*&F2F+F5F+F0*&
+\"#8F+F.F+F+F-F0*&F6F+F3F+F+*&\"#5F+)F)F-F+F+*&F*F+F)F+F0,0*&F9F+%\"xG
+F+F+*&F2F+F5F+F+*&F=F+F.F+F0F-F+*&F6F+F3F+F0*&F@F+FAF+F0F)F0" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "G2:=fglm(F);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%#G2G7%,,*$)%\"zG\"\"'\"\"\"F+*&\"\"#F+)F)\"\"$F+
+!\"\"F+F+*&\"\"%F+)F)F2F+F0*$)F)\"\"&F+F0,0*&\"\"(F+%\"yGF+F+*&F2F+F5F
++F0*&\"#8F+F.F+F+F-F0*&F6F+F3F+F+*&\"#5F+)F)F-F+F+*&F*F+F)F+F0,0*&F9F+
+%\"xGF+F+*&F2F+F5F+F+*&F=F+F.F+F0F-F+*&F6F+F3F+F0*&F@F+FAF+F0F)F0" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "\{op(G1)\} minus \{op(G2)\};
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 156 "f1:=u0^2-u0+2*u1^2+2*u2^2+2*u3^2: f2:=2*u0*u1+2*u1*u
+2+2*u2*u3-u1: f3:=2*u0*u2+u1^2+2*u1*u3-u2: f4:=u0+2*u1+2*u2+2*u3-1: G:
+=[f1,f2,f3,f4]: X:=[u3,u2,u0,u1]: " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 50 "F:=Basis(G,tdeg(op(X))); G1:=Basis(G,plex(op(X))):" }
+}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%\"FG7),,%#u0G\"\"\"*&\"\"#F(%#u1GF(
+F(*&F*F(%#u2GF(F(*&F*F(%#u3GF(F(F(!\"\",0*&\"\"$F()F'F*F(F(*(\"\")F(F+
+F(F-F(F(*(\"#7F(F'F(F+F(F(*&F6F()F+F*F(F(*&\"\"%F(F'F(F0*&F6F(F+F(F0F(
+F(,.*(F*F(F'F(F-F(F(*(F*F(F+F(F-F(F0*&F'F(F+F(F0*$F:F(F0F-F0F+F(,.*&F<
+F()F-F*F(F(*(F*F(F+F(F-F(F(*(F3F(F'F(F+F(F0FBF(F-F0F+F(,0*(\"#aF(F'F(F
+:F(F(*&\"#RF()F+F3F(F(*&F+F(F-F(F0*(\"\"(F(F'F(F+F(F0*&\"#LF(F:F(F0F-F
+(*&F*F(F+F(F(,0*(\"#OF(F-F(F:F(F(*&F8F(FMF(F0*(F*F(F+F(F-F(F0FAF(*&F3F
+(F:F(F0F-F0F+F(,0*&\"&[\\#F()F+F<F(F(*&\"%/QF(FMF(F0*(\"$%RF(F+F(F-F(F
+0*(\"$H$F(F'F(F+F(F(*&\"%V<F(F:F(F0*&\"#zF(F-F(F(*&\"#TF(F+F(F(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "G2:=fglm(F):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "\{op(G1)\} minus \{op(G2)\};" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#<\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 90 "So the program works, now let's apply it to some combinations o
+f Trinks that took a while." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+176 "f1:=45*p+35*s-165*b-36: f2:=35*p+40*z+25*t-27*s: f3:=15*w+25*p*s+
+30*z-18*t-165*b^2: f4:=-9*w+15*p*t+20*z*s: f5:=w*p+2*z*t-11*b^3: f6:=0
+0*w-11*s*b+3*b^2: G:=[f1,f2,f3,f4,f5,f6]:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 78 "X:=[p,b,s,w,t,z]: st:= time():\nF:=Basis(G, tdeg(op
+(X))): fglm(F):\ntime() - st;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"%1
+[!\"$" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "X:=[t,b,p,z,s,w]: \+
+st:= time():\nF:=Basis(G, tdeg(op(X))): fglm(F):\ntime() - st;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"%=[!\"$" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}}{MARK "23 0 0" 15 }{VIEWOPTS 1 1 0 1 1 1803 1 
+1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

@@ -1,0 +1,146 @@
+% !TEX root = OurExam.tex
+\section*{\S 1 Very Short Answers}
+
+\emph{The Java code in the following questions is valid and will provide output (without error) if entered into 
+the DrJava interactions pane.} 
+
+\subsection*{Question 1}
+Each answer in this Question is worth \emph{1 point} for a total of \emph{10 points}.
+
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\begin{enumerate}
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 10 + 2*5 % 10 
+\end{verbatim}
+the value of x is: \Ans
+
+\item The number of ``*''s printed by
+\begin{verbatim}
+for (int star = 9; star < 0; star++) {
+    System.out.println("*");
+}
+\end{verbatim}
+is: \Ans
+
+\item Suppose we have defined
+\begin{verbatim}
+int a = 12, b =0;
+boolean t = true;
+\end{verbatim}
+In order to make the expression \texttt{ (t ? !(a > b)) \&\& t } evaluate to \texttt{true}, we should replace \texttt{?} with:
+
+\Ans
+
+\item Suppose we have defined
+\begin{verbatim}
+int m=18, n=4;
+\end{verbatim}
+then the value of $\texttt{m / n + (m \% n)}$ is:\Ans
+
+\clearpage
+\item After the following code segment is executed
+\begin{verbatim}
+int x = 3;
+x = x * x;
+x = x + x;
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\item Suppose we have defined
+\begin{verbatim}
+String s1 = new String("Finals");
+String s2 = new String("Finals");
+\end{verbatim}
+then the value of the expression \texttt{(s1==s2)} is: \Ans
+
+\item The \emph{last} value of the array \texttt{int[] xs = \{1,2,3,4\}} is at position: \Ans
+
+\item After the following code segment is exectued
+\begin{verbatim}
+int x;
+for (x = 1; x < 5; x = x + x);
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\item After the following code segment is execute
+\begin{verbatim}
+int num = 15;
+if (num >= 20)
+    num = num - 20;
+if (num >= 10)
+    num = num -10;
+if (num >= 5)
+    num = num - 5;
+\end{verbatim}
+the value of \texttt{num} is: \Ans
+
+\item After the following code segment is executed
+\begin{verbatim}
+System.out.println("3"+"7");
+\end{verbatim}
+what is printed? \Ans
+\end{enumerate}
+
+
+\subsection*{Question 2}
+Each answer in this Question is worth \emph{2 points} for a total of \emph{10 points}.
+\begin{enumerate}
+\item For $32$ to be printed by the following code segment
+\begin{verbatim}
+int total = x;
+for (int i = 0; i <= 10 ; i = i + 2)
+{
+  total += i;
+}
+System.out.print(total);
+\end{verbatim}
+the value of \texttt{x} should be: \Ans
+
+\item The shape drawn by the following \texttt{Turtle} class method
+\begin{verbatim}
+void SecretShape () {
+    for (int i =0; i < 13; i++) {
+        this.forward(30);
+        this.turnLeft();
+    }
+}
+\end{verbatim}
+is a: \Ans
+
+\item After the following code segment is run
+\begin{verbatim}
+int z = 0;
+double x = 123./321, y = 0.38317757009345793;
+if ( x <= y && x > y ) {
+    z = 1;
+}
+\end{verbatim}
+the value of \texttt{z} is: \Ans
+
+\clearpage
+\item After the following code segment is run
+\begin{verbatim}
+int sum = 0; 
+for (int i = 0; i < 10; i ++) {
+    sum += i ; 
+    i ++;
+}
+\end{verbatim}
+the value of \texttt{sum} is: \Ans
+
+\item After the following code segment is run
+\begin{verbatim}
+int x = 2*2*2*3*3*3*7;
+while ( (x % 2 == 0) || (x % 3 == 0 ) ) {
+    if (x % 2 == 0) {
+        x = x/2;
+    } else {
+        x = x/3;
+    }
+}
+\end{verbatim}
+the value of \texttt{x} is: \Ans
+
+\end{enumerate}
+\clearpage
