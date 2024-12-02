@@ -206,7 +206,7 @@ div#ClassCode {
 
 div#Shore {
     width:901px;
-    height:302px;
+    height:602px;
     
     display:table;
     background-repeat:no-repeat; 
@@ -217,7 +217,7 @@ div#Shore {
     background-image:url("../images/su.png");
     
     margin-top:-22px;
-    margin-bottom:-240px;
+    margin-bottom:-622px;
     margin-left:0px;
     
     z-index: 1;
